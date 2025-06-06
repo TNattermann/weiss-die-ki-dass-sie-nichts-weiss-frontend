@@ -8,6 +8,14 @@ Dies ist das **Frontend** für unser Master-Projekt. Es basiert auf einem modern
 - [Tailwind CSS v4.1](https://tailwindcss.com/) – CSS-Framework
 
 ---
+## Deploy
+- Wenn man das Projekt mit 'npm run build' baut, dann wird der Ordner 'dist' mit allen zugehörigen Dateien erstellt
+- Um automatisch zu deployen, kann das deploy.sh Skript verwendet werden
+  - Um das Skript auf Windows auszuführen, wird eine Shell benötigt, die bash unterstützt, z.B. Git Bash 
+- Im Skript muss der eigene Nutzername eingetragen werden
+```bash
+./deploy.sh
+```
 
 ## Infos
 
