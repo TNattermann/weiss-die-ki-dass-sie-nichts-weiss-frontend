@@ -7,7 +7,14 @@ Dies ist das **Frontend** für unser Master-Projekt. Es basiert auf einem modern
 - [Vite](https://vitejs.dev/) – Build-Tool
 - [Tailwind CSS v4.1](https://tailwindcss.com/) – CSS-Framework
 
----
+## Git-Richtlinien
+- Features NIE direkt auf Master pushen
+- Wir arbeiten auf Feature-Branches
+  - Für neue Funktionen: feature/nameOfFeature
+  - Für Defects/Bugfixes: hotfix/nameOffBug
+- Für fertige Features/Defects Merge-Request erstellen
+- Teammitglieder benachrichtigen => Review => Merge durch Reviewer
+
 ## Deploy
 - Wenn man das Projekt mit 'npm run build' baut, dann wird der Ordner 'dist' mit allen zugehörigen Dateien erstellt
 - Um automatisch zu deployen, kann das deploy.sh Skript verwendet werden
