@@ -1,17 +1,8 @@
 import { useState } from "react";
+import { getTokens, getTokenIds } from '../../config/api';
 
 type TokenizerType = "simple" | "gpt2";
 type ViewMode = "tokens" | "token_ids";
-
-interface TokensResponse {
-    tokens: string[];
-}
-
-interface TokenIdsResponse {
-    token_ids: number[];
-}
-
-const BASE_URL = "http://localhost:8000"; // API Basis-URL anpassen!
 
 function TokenVisualizer() {
     const [text, setText] = useState("");
@@ -29,28 +20,11 @@ function TokenVisualizer() {
         setTokenIds(null);
 
         try {
-            const endpoint = viewMode === "tokens" ? "/tokens" : "/token_ids";
-
-            const response = await fetch(`${BASE_URL}${endpoint}`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    text,
-                    tokenizer,
-                }),
-            });
-
-            if (!response.ok) {
-                throw new Error(`API Fehler: ${response.statusText}`);
-            }
-
             if (viewMode === "tokens") {
-                const data: TokensResponse = await response.json();
+                const data = await getTokens(text, tokenizer); // Use the centralized API function
                 setTokens(data.tokens);
             } else {
-                const data: TokenIdsResponse = await response.json();
+                const data = await getTokenIds(text, tokenizer); // Use the centralized API function
                 setTokenIds(data.token_ids);
             }
         } catch (err: any) {
@@ -150,8 +124,8 @@ function TokenVisualizer() {
                                     key={idx}
                                     className="bg-blue-200 text-blue-800 px-2 py-1 rounded whitespace-pre-wrap"
                                 >
-                    {token}
-                  </span>
+                                    {token}
+                                </span>
                             ))
                             : null}
 
@@ -161,8 +135,8 @@ function TokenVisualizer() {
                                     key={idx}
                                     className="bg-green-200 text-green-800 px-2 py-1 rounded"
                                 >
-                    {id}
-                  </span>
+                                    {id}
+                                </span>
                             ))
                             : null}
                     </div>
