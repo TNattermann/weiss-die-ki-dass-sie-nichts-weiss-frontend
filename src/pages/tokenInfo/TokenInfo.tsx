@@ -1,3 +1,5 @@
+import TokenVisualizer from "./TokenVisualizer.tsx";
+
 function TokenInfo() {
     return (
         <div className="p-8 max-w-4xl mx-auto text-gray-800">
@@ -24,9 +26,9 @@ function TokenInfo() {
 
             <h2 className="text-2xl font-semibold text-blue-500 mb-2 mt-8">Tokenisierung ausprobieren</h2>
             <p className="mb-4">
-                Hier können Sie selbst einen Input eingeben. Dieser wird dann in Tokens zerlegt
-                //TO DO:
+                Hier kannst du die Tokenisierung von Texten ausprobieren. Wähle einen Tokenizer und die Anzeigeart, um zu sehen, wie dein Text in Tokens oder Token IDs zerlegt wird.
             </p>
+            <TokenVisualizer />
 
             <p className="mb-6">
                 Diese Token-IDs sind die Grundlage für die Erstellung von <strong>Embeddings</strong>, die die numerische Repräsentation für das Training des LLMs bilden.
