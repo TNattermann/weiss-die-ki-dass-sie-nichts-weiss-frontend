@@ -29,6 +29,7 @@ Dies ist das **Frontend** für unser Master-Projekt. Es basiert auf einem modern
 ### 1. Abhängigkeiten installieren
 ```bash
 npm install
+src/config/config.ts     #Richtige BACKEND-URL auswählen (Für Lokal oder Production)
 ```
 
 ### 2. Dev-Server starten
