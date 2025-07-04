@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-import reactLogo from '../../assets/react.svg';
-import viteLogo from '/vite.svg';
 import './Home.css';
 import { getVersion } from '../../config/api'
 
@@ -23,14 +21,6 @@ function Home() {
             <h1 className="text-4xl font-bold text-blue-400">
                 Hello, this is a Tailwind 4.1 applied style!
             </h1>
-            <div className="flex items-center justify-center gap-4">
-                <a href="https://vite.dev" target="_blank">
-                    <img src={viteLogo} className="logo" alt="Vite logo" />
-                </a>
-                <a href="https://react.dev" target="_blank">
-                    <img src={reactLogo} className="logo react" alt="React logo" />
-                </a>
-            </div>
             <h1>Vite + React</h1>
             <div className="card">
                 <button onClick={() => setCount((count) => count + 1)}>
