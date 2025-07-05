@@ -7,6 +7,7 @@ body {
 
 @theme {
   --color-secondary: oklch(54.6% 0.245 262.881);
+  --color-tertiary: hsl(247, 84%, 67%);
 }
 
 .neural-bg {
@@ -14,4 +15,40 @@ body {
   radial-gradient(circle at 80% 40%, rgba(139, 92, 246, 0.08) 0%, transparent 25%),
   radial-gradient(circle at 40% 70%, rgba(99, 102, 241, 0.06) 0%, transparent 25%),
   radial-gradient(circle at 70% 90%, rgba(139, 92, 246, 0.06) 0%, transparent 25%);
+}
+
+.token {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 2px;
+  border-radius: 6px;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.token-word {
+  background-color: rgba(99, 102, 241, 0.15);
+  color: hsl(247, 84%, 67%);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.token-subword {
+  background-color: rgba(139, 92, 246, 0.15);
+  color: hsl(267, 73%, 66%);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.token-special {
+  background-color: rgba(249, 115, 22, 0.15);
+  color: hsl(25, 95%, 53%);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.token-id {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: hsl(142, 71%, 45%);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  font-weight: 600;
 }
