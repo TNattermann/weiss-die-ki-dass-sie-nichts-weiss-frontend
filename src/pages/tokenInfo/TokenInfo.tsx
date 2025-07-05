@@ -1,6 +1,7 @@
 import HeroSection from "../../components/HeroSection.tsx";
-import EducationalContent from "../../components/EducationalContent.tsx";
+import EducationalContent from "./EducationalContent.tsx";
 import TokenizerVisualizer from "./TokenizerVisualizer.tsx";
+import TokenizationApproaches from "./TokenizationApproaches.tsx";
 
 
 function TokenInfo() {
@@ -29,6 +30,7 @@ function TokenInfo() {
 
             <EducationalContent />
             <TokenizerVisualizer />
+            <TokenizationApproaches />
         </div>
     );
 }
