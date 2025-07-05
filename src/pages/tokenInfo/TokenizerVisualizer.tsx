@@ -2,7 +2,7 @@ import {useState} from "react";
 import {getTokens, getTokenIds} from "../../config/api";
 
 export default function TokenizerVisualizer() {
-    const [text, setText] = useState("Die Künstliche Intelligenz revolutioniert unsere Welt! 🚀 Moderne LLMs verstehen komplexe Zusammenhänge.");
+    const [text, setText] = useState("Die Künstliche Intelligenz ist nicht intelligent! 🚀 Moderne LLMs lernen Zusammenhänge.");
     const [tokenizer, setTokenizer] = useState<"simple" | "gpt2">("simple");
     const [tokens, setTokens] = useState<string[]>([]);
     const [tokenIds, setTokenIds] = useState<number[]>([]);

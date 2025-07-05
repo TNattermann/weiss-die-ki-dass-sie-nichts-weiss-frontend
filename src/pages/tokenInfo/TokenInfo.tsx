@@ -6,7 +6,27 @@ import TokenizerVisualizer from "./TokenizerVisualizer.tsx";
 function TokenInfo() {
     return (
         <div className="bg-gray-50 min-h-screen">
-            <HeroSection />
+            <HeroSection
+                title={
+                    <>
+                        Tokens in <span className="text-secondary">Sprachmodellen</span>
+                    </>
+                }
+                subtitle={
+                    <>
+                        Bevor ein Large Language Model (LLM) wie ChatGPT Texte generieren kann,
+                        muss der Inputtext zunächst in sogenannte{" "}
+                        <span className="font-semibold text-secondary">Tokens</span>{" "}
+                        umgewandelt werden. Diese Tokenisierung ist ein essenzieller Verarbeitungsschritt.
+                    </>
+                }
+                badges={[
+                    { label: "Lernen", icon: "ri-lightbulb-line" },
+                    { label: "Live-Visualisierung", icon: "ri-cpu-line" },
+                ]}
+                scrollToId="educational-content"
+            />
+
             <EducationalContent />
             <TokenizerVisualizer />
         </div>
