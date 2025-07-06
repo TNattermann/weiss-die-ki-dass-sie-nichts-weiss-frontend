@@ -1,4 +1,10 @@
-export default function EducationalContent() {
+import {Link} from "react-router-dom";
+import {useEffect} from "react";
+
+export default function TokenInfoAlgorithms() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className="py-16 px-6 bg-white" id="educational-content">
       <div className="max-w-6xl mx-auto">
@@ -40,15 +46,19 @@ export default function EducationalContent() {
             <div className="w-14 h-14 flex items-center justify-center bg-secondary/10 rounded-xl mb-6">
               <i className="ri-brain-line text-secondary text-2xl"></i>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Notwendigkeit von Tokens</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Tokenisierung & Algorithmen</h3>
             <p className="text-gray-700 font-semibold mb-6 leading-relaxed flex-grow">
-              Das LLM selbst arbeitet nicht mit reinem Text – es verarbeitet nur numerische Token-IDs.
-              Die eigentliche Sprachverarbeitung beginnt erst nach der Tokenisierung.
+              Um Texte effizient zu tokenisieren, verwenden moderne Sprachmodelle verschiedene Algorithmen wie
+              <span className="text-secondary font-semibold"> Byte Pair Encoding (BPE)</span>. Dieser fasst häufig vorkommende Zeichenfolgen zu neuen Tokens zusammen
+              und reduziert so die Sequenzlänge.
             </p>
-            <button className="text-secondary font-medium flex items-center hover:text-secondary/80 transition-colors mt-auto">
+            <Link
+                to="/tokeninfo/algorithms"
+                className="text-secondary font-medium flex items-center hover:text-secondary transition-colors mt-auto"
+            >
               Mehr erfahren
               <i className="ri-arrow-right-line ml-2"></i>
-            </button>
+            </Link>
           </div>
           <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
             <div className="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-xl mb-6">
@@ -68,15 +78,18 @@ export default function EducationalContent() {
             <div className="w-14 h-14 flex items-center justify-center bg-orange-100 rounded-xl mb-6">
               <i className="ri-settings-3-line text-orange-600 text-2xl"></i>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Effizienz & Algorithmen</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Notwendigkeit von Tokens</h3>
             <p className="text-gray-700 font-semibold mb-6 leading-relaxed flex-grow">
-              Um das Vokabular effizient zu gestalten, kommen Algorithmen wie
-              Byte Pair Encoding (BPE) zum Einsatz. Sie fassen häufige Zeichenfolgen zusammen.
+              Das LLM selbst arbeitet nicht mit reinem Text – es verarbeitet nur numerische Token-IDs.
+              Die eigentliche Sprachverarbeitung beginnt erst nach der Tokenisierung.
             </p>
-            <button className="text-orange-600 font-medium flex items-center hover:text-orange-500 transition-colors mt-auto">
+            <Link
+                to="/tokeninfo/algorithms"
+                className="text-orange-600 font-medium flex items-center hover:text-orange-500 transition-colors mt-auto"
+            >
               Mehr erfahren
               <i className="ri-arrow-right-line ml-2"></i>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
