@@ -14,9 +14,6 @@ export default function EducationalContent() {
                 Ein <strong className="text-primary">Token</strong> kann ein Wort, ein Satzzeichen oder sogar ein einzelnes Zeichen sein – je nach verwendetem Tokenizer.
               </p>
             </div>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Diese Zahlen-IDs stammen aus einem festen <span className="font-semibold text-primary">Vokabular</span>, das der Tokenizer zuvor beim Training erstellt hat.
-            </p>
           </div>
           <div className="bg-gray-50 p-8 rounded-xl">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Einfaches Beispiel</h3>
