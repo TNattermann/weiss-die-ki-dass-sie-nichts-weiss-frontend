@@ -20,13 +20,13 @@ function Home() {
             <HeroSection
                 title={
                     <>
-                        <span className="text-secondary">Willkommen</span>
+                        <span className="text-primary">Willkommen</span>
                     </>
                 }
                 subtitle={
                     <>
                         Dies ist ein {" "}
-                        <span className="font-semibold text-secondary">Beispieltext</span>{" "}
+                        <span className="font-semibold text-primary">Beispieltext</span>{" "}
                     </>
                 }
                 badges={[
@@ -35,7 +35,7 @@ function Home() {
                 scrollToId="id-of-section"
             />
             <div className="max-w-screen-xl mx-auto px-8 py-8 text-center">
-                <h1 className="text-4xl font-bold text-secondary">
+                <h1 className="text-4xl font-bold text-primary">
                     Hello, this is a Tailwind 4.1 applied style!
                 </h1>
                 <h1>Vite + React</h1>

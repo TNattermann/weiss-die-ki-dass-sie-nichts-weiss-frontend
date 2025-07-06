@@ -9,13 +9,13 @@ export default function EducationalContent() {
               Damit ein LLM mit Sprache arbeiten kann, braucht es eine einheitliche und maschinenlesbare Darstellung des Textes. 
               Reiner Text besteht aus Zeichen und Wörtern, mit denen alleine ein neuronales Netz erstmal nichts anfangen kann.
             </p>
-            <div className="bg-primary/5 border-l-4 text-secondary p-6 rounded-r-lg mb-6">
+            <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               <p className="text-gray-800 font-medium">
-                Ein <strong className="text-secondary">Token</strong> kann ein Wort, ein Satzzeichen oder sogar ein einzelnes Zeichen sein – je nach verwendetem Tokenizer.
+                Ein <strong className="text-primary">Token</strong> kann ein Wort, ein Satzzeichen oder sogar ein einzelnes Zeichen sein – je nach verwendetem Tokenizer.
               </p>
             </div>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Diese Zahlen-IDs stammen aus einem festen <span className="font-semibold text-secondary">Vokabular</span>, das der Tokenizer zuvor beim Training erstellt hat.
+              Diese Zahlen-IDs stammen aus einem festen <span className="font-semibold text-primary">Vokabular</span>, das der Tokenizer zuvor beim Training erstellt hat.
             </p>
           </div>
           <div className="bg-gray-50 p-8 rounded-xl">
@@ -54,15 +54,15 @@ export default function EducationalContent() {
             </button>
           </div>
           <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-            <div className="w-14 h-14 flex items-center justify-center bg-secondary/10 rounded-xl mb-6">
-              <i className="ri-split-cells-horizontal text-secondary text-2xl"></i>
+            <div className="w-14 h-14 flex items-center justify-center bg-primary/10 rounded-xl mb-6">
+              <i className="ri-split-cells-horizontal text-primary text-2xl"></i>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-4">Vokabular & Encoding</h3>
             <p className="text-gray-700 font-semibold mb-6 leading-relaxed flex-grow">
               Für jedes Token im Vokabular gibt es eine eindeutige ID. Diese IDs dienen als Schlüssel zu
               sogenannten Embedding-Vektoren – numerische Repräsentationen.
             </p>
-            <button className="text-secondary font-medium flex items-center hover:text-secondary/80 transition-colors mt-auto">
+            <button className="text-primary font-medium flex items-center hover:text-primary/80 transition-colors mt-auto">
               Mehr erfahren
               <i className="ri-arrow-right-line ml-2"></i>
             </button>

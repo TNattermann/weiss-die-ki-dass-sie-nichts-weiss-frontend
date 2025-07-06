@@ -102,7 +102,7 @@ export default function TokenizerVisualizer() {
                         <button
                             onClick={handleTokenize}
                             disabled={loading || !text.trim()}
-                            className="bg-secondary text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                            className="bg-primary text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                         >
                             <span>{loading ? "Tokenisierung läuft..." : "Text tokenisieren"}</span>
                             {loading && <div className="loading-spinner inline-block ml-2"></div>}
@@ -191,18 +191,18 @@ export default function TokenizerVisualizer() {
                                     className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20">
                                     <div className="flex items-center justify-between mb-2">
                                         <h3 className="text-sm font-medium text-gray-700">Token-Anzahl</h3>
-                                        <i className="ri-counter-line text-secondary"></i>
+                                        <i className="ri-counter-line text-primary"></i>
                                     </div>
-                                    <p className="text-3xl font-bold text-secondary">{tokens.length}</p>
+                                    <p className="text-3xl font-bold text-primary">{tokens.length}</p>
                                     <p className="text-xs text-gray-600 mt-1">Gesamte Tokens</p>
                                 </div>
                                 <div
-                                    className="bg-gradient-to-br from-secondary/10 to-secondary/5 p-6 rounded-xl border border-secondary/20">
+                                    className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20">
                                     <div className="flex items-center justify-between mb-2">
                                         <h3 className="text-sm font-medium text-gray-700">Tokenizer</h3>
-                                        <i className="ri-robot-line text-secondary"></i>
+                                        <i className="ri-robot-line text-primary"></i>
                                     </div>
-                                    <p className="text-2xl font-bold text-secondary">{tokenizer === "simple" ? "Simple" : "GPT-2"}</p>
+                                    <p className="text-2xl font-bold text-primary">{tokenizer === "simple" ? "Simple" : "GPT-2"}</p>
                                     <p className="text-xs text-gray-600 mt-1">Aktueller Tokenizer</p>
                                 </div>
                                 <div

@@ -36,19 +36,19 @@ export default function TokenizationApproaches() {
             }`}
           >
             <div className="w-16 h-16 flex items-center justify-center bg-tertiary/10 rounded-xl mx-auto mb-4">
-              <i className="ri-text text-secondary text-2xl"></i>
+              <i className="ri-text text-primary text-2xl"></i>
             </div>
             <h3 className="font-bold text-lg mb-2">Wort-basiert</h3>
             <p className="text-gray-600 text-sm">Jedes Wort wird als einzelnes Token behandelt</p>
           </button>
           <button 
             onClick={() => setActiveExample("subword")}
-            className={`tokenization-example p-6 border-2 border-gray-200 rounded-xl text-center hover:border-secondary transition-all duration-300 transform hover:scale-105 ${
+            className={`tokenization-example p-6 border-2 border-gray-200 rounded-xl text-center hover:border-primary transition-all duration-300 transform hover:scale-105 ${
               activeExample === "subword" ? "active" : ""
             }`}
           >
-            <div className="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-xl mx-auto mb-4">
-              <i className="ri-text-spacing text-secondary text-2xl"></i>
+            <div className="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-xl mx-auto mb-4">
+              <i className="ri-text-spacing text-primary text-2xl"></i>
             </div>
             <h3 className="font-bold text-lg mb-2">Teilwort-basiert</h3>
             <p className="text-gray-600 text-sm">Wörter werden in häufige Teilsequenzen zerlegt</p>

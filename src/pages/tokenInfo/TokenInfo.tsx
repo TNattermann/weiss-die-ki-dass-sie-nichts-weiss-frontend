@@ -10,14 +10,14 @@ function TokenInfo() {
             <HeroSection
                 title={
                     <>
-                        Tokens in <span className="text-secondary">Sprachmodellen</span>
+                        Tokens in <span className="text-primary">Sprachmodellen</span>
                     </>
                 }
                 subtitle={
                     <>
                         Bevor ein Large Language Model (LLM) wie ChatGPT Texte generieren kann,
                         muss der Inputtext zunächst in sogenannte{" "}
-                        <span className="font-semibold text-secondary">Tokens</span>{" "}
+                        <span className="font-semibold text-primary">Tokens</span>{" "}
                         umgewandelt werden. Diese Tokenisierung ist ein essenzieller Verarbeitungsschritt.
                     </>
                 }

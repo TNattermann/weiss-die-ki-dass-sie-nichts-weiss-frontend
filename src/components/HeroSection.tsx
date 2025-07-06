@@ -37,7 +37,7 @@ export default function HeroSection({
                                 key={index}
                                 className="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full"
                             >
-                                <i className={`${badge.icon} text-secondary`}></i>
+                                <i className={`${badge.icon} text-primary`}></i>
                                 <span className="text-sm font-medium text-gray-700">
                   {badge.label}
                 </span>

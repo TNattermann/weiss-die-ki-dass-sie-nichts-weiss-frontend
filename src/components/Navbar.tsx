@@ -35,8 +35,8 @@ function Navbar() {
                                     className={({ isActive }) =>
                                         `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                                             isActive
-                                                ? 'text-secondary font-semibold'
-                                                : 'text-slate-600 hover:text-secondary'
+                                                ? 'text-primary font-semibold'
+                                                : 'text-slate-600 hover:text-primary'
                                         }`
                                     }
                                 >
@@ -69,8 +69,8 @@ function Navbar() {
                                     className={({ isActive }) =>
                                         `block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                                             isActive
-                                                ? 'text-secondary font-semibold bg-blue-50'
-                                                : 'text-slate-600 hover:text-secondary hover:bg-slate-100'
+                                                ? 'text-primary font-semibold bg-blue-50'
+                                                : 'text-slate-600 hover:text-primary hover:bg-slate-100'
                                         }`
                                     }
                                 >

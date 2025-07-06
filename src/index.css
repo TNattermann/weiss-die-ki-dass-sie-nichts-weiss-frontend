@@ -6,7 +6,8 @@ body {
 }
 
 @theme {
-  --color-secondary: oklch(54.6% 0.245 262.881);
+  --color-primary: oklch(54.6% 0.245 262.881);  /* text-blue-600 */
+  --color-secondary: oklch(54.6% 0.245 262.881);  /* text-blue-600 */
   --color-tertiary: hsl(247, 84%, 67%);
 }
 
