@@ -31,11 +31,11 @@ export default function TokenizationApproaches() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <button 
             onClick={() => setActiveExample("word")}
-            className={`tokenization-example p-6 border-2 border-gray-200 rounded-xl text-center hover:border-tertiary transition-all duration-300 transform hover:scale-105 ${
+            className={`tokenization-example p-6 border-2 border-gray-200 rounded-xl text-center hover:border-secondary transition-all duration-300 transform hover:scale-105 ${
               activeExample === "word" ? "active" : ""
             }`}
           >
-            <div className="w-16 h-16 flex items-center justify-center bg-tertiary/10 rounded-xl mx-auto mb-4">
+            <div className="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-xl mx-auto mb-4">
               <i className="ri-text text-primary text-2xl"></i>
             </div>
             <h3 className="font-bold text-lg mb-2">Wort-basiert</h3>

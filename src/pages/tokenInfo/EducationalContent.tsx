@@ -40,15 +40,15 @@ export default function EducationalContent() {
         <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Wichtige Konzepte</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-            <div className="w-14 h-14 flex items-center justify-center bg-tertiary/10 rounded-xl mb-6">
-              <i className="ri-brain-line text-tertiary text-2xl"></i>
+            <div className="w-14 h-14 flex items-center justify-center bg-secondary/10 rounded-xl mb-6">
+              <i className="ri-brain-line text-secondary text-2xl"></i>
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-4">Notwendigkeit von Tokens</h3>
             <p className="text-gray-700 font-semibold mb-6 leading-relaxed flex-grow">
               Das LLM selbst arbeitet nicht mit reinem Text – es verarbeitet nur numerische Token-IDs.
               Die eigentliche Sprachverarbeitung beginnt erst nach der Tokenisierung.
             </p>
-            <button className="text-tertiary font-medium flex items-center hover:text-tertiary/80 transition-colors mt-auto">
+            <button className="text-secondary font-medium flex items-center hover:text-secondary/80 transition-colors mt-auto">
               Mehr erfahren
               <i className="ri-arrow-right-line ml-2"></i>
             </button>
