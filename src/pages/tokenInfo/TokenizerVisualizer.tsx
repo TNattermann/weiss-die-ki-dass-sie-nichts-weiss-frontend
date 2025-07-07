@@ -35,8 +35,12 @@ export default function TokenizerVisualizer() {
             setTimeout(() => {
                 setShowTokenIds(true);
             }, 1000);
-        } catch (err: any) {
-            setError(err.message || "Ein unbekannter Fehler ist aufgetreten.");
+        } catch (err: unknown) {
+            if (err instanceof Error) {
+                setError(err.message);
+            } else {
+                setError("Ein unbekannter Fehler ist aufgetreten.");
+            }
         } finally {
             setLoading(false);
         }
