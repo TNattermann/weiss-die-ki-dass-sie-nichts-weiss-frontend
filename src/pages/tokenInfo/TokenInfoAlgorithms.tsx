@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Book } from "lucide-react";
 import {useEffect} from "react";
 import SubHeroSection from "../../components/SubHeroSection.tsx";
-import TokenizationApproaches from "./TokenizationApproaches.tsx";
 import SimpleTokenizerCode from "../../components/SimpleTokenizerCode.tsx";
 
 export default function EfficiencyAlgorithmsPage() {
@@ -33,13 +32,28 @@ export default function EfficiencyAlgorithmsPage() {
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Tokenisierungsalgorithmen</h2>
             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-              Tokenisierung ist der Prozess, bei dem ein Text in kleinere Einheiten – sogenannte <strong className="text-primary">Tokens</strong> – zerlegt wird. Die Wahl des Tokenisierungsalgorithmus beeinflusst maßgeblich die Effizienz, Genauigkeit und Flexibilität eines Sprachmodells. Nach der Zerlegung des Inputs wird jedem Token eine eindeutige ID zugeordnet. Diese IDs dienen als Schlüssel zu sogenannten Embedding-Vektoren – numerische Repräsentationen, die aus unzähligen Parametern bestehen.
+              Tokenisierung ist der Prozess, bei dem ein Text in kleinere Einheiten – sogenannte <strong
+                className="text-primary">Tokens</strong> – zerlegt wird. Die Wahl des Tokenisierungsalgorithmus
+              beeinflusst maßgeblich die Effizienz, Genauigkeit und Flexibilität eines Sprachmodells. Nach der Zerlegung
+              des Inputs wird jedem Token eine eindeutige ID zugeordnet. Diese IDs dienen als Schlüssel zu sogenannten
+              Embedding-Vektoren – numerische Repräsentationen, die aus unzähligen Parametern bestehen.
             </p>
 
-            <TokenizationApproaches />
+            <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
+              <p className="text-gray-800 font-medium">
+                Ob <strong className="text-primary">Leerzeichen</strong> als eigene Tokens behandelt
+                oder ignoriert werden, hängt stark vom verwendeten Tokenisierungsalgorithmus ab. Einige Tokenizer, wie der
+                von GPT-2, nehmen Leerzeichen direkt mit ins Token auf (z. B. <code>" Hello"</code> statt <code>"Hello"</code>).
+                Andere Ansätze hingegen behandeln Leerzeichen separat oder entfernen sie vollständig, insbesondere bei rein zeichenbasierten
+                Methoden. Diese Entscheidung beeinflusst, wie gut das Modell Sprachgrenzen erkennt und wie effizient es Texte kodieren kann.
+              </p>
+            </div>
 
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              Moderne Modelle wie GPT oder Gemini nutzen bevorzugt subword-basierte Ansätze. Sie ermöglichen eine hohe Ausdruckskraft bei gleichzeitig effizienter Repräsentation. Im nächsten Abschnitt schauen wir uns den wohl bekanntesten dieser Algorithmen genauer an: <strong className="text-primary">Byte-Pair Encoding (BPE)</strong>.
+              Moderne Modelle wie GPT oder Gemini nutzen bevorzugt subword-basierte Tokenisierung. Sie ermöglichen eine hohe
+              Ausdruckskraft bei gleichzeitig effizienter Repräsentation. Im nächsten Abschnitt schauen wir uns den wohl
+              bekanntesten dieser Algorithmen genauer an: <strong className="text-primary">Byte-Pair Encoding
+              (BPE)</strong>.
             </p>
           </div>
 
@@ -47,7 +61,8 @@ export default function EfficiencyAlgorithmsPage() {
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Wie BPE funktioniert</h2>
             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-              <strong className="text-primary">Byte-Pair Encoding (BPE)</strong> ist ein effizienter Algorithmus zur Tokenisierung, der ursprünglich zur Datenkompression entwickelt wurde. Bei BPE wird der Text zunächst in einzelne Zeichen zerlegt. Anschließend werden wiederholt die am häufigsten gemeinsam auftretenden Zeichenpaare zu einem neuen Token zusammengefügt. Dieser Vorgang wird iterativ durchgeführt, bis eine definierte Vokabulargröße erreicht ist. So entstehen Tokens, die häufige Teilwörter oder ganze Wörter repräsentieren.
+              <strong className="text-primary">Byte-Pair Encoding (BPE)</strong> ist ein effizienter Algorithmus zur
+              Tokenisierung, der ursprünglich zur Datenkompression entwickelt wurde. Bei BPE wird der Text zunächst in einzelne Zeichen zerlegt. Anschließend werden wiederholt die am häufigsten gemeinsam auftretenden Zeichenpaare zu einem neuen Token zusammengefügt. Dieser Vorgang wird iterativ durchgeführt, bis eine definierte Vokabulargröße erreicht ist. So entstehen Tokens, die häufige Teilwörter oder ganze Wörter repräsentieren.
             </p>
             <div className="bg-slate-50 p-8 rounded-xl">
               <h3 className="text-xl font-semibold text-slate-800 mb-4">Schritt-für-Schritt Beispiel:</h3>

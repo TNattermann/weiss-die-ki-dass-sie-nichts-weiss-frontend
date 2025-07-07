@@ -113,27 +113,6 @@ input:focus, textarea:focus {
   box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
 }
 
-.step-indicator {
-  position: relative;
-}
-
-.step-indicator::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, hsl(247, 84%, 67%), hsl(267, 73%, 66%));
-  border-radius: 1px;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.step-indicator.active::after {
-  transform: scaleX(1);
-}
-
 .font-logo {
   font-family: 'Pacifico', cursive;
 }

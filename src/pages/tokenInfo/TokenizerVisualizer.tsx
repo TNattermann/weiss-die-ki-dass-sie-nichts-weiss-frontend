@@ -2,8 +2,9 @@ import {useState} from "react";
 import {getTokens, getTokenIds} from "../../config/api";
 
 export default function TokenizerVisualizer() {
-    const [text, setText] = useState("Die Künstliche Intelligenz ist nicht intelligent! 🚀 Moderne LLMs lernen Zusammenhänge.");
+    const [text, setText] = useState("");
     const [tokenizer, setTokenizer] = useState<"simple" | "gpt2">("simple");
+    const [tokenizerUsed, setTokenizerUsed] = useState<"simple" | "gpt2">("simple");
     const [tokens, setTokens] = useState<string[]>([]);
     const [tokenIds, setTokenIds] = useState<number[]>([]);
     const [loading, setLoading] = useState(false);
@@ -25,10 +26,11 @@ export default function TokenizerVisualizer() {
 
             setTokens(tokensResponse.tokens);
             setTokenIds(tokenIdsResponse.token_ids);
+            setTokenizerUsed(tokenizer);
 
             setTimeout(() => {
                 setShowTokens(true);
-            }, 100);
+            }, 500);
 
             setTimeout(() => {
                 setShowTokenIds(true);
@@ -54,7 +56,7 @@ export default function TokenizerVisualizer() {
         <section className="py-16 px-6 bg-gray-50" id="visualizer">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">Tokenisierung ausprobieren</h2>
+                    <h2 className="text-4xl font-bold text-gray-900 mb-4"><span className="text-primary">Tokenisierung</span> ausprobieren</h2>
                     <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
                         Hier können Sie die Tokenisierung von Texten ausprobieren. Wählen Sie einen Tokenizer und sehen
                         Sie,
@@ -72,7 +74,7 @@ export default function TokenizerVisualizer() {
                             id="sample-text"
                             rows={4}
                             className="w-full px-6 py-4 border-2 border-gray-200 rounded-xl text-gray-800 bg-white focus:border-primary transition-all duration-300 resize-none"
-                            placeholder="Geben Sie hier Ihren Text ein, um die Tokenisierung zu sehen..."
+                            placeholder="Geben Sie hier Ihren Text ein, um Ihren Text zu tokenisieren"
                             value={text}
                             onChange={(e) => setText(e.target.value)}
                         />
@@ -129,16 +131,15 @@ export default function TokenizerVisualizer() {
                             <div className="flex justify-center mb-8">
                                 <div className="flex items-center space-x-4">
                                     <div
-                                        className="step-indicator active flex items-center space-x-2 px-4 py-2 bg-primary/10 rounded-full">
-                                        <i className="ri-check-line text-primary"></i>
-                                        <span className="text-primary font-medium">Tokens</span>
+                                        className={`flex items-center space-x-2 px-4 py-2 rounded-full ${showTokens ? 'active bg-primary/10' : 'bg-gray-100'}`}>
+                                        <i className={`ri-check-line ${showTokens ? 'text-primary' : 'text-gray-400'}`}></i>
+                                        <span className={`font-medium ${showTokens ? 'text-primary' : 'text-gray-400'}`}>Tokens</span>
                                     </div>
                                     <div className="w-8 h-0.5 bg-gray-300"></div>
                                     <div
-                                        className={`step-indicator flex items-center space-x-2 px-4 py-2 rounded-full ${showTokenIds ? 'active bg-primary/10' : 'bg-gray-100'}`}>
-                                        <i className={`ri-arrow-right-line ${showTokenIds ? 'text-primary' : 'text-gray-400'}`}></i>
-                                        <span
-                                            className={`font-medium ${showTokenIds ? 'text-primary' : 'text-gray-400'}`}>Token IDs</span>
+                                        className={`flex items-center space-x-2 px-4 py-2 rounded-full ${showTokenIds ? 'active bg-primary/10' : 'bg-gray-100'}`}>
+                                        <i className={`ri-check-line ${showTokenIds ? 'text-primary' : 'text-gray-400'}`}></i>
+                                        <span className={`font-medium ${showTokenIds ? 'text-primary' : 'text-gray-400'}`}>Token IDs</span>
                                     </div>
                                 </div>
                             </div>
@@ -197,22 +198,22 @@ export default function TokenizerVisualizer() {
                                     <p className="text-xs text-gray-600 mt-1">Gesamte Tokens</p>
                                 </div>
                                 <div
-                                    className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20">
+                                    className="bg-gradient-to-br from-secondary/10 to-secondary/5 p-6 rounded-xl border border-primary/20">
                                     <div className="flex items-center justify-between mb-2">
                                         <h3 className="text-sm font-medium text-gray-700">Tokenizer</h3>
-                                        <i className="ri-robot-line text-primary"></i>
+                                        <i className="ri-robot-line text-secondary"></i>
                                     </div>
-                                    <p className="text-2xl font-bold text-primary">{tokenizer === "simple" ? "Simple" : "GPT-2"}</p>
+                                    <p className="text-2xl font-bold text-secondary">{tokenizerUsed === "simple" ? "Simple" : "GPT-2"}</p>
                                     <p className="text-xs text-gray-600 mt-1">Aktueller Tokenizer</p>
                                 </div>
                                 <div
                                     className="bg-gradient-to-br from-green-100 to-green-50 p-6 rounded-xl border border-green-200">
                                     <div className="flex items-center justify-between mb-2">
-                                        <h3 className="text-sm font-medium text-gray-700">Zeichen/Token</h3>
+                                        <h3 className="text-sm font-medium text-gray-700">Tokens pro Zeichen</h3>
                                         <i className="ri-character-recognition-line text-green-600"></i>
                                     </div>
                                     <p className="text-3xl font-bold text-green-600">
-                                        {tokens.length > 0 ? Math.round((text.length / tokens.length) * 10) / 10 : 0}
+                                        {tokens.length > 0 ? Math.round((tokens.length / text.length) * 10) / 10 : 0}
                                     </p>
                                     <p className="text-xs text-gray-600 mt-1">Durchschnitt</p>
                                 </div>

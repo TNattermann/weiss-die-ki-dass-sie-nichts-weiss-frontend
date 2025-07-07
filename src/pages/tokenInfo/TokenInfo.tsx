@@ -10,7 +10,7 @@ function TokenInfo() {
             <HeroSection
                 title={
                     <>
-                        Tokens in <span className="text-primary">Sprachmodellen</span>
+                        <span className="text-primary">Tokens</span> in Sprachmodellen
                     </>
                 }
                 subtitle={
