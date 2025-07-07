@@ -56,7 +56,7 @@ Decoded text: Das Wetter wird morgen schön!
                     <h3 className="text-lg font-semibold text-gray-800">
                         SimpleTokenizerV2 in Python
                     </h3>
-                    <CopyButton value="${pythonCode}" />
+                    <CopyButton value={pythonCode} />
                 </div>
 
                 {/* Code block */}
