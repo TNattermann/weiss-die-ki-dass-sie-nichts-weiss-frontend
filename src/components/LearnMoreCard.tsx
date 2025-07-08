@@ -21,11 +21,11 @@ export default function InfoCard({
                                      linkTo,
                                  }: InfoCardProps) {
     return (
-        <div className="bg-bgColor rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+        <div className="bg-bgColor rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-bgLightLightGray flex flex-col">
             <div className={`w-14 h-14 flex items-center justify-center ${bgColor} rounded-xl mb-6`}>
                 <i className={`${icon} ${iconColor} text-2xl`}></i>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+            <h3 className="text-xl font-bold text-textDark mb-4">{title}</h3>
             <p className="text-textNormal font-semibold mb-6 leading-relaxed flex-grow">{description}</p>
                 <Link
                     to={linkTo}

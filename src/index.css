@@ -6,24 +6,33 @@ body {
 }
 
 @theme {
-  --color-primary: oklch(54.6% 0.245 262.881);      /* text-blue-600 */
+  --color-primary: oklch(54.6% 0.245 262.881);           /* text-blue-600 */
   --color-secondary: hsl(247, 84%, 67%);
-  --color-tertiary: oklch(64.6% 0.222 41.116);      /* text-orange-600 */
-  --color-textNormal: oklch(37.3% 0.034 259.733);   /* text-gray-700 */
-  --color-textMedium: oklch(27.8% 0.033 256.848);   /* text-gray-800 */
-  --color-textDark: oklch(27.9% 0.041 260.031);     /* text-slate-800 */
-  --color-bgColor: #ffffff;                         /* white */
-  --color-bgLightGray: oklch(92.8% 0.006 264.531);  /* text-gray-200 */
-  --color-bghero: oklch(98.5% 0.002 247.839);       /* text-gray-50 */
-  --color-light: oklch(92.9% 0.013 255.508);        /* text-slate-200 */
+  --color-tertiary: oklch(64.6% 0.222 41.116);           /* text-orange-600 */
+  --color-textNormal: oklch(37.3% 0.034 259.733);        /* text-gray-700 */
+  --color-textMedium: oklch(27.8% 0.033 256.848);        /* text-gray-800 */
+  --color-textDark: oklch(27.9% 0.041 260.031);          /* text-slate-800 */
+  --color-bgColor: #ffffff;                              /* white */
+  --color-bgLightGray: oklch(92.8% 0.006 264.531);       /* text-gray-200 */
+  --color-bgLightLightGray: oklch(92.8% 0.006 264.531);  /* text-gray-100 */
+  --color-bghero: oklch(98.5% 0.002 247.839);            /* text-gray-50 */
+  --color-light: oklch(92.9% 0.013 255.508);             /* text-slate-200 */
 }
 
 /* Dark Mode */
 @layer theme {
   .dark {
-    --color-primary: oklch(68.1% 0.162 75.834);
-    --color-secondary: hsl(247, 100%, 80%);
-    --color-bgContrast: #66C8B6;
+    --color-primary: oklch(74.2% 0.209 263.9);        /* text-blue-400 */
+    --color-secondary: hsl(247, 84%, 75%);            /* slightly lighter violet */
+    --color-tertiary: oklch(79.6% 0.186 40.56);       /* text-orange-400 */
+    --color-textNormal: oklch(85.1% 0.022 259.7);     /* text-gray-300 */
+    --color-textMedium: oklch(93% 0.015 260);         /* text-gray-100 */
+    --color-textDark: oklch(99% 0.005 260);           /* text-white */
+    --color-bgColor: oklch(27.2% 0.005 260);          /* slate-900 / almost black */
+    --color-bgLightGray: oklch(35% 0.01 260);         /* slate-800 / dark gray */
+    --color-bgLightLightGray: oklch(35% 0.005 264);  /* ca. Tailwind slate-800 */
+    --color-bghero: oklch(30% 0.008 260);             /* slightly lighter hero bg */
+    --color-light: oklch(60% 0.02 255);               /* slate-400 / muted light */
   }
 }
 

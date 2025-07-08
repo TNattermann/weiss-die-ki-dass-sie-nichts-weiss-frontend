@@ -135,13 +135,13 @@ export default function TokenizerVisualizer() {
                             <div className="flex justify-center mb-8">
                                 <div className="flex items-center space-x-4">
                                     <div
-                                        className={`flex items-center space-x-2 px-4 py-2 rounded-full ${showTokens ? 'active bg-primary/10' : 'bg-gray-100'}`}>
+                                        className={`flex items-center space-x-2 px-4 py-2 rounded-full ${showTokens ? 'active bg-primary/10' : 'bg-bgLightLightGray'}`}>
                                         <i className={`ri-check-line ${showTokens ? 'text-primary' : 'text-gray-400'}`}></i>
                                         <span className={`font-medium ${showTokens ? 'text-primary' : 'text-gray-400'}`}>Tokens</span>
                                     </div>
                                     <div className="w-8 h-0.5 bg-gray-300"></div>
                                     <div
-                                        className={`flex items-center space-x-2 px-4 py-2 rounded-full ${showTokenIds ? 'active bg-primary/10' : 'bg-gray-100'}`}>
+                                        className={`flex items-center space-x-2 px-4 py-2 rounded-full ${showTokenIds ? 'active bg-primary/10' : 'bg-bgLightLightGray'}`}>
                                         <i className={`ri-check-line ${showTokenIds ? 'text-primary' : 'text-gray-400'}`}></i>
                                         <span className={`font-medium ${showTokenIds ? 'text-primary' : 'text-gray-400'}`}>Token IDs</span>
                                     </div>

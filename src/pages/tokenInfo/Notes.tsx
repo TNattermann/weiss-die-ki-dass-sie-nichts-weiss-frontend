@@ -31,7 +31,7 @@ export default function Notes() {
   ];
 
   return (
-    <section className="py-16 px-6 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section className="py-16 px-6 bg-gradient-to-br from-gray-50 to-bgLightLightGray">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-textDark mb-8 text-center">Hinweise zur Tokenisierung</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

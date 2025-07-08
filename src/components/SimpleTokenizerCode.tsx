@@ -67,7 +67,7 @@ Decoded text: Das Wetter wird morgen schön!
                 {/* Output */}
                 <div className="px-6 pb-6">
                     <h4 className="font-medium text-textMedium mt-6 mb-2">Beispiel:</h4>
-                    <div className="code-block p-4 text-sm bg-gray-100 rounded custom-scrollbar overflow-x-auto whitespace-pre-wrap">
+                    <div className="code-block p-4 text-sm bg-bgLightLightGray rounded custom-scrollbar overflow-x-auto whitespace-pre-wrap">
                         <pre>{output}</pre>
                     </div>
                 </div>
