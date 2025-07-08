@@ -39,34 +39,34 @@ Decoded text: Das Wetter wird morgen schön!
 
     return (
         <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="text-3xl font-bold text-textDark mb-8">
                 <div className="flex justify-center items-center gap-3">
                     <CodeIcon className="h-8 w-8 text-primary" />
                     <span>SimpleTokenizerV2 Implementation</span>
                 </div>
             </h2>
 
-            <p className="text-lg text-slate-600 mb-6">
+            <p className="text-lg text-textNormal mb-6">
                 Hier ist eine vereinfachte Python-Implementation eines SimpleTokenizers,
                 der grundlegende Tokenisierung durchführt:
             </p>
 
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-                <div className="flex justify-between items-center border-b border-gray-200 px-6 py-4">
-                    <h3 className="text-lg font-semibold text-gray-800">
+            <div className="bg-bgColor shadow-lg rounded-lg overflow-hidden">
+                <div className="flex justify-between items-center border-b border-bgLightGray px-6 py-4">
+                    <h3 className="text-lg font-semibold text-textMedium">
                         SimpleTokenizerV2 in Python
                     </h3>
                     <CopyButton value={pythonCode} />
                 </div>
 
                 {/* Code block */}
-                <div className="code-block p-6 text-sm font-mono bg-gray-50 custom-scrollbar overflow-x-auto whitespace-pre-wrap">
+                <div className="code-block p-6 text-sm font-mono bg-bghero custom-scrollbar overflow-x-auto whitespace-pre-wrap">
                     <pre>{pythonCode}</pre>
                 </div>
 
                 {/* Output */}
                 <div className="px-6 pb-6">
-                    <h4 className="font-medium text-gray-800 mt-6 mb-2">Beispiel:</h4>
+                    <h4 className="font-medium text-textMedium mt-6 mb-2">Beispiel:</h4>
                     <div className="code-block p-4 text-sm bg-gray-100 rounded custom-scrollbar overflow-x-auto whitespace-pre-wrap">
                         <pre>{output}</pre>
                     </div>

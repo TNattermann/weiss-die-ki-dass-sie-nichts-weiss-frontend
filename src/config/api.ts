@@ -1,4 +1,4 @@
-import { BASE_URL } from './config'; // Make sure config.ts exports BASE_URL
+import { BASE_URL } from './config';
 
 interface TokensResponse {
     tokens: string[];

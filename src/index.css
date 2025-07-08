@@ -6,8 +6,25 @@ body {
 }
 
 @theme {
-  --color-primary: oklch(54.6% 0.245 262.881);  /* text-blue-600 */
+  --color-primary: oklch(54.6% 0.245 262.881);      /* text-blue-600 */
   --color-secondary: hsl(247, 84%, 67%);
+  --color-tertiary: oklch(64.6% 0.222 41.116);      /* text-orange-600 */
+  --color-textNormal: oklch(37.3% 0.034 259.733);   /* text-gray-700 */
+  --color-textMedium: oklch(27.8% 0.033 256.848);   /* text-gray-800 */
+  --color-textDark: oklch(27.9% 0.041 260.031);     /* text-slate-800 */
+  --color-bgColor: #ffffff;                         /* white */
+  --color-bgLightGray: oklch(92.8% 0.006 264.531);  /* text-gray-200 */
+  --color-bghero: oklch(98.5% 0.002 247.839);       /* text-gray-50 */
+  --color-light: oklch(92.9% 0.013 255.508);        /* text-slate-200 */
+}
+
+/* Dark Mode */
+@layer theme {
+  .dark {
+    --color-primary: oklch(68.1% 0.162 75.834);
+    --color-secondary: hsl(247, 100%, 80%);
+    --color-bgContrast: #66C8B6;
+  }
 }
 
 .neural-bg {

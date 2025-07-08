@@ -33,20 +33,20 @@ export default function Notes() {
   return (
     <section className="py-16 px-6 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Hinweise zur Tokenisierung</h2>
+        <h2 className="text-3xl font-bold text-textDark mb-8 text-center">Hinweise zur Tokenisierung</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {notes.map((note, index) => (
             <div 
               key={index}
-              className={`bg-white p-6 rounded-xl shadow-md border-l-4 ${note.borderColor}`}
+              className={`bg-bgColor p-6 rounded-xl shadow-md border-l-4 ${note.borderColor}`}
             >
               <div className="flex items-start space-x-4">
                 <div className={`w-8 h-8 flex items-center justify-center rounded-full flex-shrink-0 mt-1`}>
                   <i className={`${note.icon} text-${note.color}`}></i>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">{note.title}</h3>
-                  <p className="text-gray-700">{note.description}</p>
+                  <h3 className="font-semibold text-textDark mb-2">{note.title}</h3>
+                  <p className="text-textNormal">{note.description}</p>
                 </div>
               </div>
             </div>

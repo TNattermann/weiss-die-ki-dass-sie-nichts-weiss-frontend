@@ -6,7 +6,7 @@ import Notes from "./Notes.tsx";
 
 function TokenInfo() {
     return (
-        <div className="bg-gray-50 min-h-screen">
+        <div className="bg-bghero min-h-screen">
             <HeroSection
                 title={
                     <>
