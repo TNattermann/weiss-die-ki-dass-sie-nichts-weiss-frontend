@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getVersion } from '../../config/api'
+import { getVersion } from '../../config/api.ts'
 
 function Home() {
     const [version, setVersion] = useState<string | null>(null);

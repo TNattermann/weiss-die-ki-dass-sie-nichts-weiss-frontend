@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar.tsx'
+import AboutUs from './pages/aboutUs/AboutUs.tsx'
 import Home from './pages/home/Home.tsx'
 import TokenInfo from './pages/tokenInfo/TokenInfo.tsx'
 import Footer from './components/Footer.tsx';
@@ -19,6 +20,7 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/tokeninfo" element={<TokenInfo />} />
                         <Route path="/tokeninfo/algorithms" element={<TokenInfoAlgorithms />} />
+                        <Route path="/aboutus" element={<AboutUs />} />
                     </Routes>
                 </main>
                 <Footer />

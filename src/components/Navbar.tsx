@@ -11,6 +11,7 @@ interface NavItem {
 const navItems: NavItem[] = [
     { to: '/', label: 'Home' },
     { to: '/tokeninfo', label: 'Token-Info' },
+    { to: '/aboutus', label: 'Über Uns' }
 ];
 
 function Navbar() {
