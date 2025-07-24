@@ -10,6 +10,8 @@ export default function TokenizerVisualizer() {
     const [loading, setLoading] = useState(false);
     const [showTokens, setShowTokens] = useState(false);
     const [showTokenIds, setShowTokenIds] = useState(false);
+    const [showStatistics, setShowStatistics] = useState(false);
+
     const [error, setError] = useState<string | null>(null);
 
     const handleTokenize = async () => {
@@ -18,6 +20,8 @@ export default function TokenizerVisualizer() {
         setError(null);
         setShowTokens(false);
         setShowTokenIds(false);
+        setShowStatistics(false)
+
         try {
             const [tokensResponse, tokenIdsResponse] = await Promise.all([
                 getTokens(text, tokenizer),
@@ -35,6 +39,11 @@ export default function TokenizerVisualizer() {
             setTimeout(() => {
                 setShowTokenIds(true);
             }, 1000);
+
+            setTimeout(() => {
+                setShowStatistics(true)
+            }, 1200);
+
         } catch (err: unknown) {
             if (err instanceof Error) {
                 setError(err.message);
@@ -156,10 +165,10 @@ export default function TokenizerVisualizer() {
 
                             {/* Tokens anzeigen */}
                             {showTokens && (
-                                <div className="bg-bghero p-6 rounded-xl mb-8 fade-in">
-                                    <h3 className="text-lg font-semibold text-textMedium mb-4">Token Visualisierung:</h3>
+                                <div className="p-6 rounded-xl mb-8 fade-in">
+                                    <h3 className="text-lg font-semibold text-text-normal mb-4">Token Visualisierung:</h3>
                                     <div
-                                        className="bg-bgColor border-2 border-bgLightGray rounded-xl p-6 min-h-[120px] custom-scrollbar overflow-x-auto">
+                                        className="border-2 border-outline-dark rounded-xl p-6 min-h-[120px] custom-scrollbar overflow-x-auto">
                                         <div className="flex flex-wrap gap-2">
                                             {tokens.map((token, index) => (
                                                 <span
@@ -177,10 +186,10 @@ export default function TokenizerVisualizer() {
 
                             {/* Token IDs anzeigen */}
                             {showTokenIds && (
-                                <div className="bg-bghero p-6 rounded-xl mb-8 slide-up">
-                                    <h3 className="text-lg font-semibold text-textMedium mb-4">Token IDs:</h3>
+                                <div className="p-6 rounded-xl mb-8 slide-up">
+                                    <h3 className="text-lg font-semibold text-text-normal mb-4">Token IDs:</h3>
                                     <div
-                                        className="bg-bgColor border-2 border-bgLightGray rounded-xl p-6 min-h-[120px] custom-scrollbar overflow-x-auto">
+                                        className="border-2 border-outline-dark rounded-xl p-6 min-h-[120px] custom-scrollbar overflow-x-auto">
                                         <div className="flex flex-wrap gap-2">
                                             {tokenIds.map((id, index) => (
                                                 <span
@@ -196,38 +205,40 @@ export default function TokenizerVisualizer() {
                                 </div>
                             )}
 
-                            {/* Statistiken */}
+                            {/* Statistiken anzeigen */}
+                            {showStatistics && (
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div
                                     className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20">
                                     <div className="flex items-center justify-between mb-2">
-                                        <h3 className="text-sm font-medium text-textNormal">Token-Anzahl</h3>
-                                        <i className="ri-counter-line text-primary"></i>
+                                        <h3 className="text-sm font-medium text-text-normal">Token-Anzahl</h3>
+                                        <i className="ri-numbers-line text-primary"></i>
                                     </div>
                                     <p className="text-3xl font-bold text-primary">{tokens.length}</p>
-                                    <p className="text-xs text-textNormal mt-1">Gesamte Tokens</p>
+                                    <p className="text-xs text-text-normal mt-1">Gesamte Tokens</p>
                                 </div>
                                 <div
-                                    className="bg-gradient-to-br from-secondary/10 to-secondary/5 p-6 rounded-xl border border-primary/20">
+                                    className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20">
                                     <div className="flex items-center justify-between mb-2">
-                                        <h3 className="text-sm font-medium text-textNormal">Tokenizer</h3>
-                                        <i className="ri-robot-line text-secondary"></i>
+                                        <h3 className="text-sm font-medium text-text-normal">Tokenizer</h3>
+                                        <i className="ri-robot-line text-primary"></i>
                                     </div>
-                                    <p className="text-2xl font-bold text-secondary">{tokenizerUsed === "simple" ? "Simple" : "GPT-2"}</p>
-                                    <p className="text-xs text-textNormal mt-1">Aktueller Tokenizer</p>
+                                    <p className="text-2xl font-bold text-primary">{tokenizerUsed === "simple" ? "Simple" : "GPT-2"}</p>
+                                    <p className="text-xs text-text-normal mt-1">Aktueller Tokenizer</p>
                                 </div>
                                 <div
-                                    className="bg-gradient-to-br from-green-100 to-green-50 p-6 rounded-xl border border-green-200">
+                                    className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20">
                                     <div className="flex items-center justify-between mb-2">
-                                        <h3 className="text-sm font-medium text-textNormal">Tokens pro Zeichen</h3>
-                                        <i className="ri-character-recognition-line text-green-600"></i>
+                                        <h3 className="text-sm font-medium text-text-normal">Tokens pro Zeichen</h3>
+                                        <i className="ri-character-recognition-line text-primary"></i>
                                     </div>
-                                    <p className="text-3xl font-bold text-green-600">
+                                    <p className="text-3xl font-bold text-primary">
                                         {tokens.length > 0 ? Math.round((tokens.length / text.length) * 10) / 10 : 0}
                                     </p>
-                                    <p className="text-xs text-textNormal mt-1">Durchschnitt</p>
+                                    <p className="text-xs text-text-normal mt-1">Durchschnitt</p>
                                 </div>
                             </div>
+                            )}
                         </div>
                     )}
                 </div>
