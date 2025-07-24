@@ -89,6 +89,14 @@ function Navbar() {
                                 {label}
                             </NavLink>
                         ))}
+
+                        <NavLink
+                            to=""
+                            className="bg-error-container text-on-error-container block text-center px-3 py-3 rounded-lg text-base font-semibold transition-colors duration-200"
+                        >
+                            Newsletter
+                        </NavLink>
+
                         <div className="flex justify-center pt-3 mt-3 border-t border-primary">
                             <ThemeToggle />
                         </div>
