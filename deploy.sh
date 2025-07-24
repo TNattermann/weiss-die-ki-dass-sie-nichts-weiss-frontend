@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Konfiguration
-REMOTE_USER="username"
-REMOTE_HOST="scilab-0079.informatik.uni-kl.de"
+REMOTE_USER="n_urbansky21"
+REMOTE_HOST="aalab-weiss-die-ki-dass-sie-nichts-weiss.cs.rptu.de"
 REMOTE_DIR="/home/masterprojekt/frontend"
 REMOTE_DIST="$REMOTE_DIR/dist"
 

@@ -1,4 +1,3 @@
-import HeroSection from "../../components/HeroSection.tsx";
 import EducationalContent from "./EducationalContent.tsx";
 import TokenizerVisualizer from "./TokenizerVisualizer.tsx";
 import TokenizationApproaches from "./TokenizationApproaches.tsx";
@@ -7,7 +6,7 @@ import Notes from "./Notes.tsx";
 function TokenInfo() {
     return (
         <div className="bg-bghero min-h-screen">
-            <HeroSection
+            {/*<HeroSection
                 title={
                     <>
                         <span className="text-primary">Tokens</span> in Sprachmodellen
@@ -26,7 +25,7 @@ function TokenInfo() {
                     { label: "Live-Visualisierung", icon: "ri-cpu-line" },
                 ]}
                 scrollToId="educational-content"
-            />
+            />*/}
 
             <EducationalContent />
             <TokenizerVisualizer />

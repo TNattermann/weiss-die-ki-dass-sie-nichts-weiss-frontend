@@ -21,7 +21,7 @@ export default function HeroSection({
     };
 
     return (
-        <section className="neural-bg py-20 px-6">
+        <section className="py-20 px-6">
             <div className="max-w-5xl mx-auto text-center">
                 <h1 className="text-5xl md:text-6xl font-bold text-textDark mb-6 leading-tight">
                     {title}

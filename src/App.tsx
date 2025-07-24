@@ -4,11 +4,15 @@ import Home from './pages/home/Home.tsx'
 import TokenInfo from './pages/tokenInfo/TokenInfo.tsx'
 import Footer from './components/Footer.tsx';
 import TokenInfoAlgorithms from './pages/tokenInfo/TokenInfoAlgorithms.tsx'
+import bgImage from './assets/bg-gradient.png';
 
 function App() {
     return (
-        <div className="min-h-screen bg-slate-50 flex flex-col">
-            <Router>
+        <div
+            className="min-h-screen flex flex-col bg-no-repeat bg-cover bg-center"
+            style={{ backgroundImage: `url(${bgImage})` }}
+        >
+        <Router>
                 <Navbar />
                 <main className="flex-grow">
                     <Routes>

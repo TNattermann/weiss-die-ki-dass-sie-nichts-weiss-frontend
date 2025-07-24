@@ -20,7 +20,7 @@ body {
   --color-secondary-container-selected: oklch(81.1% 0.111 293.571);   /* text-violet-300 */
   --color-on-secondary-container: oklch(96.7% 0.067 122.328);         /* text-lime-100 */
 
-  /* === ERROR / STATUS === */
+  /* === ERROR / NEWSLETTER BUTTON === */
   --color-error: oklch(41% 0.159 10.272);                             /* text-rose-900 */
   --color-error-container: oklch(41% 0.159 10.272);                   /* text-rose-900 */
   --color-on-error-container: oklch(98.6% 0.031 120.757);             /* text-lime-50 */
@@ -29,24 +29,9 @@ body {
   --color-text-normal: oklch(98.6% 0.031 120.757);                    /* text-lime-50 */
 }
 
-.bg-gradient-diagonal {
-  background: linear-gradient(135deg, #172554, oklch(96.7% 0.02 122.328));
-}
-
 /* Dark Mode */
 @layer theme {
   .dark {
-    --color-primary: oklch(74.2% 0.209 263.9);        /* text-blue-400 */
-    --color-secondary: hsl(247, 84%, 75%);            /* slightly lighter violet */
-    --color-tertiary: oklch(79.6% 0.186 40.56);       /* text-orange-400 */
-    --color-textNormal: oklch(85.1% 0.022 259.7);     /* text-gray-300 */
-    --color-textMedium: oklch(93% 0.015 260);         /* text-gray-100 */
-    --color-textDark: oklch(99% 0.005 260);           /* text-white */
-    --color-bgColor: oklch(27.2% 0.005 260);          /* slate-900 / almost black */
-    --color-bgLightGray: oklch(35% 0.01 260);         /* slate-800 / dark gray */
-    --color-bgLightLightGray: oklch(35% 0.005 264);  /* ca. Tailwind slate-800 */
-    --color-bghero: oklch(30% 0.008 260);             /* slightly lighter hero bg */
-    --color-light: oklch(60% 0.02 255);               /* slate-400 / muted light */
   }
 }
 
