@@ -107,7 +107,7 @@ export default function TokenizerVisualizer() {
                                     className={`rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg
                                     ${
                                         tokenizer === t.id
-                                            ? 'bg-primary-container-selected text-primary-container scale-103'
+                                            ? 'bg-primary-container-selected text-on-primary-container-selected scale-103'
                                             : 'bg-primary-container text-on-primary-container'
                                     }`}
                                 >
@@ -123,7 +123,7 @@ export default function TokenizerVisualizer() {
                         <button
                             onClick={handleTokenize}
                             disabled={loading || !text.trim()}
-                            className="bg-primary-container-selected text-primary-container px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                            className="bg-primary-container-selected text-on-primary-container-selected px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                         >
                             <span>{loading ? "Tokenisierung läuft..." : "Text tokenisieren"}</span>
                             {loading && <div className="loading-spinner inline-block ml-2"></div>}

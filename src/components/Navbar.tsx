@@ -36,7 +36,7 @@ function Navbar() {
                             className={({ isActive }) =>
                                 `bg-primary-container text-on-primary-container rounded-full px-6 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:brightness-110 hover:shadow-lg ${
                                     isActive
-                                        ? 'bg-primary-container-selected text-primary-container'
+                                        ? 'bg-primary-container-selected text-on-primary-container-selected'
                                         : ''
                                 }`
                             }
@@ -81,7 +81,7 @@ function Navbar() {
                                 className={({ isActive }) =>
                                     `block text-center px-3 py-3 rounded-lg text-base font-semibold transition-colors duration-200 ${
                                         isActive
-                                            ? 'bg-primary-container-selected text-primary-container'
+                                            ? 'bg-primary-container-selected text-on-primary-container-selected'
                                             : 'bg-primary-container text-on-primary-container'
                                     }`
                                 }
