@@ -6,17 +6,31 @@ body {
 }
 
 @theme {
-  --color-primary: oklch(54.6% 0.245 262.881);           /* text-blue-600 */
-  --color-secondary: hsl(247, 84%, 67%);
-  --color-tertiary: oklch(64.6% 0.222 41.116);           /* text-orange-600 */
-  --color-textNormal: oklch(37.3% 0.034 259.733);        /* text-gray-700 */
-  --color-textMedium: oklch(27.8% 0.033 256.848);        /* text-gray-800 */
-  --color-textDark: oklch(27.9% 0.041 260.031);          /* text-slate-800 */
-  --color-bgColor: #ffffff;                              /* white */
-  --color-bgLightGray: oklch(92.8% 0.006 264.531);       /* text-gray-200 */
-  --color-bgLightLightGray: oklch(92.8% 0.006 264.531);  /* text-gray-100 */
-  --color-bghero: oklch(98.5% 0.002 247.839);            /* text-gray-50 */
-  --color-light: oklch(92.9% 0.013 255.508);             /* text-slate-200 */
+  /* === PRIMARY COLORS === */
+  --color-primary: oklch(96.7% 0.067 122.328);                        /* text-lime-100 */
+  --color-primary-container: oklch(28.2% 0.091 267.935);              /* text-blue-950 */
+  --color-primary-container-selected: oklch(96.7% 0.067 122.328);     /* text-lime-100 */
+  --color-on-primary-container: oklch(96.7% 0.067 122.328);           /* text-lime-100 */
+
+  --color-outline: oklch(28.2% 0.091 267.935);                        /* text-blue-950 */
+
+  /* === SECONDARY COLORS === */
+  --color-secondary: oklch(81.1% 0.111 293.571);                      /* text-violet-300 */
+  --color-secondary-container: oklch(78.5% 0.115 274.713);            /* text-indigo-300 */
+  --color-secondary-container-selected: oklch(81.1% 0.111 293.571);   /* text-violet-300 */
+  --color-on-secondary-container: oklch(96.7% 0.067 122.328);         /* text-lime-100 */
+
+  /* === ERROR / STATUS === */
+  --color-error: oklch(41% 0.159 10.272);                             /* text-rose-900 */
+  --color-error-container: oklch(41% 0.159 10.272);                   /* text-rose-900 */
+  --color-on-error-container: oklch(98.6% 0.031 120.757);             /* text-lime-50 */
+
+  /* === TEXT === */
+  --color-text-normal: oklch(98.6% 0.031 120.757);                    /* text-lime-50 */
+}
+
+.bg-gradient-diagonal {
+  background: linear-gradient(135deg, #172554, oklch(96.7% 0.02 122.328));
 }
 
 /* Dark Mode */
