@@ -57,27 +57,27 @@ export default function TokenizerVisualizer() {
     };
 
     return (
-        <section className="py-16 px-6 bg-bghero" id="visualizer">
+        <section className="py-16 px-6" id="visualizer">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold text-textDark mb-4"><span className="text-primary">Tokenisierung</span> ausprobieren</h2>
-                    <p className="text-xl text-textNormal max-w-3xl mx-auto leading-relaxed">
+                    <h1 className="text-5xl font-bold text-center text-primary mb-6">Tokenisierung ausprobieren</h1>
+                    <p className="text-xl text-text-normal max-w-3xl mx-auto leading-relaxed">
                         Hier können Sie die Tokenisierung von Texten ausprobieren. Wählen Sie einen Tokenizer und sehen
                         Sie,
                         wie Ihr Text in Tokens und Token-IDs zerlegt wird.
                     </p>
                 </div>
 
-                <div className="bg-bgColor shadow-xl rounded-2xl p-8 mb-12">
+                <div className="shadow-xl rounded-2xl p-8 mb-12"> {/* Currently no background color */}
                     {/* Input Section */}
                     <div className="mb-8">
-                        <label htmlFor="sample-text" className="block text-lg font-semibold text-textMedium mb-3">
+                        <label htmlFor="sample-text" className="block text-lg font-semibold text-text-normal mb-3">
                             Text eingeben:
                         </label>
                         <textarea
                             id="sample-text"
                             rows={4}
-                            className="w-full px-6 py-4 border-2 border-bgLightGray rounded-xl text-textMedium bg-bgColor focus:border-primary transition-all duration-300 resize-none"
+                            className="w-full px-6 py-4 border-2 border-outline-dark rounded-xl text-text-normal focus:border-primary transition-all duration-300 resize-none"
                             placeholder="Geben Sie hier Ihren Text ein, um ihn zu tokenisieren"
                             value={text}
                             onChange={(e) => setText(e.target.value)}
@@ -86,7 +86,7 @@ export default function TokenizerVisualizer() {
 
                     {/* Tokenizer Auswahl */}
                     <div className="mb-8">
-                        <h3 className="text-lg font-semibold text-textMedium mb-4">Tokenizer auswählen:</h3>
+                        <h3 className="text-lg font-semibold text-text-normal mb-4">Tokenizer auswählen:</h3>
                         <div className="flex flex-wrap gap-3">
                             {[
                                 {id: "simple", label: "Simple Tokenizer", icon: "ri-text-spacing"},
@@ -95,9 +95,15 @@ export default function TokenizerVisualizer() {
                                 <button
                                     key={t.id}
                                     onClick={() => setTokenizer(t.id as "simple" | "gpt2")}
-                                    className={`tokenization-method px-4 py-2 border-2 rounded-full transition-all duration-300 hover:scale-105 ${tokenizer === t.id ? 'active' : 'border-bgLightGray'}`}
+                                    className={`rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg
+                                    ${
+                                        tokenizer === t.id
+                                            ? 'bg-primary-container-selected text-primary-container scale-103'
+                                            : 'bg-primary-container text-on-primary-container'
+                                    }`}
                                 >
-                                    <i className={`${t.icon} mr-2`}></i>{t.label}
+                                    <i className={`${t.icon} mr-2`}></i>
+                                    {t.label}
                                 </button>
                             ))}
                         </div>
@@ -108,7 +114,7 @@ export default function TokenizerVisualizer() {
                         <button
                             onClick={handleTokenize}
                             disabled={loading || !text.trim()}
-                            className="bg-primary text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                            className="bg-primary-container-selected text-primary-container px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                         >
                             <span>{loading ? "Tokenisierung läuft..." : "Text tokenisieren"}</span>
                             {loading && <div className="loading-spinner inline-block ml-2"></div>}
@@ -117,12 +123,12 @@ export default function TokenizerVisualizer() {
 
                     {/* Error */}
                     {error && (
-                        <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-8">
+                        <div className="bg-error-container text-on-error-container border-red-200 rounded-xl p-6 mb-8">
                             <div className="flex items-center">
-                                <i className="ri-error-warning-line text-red-500 text-xl mr-3"></i>
+                                <i className="ri-error-warning-line text-error-container text-xl mr-3"></i>
                                 <div>
-                                    <h3 className="font-semibold text-red-800 mb-1">Fehler bei der Tokenisierung</h3>
-                                    <p className="text-red-700">{error}</p>
+                                    <h3 className="font-semibold text-on-error-container mb-1">Fehler bei der Tokenisierung</h3>
+                                    <p className="text-on-error-container">{error}</p>
                                 </div>
                             </div>
                         </div>

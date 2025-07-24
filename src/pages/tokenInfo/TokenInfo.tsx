@@ -1,7 +1,8 @@
-import EducationalContent from "./EducationalContent.tsx";
+import TokenIntroduction from "./TokenIntroduction.tsx";
 import TokenizerVisualizer from "./TokenizerVisualizer.tsx";
-import TokenizationApproaches from "./TokenizationApproaches.tsx";
-import Notes from "./Notes.tsx";
+// import TokenizationApproaches from "./TokenizationApproaches.tsx";
+// import Notes from "./Notes.tsx";
+// import TokenConcepts from "./TokenConcepts.tsx";
 
 function TokenInfo() {
     return (
@@ -27,10 +28,12 @@ function TokenInfo() {
                 scrollToId="educational-content"
             />*/}
 
-            <EducationalContent />
+            <TokenIntroduction />
             <TokenizerVisualizer />
-            <TokenizationApproaches />
-            <Notes />
+
+            {/*<TokenConcepts />*/}
+            {/*<TokenizationApproaches />*/}
+            {/*<Notes />*/}
         </div>
     );
 }

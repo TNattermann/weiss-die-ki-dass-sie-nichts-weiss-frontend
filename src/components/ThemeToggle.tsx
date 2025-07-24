@@ -38,7 +38,7 @@ const ThemeToggle = () => {
                 checked={enabled}
                 onChange={toggleTheme}
                 className={`${
-                    enabled ? 'bg-outline' : 'bg-outline'
+                    enabled ? 'bg-outline-dark' : 'bg-outline-dark'
                 } relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none`}
             >
         <span

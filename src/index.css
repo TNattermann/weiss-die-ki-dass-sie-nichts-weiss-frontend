@@ -9,16 +9,17 @@ body {
   /* === PRIMARY COLORS === */
   --color-primary: oklch(96.7% 0.067 122.328);                        /* text-lime-100 */
   --color-primary-container: oklch(28.2% 0.091 267.935);              /* text-blue-950 */
-  --color-primary-container-selected: oklch(96.7% 0.067 122.328);     /* text-lime-100 */
   --color-on-primary-container: oklch(96.7% 0.067 122.328);           /* text-lime-100 */
+  --color-primary-container-selected: oklch(96.7% 0.067 122.328);     /* text-lime-100 */
 
-  --color-outline: oklch(28.2% 0.091 267.935);                        /* text-blue-950 */
+  --color-outline: oklch(96.7% 0.067 122.328);                        /* text-lime-100 */
+  --color-outline-dark: oklch(28.2% 0.091 267.935);                   /* text-blue-950 */
 
   /* === SECONDARY COLORS === */
   --color-secondary: oklch(81.1% 0.111 293.571);                      /* text-violet-300 */
   --color-secondary-container: oklch(78.5% 0.115 274.713);            /* text-indigo-300 */
-  --color-secondary-container-selected: oklch(81.1% 0.111 293.571);   /* text-violet-300 */
   --color-on-secondary-container: oklch(96.7% 0.067 122.328);         /* text-lime-100 */
+  --color-secondary-container-selected: oklch(81.1% 0.111 293.571);   /* text-violet-300 */
 
   /* === ERROR / NEWSLETTER BUTTON === */
   --color-error: oklch(41% 0.159 10.272);                             /* text-rose-900 */
@@ -32,6 +33,28 @@ body {
 /* Dark Mode */
 @layer theme {
   .dark {
+    /* === PRIMARY COLORS === */
+    --color-primary: oklch(91.3% 0.083 125);
+    --color-primary-container: oklch(18% 0.07 267.935);
+    --color-on-primary-container: oklch(91.3% 0.083 125);
+    --color-primary-container-selected: oklch(91.3% 0.083 125);
+
+    --color-outline: oklch(91.3% 0.083 125);
+    --color-outline-dark: oklch(20% 0.09 267.935);
+
+    /* === SECONDARY COLORS === */
+    --color-secondary: oklch(82% 0.12 295);
+    --color-secondary-container: oklch(30% 0.11 275);
+    --color-on-secondary-container: oklch(91.3% 0.083 125);
+    --color-secondary-container-selected: oklch(82% 0.12 295);
+
+    /* === ERROR / NEWSLETTER BUTTON === */
+    --color-error: oklch(65% 0.18 25);
+    --color-error-container: oklch(28% 0.17 15);
+    --color-on-error-container: oklch(91.3% 0.083 125);
+
+    /* === TEXT === */
+    --color-text-normal: oklch(91.3% 0.083 125);
   }
 }
 
@@ -63,20 +86,20 @@ button:disabled {
 
 .token-word {
   background-color: rgba(99, 102, 241, 0.15);
-  color: hsl(247, 84%, 67%);
+  color: var(--color-primary);
   border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
 .token-subword {
-  background-color: rgba(139, 92, 246, 0.15);
-  color: hsl(267, 73%, 66%);
-  border: 1px solid rgba(139, 92, 246, 0.3);
+  background-color: rgba(99, 102, 241, 0.15);
+  color: var(--color-primary);
+  border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
 .token-special {
-  background-color: rgba(249, 115, 22, 0.15);
-  color: hsl(25, 95%, 53%);
-  border: 1px solid rgba(249, 115, 22, 0.3);
+  background-color: rgba(99, 102, 241, 0.15);
+  color: var(--color-secondary);
+  border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
 .token-id {
@@ -84,12 +107,6 @@ button:disabled {
   color: hsl(142, 71%, 45%);
   border: 1px solid rgba(34, 197, 94, 0.3);
   font-weight: 600;
-}
-
-.tokenization-method.active {
-  background-color: rgba(99, 102, 241, 0.1);
-  border-color: hsl(247, 84%, 67%);
-  color: hsl(247, 84%, 67%);
 }
 
 .tokenization-example.active {
