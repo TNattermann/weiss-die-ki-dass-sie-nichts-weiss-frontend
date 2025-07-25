@@ -43,7 +43,7 @@ class SimpleTokenizerV2:
                     <h2 className="text-3xl font-bold text-textDark mb-8">
                         <div className="flex justify-center items-center gap-3">
                             <CodeIcon className="h-12 w-12 text-primary"/>
-                            <span className="text-5xl font-bold text-center text-primary">SimpleTokenizerV2 Implementation</span>
+                            <span className="text-5xl font-bold text-center text-primary break-words">SimpleTokenizer Implementation</span>
 
                         </div>
                     </h2>
