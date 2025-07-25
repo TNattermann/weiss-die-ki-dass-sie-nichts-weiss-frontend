@@ -4,14 +4,11 @@ import AboutUs from './pages/aboutUs/AboutUs.tsx'
 import Home from './pages/home/Home.tsx'
 import TokenPage from './pages/tokenInfo/TokenPage.tsx'
 import Footer from './components/Footer.tsx';
-import bgImage from './assets/bg-gradient.png';
 
 function App() {
     return (
-        <div
-            className="min-h-screen flex flex-col bg-no-repeat bg-cover bg-center"
-            style={{ backgroundImage: `url(${bgImage})` }}
-        >
+        <div className="bg-image min-h-screen flex flex-col bg-no-repeat bg-cover bg-center">
+
         <Router>
                 <Navbar />
                 <main className="flex-grow">
