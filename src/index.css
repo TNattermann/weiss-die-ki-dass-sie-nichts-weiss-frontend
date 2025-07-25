@@ -68,7 +68,7 @@ body {
 
 @layer utilities {
   .bg-image {
-    /* Uses an absolute path to reference a public folder in the React project -> supress error */
+    /* Uses an absolute path to reference a public folder in the React project -> suppress error */
     /* noinspection CssUnknownTarget */
     background-image: url('/bg-gradient.png');
   }

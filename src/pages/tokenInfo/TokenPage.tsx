@@ -9,7 +9,7 @@ import TokenMainTakeaways from "./TokenMainTakeaways.tsx";
 
 function TokenPage() {
     return (
-        <div className="bg-bghero min-h-screen">
+        <div className="min-h-screen">
             {/*<HeroSection
                 title={
                     <>
