@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar.tsx'
 import AboutUs from './pages/aboutUs/AboutUs.tsx'
 import Home from './pages/home/Home.tsx'
-import TokenInfo from './pages/tokenInfo/TokenInfo.tsx'
+import TokenPage from './pages/tokenInfo/TokenPage.tsx'
 import Footer from './components/Footer.tsx';
 import bgImage from './assets/bg-gradient.png';
 
@@ -17,7 +17,7 @@ function App() {
                 <main className="flex-grow">
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/tokeninfo" element={<TokenInfo />} />
+                        <Route path="/tokeninfo" element={<TokenPage />} />
                         <Route path="/aboutus" element={<AboutUs />} />
                     </Routes>
                 </main>

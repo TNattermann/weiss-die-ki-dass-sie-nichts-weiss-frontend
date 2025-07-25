@@ -7,7 +7,7 @@ import TokenBPE from "./TokenBPE.tsx";
 import SimpleTokenizerCode from "../../components/SimpleTokenizerCode.tsx";
 import TokenMainTakeaways from "./TokenMainTakeaways.tsx";
 
-function TokenInfo() {
+function TokenPage() {
     return (
         <div className="bg-bghero min-h-screen">
             {/*<HeroSection
@@ -47,4 +47,4 @@ function TokenInfo() {
     );
 }
 
-export default TokenInfo;
+export default TokenPage;
