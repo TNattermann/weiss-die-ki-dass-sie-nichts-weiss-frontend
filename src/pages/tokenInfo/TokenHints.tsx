@@ -1,4 +1,4 @@
-export default function Notes() {
+export default function TokenHints() {
   const notes = [
     {
       icon: "ri-information-line",

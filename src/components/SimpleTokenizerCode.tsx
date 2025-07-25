@@ -1,4 +1,4 @@
-import { Code as CodeIcon } from "lucide-react";
+import {Code as CodeIcon} from "lucide-react";
 import {CopyButton} from "./CopyButton.tsx";
 
 export default function SimpleTokenizerCode() {
@@ -31,48 +31,53 @@ class SimpleTokenizerV2:
         return text
 `.trim();
 
-    const output = `
-Tokens: ['Das', 'Wetter', 'wird', 'morgen', 'schön', '!']
-Token IDs: [1, 2, 5, 3, 4, 0]
-Decoded text: Das Wetter wird morgen schön!
-`.trim();
+    const output =
+        `Tokens: ['Das', 'Wetter', 'wird', 'morgen', 'schön', '!']
+        Token IDs: [1, 2, 5, 3, 4, 0]
+        Decoded text: Das Wetter wird morgen schön!`.trim();
 
     return (
-        <div className="mb-12">
-            <h2 className="text-3xl font-bold text-textDark mb-8">
-                <div className="flex justify-center items-center gap-3">
-                    <CodeIcon className="h-12 w-12 text-primary" />
-                    <span className="text-5xl font-bold text-center text-primary">SimpleTokenizerV2 Implementation</span>
+        <section className="py-16 px-6">
+            <div className="max-w-6xl mx-auto">
+                <div className="mb-12">
+                    <h2 className="text-3xl font-bold text-textDark mb-8">
+                        <div className="flex justify-center items-center gap-3">
+                            <CodeIcon className="h-12 w-12 text-primary"/>
+                            <span className="text-5xl font-bold text-center text-primary">SimpleTokenizerV2 Implementation</span>
 
-                </div>
-            </h2>
+                        </div>
+                    </h2>
 
-            <p className="text-lg text-text-normal mb-6">
-                Hier ist eine vereinfachte Python-Implementation eines SimpleTokenizers,
-                der grundlegende Tokenisierung durchführt:
-            </p>
+                    <p className="text-lg text-text-normal mb-6">
+                        Hier ist eine vereinfachte Python-Implementation eines SimpleTokenizers,
+                        der grundlegende Tokenisierung durchführt:
+                    </p>
 
-            <div className="shadow-xl rounded-2xl p-8 mb-12">
-                <div className="text-outline-dark flex justify-between items-center border-b px-6 py-4 mb-5">
-                    <h3 className="text-lg font-semibold text-primary">
-                        SimpleTokenizerV2 in Python
-                    </h3>
-                    <CopyButton value={pythonCode} />
-                </div>
+                    <div className="shadow-xl rounded-2xl p-8 mb-12">
+                        <div className="text-outline-dark flex justify-between items-center border-b px-6 py-4 mb-5">
+                            <h3 className="text-lg font-semibold text-primary">
+                                SimpleTokenizerV2 in Python
+                            </h3>
+                            <CopyButton value={pythonCode}/>
+                        </div>
 
-                {/* Code block */}
-                <div className="text-text-normal bg-primary/5 code-block p-6 text-sm font-mono custom-scrollbar overflow-x-auto whitespace-pre-wrap rounded-2xl">
-                    <pre>{pythonCode}</pre>
-                </div>
+                        {/* Code block */}
+                        <div
+                            className="text-text-normal bg-primary/5 code-block p-6 text-sm font-mono custom-scrollbar overflow-x-auto whitespace-pre-wrap rounded-2xl">
+                            <pre>{pythonCode}</pre>
+                        </div>
 
-                {/* Output */}
-                <div className="mt-6">
-                    <h4 className="font-medium text-primary mb-2 px-6">Beispiel:</h4>
-                    <div className="text-text-normal bg-primary/5 code-block p-6 text-sm font-mono custom-scrollbar overflow-x-auto whitespace-pre-wrap rounded-2xl">
-                        <pre>{output}</pre>
+                        {/* Output */}
+                        <div className="mt-6">
+                            <h3 className="font-medium text-xl text-primary mb-2">Beispiel:</h3>
+                            <div
+                                className="text-text-normal bg-primary/5 code-block p-6 text-sm font-mono custom-scrollbar overflow-x-auto whitespace-pre-wrap rounded-2xl">
+                                <pre>{output}</pre>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

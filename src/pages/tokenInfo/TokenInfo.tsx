@@ -1,9 +1,11 @@
 import TokenIntroduction from "./TokenIntroduction.tsx";
 import TokenizerVisualizer from "./TokenizerVisualizer.tsx";
 import TokenizationApproaches from "./TokenizationApproaches.tsx";
-import Notes from "./Notes.tsx";
-import TokenInfoAlgorithms from "./TokenInfoAlgorithms.tsx";
-// import TokenConcepts from "./TokenConcepts.tsx";
+import TokenHints from "./TokenHints.tsx";
+import TokenAlgorithmsInfo from "./TokenAlgorithmsInfo.tsx";
+import TokenBPE from "./TokenBPE.tsx";
+import SimpleTokenizerCode from "../../components/SimpleTokenizerCode.tsx";
+import TokenMainTakeaways from "./TokenMainTakeaways.tsx";
 
 function TokenInfo() {
     return (
@@ -35,8 +37,12 @@ function TokenInfo() {
             {/*<TokenConcepts /> not needed*/}
 
             <TokenizationApproaches />
-            <Notes />
-            <TokenInfoAlgorithms />
+            <TokenHints />
+
+            <TokenAlgorithmsInfo />
+            <TokenBPE />
+            <SimpleTokenizerCode />
+            <TokenMainTakeaways />
         </div>
     );
 }
