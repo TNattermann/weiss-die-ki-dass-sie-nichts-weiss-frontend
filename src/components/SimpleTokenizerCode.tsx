@@ -41,33 +41,34 @@ Decoded text: Das Wetter wird morgen schön!
         <div className="mb-12">
             <h2 className="text-3xl font-bold text-textDark mb-8">
                 <div className="flex justify-center items-center gap-3">
-                    <CodeIcon className="h-8 w-8 text-primary" />
-                    <span>SimpleTokenizerV2 Implementation</span>
+                    <CodeIcon className="h-12 w-12 text-primary" />
+                    <span className="text-5xl font-bold text-center text-primary">SimpleTokenizerV2 Implementation</span>
+
                 </div>
             </h2>
 
-            <p className="text-lg text-textNormal mb-6">
+            <p className="text-lg text-text-normal mb-6">
                 Hier ist eine vereinfachte Python-Implementation eines SimpleTokenizers,
                 der grundlegende Tokenisierung durchführt:
             </p>
 
-            <div className="bg-bgColor shadow-lg rounded-lg overflow-hidden">
-                <div className="flex justify-between items-center border-b border-bgLightGray px-6 py-4">
-                    <h3 className="text-lg font-semibold text-textMedium">
+            <div className="shadow-xl rounded-2xl p-8 mb-12">
+                <div className="text-outline-dark flex justify-between items-center border-b px-6 py-4 mb-5">
+                    <h3 className="text-lg font-semibold text-primary">
                         SimpleTokenizerV2 in Python
                     </h3>
                     <CopyButton value={pythonCode} />
                 </div>
 
                 {/* Code block */}
-                <div className="code-block p-6 text-sm font-mono bg-bghero custom-scrollbar overflow-x-auto whitespace-pre-wrap">
+                <div className="text-text-normal bg-primary/5 code-block p-6 text-sm font-mono custom-scrollbar overflow-x-auto whitespace-pre-wrap rounded-2xl">
                     <pre>{pythonCode}</pre>
                 </div>
 
                 {/* Output */}
-                <div className="px-6 pb-6">
-                    <h4 className="font-medium text-textMedium mt-6 mb-2">Beispiel:</h4>
-                    <div className="code-block p-4 text-sm bg-bgLightLightGray rounded custom-scrollbar overflow-x-auto whitespace-pre-wrap">
+                <div className="mt-6">
+                    <h4 className="font-medium text-primary mb-2 px-6">Beispiel:</h4>
+                    <div className="text-text-normal bg-primary/5 code-block p-6 text-sm font-mono custom-scrollbar overflow-x-auto whitespace-pre-wrap rounded-2xl">
                         <pre>{output}</pre>
                     </div>
                 </div>

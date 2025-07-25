@@ -21,12 +21,9 @@ export function CopyButton({ value}: CopyButtonProps) {
     return (
         <motion.button
             onClick={handleCopy}
-            className="group relative rounded-md p-1.5 text-zinc-400"
+            className="group relative rounded-md p-1.5 text-primary"
             aria-label="Copy command"
-            whileHover={{
-                backgroundColor: "rgba(255, 255, 255, 0.1)",
-                color: "gray",
-            }}
+            whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.9 }}
         >
             <AnimatePresence mode="wait">
