@@ -1,7 +1,7 @@
 import TokenIntroduction from "./TokenIntroduction.tsx";
 import TokenizerVisualizer from "./TokenizerVisualizer.tsx";
 import TokenizationApproaches from "./TokenizationApproaches.tsx";
-// import Notes from "./Notes.tsx";
+import Notes from "./Notes.tsx";
 // import TokenConcepts from "./TokenConcepts.tsx";
 
 function TokenInfo() {
@@ -33,7 +33,7 @@ function TokenInfo() {
 
             {/*<TokenConcepts />*/}
             <TokenizationApproaches />
-            {/*<Notes />*/}
+            <Notes />
         </div>
     );
 }

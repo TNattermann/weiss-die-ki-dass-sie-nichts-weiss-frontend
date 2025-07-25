@@ -9,8 +9,8 @@ export default function Notes() {
     },
     {
       icon: "ri-global-line",
-      color: "secondary",
-      borderColor: "border-secondary",
+      color: "primary",
+      borderColor: "border-primary",
       title: "Sprach- und Kontextabhängig",
       description: "Die Tokenisierung ist sprach- und kontextabhängig. Dasselbe Wort kann je nach Sprache oder benachbarten Tokens unterschiedlich zerlegt werden."
     },
@@ -23,30 +23,30 @@ export default function Notes() {
     },
     {
       icon: "ri-settings-4-line",
-      color: "secondary",
-      borderColor: "border-secondary",
+      color: "primary",
+      borderColor: "border-primary",
       title: "Tokenizer-Wahl",
       description: "Die Wahl des Tokenizers (z.B. GPT-2 vs. GPT-4 Tokenizer) beeinflusst, wie der Text aufgelöst wird."
     }
   ];
 
   return (
-    <section className="py-16 px-6 bg-gradient-to-br from-gray-50 to-bgLightLightGray">
+    <section className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-textDark mb-8 text-center">Hinweise zur Tokenisierung</h2>
+        <h1 className="text-5xl font-bold text-center text-primary mb-10">Hinweise zur Tokenisierung</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {notes.map((note, index) => (
             <div 
               key={index}
-              className={`bg-bgColor p-6 rounded-xl shadow-md border-l-4 ${note.borderColor}`}
+              className={`p-6 rounded-xl shadow-md border-l-4 ${note.borderColor}`}
             >
               <div className="flex items-start space-x-4">
                 <div className={`w-8 h-8 flex items-center justify-center rounded-full flex-shrink-0 mt-1`}>
                   <i className={`${note.icon} text-${note.color}`}></i>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-textDark mb-2">{note.title}</h3>
-                  <p className="text-textNormal">{note.description}</p>
+                  <h3 className="font-semibold text-primary mb-2">{note.title}</h3>
+                  <p className="text-text-normal">{note.description}</p>
                 </div>
               </div>
             </div>
