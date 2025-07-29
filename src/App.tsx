@@ -3,7 +3,7 @@ import Navbar from './components/Navbar.tsx'
 import AboutUs from './pages/aboutUs/AboutUs.tsx'
 import Home from './pages/home/Home.tsx'
 import TokenPage from './pages/tokenInfo/TokenPage.tsx'
-import AttentionPage from './pages/attention/attentionPage.tsx'
+import AttentionPage from "./pages/attention/AttentionPage.tsx";
 import Footer from './components/Footer.tsx';
 
 function App() {
