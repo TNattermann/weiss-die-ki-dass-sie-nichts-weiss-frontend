@@ -6,6 +6,7 @@ import TokenAlgorithmsInfo from "./TokenAlgorithmsInfo.tsx";
 import TokenBPE from "./TokenBPE.tsx";
 import SimpleTokenizerCode from "../../components/SimpleTokenizerCode.tsx";
 import TokenMainTakeaways from "./TokenMainTakeaways.tsx";
+import SectionSidebar from "../../components/SectionSidebar.tsx";
 
 function TokenPage() {
     return (
@@ -31,18 +32,35 @@ function TokenPage() {
                 scrollToId="educational-content"
             />*/}
 
-            <TokenIntroduction />
-            <TokenizerVisualizer />
+            <div className="min-h-screen">
+                <div className="px-10 py-10">
+                    <SectionSidebar
+                        sections={[
+                            { id: "introduction", title: "Einführung" },
+                            { id: "visualizer", title: "Visualizer" },
+                            { id: "approaches", title: "Ansätze" },
+                            { id: "hints", title: "Hinweise" },
+                            { id: "algorithms", title: "Algorithmen" },
+                            { id: "bpe", title: "BPE" },
+                            { id: "code", title: "Tokenizer Code" },
+                            { id: "takeaways", title: "Zusammenfassung" },
+                        ]}
+                    />
+                </div>
 
-            {/*<TokenConcepts /> not needed*/}
+                {/* Content mittig begrenzen */}
+                <main className="flex-1 max-w-7xl mx-auto space-y-24 px-4">
+                    <div id="introduction"><TokenIntroduction /></div>
+                    <div id="visualizer"><TokenizerVisualizer /></div>
+                    <div id="approaches"><TokenizationApproaches /></div>
+                    <div id="hints"><TokenHints /></div>
+                    <div id="algorithms"><TokenAlgorithmsInfo /></div>
+                    <div id="bpe"><TokenBPE /></div>
+                    <div id="code"><SimpleTokenizerCode /></div>
+                    <div id="takeaways"><TokenMainTakeaways /></div>
+                </main>
+            </div>
 
-            <TokenizationApproaches />
-            <TokenHints />
-
-            <TokenAlgorithmsInfo />
-            <TokenBPE />
-            <SimpleTokenizerCode />
-            <TokenMainTakeaways />
         </div>
     );
 }
