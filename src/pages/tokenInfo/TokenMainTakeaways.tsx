@@ -7,26 +7,31 @@ export default function TokenMainTakeaways() {
       <div className="max-w-6xl mx-auto">
 
         {/* Key Takeaways */}
-        <div className="bg-gradient-to-r from-primary text-outline-dark text-bgColor p-8 rounded-2xl">
-          <h2 className="text-on-primary-container-selected text-2xl font-bold mb-6 flex items-center">
+        <h1 className="text-5xl font-bold text-center text-primary mb-6">
+          <div className="flex justify-center items-center gap-3">
             <Book className="mr-3 h-7 w-7" />
-            Wichtige Erkenntnisse
-          </h2>
+            <span className="text-5xl font-bold text-center text-primary break-words">Wichtige Erkenntnisse</span>
+          </div>
+        </h1>
+        <div className="bg-gradient-to-r from-primary text-outline-dark text-bgColor p-8 rounded-2xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-on-primary-container-selected font-semibold mb-3">Algorithmus-Wahl</h3>
+              <h3 className="text-on-primary-container-selected font-semibold mb-3">Tokens sind keine Wörter</h3>
               <p className="text-on-primary-container-selected">
-                Die Wahl des Tokenisierungsalgorithmus beeinflusst direkt die Performance und Qualität des LLMs.
+                Tokens sind rein technische Einheiten, in die Text zerlegt wird. Das Modell „versteht“ den Text nicht auf Wortebene,
+                sondern verarbeitet nur diese Token-Sequenzen.
               </p>
             </div>
             <div>
-              <h3 className="text-on-primary-container-selected font-semibold mb-3">BPE-Vorteile</h3>
+              <h3 className="text-on-primary-container-selected font-semibold mb-3">Algorithmus-Wahl</h3>
               <p className="text-on-primary-container-selected">
-                BPE reduziert die Anzahl der Tokens und verbessert die Sprachverständnis.
+                Die Wahl des Tokenisierungsalgorithmus beeinflusst direkt, wie der Text zerteilt wird und wie effizient das LLM arbeitet.
+                Unterschiedliche Tokenizer können denselben Satz unterschiedlich zerlegen.
               </p>
             </div>
           </div>
         </div>
+
 
         {/* Navigation */}
         <div className="mt-12 text-center">
