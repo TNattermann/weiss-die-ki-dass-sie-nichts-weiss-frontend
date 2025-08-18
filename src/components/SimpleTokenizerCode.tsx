@@ -32,9 +32,9 @@ class SimpleTokenizerV2:
 `.trim();
 
     const output =
-        `Tokens: ['Das', 'Wetter', 'wird', 'morgen', 'schön', '!']
-        Token IDs: [1, 2, 5, 3, 4, 0]
-        Decoded text: Das Wetter wird morgen schön!`.trim();
+`Tokens:         ['Das', 'Wetter', 'heute', 'ist', 'besonders', 'schön', '.']
+Token IDs:      [1, 2, 3, 4, 5, 6, 0]
+Decoded text:   Das Wetter heute ist besonders schön.`.trim();
 
     return (
         <section className="py-16 px-6">

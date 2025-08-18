@@ -27,21 +27,28 @@ export default function TokenizationApproaches() {
     const examples = {
         word: {
             title: "Wort-basiert:",
-            tokens: ["Maschinelles", "Lernen"],
+            tokens: ["Das", "Wetter", "heute", "ist", "besonders", "schön."],
             tokenClass: "token-word",
-            description: "2 Tokens • Große Vokabular-Größe nötig"
+            description: "6 Tokens • Große Vokabular-Größe nötig"
         },
         subword: {
             title: "Teilwort-basiert (BPE):",
-            tokens: ["Masch", "in", "elles", "Lern", "en"],
+            tokens: ["Das", "Wett", "er", "heute", "ist", "besonders", "schön", "."],
             tokenClass: "token-subword",
-            description: "5 Tokens • Ausgewogene Effizienz"
+            description: "8 Tokens • Ausgewogene Effizienz von Tokenanzahl und Länge"
         },
         character: {
             title: "Zeichen-basiert:",
-            tokens: ["M", "a", "s", "c", "h", "i", "n", "e", "l", "l", "e", "s", " ", "L", "e", "r", "n", "e", "n"],
+            tokens: [
+                "D","a","s"," ",
+                "W","e","t","t","e","r"," ",
+                "h","e","u","t","e"," ",
+                "i","s","t"," ",
+                "b","e","s","o","n","d","e","r","s"," ",
+                "s","c","h","ö","n","."
+            ],
             tokenClass: "token-special",
-            description: "19 Tokens • Kleines Vokabular, lange Sequenzen"
+            description: "37 Tokens • Kleines Vokabular, lange Sequenzen an Tokens"
         }
     };
 
@@ -82,7 +89,7 @@ export default function TokenizationApproaches() {
                 {/* Example Visualization */}
                 <div className="shadow-xl rounded-2xl p-8">
                     <div className="text-center mb-6">
-                        <h3 className="text-xl font-semibold text-primary mb-2">Beispiel: "Maschinelles Lernen"</h3>
+                        <h3 className="text-xl font-semibold text-primary mb-2">Beispiel: "Das Wetter heute ist besonders schön."</h3>
                         <p className="text-text-normal">Siehe wie verschiedene Ansätze denselben Text tokenisieren</p>
                     </div>
                     <div className="space-y-6">

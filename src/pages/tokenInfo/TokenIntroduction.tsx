@@ -27,16 +27,18 @@ export default function TokenInfoAlgorithms() {
                         <h3 className="text-primary text-xl font-semibold text-textDark mb-4">Einfaches Beispiel</h3>
                         <div className="bg-bgColor p-4 rounded-lg border border-outline mb-4">
                             <p className="text-text-normal font-semibold text-sm text-textNormal mb-2">Input:</p>
-                            <p className="text-text-normal font-mono text-textDark">"Heute wird es sonnig!"</p>
+                            <p className="text-text-normal font-mono text-textDark">"Das Wetter heute ist besonders schön."</p>
                         </div>
                         <div className="bg-bgColor p-4 rounded-lg border border-outline">
                             <p className="text-text-normal font-semibold text-sm text-textNormal mb-3">Tokens:</p>
                             <div className="flex flex-wrap gap-2">
-                                <span className="token token-word">Heute</span>
-                                <span className="token token-word">wird</span>
-                                <span className="token token-word">es</span>
-                                <span className="token token-word">sonnig</span>
-                                <span className="token token-special">!</span>
+                                <span className="token token-word">Das</span>
+                                <span className="token token-word">Wetter</span>
+                                <span className="token token-word">heute</span>
+                                <span className="token token-word">ist</span>
+                                <span className="token token-word">besonders</span>
+                                <span className="token token-word">schön</span>
+                                <span className="token token-special">.</span>
                             </div>
                         </div>
                     </div>
