@@ -37,13 +37,13 @@ function TokenPage() {
                     <SectionSidebar
                         sections={[
                             { id: "introduction", title: "Einführung" },
-                            { id: "visualizer", title: "Visualizer" },
-                            { id: "approaches", title: "Ansätze" },
+                            { id: "visualizer", title: "Ausprobieren" },
+                            { id: "approaches", title: "Tokenisierungsansätze" },
                             { id: "hints", title: "Hinweise" },
                             { id: "algorithms", title: "Algorithmen" },
                             { id: "bpe", title: "BPE" },
                             { id: "code", title: "Tokenizer Code" },
-                            { id: "takeaways", title: "Zusammenfassung" },
+                            { id: "takeaways", title: "Erkenntnisse" },
                         ]}
                     />
                 </div>
