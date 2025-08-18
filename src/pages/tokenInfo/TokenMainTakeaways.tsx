@@ -25,7 +25,7 @@ export default function TokenMainTakeaways() {
             <div>
               <h3 className="text-on-primary-container-selected font-semibold mb-3">Algorithmus-Wahl</h3>
               <p className="text-on-primary-container-selected">
-                Die Wahl des Tokenisierungsalgorithmus beeinflusst direkt, wie der Text zerteilt wird und wie effizient das LLM arbeitet.
+                Die Wahl des Tokenisierungsalgorithmus beeinflusst direkt, wie der Text zerteilt wird und wie effizient das Sprachmodell arbeitet.
                 Unterschiedliche Tokenizer können denselben Satz unterschiedlich zerlegen.
               </p>
             </div>

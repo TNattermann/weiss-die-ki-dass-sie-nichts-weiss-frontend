@@ -44,7 +44,7 @@ export default function TokenConcepts() {
                         iconColor="text-tertiary"
                         bgColor="bg-tertiary/10"
                         title="Notwendigkeit von Tokens"
-                        description="Das LLM selbst arbeitet nicht mit reinem Text – es verarbeitet nur numerische Token-IDs. Die eigentliche Sprachverarbeitung beginnt erst nach der Tokenisierung."
+                        description="Das Sprachmodell selbst arbeitet nicht mit reinem Text – es verarbeitet nur numerische Token-IDs. Die eigentliche Sprachverarbeitung beginnt erst nach der Tokenisierung."
                         linkText="Mehr erfahren"
                         linkTo="/tokeninfo/algorithms"
                     />
