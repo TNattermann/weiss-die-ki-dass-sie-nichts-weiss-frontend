@@ -4,6 +4,7 @@ import AboutUs from './pages/aboutUs/AboutUs.tsx'
 import Home from './pages/home/Home.tsx'
 import TokenPage from './pages/tokenInfo/TokenPage.tsx'
 import AttentionPage from "./pages/attention/AttentionPage.tsx";
+import LearningPage from "./pages/networkLearning/LearningPage.tsx";
 import Footer from './components/Footer.tsx';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/tokeninfo" element={<TokenPage />} />
+                        <Route path="/networkLearning" element={<LearningPage />} />
                         <Route path="/attention" element={<AttentionPage />} />
                         <Route path="/aboutus" element={<AboutUs />} />
                     </Routes>
