@@ -4,7 +4,6 @@ import TokenizationApproaches from "./TokenizationApproaches.tsx";
 import TokenHints from "./TokenHints.tsx";
 import TokenAlgorithmsInfo from "./TokenAlgorithmsInfo.tsx";
 import TokenBPE from "./TokenBPE.tsx";
-import SimpleTokenizerCode from "../../components/SimpleTokenizerCode.tsx";
 import TokenMainTakeaways from "./TokenMainTakeaways.tsx";
 import SectionSidebar from "../../components/SectionSidebar.tsx";
 
@@ -42,7 +41,6 @@ function TokenPage() {
                             { id: "hints", title: "Hinweise" },
                             { id: "algorithms", title: "Algorithmen" },
                             { id: "bpe", title: "BPE" },
-                            { id: "code", title: "Tokenizer Code" },
                             { id: "takeaways", title: "Erkenntnisse" },
                         ]}
                     />
@@ -56,7 +54,6 @@ function TokenPage() {
                     <div id="hints"><TokenHints /></div>
                     <div id="algorithms"><TokenAlgorithmsInfo /></div>
                     <div id="bpe"><TokenBPE /></div>
-                    <div id="code"><SimpleTokenizerCode /></div>
                     <div id="takeaways"><TokenMainTakeaways /></div>
                 </main>
             </div>

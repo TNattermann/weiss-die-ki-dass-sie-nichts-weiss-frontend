@@ -20,7 +20,7 @@ export default function TokenizerVisualizer() {
         setError(null);
         setShowTokens(false);
         setShowTokenIds(false);
-        setShowStatistics(false)
+        setShowStatistics(false);
 
         try {
             const [tokensResponse, tokenIdsResponse] = await Promise.all([
@@ -28,7 +28,11 @@ export default function TokenizerVisualizer() {
                 getTokenIds(text, tokenizer),
             ]);
 
-            setTokens(tokensResponse.tokens);
+            const tokensWithSpaces = tokensResponse.tokens.map(
+                (t) => t.replace(/ /g, "␣")
+            );
+
+            setTokens(tokensWithSpaces);
             setTokenIds(tokenIdsResponse.token_ids);
             setTokenizerUsed(tokenizer);
 
@@ -41,9 +45,8 @@ export default function TokenizerVisualizer() {
             }, 1000);
 
             setTimeout(() => {
-                setShowStatistics(true)
+                setShowStatistics(true);
             }, 1200);
-
         } catch (err: unknown) {
             if (err instanceof Error) {
                 setError(err.message);
@@ -56,9 +59,11 @@ export default function TokenizerVisualizer() {
     };
 
     const getTokenClass = (token: string) => {
-        if (/[!?.,;:]/.test(token) || /[^\w\s]/.test(token)) {
+        const normalized = token.replace(/␣/g, "");
+
+        if (/[!?.,;:]/.test(normalized) || /[^\w\s]/.test(normalized)) {
             return 'token token-special';
-        } else if (token.includes('##') || token.length <= 3) {
+        } else if (normalized.includes("##") || normalized.length <= 3) {
             return 'token token-subword';
         } else {
             return 'token token-word';
@@ -207,37 +212,37 @@ export default function TokenizerVisualizer() {
 
                             {/* Statistiken anzeigen */}
                             {showStatistics && (
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div
-                                    className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20">
-                                    <div className="flex items-center justify-between mb-2">
-                                        <h3 className="text-sm font-medium text-text-normal">Token-Anzahl</h3>
-                                        <i className="ri-numbers-line text-primary"></i>
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <div
+                                        className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <h3 className="text-sm font-medium text-text-normal">Token-Anzahl</h3>
+                                            <i className="ri-numbers-line text-primary"></i>
+                                        </div>
+                                        <p className="text-3xl font-bold text-primary">{tokens.length}</p>
+                                        <p className="text-xs text-text-normal mt-1">Gesamte Tokens</p>
                                     </div>
-                                    <p className="text-3xl font-bold text-primary">{tokens.length}</p>
-                                    <p className="text-xs text-text-normal mt-1">Gesamte Tokens</p>
-                                </div>
-                                <div
-                                    className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20">
-                                    <div className="flex items-center justify-between mb-2">
-                                        <h3 className="text-sm font-medium text-text-normal">Tokenizer</h3>
-                                        <i className="ri-robot-line text-primary"></i>
+                                    <div
+                                        className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <h3 className="text-sm font-medium text-text-normal">Tokenizer</h3>
+                                            <i className="ri-robot-line text-primary"></i>
+                                        </div>
+                                        <p className="text-2xl font-bold text-primary">{tokenizerUsed === "simple" ? "Simple" : "GPT-2"}</p>
+                                        <p className="text-xs text-text-normal mt-1">Aktueller Tokenizer</p>
                                     </div>
-                                    <p className="text-2xl font-bold text-primary">{tokenizerUsed === "simple" ? "Simple" : "GPT-2"}</p>
-                                    <p className="text-xs text-text-normal mt-1">Aktueller Tokenizer</p>
-                                </div>
-                                <div
-                                    className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20">
-                                    <div className="flex items-center justify-between mb-2">
-                                        <h3 className="text-sm font-medium text-text-normal">Tokens pro Zeichen</h3>
-                                        <i className="ri-character-recognition-line text-primary"></i>
+                                    <div
+                                        className="bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border border-primary/20">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <h3 className="text-sm font-medium text-text-normal">Tokens pro Zeichen</h3>
+                                            <i className="ri-character-recognition-line text-primary"></i>
+                                        </div>
+                                        <p className="text-3xl font-bold text-primary">
+                                            {tokens.length > 0 ? Math.round((tokens.length / text.length) * 10) / 10 : 0}
+                                        </p>
+                                        <p className="text-xs text-text-normal mt-1">Durchschnitt</p>
                                     </div>
-                                    <p className="text-3xl font-bold text-primary">
-                                        {tokens.length > 0 ? Math.round((tokens.length / text.length) * 10) / 10 : 0}
-                                    </p>
-                                    <p className="text-xs text-text-normal mt-1">Durchschnitt</p>
                                 </div>
-                            </div>
                             )}
                         </div>
                     )}
