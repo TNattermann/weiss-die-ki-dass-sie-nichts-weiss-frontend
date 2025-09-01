@@ -11,6 +11,7 @@ interface NavItem {
 const navItems: NavItem[] = [
     { to: '/', label: 'Home' },
     { to: '/tokeninfo', label: 'Tokens' },
+    { to: '/networkLearning', label: 'Wie ~lernt ein Modell?' },
     { to: '/attention', label: 'Aufmerksamkeit' },
     { to: '/aboutus', label: 'Über Uns' }
 ];
