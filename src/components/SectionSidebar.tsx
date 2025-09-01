@@ -73,28 +73,30 @@ export default function SectionSidebar({ sections }: Props) {
 
 
     return (
-        <aside className="fixed top-24 overflow-auto hidden lg:block pr-8">
-            <nav className="flex flex-col space-y-3">
-                {sections.map(({ id, title }) => {
-                    const isActive = activeId === id;
-                    return (
-                        <button
-                            key={id}
-                            onClick={() => scrollTo(id)}
-                            className={`
-                                text-center text-lg font-semibold rounded-full px-6 py-2 transition-all duration-300
-                                ${
-                                isActive
-                                    ? "bg-primary-container-selected text-on-primary-container-selected shadow-lg"
-                                    : "bg-primary-container text-on-primary-container hover:brightness-110"
-                            }
-                            `}
-                        >
-                            {title}
-                        </button>
-                    );
-                })}
-            </nav>
+        <aside className="hidden lg:block">
+            <div className="sticky top-24 pr-8">
+                <nav className="flex flex-col space-y-3">
+                    {sections.map(({ id, title }) => {
+                        const isActive = activeId === id;
+                        return (
+                            <button
+                                key={id}
+                                onClick={() => scrollTo(id)}
+                                className={`
+                text-center text-lg font-semibold rounded-full px-6 py-2 transition-all duration-300
+                ${
+                                    isActive
+                                        ? "bg-primary-container-selected text-on-primary-container-selected shadow-lg"
+                                        : "bg-primary-container text-on-primary-container hover:brightness-110"
+                                }
+              `}
+                            >
+                                {title}
+                            </button>
+                        );
+                    })}
+                </nav>
+            </div>
         </aside>
     );
 }

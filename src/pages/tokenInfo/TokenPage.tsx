@@ -31,8 +31,8 @@ function TokenPage() {
                 scrollToId="educational-content"
             />*/}
 
-            <div className="min-h-screen">
-                <div className="px-10 py-10">
+            <div className="px-4 py-10 lg:px-10">
+                <div className="lg:grid lg:grid-cols-[250px_1fr] lg:gap-8">
                     <SectionSidebar
                         sections={[
                             { id: "introduction", title: "Einführung" },
@@ -44,18 +44,18 @@ function TokenPage() {
                             { id: "takeaways", title: "Erkenntnisse" },
                         ]}
                     />
-                </div>
 
-                {/* Content mittig begrenzen */}
-                <main className="flex-1 max-w-7xl mx-auto space-y-24 px-4">
-                    <div id="introduction"><TokenIntroduction /></div>
-                    <div id="visualizer"><TokenizerVisualizer /></div>
-                    <div id="approaches"><TokenizationApproaches /></div>
-                    <div id="hints"><TokenHints /></div>
-                    <div id="algorithms"><TokenAlgorithmsInfo /></div>
-                    <div id="bpe"><TokenBPE /></div>
-                    <div id="takeaways"><TokenMainTakeaways /></div>
-                </main>
+                    {/* Content */}
+                    <main className="mx-auto space-y-24 w-full max-w-3xl lg:max-w-5xl xl:max-w-7xl">
+                        <div id="introduction"><TokenIntroduction /></div>
+                        <div id="visualizer"><TokenizerVisualizer /></div>
+                        <div id="approaches"><TokenizationApproaches /></div>
+                        <div id="hints"><TokenHints /></div>
+                        <div id="algorithms"><TokenAlgorithmsInfo /></div>
+                        <div id="bpe"><TokenBPE /></div>
+                        <div id="takeaways"><TokenMainTakeaways /></div>
+                    </main>
+                </div>
             </div>
 
         </div>
