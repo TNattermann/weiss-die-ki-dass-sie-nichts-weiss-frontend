@@ -29,26 +29,26 @@ export default function TokenizationApproaches() {
             title: "Wort-basiert:",
             tokens: ["Das", "Wetter", "heute", "ist", "besonders", "schön."],
             tokenClass: "token-word",
-            description: "6 Tokens • Große Vokabular-Größe nötig"
+            description: "6 Tokens • Große Vokabular-Größe nötig • Jede unterstützte Sprache vergrößert das Vokabular"
         },
         subword: {
             title: "Teilwort-basiert (BPE):",
             tokens: ["Das", "Wett", "er", "heute", "ist", "besonders", "schön", "."],
             tokenClass: "token-subword",
-            description: "8 Tokens • Ausgewogene Effizienz von Tokenanzahl und Länge"
+            description: "8 Tokens • Mittelgroßes Vokabular • Zerteilt Wörter in kleinere Einheiten • Gute Balance zwischen Vokabulargröße und Tokenanzahl"
         },
         character: {
             title: "Zeichen-basiert:",
             tokens: [
-                "D","a","s"," ",
-                "W","e","t","t","e","r"," ",
-                "h","e","u","t","e"," ",
-                "i","s","t"," ",
-                "b","e","s","o","n","d","e","r","s"," ",
+                "D","a","s","␣",
+                "W","e","t","t","e","r","␣",
+                "h","e","u","t","e","␣",
+                "i","s","t","␣",
+                "b","e","s","o","n","d","e","r","s","␣",
                 "s","c","h","ö","n","."
             ],
             tokenClass: "token-special",
-            description: "37 Tokens • Kleines Vokabular, lange Sequenzen an Tokens"
+            description: "37 Tokens • Kleines Vokabular, lange Sequenzen an Tokens • Mehr Rechenaufwand, um Muster und Zusammenhänge zu erkennen"
         }
     };
 
@@ -85,12 +85,10 @@ export default function TokenizationApproaches() {
                     })}
                 </div>
 
-
-                {/* Example Visualization */}
                 <div className="shadow-xl rounded-2xl p-8">
                     <div className="text-center mb-6">
                         <h3 className="text-xl font-semibold text-primary mb-2">Beispiel: "Das Wetter heute ist besonders schön."</h3>
-                        <p className="text-text-normal">Siehe wie verschiedene Ansätze denselben Text tokenisieren</p>
+                        <p className="text-text-normal">Sehen Sie, wie verschiedene Ansätze denselben Text tokenisieren</p>
                     </div>
                     <div className="space-y-6">
                         {Object.entries(examples).map(([key, example]) => (

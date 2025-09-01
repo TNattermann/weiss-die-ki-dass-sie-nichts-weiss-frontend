@@ -18,7 +18,7 @@ export default function TokenAlgorithmsInfo() {
               <p className="text-text-normal font-medium">
                 Ob <strong className="text-primary">Leerzeichen</strong> als eigene Tokens behandelt
                 oder ignoriert werden, hängt stark vom verwendeten Tokenisierungsalgorithmus ab. Einige Tokenizer, wie der
-                von GPT-2, nehmen Leerzeichen direkt mit ins Token auf (z. B. <code>" Hello"</code> statt <code>"Hello"</code>).
+                von GPT-2, nehmen Leerzeichen direkt mit ins Token auf (z. B. <span className="token token-word">␣Hello</span> statt <span className="token token-word">Hello</span>).
                 Andere Ansätze hingegen behandeln Leerzeichen separat oder entfernen sie vollständig, insbesondere bei rein zeichenbasierten
                 Methoden. Diese Entscheidung beeinflusst, wie gut das Modell Sprachgrenzen erkennt und wie effizient es Texte kodieren kann.
               </p>
