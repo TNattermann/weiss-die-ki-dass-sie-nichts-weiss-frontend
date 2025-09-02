@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Konfiguration
-REMOTE_USER="n_urbansky21"
+REMOTE_USER="milli"
 REMOTE_HOST="aalab-weiss-die-ki-dass-sie-nichts-weiss.cs.rptu.de"
 REMOTE_DIR="/home/masterprojekt/frontend"
 REMOTE_DIST="$REMOTE_DIR/dist"
