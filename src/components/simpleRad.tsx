@@ -148,7 +148,7 @@ export default function SimpleRad({wordpercentlist}: any) {
     }
 
     return (
-        <section className="py-6 px-6" id="educational-content">
+        
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                     
@@ -185,6 +185,6 @@ export default function SimpleRad({wordpercentlist}: any) {
                 </div>
 
             </div>
-        </section>
+        
     );
 }

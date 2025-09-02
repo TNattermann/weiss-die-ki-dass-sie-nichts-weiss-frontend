@@ -12,9 +12,9 @@ export default function WahrIntroduction() {
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
-                        Der jetzt noch fehlende Schritt ist, was die KI macht, nachdem ein Wort hinzugefügt wurde. 
-                        Die KI nimmt einfach den Satz, der das neue Wort enthält, und macht das gleiche nochmal,
-                        bis der Satz beendet wird. Schließlich hat sie ja für jeden Satz zugriff auf die Wahrscheinlichkeitstabellen.
+                        Der jetzt noch fehlende Schritt ist, was das Modell macht, nachdem ein Wort hinzugefügt wurde. 
+                        Das Modell nimmt einfach den Satz, der das neue Wort enthält, und macht das gleiche nochmal,
+                        bis der Satz beendet wird. Schließlich hat es ja für jeden Satz zugriff auf die Wahrscheinlichkeitstabellen.
                         </p>
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">

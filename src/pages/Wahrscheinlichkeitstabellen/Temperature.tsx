@@ -76,6 +76,41 @@ export default function Temperature() {
         setRangeAdjustedValue(adjustRange(rangeValue, minrange));
     };
 
+    const [activeExample, setActiveExample] = useState("A");
+    const temperatureExamples = [
+        {
+            id: "A",
+            label: "A.",
+            description: "Temperatur = 0",
+        },
+        {
+            id: "B",
+            label: "B.",
+            description: "Temperatur = 1",
+        },
+        {
+            id: "C",
+            label: "C.",
+            description: "Temperatur = 100",
+        },
+    ] as const;
+
+    const temperaturewheels = {
+        A: {
+            wordratio: [["schön", 1]]
+            
+        },
+        B: {
+            
+            wordratio: [["schön", 0.45], ["warm", 0.3], ["kalt", 0.25]]
+        },
+        C: {
+            
+            wordratio: [["schön", 33], ["warm", 33], ["kalt", 33]] //Wird später zu Prozent zusammengekürzt. Benutze hier ganze Zahlen um floating point error zu vermeiden.
+
+        }
+    };
+
     
 
 
@@ -106,29 +141,47 @@ export default function Temperature() {
                 </div>
 
                 <div className="p-8 rounded-xl">
-                        <h3 className="text-primary text-xl font-semibold text-textDark mb-4">A. Temperatur = 0</h3>
-                        
-                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
-                        <SimpleRad wordpercentlist={[["schön", 1]]}
-                        />
-                        </p>
+                {temperatureExamples.map((t) => {
+                        const isActive = activeExample === t.id;
+                        return (
+                            <button
+                                key={t.id}
+                                onClick={() => setActiveExample(t.id as typeof activeExample)}
+                                className={`p-6 rounded-xl text-center transition-all duration-300 transform hover:scale-105
+          ${isActive
+                                    ? "bg-primary-container-selected text-on-primary-container-selected"
+                                    : "bg-primary-container text-on-primary-container"}
+        `}
+                            >
+                                <div
+                                    className={`w-16 h-16 flex items-center justify-center rounded-xl mx-auto mb-4
+            ${isActive
+                                        ? "bg-on-primary-container-selected/10"
+                                        : "bg-on-primary-container/10"}`}
+                                >
+                                   
+                                </div>
+                                <h3 className="font-bold text-lg mb-2">{t.label}</h3>
+                                <p className="text-sm">{t.description}</p>
+                            </button>
+                        );
+                    })}
 
-                        <h3 className="text-primary text-xl font-semibold text-textDark mb-4">B. Temperatur = 1</h3>
-                        
-                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
-
-                        <SimpleRad wordpercentlist={[["schön", 0.45], ["warm", 0.3], ["kalt", 0.25]]}
-                        />
-                        </p>
-
-                        <h3 className="text-primary text-xl font-semibold text-textDark mb-4">C. Temperatur = 100</h3>
-                        
-                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
-
-                        <SimpleRad wordpercentlist={[["schön", 33], ["warm", 33], ["kalt", 33]]} //Wird später zu Prozent zusammengekürzt. Benutze hier ganze Zahlen um floating point error zu vermeiden.
-                        />
-                        </p>
+                    {Object.entries(temperaturewheels).map(([key, example]) => (
+                            <div
+                                key={key}
+                                className={`${activeExample === key ? "block" : "hidden"}`}
+                            >
+                                
+                                
+                                <p className="text-lg text-text-normal mb-6 leading-relaxed">
+                                <SimpleRad wordpercentlist={example.wordratio}
+                                />
+                                    
+                                </p>
+                            </div>
+                        ))}
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 

@@ -8,12 +8,18 @@ export default function WahrIntroduction() {
     return (
         <section className="py-6 px-6" id="educational-content">
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-5xl font-bold text-center text-primary mb-6">Wie funktioniert text-generierende KI?</h1>
+                <h1 className="text-5xl font-bold text-center text-primary mb-6">Wie funktionierten Sprachmodelle?</h1>
                 <div className="text-center mb-16">
                     <div>
+
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
-                        Text-generierende KI funktioniert nach einem sehr einfachen Prinzip: Man gibt ihnen einen unvollständigen Satz 
+                        Sprachmodelle (häufig auch LLM für "Large Language Modell" genannt) sind Systeme wie ChatGPT,
+                        die einem einen gewollten Text generieren.
+                        </p>
+                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
+
+                        Sprachmodelle funktionieren nach einem sehr einfachen Prinzip: Man gibt ihnen einen unvollständigen Satz 
                         und sie generieren das nächste Wort in diesem Satz. Nehmen wir uns einen solchen Satz als Beispiel:
                         </p>
                     </div>
@@ -65,7 +71,7 @@ export default function WahrIntroduction() {
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
-                        Um zu entscheiden wie die KI jetzt den Satz beendet, könnten wir diese Wahrscheinlichkeitstabelle
+                        Um zu entscheiden wie das Sprachmodell jetzt den Satz beendet, könnten wir diese Wahrscheinlichkeitstabelle
                         nutzen und einfach das Wort
                         mit der größten Wahrscheinlichkeit nehmen.
                         </p>
@@ -99,17 +105,19 @@ export default function WahrIntroduction() {
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
                         Durch das Glücksrad ist jetzt auch etwas Varianz gewährleistet, 
-                        so dass unsere KI nicht immer das häufigste
+                        so dass unser LLM nicht immer das häufigste
                         Wort nimmt, aber trotzdem dazu tendiert, Wörter zu nehmen, die zu der Situation passen 
-                        (und nicht zum Beispiel das Wort "Banane" nimmt).
+                        (und nicht zum Beispiel das Wort "Banane").
                         </p>
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
-                        Für die KI hat das Glücksrad natürlich nicht nur drei Worte, sondern alle möglichen. Dabei sind nicht nur Wörter,
-                        sondern auch Sonderzeichen, wie der Punkt "." enthalten, damit die KI auch einen Satz beenden kann.
-                        Jetzt muss man sich nur noch vorstellen, dass die KI diese Wahrscheinlichkeitstabellen für jeden Satzanfang,
-                        dem sie etwas hinzufügen soll, besitzt.
+                        Für das LLM hat das Glücksrad natürlich nicht nur drei Worte, sondern alle möglichen. 
+                        Dabei sind nicht nur Wörter,
+                        sondern auch Sonderzeichen, wie der Punkt "." enthalten, 
+                        damit das Sprachmodell auch einen Satz beenden kann.
+                        Jetzt muss man sich nur noch vorstellen, dass das LLM diese Wahrscheinlichkeitstabellen für jeden möglichen 
+                        Satzanfang besitzt. Damit ~weiß das Sprachmodell bei jedem Satz, welches Wort als nächstes kommt.
                         </p>
 
                         
