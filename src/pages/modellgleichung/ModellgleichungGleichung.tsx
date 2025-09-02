@@ -25,7 +25,7 @@ export default function ModellgleichunGleichung() {
                 </p>
               </div>
               <img
-                src="\src\pages\modellgleichung\Beispiel_Modellgleichung_Gleichung.png"
+                src="\img\Beispiel_Modellgleichung_Gleichung.png"
                 className="h-[200px] w-[450px] object-cover rounded-lg shadow-md border"
               />
             </div>

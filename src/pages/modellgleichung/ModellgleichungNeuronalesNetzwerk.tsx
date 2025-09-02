@@ -8,9 +8,9 @@ function VideoPage() {
   const [selectedDigit, setSelectedDigit] = useState<"1" | "4" | "7">("1");
 
   const images: Record<"1" | "4" | "7", string> = {
-    "1": "/src/pages/modellgleichung/Merged_1.png",
-    "4": "/src/pages/modellgleichung/Merged_4.png",
-    "7": "/src/pages/modellgleichung/Merged_7.png",
+    "1": "/img/Merged_1.png",
+    "4": "/img/Merged_4.png",
+    "7": "/img/Merged_7.png",
   };
 
   return (
