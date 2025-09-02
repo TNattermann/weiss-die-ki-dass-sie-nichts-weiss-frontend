@@ -23,7 +23,7 @@ export default function LearningGraddesc() {
                     {/* Video */}
                   <div className="flex justify-center md:justify-end">
                     <video 
-                      src="/videos/bowman_gradX2.mp4" 
+                      src="/videos/BowmanGrad.mp4" 
                       autoPlay 
                       loop 
                       muted 
@@ -49,7 +49,7 @@ export default function LearningGraddesc() {
             </div>
             <div className="w-full flex justify-center mb-6">
                 <video 
-                    src="/videos/GradientDescentEdgesSceneV2.mp4" 
+                    src="/videos/GradientDescentEdgesScene.mp4" 
                     autoPlay 
                     loop 
                     muted 

@@ -24,7 +24,7 @@ export default function LearningLoss() {
                     {/* Bild */}
                     <div className="flex justify-center md:justify-end">
                         <img 
-                            src="/img/Distance2.png" 
+                            src="/img/Distance_Target.png" 
                             alt="Verschiedene Schüsse" 
                             className="w-full max-w-sm rounded-xl shadow-lg"
                         />
@@ -49,7 +49,7 @@ export default function LearningLoss() {
             </div>
             <div className="w-full flex justify-center mb-6">
                 <img 
-                    src="/img/Bowmen_DatapointsV2.png" 
+                    src="/img/Bowmen_Datapoints.png" 
                     alt="Mehrere Bogenschützen als Daten" 
                     className="w-full max-w-none rounded-xl shadow-lg object-contain"
                 />

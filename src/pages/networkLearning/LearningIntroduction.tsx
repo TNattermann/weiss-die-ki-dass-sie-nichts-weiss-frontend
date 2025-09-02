@@ -25,7 +25,7 @@ export default function LearningIntroduction() {
                     {/* Bild */}
                     <div className="flex justify-center md:justify-end">
                         <img 
-                            src="img/bowman_lime2.png" 
+                            src="/img/Bowman_Lime.png" 
                             alt="Bogenschütze als Metapher für KI-Lernen" 
                             className="w-full max-w-sm rounded-xl shadow-lg"
                         />

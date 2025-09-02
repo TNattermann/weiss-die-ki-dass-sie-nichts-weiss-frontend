@@ -23,7 +23,7 @@ export default function LearningBackprop() {
                     {/* Video */}
                     <div className="flex justify-center md:justify-end">
                       <video 
-                          src="/videos/bowman_backpropX2.mp4" 
+                          src="/videos/BowmanBackprop.mp4" 
                           autoPlay 
                           loop 
                           muted 
