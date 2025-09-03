@@ -81,10 +81,10 @@ export default function AttentionSelfattention() {
   return (
     <section className="py-6 px-6" id="educational-content">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold text-center text-primary mb-6">
-          Selbstaufmerksamkeit
+        <h1 className="text-5xl font-bold text-center text-primary mb-4">
+          Self-Attention
         </h1>
-        <div className="mb-12">
+        <div className="mb-4">
           <p className="text-lg text-text-normal mb-8 leading-relaxed">
             Zum Aufmerksamkeitsblock in Transformer-Modellen ist es nun nicht
             mehr weit: Es werden drei verschiedene Arten von Vektoren gebildet,
@@ -92,7 +92,7 @@ export default function AttentionSelfattention() {
             <VectorList />
           </p>
 
-          <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
+          <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-4">
             <p className="text-text-normal font-medium">
               Wenn man dies wiederum mit dem Beispiel der Betonung bei
               menschlicher Kommunikation vergleicht, so kann man feststellen,
@@ -101,7 +101,7 @@ export default function AttentionSelfattention() {
               benachbarter Wörter oder sogar ganzer Sätze.
             </p>
           </div>
-          <p className="text-lg text-text-normal mb-8 leading-relaxed">
+          <p className="text-lg text-text-normal mb-4 leading-relaxed">
             Mithilfe dieser drei unterschiedlichen Vektoren wird also nicht nur
             der reine Inhalt eines Wortes erfasst, sondern auch seine Position
             im Text und andere Kontextinformationen.
