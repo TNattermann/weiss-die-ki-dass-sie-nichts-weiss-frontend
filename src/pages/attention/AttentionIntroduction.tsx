@@ -60,10 +60,10 @@ export default function AttentionIntroduction() {
   return (
     <section className="py-6 px-6" id="educational-content">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold text-center text-primary mb-6">
+        <h1 className="text-5xl font-bold text-center text-primary mb-4">
           Intuition
         </h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-6">
           <div>
             <p className="text-lg text-text-normal mb-6 leading-relaxed">
               Wir haben gelernt, dass ein Sprachmodell das nächste Wort in einem
@@ -86,7 +86,7 @@ export default function AttentionIntroduction() {
               </p>
             </div>
           </div>
-          <div className="p-8 rounded-xl">
+          <div className="p-2 rounded-xl">
             <h3 className="text-primary text-xl font-semibold text-textDark mb-4">
               Einfaches Beispiel: Den Satz vervollständigen.
             </h3>
@@ -96,9 +96,9 @@ export default function AttentionIntroduction() {
                 sehr..."
               </p>
             </div>
-            <p className="text-sm italic text-text-normal mb-6 leading-relaxed">
+            <p className="text-sm italic text-text-normal mb-4 leading-relaxed">
               Hier könnten nun viele verschiedene Antworten passen - regnerisch,
-              schön, sonnig, windig oder vielleicht einfach wieder toll.&nbsp;
+              schön, sonnig, windig oder vielleicht einfach wieder toll.{" "}
               <span
                 tabIndex={0}
                 className="relative group cursor-help underline decoration-dotted"
@@ -113,14 +113,12 @@ export default function AttentionIntroduction() {
             </p>
           </div>
         </div>
-        <p className="text-lg text-text-normal mb-6 leading-relaxed">
+        <p className="text-lg text-text-normal mb-4 leading-relaxed">
           Wie wählt man nun das nächste Wort aus? Einen Hinweis gibt der Satz
           selbst, oder eher: Die Wörter im Satz. Doch welche Wörter sind
           wichtig, und welche nicht so wichtig?
         </p>
-      </div>
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {notes.map((note, index) => (
             <div
               key={index}
@@ -128,7 +126,7 @@ export default function AttentionIntroduction() {
             >
               <div className="flex items-start space-x-4">
                 <div
-                  className={`w-8 h-8 flex items-center justify-center rounded-full flex-shrink-0 mt-1`}
+                  className={`w-8 h-8 flex items-center justify-center rounded-full flex-shrink-0`}
                 >
                   <i className={`${note.icon} text-${note.color}`}></i>
                 </div>
@@ -142,7 +140,7 @@ export default function AttentionIntroduction() {
             </div>
           ))}
         </div>
-        <p className="text-lg text-text-normal mb-6 leading-relaxed mt-6">
+        <p className="text-lg text-text-normal mb-4 leading-relaxed mt-4">
           Ähnlich wie wir muss sich die KI also auf die relevantesten Wörter
           ~konzentrieren können - sonst geht der gesamte Kontext verloren. Doch
           woher ~weiß die KI, welches Wort relevant ist und welches nicht?

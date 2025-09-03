@@ -15,7 +15,7 @@ function AttentionPage() {
             sections={[
               { id: "introduction", title: "Intuition" },
               { id: "concept", title: "Konzept" },
-              { id: "selfattention", title: "Selbstaufmerksamkeit" },
+              { id: "selfattention", title: "Self-Attention" },
               { id: "block", title: "Attention-Block" },
               { id: "example", title: "Beispiel" },
               { id: "takeaway", title: "Erkenntnisse" },
