@@ -76,8 +76,8 @@ export default function AttentionConcept() {
               kann es aber auch so verstehen: Das Sprachmodell ~lernt die
               Betonung einzelner Wörter. So wie wir gewisse Wörter
               unterschiedlich betonen, um ihre Bedeutung zu unterstreichen,
-              ~betont die KI auch verschiedene Wörter, um ihre Wichtigkeit zu
-              erfassen.
+              ~betont das Modell auch verschiedene Wörter, um ihre Wichtigkeit
+              zu erfassen.
             </p>
           </div>
 

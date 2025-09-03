@@ -141,10 +141,10 @@ export default function AttentionIntroduction() {
           ))}
         </div>
         <p className="text-lg text-text-normal mb-4 leading-relaxed mt-4">
-          Ähnlich wie wir muss sich die KI also auf die relevantesten Wörter
-          ~konzentrieren können - sonst geht der gesamte Kontext verloren. Doch
-          woher ~weiß die KI, welches Wort relevant ist und welches nicht?
-          Natürlich! Sie ~lernt es.
+          Ähnlich wie wir muss sich das Sprachmodell also auf die relevantesten
+          Wörter ~konzentrieren können - sonst geht der gesamte Kontext
+          verloren. Doch woher ~weiß das Modell, welches Wort relevant ist und
+          welches nicht?
         </p>
       </div>
     </section>
