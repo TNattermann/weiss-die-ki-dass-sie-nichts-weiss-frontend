@@ -51,14 +51,14 @@ export default function AttentionConcept() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <section className="py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
-          <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">
+    <section className="py-6 px-6" id="educational-content">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-4">
+          <h1 className="text-5xl font-bold text-center text-primary mb-4 break-words">
             Konzept
           </h1>
 
-          <p className="text-lg text-text-normal mb-6 leading-r>elaxed">
+          <p className="text-lg text-text-normal mb-4 leading-r>elaxed">
             Am Anfang bekommt jedes Wort der Eingabe eine Wichtigkeit zugeordnet
             (das <strong className="text-primary">Gewicht</strong>). Dieser
             Parameter kann später vom Sprachmodell je nach Wichtigkeit angepasst
@@ -70,14 +70,14 @@ export default function AttentionConcept() {
             Wort und die Kontextinformationen im Modell darstellt.
           </p>
 
-          <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
+          <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-4">
             <p className="text-text-normal font-medium">
               Das hört sich alles sehr kompliziert an - das ist es auch - man
               kann es aber auch so verstehen: Das Sprachmodell ~lernt die
               Betonung einzelner Wörter. So wie wir gewisse Wörter
               unterschiedlich betonen, um ihre Bedeutung zu unterstreichen,
-              ~betont die KI auch verschiedene Wörter, um ihre Wichtigkeit zu
-              erfassen.
+              ~betont das Modell auch verschiedene Wörter, um ihre Wichtigkeit
+              zu erfassen.
             </p>
           </div>
 

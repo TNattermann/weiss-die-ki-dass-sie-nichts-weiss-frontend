@@ -9,13 +9,13 @@ import SectionSidebar from "../../components/SectionSidebar";
 function AttentionPage() {
   return (
     <div className="min-h-screen">
-      <div className="px-10 py-10">
+      <div className="px-4 py-10 lg:px-10">
         <div className="lg:grid lg:grid-cols-[250px_1fr] lg:gap-8">
           <SectionSidebar
             sections={[
               { id: "introduction", title: "Intuition" },
               { id: "concept", title: "Konzept" },
-              { id: "selfattention", title: "Selbstaufmerksamkeit" },
+              { id: "selfattention", title: "Self-Attention" },
               { id: "block", title: "Attention-Block" },
               { id: "example", title: "Beispiel" },
               { id: "takeaway", title: "Erkenntnisse" },
