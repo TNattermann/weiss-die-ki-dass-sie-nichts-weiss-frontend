@@ -99,9 +99,12 @@ export default function AttentionIntroduction() {
             <p className="text-sm italic text-text-normal mb-6 leading-relaxed">
               Hier könnten nun viele verschiedene Antworten passen - regnerisch,
               schön, sonnig, windig oder vielleicht einfach wieder toll.&nbsp;
-              <span className="relative group cursor-help underline decoration-dotted">
+              <span
+                tabIndex={0}
+                className="relative group cursor-help underline decoration-dotted"
+              >
                 Was würden Sie tippen?
-                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block bg-black text-white text-xs px-2 py-1 rounded">
+                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block group-focus:block bg-black text-white text-xs px-2 py-1 rounded">
                   Das Sprachmodell vervollständigt diesen Satz übrigens mit
                   "schön". Wie positiv unser kleiner künstlicher Helfer doch
                   ist.
