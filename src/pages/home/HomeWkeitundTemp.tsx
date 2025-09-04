@@ -1,4 +1,5 @@
 import {useEffect} from "react";
+import WahrPage from '../Wahrscheinlichkeitstabellen/WahrPage.tsx'
 
 export default function HomeWkeitundTemp() {
     useEffect(() => {
@@ -10,7 +11,7 @@ export default function HomeWkeitundTemp() {
                 <h1 className="text-xl font-bold text-on-primary-container">
                     Wahrscheinlichkeitstabellen und Temperatur
                 </h1>
-                <p>Das ist ein Platzhalter für Camerons Teil.</p>
+                <WahrPage />
             </div>
         </section>
     );
