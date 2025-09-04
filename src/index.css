@@ -8,7 +8,7 @@ body {
 @theme {
   /* === PRIMARY COLORS === */
   --color-primary: oklch(96.7% 0.067 122.328);                          /* text-lime-100 = #ecfcca */ 
-  --color-primary-container: oklch(28.2% 0.091 267.935);                /* text-blue-950 */
+  --color-primary-container: oklch(28.2% 0.091 267.935);                /* text-blue-950 = #162456 */
   --color-on-primary-container: var(--color-primary);
   --color-primary-container-selected: var(--color-primary);
   --color-on-primary-container-selected: var(--color-primary-container);
@@ -22,7 +22,7 @@ body {
   /* === SECONDARY COLORS === */
   --color-secondary: oklch(81.1% 0.111 293.571);                        /* text-violet-300 */
   --color-secondary-container: oklch(78.5% 0.115 274.713);              /* text-indigo-300 */
-  --color-on-secondary-container: var(--color-primary);
+  --color-on-secondary-container: var(--color-on-primary-container-selected);
   --color-secondary-container-selected: var(--color-secondary);
   --color-on-secondary-container-selected: var(--color-primary);
 
