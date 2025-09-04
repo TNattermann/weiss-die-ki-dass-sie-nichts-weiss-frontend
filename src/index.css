@@ -7,7 +7,7 @@ body {
 
 @theme {
   /* === PRIMARY COLORS === */
-  --color-primary: oklch(96.7% 0.067 122.328);                          /* text-lime-100 */
+  --color-primary: oklch(96.7% 0.067 122.328);                          /* text-lime-100 = #ecfcca */ 
   --color-primary-container: oklch(28.2% 0.091 267.935);                /* text-blue-950 */
   --color-on-primary-container: var(--color-primary);
   --color-primary-container-selected: var(--color-primary);

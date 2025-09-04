@@ -1,29 +1,32 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar.tsx'
-import AboutUs from './pages/aboutUs/AboutUs.tsx'
-import Home from './pages/home/Home.tsx'
-import TokenPage from './pages/tokenInfo/TokenPage.tsx'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.tsx";
+import AboutUs from "./pages/aboutUs/AboutUs.tsx";
+import Home from "./pages/home/Home.tsx";
+import TokenPage from "./pages/tokenInfo/TokenPage.tsx";
+import LearningPage from "./pages/networkLearning/LearningPage.tsx";
+import ModellgleichungPage from "./pages/modellgleichung/ModellgleichungPage.tsx";
 import AttentionPage from "./pages/attention/AttentionPage.tsx";
-import Footer from './components/Footer.tsx';
+import Footer from "./components/Footer.tsx";
 
 function App() {
-    return (
-        <div className="bg-image min-h-screen flex flex-col bg-no-repeat bg-cover bg-center">
-
-        <Router>
-                <Navbar />
-                <main className="flex-grow">
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/tokeninfo" element={<TokenPage />} />
-                        <Route path="/attention" element={<AttentionPage />} />
-                        <Route path="/aboutus" element={<AboutUs />} />
-                    </Routes>
-                </main>
-                <Footer />
-            </Router>
-        </div>
-    );
+  return (
+    <div className="bg-image min-h-screen flex flex-col bg-no-repeat bg-cover bg-center">
+      <Router>
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/tokeninfo" element={<TokenPage />} />
+            <Route path="/networkLearning" element={<LearningPage />} />
+            <Route path="/attention" element={<AttentionPage />} />
+            <Route path="/modellgleichung" element={<ModellgleichungPage />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
+    </div>
+  );
 }
 
-export default App
+export default App;
