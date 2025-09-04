@@ -87,7 +87,7 @@ export default function SimpleRad({wordpercentlist}: any) {
         const test = "blue";
         return(
 
-            <ul class="legend">
+            <ul className="legend">
                 {wordradiantlist.map((wordradiant, index) => (
                 <li className="legend-item"  key={index}>
                     <span className={`legend-circle`} style={{background: piecolours[index]}}>
@@ -152,7 +152,7 @@ export default function SimpleRad({wordpercentlist}: any) {
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
                     
-                    <div class="wheel-and-legend">
+                    <div className="wheel-and-legend">
                         <div className="arrow">
 
                             <div className="circle" id="simpleRad" style={{

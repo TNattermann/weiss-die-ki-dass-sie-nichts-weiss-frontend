@@ -104,7 +104,7 @@ export default function WahrIntroduction() {
                         und einen Satz generieren.
                         </p>
 
-                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
+                        
 
                         <input
                             type="range"
@@ -116,7 +116,7 @@ export default function WahrIntroduction() {
 
                         <MultiTestRad wordlibrary={wordlibrary} temperature={rangeAdjustedValue} isVideo={false}
                         />
-                        </p>
+                        
                     </div>
                 </div>
 

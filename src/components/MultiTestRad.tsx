@@ -280,7 +280,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
 
             //TBD make this take the correct index
 
-            <ul class="legend">
+            <ul className="legend">
                 {/*wordradiantlist.map((wordradiant, index) => (
                 <li className="legend-item"  key={index}>
                     <span className={`legend-circle`} style={{background: piecolours[index]}}>
@@ -444,7 +444,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
                     <div className="circle-parade">
 
                         {Array(totalnumberofcircles).keys().map( (circleindex) => 
-                            <div class="wheel-and-legend">
+                            <div className="wheel-and-legend">
                             <div className="arrow">
 
                                 <div className="circle" id="Rad1" style={{

@@ -56,15 +56,15 @@ export default function WahrIntroduction() {
 
                 <table className="table-auto text-lg text-text-normal">  
                 <thead>    
-                    <tr>      <th>Wort</th>       <th>Wahrscheinlichkeit</th>    </tr>  
+                    <tr><th>Wort</th><th>Wahrscheinlichkeit</th></tr>  
                 </thead>  
                 <tbody>    
-                    <tr>      <td>schön</td>      <td>45%</td>    </tr>    
-                    <tr>      <td>warm</td>      <td>30%</td>     </tr>   
-                    <tr>      <td>kalt</td>     <td>25%</td> </tr>  
+                    <tr><td>schön</td><td>45%</td></tr>    
+                    <tr><td>warm</td><td>30%</td></tr>   
+                    <tr><td>kalt</td><td>25%</td></tr>  
                 </tbody>
                 <thead>    
-                    <tr>      <th>Gesamt:</th>       <th>100%</th>    </tr>  
+                    <tr><th>Gesamt:</th><th>100%</th></tr>  
                 </thead> 
                 </table>
 
@@ -97,11 +97,11 @@ export default function WahrIntroduction() {
                         "warm" liegen bleiben.
                         </p>
 
-                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
+                        
 
                         <SimpleRad wordpercentlist={[["schön", 0.45], ["warm", 0.3], ["kalt", 0.25]]}
                         />
-                        </p>
+                        
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 

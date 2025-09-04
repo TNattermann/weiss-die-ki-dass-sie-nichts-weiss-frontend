@@ -74,11 +74,11 @@ export default function NextWord() {
                         bis der Satz beendet wird. Schließlich hat es ja für jeden Satz zugriff auf die Wahrscheinlichkeitstabellen.
                         </p>
 
-                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
+                        
                         
                         <MultiTestRad wordlibrary={wordlibrary} temperature={10} isVideo={true}
                         />
-                        </p>
+                        
                     </div>
                 </div>
 

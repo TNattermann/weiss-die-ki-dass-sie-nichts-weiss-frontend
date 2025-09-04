@@ -160,11 +160,11 @@ export default function Temperature() {
                             >
                                 
                                 
-                                <p className="text-lg text-text-normal mb-6 leading-relaxed">
+                                
                                 <SimpleRad wordpercentlist={example.wordratio}
                                 />
                                     
-                                </p>
+                            
                             </div>
                         ))}
 
@@ -176,7 +176,7 @@ export default function Temperature() {
 
                         <h3 className="text-primary text-xl font-semibold text-textDark mb-4">D. Temperatur = {rangeAdjustedValue}</h3>
 
-                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
+                        
                         <input
                             type="range"
                             min={minrange}
@@ -187,7 +187,7 @@ export default function Temperature() {
 
                         <SimpleRad wordpercentlist={applytemperature([["schön", 0.45 ], ["warm", 0.3], ["kalt", 0.25]],  rangeAdjustedValue)}
                         />
-                        </p>
+                        
                 </div>
                 
 
