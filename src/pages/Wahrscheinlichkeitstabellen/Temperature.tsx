@@ -18,48 +18,33 @@ function adjustRange (range: number, minimrange : number){
 }
 
 function applytemperature (wordpercentlist : [string, number][], temperature : number){
-    let newlist = [];
+    let newlist;
     let newvalue : number;
 
     //console.log(wordpercentlist);
 
-    for (let i=0; i < wordpercentlist.length; i++){
-        
-        /*
-        if (temperature == 0){
-            if (wordpercentlist[i][0] == "schön"){
+    if (temperature == 0){
+        newlist = [];
+        for (let i=0; i < wordpercentlist.length; i++){
+            if (i == 0){  //muss eigentlich erst nach dem maximum suchen, aber nehme mal implizit an, dass das gegeben ist
                 newvalue = wordpercentlist[i][1];
             }
             else {
                 newvalue = 0;
             }
-        }
-        else {
-            newvalue = wordpercentlist[i][1] / temperature;
-            console.log("applying temperature", wordpercentlist[i], newvalue, temperature);
-        }
-        */
-
-        if (temperature == 0){
-            if (wordpercentlist[i][0] == "schön"){
-                newvalue = wordpercentlist[i][1];
-            }
-            else {
-                newvalue = 0;
-            }
-        }
-        else {
-            if (wordpercentlist[i][0] == "schön" ){
-                newvalue = wordpercentlist[i][1] * (1 / temperature);
-            }
-            else {
-                newvalue = wordpercentlist[i][1];
-            }
+            newlist.push([wordpercentlist[i][0], newvalue]);
         }
 
-        newlist.push([wordpercentlist[i][0], newvalue]);
-        
     }
+    else {
+        const explist = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1] * 50 / temperature)]);
+        const expsum = explist.reduce((accumulator, wordexp) => accumulator + wordexp[1], 0);
+        newlist = explist.map( (wordexp) => [wordexp[0], wordexp[1] / expsum]);
+    }
+
+    
+        
+        
     //console.log(newlist);
 
     return (newlist);
@@ -127,8 +112,8 @@ export default function Temperature() {
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
                         Wir haben jetzt schon zwei verschiedene Implementierungsmethoden gesehen, wie wir das Wort anhand der
-                        Wahrscheinlichkeitstabelle auswählen. Die Methode, wo wir einfach nur das wahrscheinlichste Wort wählen (A.),
-                        und die, bei der wir auf unserem unveränderten Glücksrad drehen (B.). Wir können aber noch mehr Variation rein-bringen,
+                        Wahrscheinlichkeitstabelle auswählen. Die Methode, bei der wir einfach nur das wahrscheinlichste Wort wählen (<b>A.</b>),
+                        und die, bei der wir auf unserem unveränderten Glücksrad drehen (<b>B.</b>). Wir können aber noch mehr Variation rein-bringen,
                         in dem wir das Glücksrad etwas verändern, sodass alle Wörter etwas mehr gleich-wahrscheinlich sind.
                         </p>
 

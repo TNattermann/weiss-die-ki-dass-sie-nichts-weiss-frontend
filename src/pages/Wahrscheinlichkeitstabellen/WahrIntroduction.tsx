@@ -1,5 +1,6 @@
 import {useEffect} from "react";
 import SimpleRad from "../../components/SimpleRad";
+import Tilde from "../../components/Tilde";
 
 export default function WahrIntroduction() {
     useEffect(() => {
@@ -8,7 +9,7 @@ export default function WahrIntroduction() {
     return (
         <section className="py-6 px-6" id="educational-content">
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-5xl font-bold text-center text-primary mb-6">Wie funktionierten Sprachmodelle?</h1>
+                <h1 className="text-5xl font-bold text-center text-primary mb-6">Wie funktionieren Sprachmodelle?</h1>
                 <div className="text-center mb-16">
                     <div>
 
@@ -92,7 +93,7 @@ export default function WahrIntroduction() {
 
                         Eine gute Methode, um sich diese Wahrscheinlichkeitstabelle vorzustellen ist als Glücksrad auf dem Jahrmarkt.
                         Je größer die Wahrscheinlichkeit des Wortes ist, desto mehr Platz bekommt ein Wort. In diesem Fall, also "schön"
-                        mit dem meisten Platz und kalt am wenigsten. Wenn das Rad gedreht wird, sollte es in etwa drei von zehn Fällen
+                        mit dem meisten Platz und "kalt" am wenigsten. Wenn das Rad gedreht wird, sollte es in etwa drei von zehn Fällen bei
                         "warm" liegen bleiben.
                         </p>
 
@@ -117,7 +118,7 @@ export default function WahrIntroduction() {
                         sondern auch Sonderzeichen, wie der Punkt "." enthalten, 
                         damit das Sprachmodell auch einen Satz beenden kann.
                         Jetzt muss man sich nur noch vorstellen, dass das LLM diese Wahrscheinlichkeitstabellen für jeden möglichen 
-                        Satzanfang besitzt. Damit ~weiß das Sprachmodell bei jedem Satz, welches Wort als nächstes kommt.
+                        Satzanfang besitzt. Damit <Tilde />weiß das Sprachmodell bei jedem Satz, welches Wort als nächstes kommt.
                         </p>
 
                         

@@ -5,32 +5,215 @@ const fullspinduration = 0.3;
 const spinanimation = `spin ${fullspinduration}s linear infinite`;
 const piecolours = ["blue", "red", "yellow", "green", "lightgreen", "gold", "pink"];
 
+const maximumnumberofcircles = 3;
+
+
+function applytemperature (wordpercentlist : [string, number][], temperature : number){
+    let newlist;
+    let newvalue : number;
+
+    //console.log(wordpercentlist);
+
+    if (temperature == 0){
+        newlist = [];
+        for (let i=0; i < wordpercentlist.length; i++){
+            if (i == 0){  //muss eigentlich erst nach dem maximum suchen, aber nehme mal implizit an, dass das gegeben ist
+                newvalue = wordpercentlist[i][1];
+            }
+            else {
+                newvalue = 0;
+            }
+            newlist.push([wordpercentlist[i][0], newvalue]);
+        }
+
+    }
+    else {
+        const explist = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1] * 50 / temperature)]);
+        const expsum = explist.reduce((accumulator, wordexp) => accumulator + wordexp[1], 0);
+        newlist = explist.map( (wordexp) => [wordexp[0], wordexp[1] / expsum]);
+    }
+
+    
+        
+        
+    //console.log(newlist);
+
+    return (newlist);
+
+}
 
 
 
-export default function MultiTestRad({wordpercentlist}: any) {
-    const [currentAnimation, setCurrentAnimation] = useState(["none", "none"]);
-    const [currentTransform, setTransform] = useState(["none", "none"]);
+
+
+
+export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
+    const [totalnumberofcircles, settotalnumberofcircles] = useState(maximumnumberofcircles);
+    const [circlecounter, setcirclecounter] = useState(0); 
+    const [wordpercentlist, setwordpercentlist] = useState(wordlibrary[0].list);
+    const [wordradiantlist, setwordradiantlist] = useState(turnPercenttoDegrees(applytemperature(wordpercentlist, temperature)));
+    //States that need to be declared early, because the others rely on it
+
+    const [currentAnimation, setCurrentAnimation] = useState(createfilledArray("none", totalnumberofcircles));
+    const [currentTransform, setTransform] = useState(createfilledArray("none", totalnumberofcircles));
+    const [circlebackground, setcirclebackground] = useState(createCircleParade(wordradiantlist));
+    //states that determine the states of the circles
+
+    const [legendsets, setlegendsets] = useState(createLegendSet(wordradiantlist));
+
     const [isSpinning, setisSpinning] = useState(false);
-    const [circlecounter, setcirclecounter] = useState(0);
-    const totalnumberofcircles = 2;
+    const [isLastCircle, setisLastCircle] = useState(false); 
     //const [currentRotation, setcurrentRotation] = useState(0);
     //const startTime = performance.now(); //update this when you have a start button TBD
     //let startTime: number;
     const [startTime, setstartTime] = useState<number | undefined>(undefined);
-    const [winnermessage, setwinnermessage] = useState("__");
-    const [winnermemory, setwinnermemory] = useState([""]);
-    const [wordradiantlist, setwordradiantlist] = useState(turnPercenttoDegrees(wordpercentlist));
+    const [winnermessage, setwinnermessage] = useState("__"); //changing this string also makes a winnermessage manipulation later not work.
+    
+    const [isVideoStarted, setisVideoStarted] = useState(false);
+    const [timeRemaining, setTimeRemaining] = useState(0);
+    const [eventDate, setEventDate] = useState(new Date());
+    //constants important for the Video-version
+
+
+    let clickdisplay : string;
+    let videodisplay: string;
+    if (isVideo) {
+        clickdisplay = "none";
+        videodisplay = "";
+    }
+    else {
+        clickdisplay = "";
+        videodisplay = "none";
+    }
+    
     //useState([["blue0", 172],["red", 249],["yellow",313],["green",333],["lightgreen",347],["gold",360]]);
     //the initial state here is still a test-case, should probably be replaced
-    const [circlebackground, setcirclebackground] = useState(colourCircle());
 
     useEffect(() => {
-        setwordradiantlist(turnPercenttoDegrees(wordpercentlist));
-        setcirclebackground(colourCircle());
-        //console.log("Redrawing circle with new wordpercentlist:", wordpercentlist);
-        //console.log("does radiantlist change?", wordradiantlist);
-    }, [wordpercentlist]);
+        const tempradiantlist = turnPercenttoDegrees(applytemperature(wordpercentlist, temperature));
+        setwordradiantlist(tempradiantlist);
+        console.log("effect", tempradiantlist);
+        setcirclebackground(colourCircleParade(tempradiantlist, circlecounter));
+
+        
+        if (isVideoStarted) {
+            const countdownInterval = setInterval(() => {
+              const currentTime = new Date().getTime();
+              const eventTime = new Date(eventDate).getTime();
+              let remainingTime = eventTime - currentTime;
+      
+              if (remainingTime <= 0) {
+                remainingTime = 0;
+                clearInterval(countdownInterval);
+                
+                if (isSpinning){
+                    handleStopButton();
+                }
+                else {
+                    handleStartButton();
+                }
+
+                if (!isLastCircle){
+                const newEventDate = new Date(eventDate);
+                newEventDate.setSeconds(newEventDate.getSeconds() + 2);
+                setEventDate(newEventDate);
+                }
+              }
+      
+              setTimeRemaining(remainingTime);
+            }, 1000);
+      
+            return () => clearInterval(countdownInterval);
+          }
+        
+       
+    }, [temperature, isVideoStarted, timeRemaining]); //delete the latter two maybe
+
+    function createfilledArray(content: any, length: number){
+        let newlist = [];
+        for (let i=0; i < length; i++){
+            newlist.push(content);
+        }
+        return (newlist);
+    }
+
+    function createCircleParade( wordlist : (string | number)[][]){
+        let newlist = [];
+        const background = "rgba(128, 128, 128, 0.8)"; //grey and 80% opacity
+        
+        for (let i=0; i < totalnumberofcircles; i++){
+            if (i == 0){
+                newlist.push(colourCircle(wordlist));
+            }
+            else {
+                newlist.push(background);
+            }
+        }
+        
+        return (newlist);
+    }
+    
+    function colourCircleParade( wordlist : (string | number)[][], counter: number){
+        let newlist = [];
+        const background = "rgba(128, 128, 128, 0.1)"; //grey and 80% opacity
+        
+        for (let i=0; i < circlebackground.length; i++){
+            if (i < counter){
+
+                newlist.push(circlebackground[i]);
+            }
+            else if (i == counter){
+                newlist.push(colourCircle(wordlist));
+            }
+            else {
+                newlist.push(background);
+            }
+        }
+        
+        return (newlist);
+    }
+
+    function createLegendSet( wordlist : (string | number)[][]){
+        let legendset= [];
+        const keyword = ""; 
+        const keycircle = "rgba(128, 128, 128, 0.1)"; //grey and 80% opacity
+        
+        for (let i=0; i < totalnumberofcircles; i++){
+            if (i == 0){
+                legendset.push({keywordlist: wordlist.map((word) => (word[0])),
+                    beforecircle: wordlist.map((word, wordindex) => (piecolours[wordindex]))});
+            }
+            else {
+                legendset.push({keywordlist: createfilledArray(keyword, wordlist.length), 
+                    beforecircle: createfilledArray(keycircle, wordlist.length)});
+            }
+        }
+        
+        return (legendset);
+    }
+
+    function writeLegendSet( wordlist : (string | number)[][], counter: number){
+        let legendset= [];
+        const keyword = ""; 
+        const keycircle = "rgba(128, 128, 128, 0.1)"; //grey and 80% opacity
+        
+        for (let i=0; i < legendsets.length; i++){
+            if (i < counter){
+
+                legendset.push(legendsets[i]);
+            }
+            else if (i == counter){
+                legendset.push({keywordlist: wordlist.map((word) => (word[0])),
+                    beforecircle: wordlist.map((word, wordindex) => (piecolours[wordindex]))});
+            }
+            else {
+                legendset.push({keywordlist: createfilledArray(keyword, wordlist.length), 
+                    beforecircle: createfilledArray(keycircle, wordlist.length)});
+            }
+        }
+        
+        return (legendset);
+    }
 
     function turnPercenttoDegrees(wordpercentlist : [string, number][]){
         
@@ -55,14 +238,14 @@ export default function MultiTestRad({wordpercentlist}: any) {
             wordradiantlist.push([wordpercentlist[i][0], currentdegree]);
             lastdegree += currentdegree;
         }
-        //const wordradiantlist = wordpercentlist.map( wordpercent => [wordpercent[0], wordpercent[1] * 360]);
+        
         //const wordradiantlist = [["blue0", 172],["red", 249],["yellow",313],["green",333],["lightgreen",347],["gold",360]];
-        //console.log(wordpercentlist);
+        
 
         return(wordradiantlist);
     }
     
-    function colourCircle() {
+    function colourCircle( wordradiantlist : (string | number)[][]) {
         
         const pieparticipants = wordradiantlist;
         let resultString = ``;
@@ -86,18 +269,29 @@ export default function MultiTestRad({wordpercentlist}: any) {
         //conic-gradient(blue 0deg 172deg, red 172deg 249deg, yellow 249deg 313deg, green 313deg 333deg, lightgreen 333deg 347deg, gold 347deg 360deg, pink 360deg 360deg)
     }
 
-    function CreateLegend(){
-        const test = "blue";
+    function CreateLegend({legendindex} : any){
+        
         return(
 
+            //TBD make this take the correct index
+
             <ul class="legend">
-                {wordradiantlist.map((wordradiant, index) => (
+                {/*wordradiantlist.map((wordradiant, index) => (
                 <li className="legend-item"  key={index}>
                     <span className={`legend-circle`} style={{background: piecolours[index]}}>
                     </span>
                     {wordradiant[0]}
                 </li>
+                ))*/}
+                {console.log("Legendset", legendsets, legendindex)}
+                {legendsets[legendindex].keywordlist.map((keyword, index) => (
+                <li className="legend-item"  key={index}>
+                    <span className={`legend-circle`} style={{background: legendsets[legendindex].beforecircle[index]}}>
+                    </span>
+                    {keyword}
+                </li>
                 ))}
+
             </ul>
             
         );
@@ -115,17 +309,36 @@ export default function MultiTestRad({wordpercentlist}: any) {
         return (currentRotation);
     }
 
-    function displayWinner(currentRotation: number){
+    function displayWinner(currentRotation: number, counter : number){
         const maxdegrees = wordradiantlist; //starting with 0 or the previous degree, this is the area of each colour
+        console.log("Maxdegrees:", maxdegrees);
         const Winner = maxdegrees.filter(([colour, num]) => num > currentRotation)[0][0];
-        let winnerstring = "";
-        for (let i=0; i < circlecounter + 1; i++){
-            winnerstring += winnermemory[i];
+        console.log(currentRotation, Winner);
+        let winnerstring = winnermessage;
+        if (counter === 0){//(winnerstring == "__" || !isNotLastCircle){
+            winnerstring = "";
         }
         const newWinner = `${Winner}`;
         winnerstring += newWinner;
-        setwinnermemory(winnermemory.concat([newWinner]));
         setwinnermessage(winnerstring);
+
+        return (Winner);
+
+    }
+
+    function updateNextCircle(Winner : string, isNotLastCircle : boolean){
+        const temppercentlist = wordlibrary.find((word) => word.id === Winner).list;
+        console.log("new percent", temppercentlist);
+        const tempradiantlist = turnPercenttoDegrees(applytemperature(temppercentlist, temperature));
+        setwordpercentlist(temppercentlist);
+        console.log("update", tempradiantlist);
+        setwordradiantlist(tempradiantlist);
+        if (isNotLastCircle){
+            setcirclebackground(colourCircleParade(tempradiantlist, circlecounter+1));
+            setlegendsets(writeLegendSet(tempradiantlist, circlecounter + 1));
+        }
+
+        
 
     }
 
@@ -147,6 +360,13 @@ export default function MultiTestRad({wordpercentlist}: any) {
             //startTime = performance.now();
             setstartTime(performance.now());
 
+            console.log(circlebackground);
+
+            if (isLastCircle){
+                setcirclebackground(createCircleParade(wordradiantlist));
+                setlegendsets(createLegendSet(wordradiantlist));
+            }
+
 
             setCurrentAnimation(inputcorrectindex(currentAnimation, spinanimation, circlecounter));
             setTransform(inputcorrectindex(currentTransform, "none", circlecounter));
@@ -159,22 +379,50 @@ export default function MultiTestRad({wordpercentlist}: any) {
     function handleStopButton(){
         if(isSpinning){
             const currentRotation = updateRotation();
-    
+
             setCurrentAnimation(inputcorrectindex(currentAnimation, "none", circlecounter)); // Stop the animation
             setTransform(inputcorrectindex(currentTransform, `rotate(${- currentRotation}deg)`, circlecounter)); // Freeze at the current rotation
             setisSpinning(false);
 
-            if (circlecounter < totalnumberofcircles - 1){
-                setcirclecounter(circlecounter + 1);
-                setwinnermemory([""]);
-            }
-            else {setcirclecounter(0);}
+             
 
-            displayWinner(currentRotation);
+            const isNotLastCircle = (circlecounter < totalnumberofcircles - 1);
+            setisLastCircle(!isNotLastCircle);
+
+            const Winner = displayWinner(currentRotation, circlecounter);
+
+
+            if (isNotLastCircle){
+                setcirclecounter(circlecounter + 1);
+                updateNextCircle(Winner, isNotLastCircle);
+                console.log(circlebackground);
+                
+
+            }
+            else {
+                console.log("I am in the reset portion");
+                setcirclecounter(0);
+                updateNextCircle("0", isNotLastCircle);
+            }
+            
         }
 
 
     
+    }
+
+    function handleVideoButton(){
+        if (!isVideoStarted){
+
+        
+
+        handleStartButton();
+        
+        const newEventDate = new Date();
+        newEventDate.setSeconds(newEventDate.getSeconds() + 2);
+        setEventDate(newEventDate);
+        setisVideoStarted(true);
+        }
     }
 
     return (
@@ -182,49 +430,46 @@ export default function MultiTestRad({wordpercentlist}: any) {
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
 
+                    <button id="VideoButton" onClick={handleVideoButton} className="rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
+                    style={{ display: videodisplay}}>
+                        Play (TBD Video Play symbol here)
+                    </button>
+
+
                     <div className="circle-parade">
-                    
-                        <div class="wheel-and-legend">
+
+                        {Array(totalnumberofcircles).keys().map( (circleindex) => 
+                            <div class="wheel-and-legend">
                             <div className="arrow">
 
                                 <div className="circle" id="Rad1" style={{
-                                    background: circlebackground,
-                                    animation: currentAnimation[0],
-                                    transform: currentTransform[0]
+                                    background: circlebackground[circleindex],
+                                    animation: currentAnimation[circleindex],
+                                    transform: currentTransform[circleindex]
                                 }}>
                                 </div>
 
                             </div>
 
                             
-                            <CreateLegend />
+                            <CreateLegend legendindex={circleindex} />
                             
                         </div>
-
-                        <div class="wheel-and-legend">
-                            <div className="arrow">
-
-                                <div className="circle" id="Rad2" style={{
-                                    background: circlebackground,
-                                    animation: currentAnimation[1],
-                                    transform: currentTransform[1]
-                                }}>
-                                </div>
-
-                            </div>
-
-                            
-                            <CreateLegend />
-                            
-                        </div>
+                        )}
+                    
+                        
 
                     </div>
 
-                    <button id="startButton" onClick={handleStartButton} className="rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg">
+                    
+
+                    <button id="startButton" onClick={handleStartButton} className="rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
+                    style={{ display: clickdisplay}}>
                         Start Spinning
                     </button>
 
-                    <button id="stopButton" onClick={handleStopButton} className="rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg">
+                    <button id="stopButton" onClick={handleStopButton} className="rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
+                    style={{ display: clickdisplay}}>
                         Stop Spinning
                     </button>
 

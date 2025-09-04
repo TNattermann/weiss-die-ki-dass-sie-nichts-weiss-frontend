@@ -2,6 +2,7 @@ import WahrIntroduction from "./WahrIntroduction";
 import NextWord from "./NextWord";
 import Temperature from "./Temperature";
 import Ausprobieren from "./TempAusprob";
+import MainTakeAway from "./WahrMainTakeAways";
 import SectionSidebar from "../../components/SectionSidebar.tsx";
 
 function WahrPage() {
@@ -27,7 +28,7 @@ function WahrPage() {
                         <div id="nextword"><NextWord /></div>
                         <div id="temperature"><Temperature /></div>
                         <div id="playing"><Ausprobieren /></div>
-                        <div id="takeaways"> Do This TBD</div>
+                        <div id="takeaways"><MainTakeAway /></div>
                     </main>
                 </div>
             </div>
