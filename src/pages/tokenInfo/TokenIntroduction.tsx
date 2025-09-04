@@ -11,7 +11,7 @@ export default function TokenInfoAlgorithms() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
-                            Damit ein Sprachmodell mit Sprache arbeiten kann, braucht es eine einheitliche und maschinenlesbare
+                            Damit ein Sprachmodell mit Sprache ~arbeiten kann, braucht es eine einheitliche und maschinenlesbare
                             Darstellung des Textes.
                             Reiner Text besteht aus Zeichen und Wörtern, mit denen alleine ein neuronales Netz erstmal
                             nichts anfangen kann.
