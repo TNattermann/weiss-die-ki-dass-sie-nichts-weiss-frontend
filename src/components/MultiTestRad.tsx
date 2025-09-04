@@ -92,7 +92,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
     useEffect(() => {
         const tempradiantlist = turnPercenttoDegrees(applytemperature(wordpercentlist, temperature));
         setwordradiantlist(tempradiantlist);
-        console.log("effect", tempradiantlist);
+        
         setcirclebackground(colourCircleParade(tempradiantlist, circlecounter));
 
         
@@ -288,7 +288,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
                     {wordradiant[0]}
                 </li>
                 ))*/}
-                {console.log("Legendset", legendsets, legendindex)}
+                
                 {legendsets[legendindex].keywordlist.map((keyword, index) => (
                 <li className="legend-item"  key={index}>
                     <span className={`legend-circle`} style={{background: legendsets[legendindex].beforecircle[index]}}>
@@ -316,9 +316,9 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
 
     function displayWinner(currentRotation: number, counter : number){
         const maxdegrees = wordradiantlist; //starting with 0 or the previous degree, this is the area of each colour
-        console.log("Maxdegrees:", maxdegrees);
+        
         const Winner = maxdegrees.filter(([colour, num]) => num > currentRotation)[0][0];
-        console.log(currentRotation, Winner);
+        
         let winnerstring = winnermessage;
         if (counter === 0){//(winnerstring == "__" || !isNotLastCircle){
             winnerstring = "";
@@ -333,10 +333,10 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
 
     function updateNextCircle(Winner : string, isNotLastCircle : boolean){
         const temppercentlist = wordlibrary.find((word) => word.id === Winner).list;
-        console.log("new percent", temppercentlist);
+        
         const tempradiantlist = turnPercenttoDegrees(applytemperature(temppercentlist, temperature));
         setwordpercentlist(temppercentlist);
-        console.log("update", tempradiantlist);
+        
         setwordradiantlist(tempradiantlist);
         if (isNotLastCircle){
             setcirclebackground(colourCircleParade(tempradiantlist, circlecounter+1));
@@ -365,7 +365,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
             //startTime = performance.now();
             setstartTime(performance.now());
 
-            console.log(circlebackground);
+            
 
             if (isLastCircle){
                 setcirclebackground(createCircleParade(wordradiantlist));
@@ -400,12 +400,12 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
             if (isNotLastCircle){
                 setcirclecounter(circlecounter + 1);
                 updateNextCircle(Winner, isNotLastCircle);
-                console.log(circlebackground);
+                
                 
 
             }
             else {
-                console.log("I am in the reset portion");
+                
                 setcirclecounter(0);
                 updateNextCircle("0", isNotLastCircle);
             }
@@ -431,7 +431,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
     }
 
     return (
-        <section className="py-6 px-6" id="educational-content">
+        
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
 
@@ -487,6 +487,6 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
                 </div>
 
             </div>
-        </section>
+        
     );
 }

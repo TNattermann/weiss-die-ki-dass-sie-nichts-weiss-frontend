@@ -3,7 +3,7 @@ import Tilde from "../../components/Tilde";
 
 export default function WahrMainTakeaways() {
   return (
-      <section className="py-16 px-6">
+      
         <div className="max-w-6xl mx-auto">
 
           {/* Key Takeaways */}
@@ -41,6 +41,6 @@ export default function WahrMainTakeaways() {
           
 
         </div>
-      </section>
+      
   );
 }
