@@ -96,6 +96,12 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
         setcirclebackground(colourCircleParade(tempradiantlist, circlecounter));
 
         
+        
+        
+       
+    }, [temperature]); //delete the latter two maybe
+
+    useEffect(() => {
         if (isVideoStarted) {
             const countdownInterval = setInterval(() => {
               const currentTime = new Date().getTime();
@@ -125,9 +131,8 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
       
             return () => clearInterval(countdownInterval);
           }
-        
-       
-    }, [temperature, isVideoStarted, timeRemaining]); //delete the latter two maybe
+
+    }, [isVideoStarted, timeRemaining]);
 
     function createfilledArray(content: any, length: number){
         let newlist = [];
