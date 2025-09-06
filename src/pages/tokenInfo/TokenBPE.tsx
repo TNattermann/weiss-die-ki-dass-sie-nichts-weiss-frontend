@@ -74,55 +74,61 @@ export default function TokenBPE() {
 
                 <div className="bg-bgColor p-6 rounded-lg border border-outline-dark">
                   <h4 className="font-semibold text-primary mb-3">
-                    2. Häufigste Paare finden
+                    2. Häufige benachbaarte Zeichenpaare zusammenfassen
                   </h4>
                   <p className="text-text-normal mb-2">
-                    Das Paar <code>t + t</code> in „Wetter“ kommt häufig vor:
+                    Beispiel: Das Paar <code>a + s</code> in „Das“ kommt häufig vor:
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="token token-word">D</span>
-                    <span className="token token-word">a</span>
-                    <span className="token token-word">s</span>
+                    <span className="token token-word">as</span>
                     <span className="token token-special">␣</span>
-                    <span className="token token-word">W</span>
-                    <span className="token token-word">e</span>
-                    <span className="token token-word">tt</span>
+                    <span className="token token-word">We</span>
+                    <span className="token token-word">t</span>
+                    <span className="token token-word">t</span>
+                    <span className="token token-word">er</span>
+                    <span className="token token-special">␣</span>
+                    <span className="token token-word">he</span>
+                    <span className="token token-word">u</span>
+                    <span className="token token-word">te</span>
+                    <span className="token token-word">␣i</span>
+                    <span className="token token-word">s</span>
+                    <span className="token token-word">t</span>
+                    <span className="token token-special">␣</span>
+                    <span className="token token-word">be</span>
+                    <span className="token token-word">s</span>
+                    <span className="token token-word">on</span>
+                    <span className="token token-word">d</span>
                     <span className="token token-word">e</span>
                     <span className="token token-word">r</span>
+                    <span className="token token-word">s</span>
                     <span className="token token-special">␣</span>
-                    <span className="token token-word">h</span>
-                    <span className="token token-word">e</span>
-                    <span className="token token-word">u</span>
-                    <span className="token token-word">t</span>
-                    <span className="token token-word">e</span>
-                    <span className="token token-special">␣</span>
-                    <span className="token token-word">ist</span>
-                    <span className="token token-special">␣</span>
-                    <span className="token token-word">besonders</span>
-                    <span className="token token-special">␣</span>
-                    <span className="token token-word">schön</span>
+                    <span className="token token-word">s</span>
+                    <span className="token token-word">ch</span>
+                    <span className="token token-word">ön</span>
                     <span className="token token-special">.</span>
                   </div>
                 </div>
 
                 <div className="bg-bgColor p-6 rounded-lg border border-outline-dark">
-                  <h4 className="font-semibold text-primary mb-3">3. Iteration</h4>
+                  <h4 className="font-semibold text-primary mb-3">3. Nächste Iteration</h4>
                   <p className="text-text-normal mb-2">
-                    Weitere häufige Kombinationen zusammenfassen (z. B. „Das“, „Wett“, „er“, „schön“):
+                    Weitere häufige Wortsequenzen zusammenfassen (z. B. „␣Wet“, „ute“):
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    <span className="token token-word">Das</span>
-                    <span className="token token-special">␣</span>
-                    <span className="token token-word">Wett</span>
-                    <span className="token token-word">er</span>
-                    <span className="token token-special">␣</span>
-                    <span className="token token-word">heute</span>
-                    <span className="token token-special">␣</span>
-                    <span className="token token-word">ist</span>
-                    <span className="token token-special">␣</span>
-                    <span className="token token-word">besonders</span>
-                    <span className="token token-special">␣</span>
-                    <span className="token token-word">schön</span>
+                    <span className="token token-word">D</span>
+                    <span className="token token-word">as</span>
+                    <span className="token token-word">␣Wet</span>
+                    <span className="token token-word">ter</span>
+                    <span className="token token-word">␣he</span>
+                    <span className="token token-word">ute</span>
+                    <span className="token token-word">␣is</span>
+                    <span className="token token-word">t</span>
+                    <span className="token token-word">␣bes</span>
+                    <span className="token token-word">ond</span>
+                    <span className="token token-word">ers</span>
+                    <span className="token token-word">␣sch</span>
+                    <span className="token token-word">ön</span>
                     <span className="token token-special">.</span>
                   </div>
                 </div>
