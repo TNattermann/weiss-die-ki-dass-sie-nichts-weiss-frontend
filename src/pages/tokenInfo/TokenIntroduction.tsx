@@ -18,7 +18,7 @@ export default function TokenInfoAlgorithms() {
                         </p>
                         <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
                             <p className="text-textMedium font-medium">
-                                Ein <strong className="text-primary">Token</strong> kann ein Wort, ein Satzzeichen oder
+                                Ein <strong className="text-primary">Token</strong> kann ein Wort, eine Zeichensequenz, ein Satzzeichen oder
                                 sogar ein einzelnes Zeichen sein – je nach verwendetem Tokenizer.
                             </p>
                         </div>
@@ -32,12 +32,19 @@ export default function TokenInfoAlgorithms() {
                         <div className="bg-bgColor p-4 rounded-lg border border-outline">
                             <p className="text-text-normal font-semibold text-sm text-textNormal mb-3">Tokens:</p>
                             <div className="flex flex-wrap gap-2">
-                                <span className="token token-word">Das</span>
-                                <span className="token token-word">Wetter</span>
-                                <span className="token token-word">heute</span>
-                                <span className="token token-word">ist</span>
-                                <span className="token token-word">besonders</span>
-                                <span className="token token-word">schön</span>
+                                <span className="token token-word">D</span>
+                                <span className="token token-word">as</span>
+                                <span className="token token-word">␣Wet</span>
+                                <span className="token token-word">ter</span>
+                                <span className="token token-word">␣he</span>
+                                <span className="token token-word">ute</span>
+                                <span className="token token-word">␣is</span>
+                                <span className="token token-word">t</span>
+                                <span className="token token-word">␣bes</span>
+                                <span className="token token-word">ond</span>
+                                <span className="token token-word">ers</span>
+                                <span className="token token-word">␣sch</span>
+                                <span className="token token-word">ön</span>
                                 <span className="token token-special">.</span>
                             </div>
                         </div>

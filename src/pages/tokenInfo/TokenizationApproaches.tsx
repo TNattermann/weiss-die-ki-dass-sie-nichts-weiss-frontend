@@ -29,13 +29,13 @@ export default function TokenizationApproaches() {
             title: "Wort-basiert:",
             tokens: ["Das", "Wetter", "heute", "ist", "besonders", "schön."],
             tokenClass: "token-word",
-            description: "6 Tokens • Große Vokabular-Größe nötig • Jede unterstützte Sprache vergrößert das Vokabular"
+            description: "6 Tokens • Große Vokabular-Größe nötig, da jedes einzelne Wort ein Token ist • Jede unterstützte Sprache vergrößert das Vokabular"
         },
         subword: {
             title: "Teilwort-basiert (BPE):",
-            tokens: ["Das", "Wett", "er", "heute", "ist", "besonders", "schön", "."],
+            tokens: ["D", "as", "␣Wet", "ter", "␣he", "ute", "␣is", "t", "␣bes", "ond", "ers", "␣sch", "ön", "."],
             tokenClass: "token-subword",
-            description: "8 Tokens • Mittelgroßes Vokabular • Zerteilt Wörter in kleinere Einheiten • Gute Balance zwischen Vokabulargröße und Tokenanzahl"
+            description: "8 Tokens • Mittelgroßes Vokabular • Zerteilt Wörter in kleinere Einheiten (nicht unbedingt sinnvolle Silben oder Wortteile) • Gute Balance zwischen Vokabulargröße und Tokenanzahl"
         },
         character: {
             title: "Zeichen-basiert:",
@@ -56,6 +56,11 @@ export default function TokenizationApproaches() {
         <section className="py-16 px-6">
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-5xl font-bold text-center text-primary mb-10">Tokenisierungs-Ansätze im Vergleich</h1>
+                <p className="text-lg text-text-normal mb-6 leading-r>elaxed">
+                    Damit wir besser verstehen, wie Sprachmodelle mit Text ~arbeiten, müssen wir zuerst das Konzept des <strong className="text-primary">Vokabulars</strong> einführen.
+                    Das <strong className="text-primary">Vokabular</strong> ist im Kontext von Sprachmodellen die gesamte Sammlung aller möglichen Tokens, die das Modell verwenden darf – also Wörter, Wortteile oder auch Satzzeichen.
+                    Genau aus diesen Token setzt das Modell seine Texte Schritt für Schritt zusammen.
+                </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
 
                     {tokenizationApproaches.map((t) => {
