@@ -28,7 +28,7 @@ function applytemperature (wordpercentlist : [string, number][], temperature : n
 
     }
     else {
-        const explist = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1] * 50 / temperature)]);
+        const explist : [string, number][] = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1] * 50 / temperature)]);
         const expsum = explist.reduce((accumulator, wordexp) => accumulator + wordexp[1], 0);
         newlist = explist.map( (wordexp) => [wordexp[0], wordexp[1] / expsum]);
     }
@@ -332,7 +332,10 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
     }
 
     function updateNextCircle(Winner : string, isNotLastCircle : boolean){
-        const temppercentlist = wordlibrary.find((word) => word.id === Winner).list;
+        const temppercentlist = wordlibrary.find((word : {
+            id: string;
+            list: (string | number)[][];
+        }) => word.id === Winner).list;
         
         const tempradiantlist = turnPercenttoDegrees(applytemperature(temppercentlist, temperature));
         setwordpercentlist(temppercentlist);
@@ -443,8 +446,8 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
 
                     <div className="circle-parade">
 
-                        {Array(totalnumberofcircles).keys().map( (circleindex) => 
-                            <div className="wheel-and-legend">
+                        {Array.from(Array(totalnumberofcircles).keys()).map( (circleindex) => 
+                            <div className="wheel-and-legend" key={circleindex}>
                             <div className="arrow">
 
                                 <div className="circle" id="Rad1" style={{
