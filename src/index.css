@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import 'remixicon/fonts/remixicon.css';
+@import "remixicon/fonts/remixicon.css";
 
 body {
   @apply font-sans antialiased;
@@ -7,38 +7,40 @@ body {
 
 @theme {
   /* === PRIMARY COLORS === */
-  --color-primary: oklch(96.7% 0.067 122.328);                          /* text-lime-100 = #ecfcca */ 
-  --color-primary-container: oklch(28.2% 0.091 267.935);                /* text-blue-950 */
+  --color-primary: oklch(96.7% 0.067 122.328); /* text-lime-100 = #ecfcca */
+  --color-primary-container: oklch(
+    28.2% 0.091 267.935
+  ); /* text-blue-950 = #162456 */
   --color-on-primary-container: var(--color-primary);
   --color-primary-container-selected: var(--color-primary);
   --color-on-primary-container-selected: var(--color-primary-container);
 
   /* === TEXT === */
-  --color-text-normal: oklch(98.6% 0.031 120.757);                      /* text-lime-50 */
+  --color-text-normal: oklch(98.6% 0.031 120.757); /* text-lime-50 */
 
   --color-outline: var(--color-primary);
   --color-outline-dark: var(--color-primary-container);
 
   /* === SECONDARY COLORS === */
-  --color-secondary: oklch(81.1% 0.111 293.571);                        /* text-violet-300 */
-  --color-secondary-container: oklch(78.5% 0.115 274.713);              /* text-indigo-300 */
-  --color-on-secondary-container: var(--color-primary);
+  --color-secondary: oklch(81.1% 0.111 293.571); /* text-violet-300 */
+  --color-secondary-container: oklch(78.5% 0.115 274.713); /* text-indigo-300 */
+  --color-on-secondary-container: var(--color-on-primary-container-selected);
   --color-secondary-container-selected: var(--color-secondary);
   --color-on-secondary-container-selected: var(--color-primary);
 
   /* === ERROR / NEWSLETTER BUTTON === */
-  --color-error: oklch(41% 0.159 10.272);                               /* text-rose-900 */
-  --color-error-container: oklch(41% 0.159 10.272);                     /* text-rose-900 */
+  --color-error: oklch(41% 0.159 10.272); /* text-rose-900 */
+  --color-error-container: oklch(41% 0.159 10.272); /* text-rose-900 */
   --color-on-error-container: var(--color-text-normal);
 
-  --color-footer: oklch(44.6% 0.043 257.281);                           /* text-slate-600 */
+  --color-footer: oklch(44.6% 0.043 257.281); /* text-slate-600 */
 }
 
 /* Dark Mode */
 @layer theme {
   .dark {
     /* === PRIMARY COLORS === */
-    --color-primary: oklch(85% 0.060 122.328);
+    --color-primary: oklch(85% 0.06 122.328);
     --color-primary-container: oklch(18% 0.07 267.935);
     --color-on-primary-container: var(--color-primary);
     --color-primary-container-selected: var(--color-primary);
@@ -51,7 +53,7 @@ body {
     --color-outline-dark: var(--color-primary-container);
 
     /* === SECONDARY COLORS === */
-    --color-secondary: oklch(71% 0.10 293.571);
+    --color-secondary: oklch(71% 0.1 293.571);
     --color-secondary-container: oklch(58% 0.09 274.713);
     --color-on-secondary-container: var(--color-primary);
     --color-secondary-container-selected: var(--color-secondary);
@@ -62,7 +64,7 @@ body {
     --color-error-container: oklch(35% 0.14 10.272);
     --color-on-error-container: var(--color-text-normal);
 
-    --color-footer: oklch(37.2% 0.044 257.287);                           /* text-slate-700 */
+    --color-footer: oklch(37.2% 0.044 257.287); /* text-slate-700 */
   }
 }
 
@@ -70,21 +72,40 @@ body {
   .bg-image {
     /* Uses an absolute path to reference a public folder in the React project -> suppress error */
     /* noinspection CssUnknownTarget */
-    background-image: url('/bg-gradient.png');
+    background-image: url("/bg-gradient.png");
   }
 
   .dark .bg-image {
     /* noinspection CssUnknownTarget */
-    background-image: url('/bg-gradient-dark.png');
+    background-image: url("/bg-gradient-dark.png");
   }
 }
 
+a {
+  text-decoration: underline;
+}
 
 .neural-bg {
-  background-image: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 25%),
-  radial-gradient(circle at 80% 40%, rgba(139, 92, 246, 0.08) 0%, transparent 25%),
-  radial-gradient(circle at 40% 70%, rgba(99, 102, 241, 0.06) 0%, transparent 25%),
-  radial-gradient(circle at 70% 90%, rgba(139, 92, 246, 0.06) 0%, transparent 25%);
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      rgba(99, 102, 241, 0.08) 0%,
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 80% 40%,
+      rgba(139, 92, 246, 0.08) 0%,
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 40% 70%,
+      rgba(99, 102, 241, 0.06) 0%,
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 70% 90%,
+      rgba(139, 92, 246, 0.06) 0%,
+      transparent 25%
+    );
 }
 
 button {
@@ -100,7 +121,7 @@ button:disabled {
   padding: 4px 8px;
   margin: 2px;
   border-radius: 6px;
-  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Code", monospace;
   font-size: 14px;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -142,7 +163,9 @@ button:disabled {
 }
 
 @keyframes fadeIn {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
@@ -150,6 +173,27 @@ button:disabled {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.hover span {
+  display: none;
+}
+.hover:hover span {
+  position: absolute;
+  display: inline;
+  margin: 0px 0px;
+  height: auto;
+  width: auto;
+  padding: 1em;
+  z-index: 2;
+}
+.hover:hover span span {
+  position: relative;
+  margin: auto;
+  height: auto;
+  width: auto;
+  border: none;
+  padding: 0;
 }
 
 .loading-spinner {
@@ -162,15 +206,70 @@ button:disabled {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-input:focus, textarea:focus {
+.arrow {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.arrow::before {
+  /* the actual arrow pointing at the top of the circle */
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -5px; /* Adjust this value to position the triangle vertically */
+  left: 50%; /* Center the triangle horizontally */
+  transform: translateX(-50%); /* Center and rotate the triangle */
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent; /* Left side of the triangle */
+  border-right: 5px solid transparent; /* Right side of the triangle */
+  border-top: 15px solid grey; /* Top side of the triangle (the color of the triangle) */
+}
+
+.circle-parade {
+  display: flex;
+  align-items: center;
+}
+
+.wheel-and-legend {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.legend {
+  margin-left: 20px; /* Space between the circle and the legend */
+  display: flex;
+  flex-direction: column; /* Stack legend items vertically */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.legend-circle {
+  width: 15px; /* Width of the color box */
+  height: 15px; /* Height of the color box */
+  border-radius: 50%; /* Make it a circle */
+  margin-right: 8px; /* Space between the color box and text */
+}
+
+input:focus,
+textarea:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
 }
 
 .font-logo {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }

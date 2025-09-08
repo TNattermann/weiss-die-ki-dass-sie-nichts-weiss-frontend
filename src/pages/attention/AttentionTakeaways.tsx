@@ -13,16 +13,16 @@ export default function AttentionTakeaways() {
           </h2>
           <div>
             <h3 className="text-on-primary-container-selected font-semibold mb-3">
-              Die künstliche ~Aufmerksamkeit hat nicht viel mit menschlicher
-              Aufmerksamkeit gemein.
+              Die künstliche Aufmerksamkeit ist eigentlich ein falscher Begriff
+              für das Konzept zur Bestimmung von Wichtigkeiten von Wörtern.
             </h3>
             <p className="text-on-primary-container-selected">
               Der Aufmerksamkeitsmechranismus in großen Sprachmodellen basiert
               auf einer Reihe von handwerklichen Entscheidungen. Diese arbeiten
               darauf hin, mathematisch die Wichtigkeit von bestimmten Wörtern zu
               berechnen. Dieser Aufbau ist schwer mit menschlicher Intution zu
-              erklären, hat keinerlei Verbindung zur Semantik der echten Welt,
-              und ist nicht die beste Lösung für das Problem.
+              erklären und ist nicht zwangsläufig die beste Lösung für das
+              Problem.
             </p>
           </div>
         </div>

@@ -1,7 +1,6 @@
 import AttentionIntroduction from "./AttentionIntroduction";
 import AttentionConcept from "./AttentionConcept";
 import AttentionSelfattention from "./AttentionSelfAttention";
-import AttentionBlock from "./AttentionBlock";
 import AttentionExample from "./AttentionExample";
 import AttentionTakeaways from "./AttentionTakeaways";
 import SectionSidebar from "../../components/SectionSidebar";
@@ -16,7 +15,6 @@ function AttentionPage() {
               { id: "introduction", title: "Intuition" },
               { id: "concept", title: "Konzept" },
               { id: "selfattention", title: "Self-Attention" },
-              { id: "block", title: "Attention-Block" },
               { id: "example", title: "Beispiel" },
               { id: "takeaway", title: "Erkenntnisse" },
             ]}
@@ -32,9 +30,6 @@ function AttentionPage() {
             </div>
             <div id="selfattention">
               <AttentionSelfattention />
-            </div>
-            <div id="block">
-              <AttentionBlock />
             </div>
             <div id="example">
               <AttentionExample />

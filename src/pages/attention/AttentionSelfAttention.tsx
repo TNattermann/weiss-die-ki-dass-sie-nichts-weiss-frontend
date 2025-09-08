@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 type FileWithTextProps = {
   fileSrc: string;
@@ -86,10 +87,20 @@ export default function AttentionSelfattention() {
         </h1>
         <div className="mb-4">
           <p className="text-lg text-text-normal mb-8 leading-relaxed">
-            Zum Aufmerksamkeitsblock in Transformer-Modellen ist es nun nicht
-            mehr weit: Es werden drei verschiedene Arten von Vektoren gebildet,
-            die jeweils eine besondere Rolle spielen:
-            <VectorList />
+            Das Sprachmodell lernt also mithilfe eines Neuronalen Netzes für
+            jedes neu generierte Wort, welche vorangegangen Wörter relevant
+            sind. Es nutzt dafür die bereits getätigten Eingaben - also nur mit
+            dem Inhalt selbst (Mehr zu Neuronalen Netzen auf{" "}
+            <Link to="/modellgleichung">dieser</Link> Seite). Dazu benötigt es
+            das entsprechende <Link to="/networkLearning">Training</Link>. Der
+            gesamte Prompt und die bereits generierten Tokens (mehr zu{" "}
+            <Link to="/wordembeddings">Tokens</Link>) werden erneut als Input in
+            das Sprachmodell gegeben, und das nächste Wort wird generiert,
+            basierend auf den berechneten Werten der Wichtigkeit. Am Ende ist
+            die Wichtigkeit eines Tokens für alle anderen Tokens nur ein
+            mathematisch berechneter Vektor, der alle Informationen, die wir als
+            Menschen als relevant betrachten, um das nächste Wort zu finden,
+            beinhaltet. Dies ist menschlich nur schwer vorstellbar.
           </p>
 
           <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-4">
@@ -98,14 +109,10 @@ export default function AttentionSelfattention() {
               menschlicher Kommunikation vergleicht, so kann man feststellen,
               dass gewisse Wörter mehr Inhalt in sich tragen als nur ihre
               oberflächliche Bedeutung. Manche ändern beispielsweise den Sinn
-              benachbarter Wörter oder sogar ganzer Sätze.
+              benachbarter Wörter oder sogar ganzer Sätze. All diese
+              Informationen werden am Ende in einen Vektor verpackt.
             </p>
           </div>
-          <p className="text-lg text-text-normal mb-4 leading-relaxed">
-            Mithilfe dieser drei unterschiedlichen Vektoren wird also nicht nur
-            der reine Inhalt eines Wortes erfasst, sondern auch seine Position
-            im Text und andere Kontextinformationen.
-          </p>
 
           <FileWithText
             fileSrc="/example-audio.mp3"
