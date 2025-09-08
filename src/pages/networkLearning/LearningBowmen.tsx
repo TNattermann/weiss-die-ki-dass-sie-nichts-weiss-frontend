@@ -44,12 +44,32 @@ export default function BowmanShooter() {
   };
 
   // Map tension (10–2000) to the arrow TIP's destination X on the canvas
-  const computeDestTipX = (t: number, s:number) => {
-    const normalized = (t - min_slider) / (max_slider - min_slider); // 0..1
-    const minTipX = bowmanX + 40;         // tip when offset = 0
-    const maxTipX = canvasWidth - 4;      // keep inside canvas
-    return Math.max(s, minTipX + normalized * (maxTipX - minTipX)) ;
-  };
+  //const computeDestTipX = (t: number, s:number) => {
+  //  const normalized = (t - min_slider) / (max_slider - min_slider); // 0..1
+  //  const minTipX = bowmanX + 40;         // tip when offset = 0
+  //  const maxTipX = canvasWidth - 4;      // keep inside canvas
+  //  return Math.max(s, minTipX + normalized * (maxTipX - minTipX)) ;
+  //};
+
+// Map tension (10–1000) to the arrow TIP's destination X on the canvas
+const computeDestTipX = (t: number, startTipX: number) => {
+  const normalized = (t - min_slider) / (max_slider - min_slider); // 0..1
+  const minTipX = bowmanX + 40 * scaling;  // arrow tip at rest
+  const maxTipX = canvasWidth - 4;
+
+  const computed = minTipX + normalized * (maxTipX - minTipX);
+
+  // If the slider is at absolute minimum, no movement
+  if (t <= min_slider) {
+    return startTipX;
+  }
+
+  // Otherwise ensure at least a tiny nudge forward
+  const minTravelPx = 6; // minimal visible movement
+  const nudged = Math.max(startTipX + minTravelPx, computed);
+
+  return Math.min(nudged, maxTipX);
+};
 
   // Canvas setup (hi-DPI) and initial draw
   useEffect(() => {
@@ -112,11 +132,15 @@ export default function BowmanShooter() {
 
         const distanceToCenter = Math.abs(dest - targetX);
         const hit = distanceToCenter <= 3*scaling ;
-        const scaledDistance = distanceToCenter / 40;
-        const missAmount = Math.round(scaledDistance * 10) / 10;
+        const missAmount = Math.round(distanceToCenter) //Math.round(scaledDistance * 10) / 10;
 
         if (!hit) {
-          setShotResult(`❌ Daneben (um ${missAmount} Meter verfehlt)`);
+          if (missAmount < 100) {
+            setShotResult(`❌ Daneben (um ${missAmount} cm verfehlt)`);
+          }
+          else {
+            setShotResult(`❌ Daneben (um ${(missAmount / 100).toFixed(1)} Meter verfehlt)`);
+          }
         }  
 
         //setShotResult(hit ? "🎯 Treffer!" : "❌ Daneben");
@@ -182,7 +206,7 @@ export default function BowmanShooter() {
     y: number,
     s: number,
   ): void => {
-    const ringWidths = [s*35, s*30, s*20, s*15, s*3];
+    const ringWidths = [s * 27, s * 24, s * 15, s * 12, s * 3];
     const colors = ["black", "white", "black", "white", "red"];
     for (let i = 0; i < ringWidths.length; i++) {
       ctx.beginPath();

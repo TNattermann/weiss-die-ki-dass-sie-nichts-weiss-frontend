@@ -37,7 +37,7 @@ export default function LearningGraddesc() {
             <p className="text-lg text-text-normal mb-6 leading-r>elaxed">
               Auch die KI tastet sich langsam an eine optimale Einstellung heran - nur muss dabei nicht wie beim Bogenschießen
               ein Aspekt (die Bogenspannung) angepasst werden, sondern <strong className="text-primary">jedes</strong> der vielen 
-              Gewichte, die den internen Zustand der KI repräsentieren. 
+              Gewichte der KI. 
               Da jedes dieser Gewichte einen Einfluss auf den loss haben kann, muss auch für jedes Gewicht eine Anpassung erfolgen.
             </p>
 
@@ -59,7 +59,7 @@ export default function LearningGraddesc() {
             </div>            
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               <p className="text-text-normal font-medium">
-                <strong className="text-primary">Zusammenfassung Gradientenabstieg: </strong> Das Modell passt seine internen Zustände (= Gewichte) 
+                <strong className="text-primary">Zusammenfassung Gradientenabstieg: </strong> Das Modell passt seine Gewichte 
                 schrittweise an, um den loss zunehmend zu verringern. Diese Anpasungen sind der <strong className="text-primary">Kern des eigentlichen Lernprozesses</strong>.
                 Woher das Modell weiß, welche Gewichte wie stark angepasst werden müssen, wird mit der <strong className="text-primary">Backpropagation </strong> bestimmt.
               </p>
