@@ -34,48 +34,11 @@ body {
   --color-footer: oklch(44.6% 0.043 257.281);                           /* text-slate-600 */
 }
 
-/* Dark Mode */
-@layer theme {
-  .dark {
-    /* === PRIMARY COLORS === */
-    --color-primary: oklch(85% 0.060 122.328);
-    --color-primary-container: oklch(18% 0.07 267.935);
-    --color-on-primary-container: var(--color-primary);
-    --color-primary-container-selected: var(--color-primary);
-    --color-on-primary-container-selected: var(--color-primary-container);
-
-    /* === TEXT === */
-    --color-text-normal: oklch(90% 0.025 120.757);
-
-    --color-outline: var(--color-primary);
-    --color-outline-dark: var(--color-primary-container);
-
-    /* === SECONDARY COLORS === */
-    --color-secondary: oklch(71% 0.10 293.571);
-    --color-secondary-container: oklch(58% 0.09 274.713);
-    --color-on-secondary-container: var(--color-primary);
-    --color-secondary-container-selected: var(--color-secondary);
-    --color-on-secondary-container-selected: var(--color-primary);
-
-    /* === ERROR / NEWSLETTER BUTTON === */
-    --color-error: oklch(35% 0.14 10.272);
-    --color-error-container: oklch(35% 0.14 10.272);
-    --color-on-error-container: var(--color-text-normal);
-
-    --color-footer: oklch(37.2% 0.044 257.287);                           /* text-slate-700 */
-  }
-}
-
 @layer utilities {
   .bg-image {
     /* Uses an absolute path to reference a public folder in the React project -> suppress error */
     /* noinspection CssUnknownTarget */
     background-image: url('/bg-gradient.png');
-  }
-
-  .dark .bg-image {
-    /* noinspection CssUnknownTarget */
-    background-image: url('/bg-gradient-dark.png');
   }
 }
 
@@ -156,7 +119,7 @@ button:disabled {
 .hover:hover span {
   position: absolute;
   display: inline;
-  margin: 0px 0px;
+  margin: 0 0;
   height: auto;
   width: auto;
   padding: 1em;

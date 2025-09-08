@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
 
 interface NavItem {
   to: string;
@@ -60,10 +59,6 @@ function Navbar() {
           </NavLink>
         </div>
 
-        <div className="hidden md:flex items-center ml-auto pl-4">
-          <ThemeToggle />
-        </div>
-
         {/* Mobile menu button (sichtbar bei kleinen Screens) */}
         <div className="md:hidden ml-auto">
           <button
@@ -102,10 +97,6 @@ function Navbar() {
             >
               Newsletter
             </NavLink>
-
-            <div className="flex justify-center pt-3 mt-3 border-t border-primary">
-              <ThemeToggle />
-            </div>
           </div>
         </div>
       )}

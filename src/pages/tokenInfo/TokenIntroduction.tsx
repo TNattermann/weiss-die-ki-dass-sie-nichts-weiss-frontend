@@ -24,10 +24,10 @@ export default function TokenInfoAlgorithms() {
                         </div>
                     </div>
                     <div className="p-8 rounded-xl">
-                        <h3 className="text-primary text-xl font-semibold text-textDark mb-4">Einfaches Beispiel</h3>
+                        <h3 className="text-primary text-xl font-semibold mb-4">Einfaches Beispiel</h3>
                         <div className="bg-bgColor p-4 rounded-lg border border-outline mb-4">
                             <p className="text-text-normal font-semibold text-sm text-textNormal mb-2">Input:</p>
-                            <p className="text-text-normal font-mono text-textDark">"Das Wetter heute ist besonders schön."</p>
+                            <p className="text-text-normal font-mono">"Das Wetter heute ist besonders schön."</p>
                         </div>
                         <div className="bg-bgColor p-4 rounded-lg border border-outline">
                             <p className="text-text-normal font-semibold text-sm text-textNormal mb-3">Tokens:</p>
