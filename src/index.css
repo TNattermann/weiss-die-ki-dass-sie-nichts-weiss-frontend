@@ -205,6 +205,16 @@ button:disabled {
   animation: spin 1s linear infinite;
 }
 
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* background: conic-gradient(blue 0deg 172deg, red 172deg 249deg, yellow 249deg 313deg, green 313deg 333deg,
+   lightgreen 333deg 347deg, gold 347deg 360deg, pink 360deg 360deg); */
+  animation: none; /*spin 1s linear infinite; /*dont forget to update duration is JS */
+  animation-direction: reverse !important;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -212,6 +222,106 @@ button:disabled {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.arrow {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.arrow::before {
+  /* the actual arrow pointing at the top of the circle */
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -5px; /* Adjust this value to position the triangle vertically */
+  left: 50%; /* Center the triangle horizontally */
+  transform: translateX(-50%); /* Center and rotate the triangle */
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent; /* Left side of the triangle */
+  border-right: 5px solid transparent; /* Right side of the triangle */
+  border-top: 15px solid grey; /* Top side of the triangle (the color of the triangle) */
+}
+
+.circle-parade {
+  display: flex;
+  align-items: center;
+}
+
+.wheel-and-legend {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.legend {
+  margin-left: 20px; /* Space between the circle and the legend */
+  display: flex;
+  flex-direction: column; /* Stack legend items vertically */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.legend-circle {
+  width: 15px; /* Width of the color box */
+  height: 15px; /* Height of the color box */
+  border-radius: 50%; /* Make it a circle */
+  margin-right: 8px; /* Space between the color box and text */
+}
+
+.arrow {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.arrow::before {
+  /* the actual arrow pointing at the top of the circle */
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: -5px; /* Adjust this value to position the triangle vertically */
+  left: 50%; /* Center the triangle horizontally */
+  transform: translateX(-50%); /* Center and rotate the triangle */
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent; /* Left side of the triangle */
+  border-right: 5px solid transparent; /* Right side of the triangle */
+  border-top: 15px solid grey; /* Top side of the triangle (the color of the triangle) */
+}
+
+.circle-parade {
+  display: flex;
+  align-items: center;
+}
+
+.wheel-and-legend {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.legend {
+  margin-left: 20px; /* Space between the circle and the legend */
+  display: flex;
+  flex-direction: column; /* Stack legend items vertically */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.legend-circle {
+  width: 15px; /* Width of the color box */
+  height: 15px; /* Height of the color box */
+  border-radius: 50%; /* Make it a circle */
+  margin-right: 8px; /* Space between the color box and text */
 }
 
 .arrow {

@@ -13,26 +13,33 @@ export default function TokenMainTakeaways() {
               <span className="text-5xl font-bold text-center text-primary break-words">Wichtige Erkenntnisse</span>
             </div>
           </h1>
-          <div className="bg-gradient-to-r from-primary text-outline-dark text-bgColor p-8 rounded-2xl">
+          <div className="bg-primary-container p-8 rounded-2xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h3 className="text-on-primary-container-selected font-semibold mb-3">Tokens sind keine Wörter</h3>
-                <p className="text-on-primary-container-selected">
+                <h3 className="text-on-primary-container font-semibold mb-3"><b>Tokens sind keine Wörter</b></h3>
+                <p className="text-on-primary-container">
                   Tokens sind rein technische Einheiten, in die Text zerlegt wird. Das Modell „versteht“ den Text nicht auf Wortebene,
                   sondern verarbeitet nur diese Token-Sequenzen.
                 </p>
               </div>
               <div>
-                <h3 className="text-on-primary-container-selected font-semibold mb-3">Algorithmus-Wahl</h3>
-                <p className="text-on-primary-container-selected">
+                <h3 className="text-on-primary-container font-semibold mb-3"><b>Algorithmus-Wahl</b></h3>
+                <p className="text-on-primary-container">
                   Die Wahl des Tokenisierungsalgorithmus beeinflusst direkt, wie der Text zerteilt wird und wie effizient das Sprachmodell arbeitet.
                   Unterschiedliche Tokenizer können denselben Satz unterschiedlich zerlegen.
                 </p>
               </div>
-              {/* Volle Breite */}
-              <div className="md:col-span-2">
-                <h3 className="text-on-primary-container-selected text-center font-semibold mb-3"><b>Kein echtes Verständnis</b></h3>
-                <p className="text-on-primary-container-selected">
+              <div>
+                <h3 className="text-on-primary-container font-semibold mb-3"><b>Tokens sind keine sinnvollen Einheiten</b></h3>
+                <p className="text-on-primary-container">
+                  Tokens entsprechen nicht automatisch Wörtern oder grammatikalisch sinnvollen Bestandteilen.
+                  Besonders bei teilwort-basierten Ansätzen entstehen Sequenzen wie „he“ und „ute“,
+                  die für sich genommen keine Bedeutung tragen. Das Modell arbeitet aber ausschließlich mit diesen Fragmenten.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-on-primary-container font-semibold mb-3"><b>Kein echtes Verständnis</b></h3>
+                <p className="text-on-primary-container">
                   Ein Sprachmodell kennt keine Bedeutungen, sondern nur mathematische Muster.
                   Auf die Frage <em>„Was ist eine Brombeere?“</em> hat es kein Verständnis darüber, was eine Brombeere ist,
                   sondern nur Wahrscheinlichkeiten für passende Token-Sequenzen, die es aus den Trainingsdaten gelernt hat.
@@ -47,9 +54,9 @@ export default function TokenMainTakeaways() {
           <div className="mt-12 text-center">
             <Link
                 to="/"
-                className="inline-flex items-center bg-primary-container text-on-primary-container px-8 py-3 rounded-lg font-medium hover:bg-primary transition-colors duration-200 shadow-lg"
+                className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
             >
-              Weiter zu Test
+              Weiter zu anderer Seite
               <ArrowRight className="text-on-primary-container ml-2 h-5 w-5" />
             </Link>
           </div>

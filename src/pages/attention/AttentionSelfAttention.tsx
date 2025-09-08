@@ -86,6 +86,7 @@ export default function AttentionSelfattention() {
           Self-Attention
         </h1>
         <div className="mb-4">
+        <div className="mb-4">
           <p className="text-lg text-text-normal mb-8 leading-relaxed">
             Das Sprachmodell lernt also mithilfe eines Neuronalen Netzes für
             jedes neu generierte Wort, welche vorangegangen Wörter relevant
@@ -113,6 +114,11 @@ export default function AttentionSelfattention() {
               Informationen werden am Ende in einen Vektor verpackt.
             </p>
           </div>
+          <p className="text-lg text-text-normal mb-8 leading-relaxed">
+            Mithilfe dieser drei unterschiedlichen Vektoren wird also nicht nur
+            der reine Inhalt eines Wortes erfasst, sondern auch seine Position
+            im Text und andere Kontextinformationen.
+          </p>
 
           <FileWithText
             fileSrc="/example-audio.mp3"
