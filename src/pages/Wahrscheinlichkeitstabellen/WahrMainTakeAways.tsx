@@ -1,4 +1,4 @@
-import Tilde from "../../components/Tilde";
+import Tilde from "../../components/Tilde.tsx";
 
 
 export default function WahrMainTakeaways() {

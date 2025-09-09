@@ -1,8 +1,8 @@
-import WahrIntroduction from "./WahrIntroduction";
-import NextWord from "./NextWord";
-import Temperature from "./Temperature";
-import Ausprobieren from "./TempAusprob";
-import MainTakeAway from "./WahrMainTakeAways";
+import WahrIntroduction from "./WahrIntroduction.tsx";
+import NextWord from "./NextWord.tsx";
+import Temperature from "./Temperature.tsx";
+import Ausprobieren from "./TempAusprob.tsx";
+import MainTakeAway from "./WahrMainTakeAways.tsx";
 import SectionSidebar from "../../components/SectionSidebar.tsx";
 
 function WahrPage() {

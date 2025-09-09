@@ -15,7 +15,7 @@ export default function SimpleRad({wordpercentlist}: any) {
     //const [currentRotation, setcurrentRotation] = useState(0);
     //const startTime = performance.now(); //update this when you have a start button TBD
     //let startTime: number;
-    const [startTime, setstartTime] = useState<number | undefined>(undefined);
+    const [startTime, setstartTime] = useState<number>(performance.now());
     const [winnermessage, setwinnermessage] = useState("__");
     const [wordradiantlist, setwordradiantlist] = useState(turnPercenttoDegrees(wordpercentlist));
     //useState([["blue0", 172],["red", 249],["yellow",313],["green",333],["lightgreen",347],["gold",360]]);
@@ -44,7 +44,7 @@ export default function SimpleRad({wordpercentlist}: any) {
         
         
         //we assume for now the numbers all add up to 1
-        let wordradiantlist = []; 
+        let wordradiantlist : [string, number][] = []; 
         let lastdegree = 0;
         let currentdegree;
         for (let i=0; i < wordpercentlist.length; i++){
@@ -84,7 +84,6 @@ export default function SimpleRad({wordpercentlist}: any) {
     }
 
     function CreateLegend(){
-        const test = "blue";
         return(
 
             <ul className="legend">
@@ -114,7 +113,7 @@ export default function SimpleRad({wordpercentlist}: any) {
 
     function displayWinner(currentRotation: number){
         const maxdegrees = wordradiantlist; //starting with 0 or the previous degree, this is the area of each colour
-        const Winner = maxdegrees.filter(([colour, num]) => num > currentRotation)[0][0];
+        const Winner = maxdegrees.filter(([, num]) => num > currentRotation)[0]?.[0];
         setwinnermessage(`${Winner}`);
 
     }

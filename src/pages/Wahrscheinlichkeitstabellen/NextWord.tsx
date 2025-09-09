@@ -1,5 +1,5 @@
 import {useEffect} from "react";
-import MultiTestRad from "../../components/MultiTestRad";
+import MultiTestRad from "../../components/MultiTestRad.tsx";
 
 
 const wordlibrary = [

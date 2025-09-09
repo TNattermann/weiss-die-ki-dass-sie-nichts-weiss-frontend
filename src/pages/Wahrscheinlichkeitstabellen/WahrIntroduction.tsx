@@ -1,6 +1,6 @@
 import {useEffect} from "react";
-import SimpleRad from "../../components/SimpleRad";
-import Tilde from "../../components/Tilde";
+import SimpleRad from "../../components/SimpleRad.tsx";
+import Tilde from "../../components/Tilde.tsx";
 
 export default function WahrIntroduction() {
     useEffect(() => {

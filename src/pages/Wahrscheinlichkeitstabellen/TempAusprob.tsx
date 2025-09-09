@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 import { useState } from 'react';
-import MultiTestRad from "../../components/MultiTestRad";
+import MultiTestRad from "../../components/MultiTestRad.tsx";
 
 //right now a lot of code is copied from simpleRad. Find a better way
 
@@ -79,14 +79,14 @@ const wordlibrary = [
 
 
 
-export default function WahrIntroduction() {
+export default function TempAusprob() {
     const minrange = -20;
-    const [rangeValue, setRangeValue] = useState(-20); //update this to 0 again !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    const [rangeValue, setRangeValue] = useState(0); //update this to 0 again !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     const [rangeAdjustedValue, setRangeAdjustedValue] = useState(adjustRange(rangeValue, minrange));
 
-    const handleRangeChange = (event) => {
+    const handleRangeChange = (event : any) => {
         setRangeValue(event.target.value); // Update state with the current value
-        setRangeAdjustedValue(adjustRange(rangeValue, minrange));
+        setRangeAdjustedValue(adjustRange(event.target.value, minrange));
     };
 
     useEffect(() => {

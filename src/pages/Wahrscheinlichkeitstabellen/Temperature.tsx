@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 import { useState } from 'react';
-import SimpleRad from "../../components/SimpleRad";
+import SimpleRad from "../../components/SimpleRad.tsx";
 
 function adjustRange (range: number, minimrange : number){
     let adjustedRange: number;
@@ -18,7 +18,7 @@ function adjustRange (range: number, minimrange : number){
 }
 
 function applytemperature (wordpercentlist : [string, number][], temperature : number){
-    let newlist;
+    let newlist : [string, number][];
     let newvalue : number;
 
     //console.log(wordpercentlist);
@@ -37,7 +37,7 @@ function applytemperature (wordpercentlist : [string, number][], temperature : n
 
     }
     else {
-        const explist = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1] * 50 / temperature)]);
+        const explist : [string, number][] = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1] * 50 / temperature)]);
         const expsum = explist.reduce((accumulator, wordexp) => accumulator + wordexp[1], 0);
         newlist = explist.map( (wordexp) => [wordexp[0], wordexp[1] / expsum]);
     }
@@ -53,12 +53,12 @@ function applytemperature (wordpercentlist : [string, number][], temperature : n
 
 export default function Temperature() {
     const minrange = -20;
-    const [rangeValue, setRangeValue] = useState(-20); //update this to 0 again !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    const [rangeValue, setRangeValue] = useState(0); //update this to 0 again !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     const [rangeAdjustedValue, setRangeAdjustedValue] = useState(adjustRange(rangeValue, minrange));
 
-    const handleRangeChange = (event) => {
+    const handleRangeChange = (event : any) => {
         setRangeValue(event.target.value); // Update state with the current value
-        setRangeAdjustedValue(adjustRange(rangeValue, minrange));
+        setRangeAdjustedValue(adjustRange(event.target.value, minrange));
     };
 
     const [activeExample, setActiveExample] = useState("A");

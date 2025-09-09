@@ -9,7 +9,7 @@ const maximumnumberofcircles = 3;
 
 
 function applytemperature (wordpercentlist : [string, number][], temperature : number){
-    let newlist;
+    let newlist : [string, number][];
     let newvalue : number;
 
     //console.log(wordpercentlist);
@@ -48,7 +48,8 @@ function applytemperature (wordpercentlist : [string, number][], temperature : n
 
 
 export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
-    const [totalnumberofcircles, settotalnumberofcircles] = useState(maximumnumberofcircles);
+    //const [totalnumberofcircles, settotalnumberofcircles] = useState(maximumnumberofcircles);
+    const totalnumberofcircles = maximumnumberofcircles;
     const [circlecounter, setcirclecounter] = useState(0); 
     const [wordpercentlist, setwordpercentlist] = useState(wordlibrary[0].list);
     const [wordradiantlist, setwordradiantlist] = useState(turnPercenttoDegrees(applytemperature(wordpercentlist, temperature)));
@@ -66,7 +67,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
     //const [currentRotation, setcurrentRotation] = useState(0);
     //const startTime = performance.now(); //update this when you have a start button TBD
     //let startTime: number;
-    const [startTime, setstartTime] = useState<number | undefined>(undefined);
+    const [startTime, setstartTime] = useState<number>(performance.now());
     const [winnermessage, setwinnermessage] = useState("__"); //changing this string also makes a winnermessage manipulation later not work.
     
     const [isVideoStarted, setisVideoStarted] = useState(false);
@@ -185,8 +186,10 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
         
         for (let i=0; i < totalnumberofcircles; i++){
             if (i == 0){
-                legendset.push({keywordlist: wordlist.map((word) => (word[0])),
-                    beforecircle: wordlist.map((word, wordindex) => (piecolours[wordindex]))});
+                legendset.push(
+                    {keywordlist: wordlist.map((word) => (word[0])),
+                    beforecircle: wordlist.map((_, wordindex) => (piecolours[wordindex]))}
+                );
             }
             else {
                 legendset.push({keywordlist: createfilledArray(keyword, wordlist.length), 
@@ -209,7 +212,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
             }
             else if (i == counter){
                 legendset.push({keywordlist: wordlist.map((word) => (word[0])),
-                    beforecircle: wordlist.map((word, wordindex) => (piecolours[wordindex]))});
+                    beforecircle: wordlist.map((_, wordindex) => (piecolours[wordindex]))});
             }
             else {
                 legendset.push({keywordlist: createfilledArray(keyword, wordlist.length), 
@@ -235,7 +238,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
         
         
         //we assume for now the numbers all add up to 1
-        let wordradiantlist = []; 
+        let wordradiantlist : [string, number][] = []; 
         let lastdegree = 0;
         let currentdegree;
         for (let i=0; i < wordpercentlist.length; i++){
@@ -317,7 +320,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
     function displayWinner(currentRotation: number, counter : number){
         const maxdegrees = wordradiantlist; //starting with 0 or the previous degree, this is the area of each colour
         
-        const Winner = maxdegrees.filter(([colour, num]) => num > currentRotation)[0][0];
+        const Winner = maxdegrees.filter(([, num]) => num > currentRotation)[0]?.[0];
         
         let winnerstring = winnermessage;
         if (counter === 0){//(winnerstring == "__" || !isNotLastCircle){
