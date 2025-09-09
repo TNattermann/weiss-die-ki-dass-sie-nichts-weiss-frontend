@@ -7,6 +7,8 @@ import AttentionPage from "./pages/attention/AttentionPage.tsx";
 import LearningPage from "./pages/networkLearning/LearningPage.tsx";
 import ModellgleichungPage from "./pages/modellgleichung/ModellgleichungPage.tsx";
 import WordEmbeddingsPage from './pages/wordembeddings/WordEmbeddingsPage.tsx';
+import Download from './pages/download/download.tsx';
+import Impressum from './pages/impressum/impressum.tsx';
 import Footer from './components/Footer.tsx';
 
 
@@ -25,6 +27,8 @@ function App() {
                         <Route path="/modellgleichung" element={<ModellgleichungPage />} />
                         <Route path="/aboutus" element={<AboutUs />} />
                         <Route path='/wordembeddings' element={<WordEmbeddingsPage />} />
+                        <Route path='/impressum' element={<Impressum />} />
+                        <Route path='/download' element={<Download />} />
                     </Routes>
                 </main>
                 <Footer />

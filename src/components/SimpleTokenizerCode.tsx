@@ -40,7 +40,7 @@ Decoded text:   Das Wetter heute ist besonders schön.`.trim();
         <section className="py-16 px-6">
             <div className="max-w-6xl mx-auto">
                 <div className="mb-12">
-                    <h2 className="text-3xl font-bold text-textDark mb-8">
+                    <h2 className="text-3xl font-bold mb-8">
                         <div className="flex justify-center items-center gap-3">
                             <CodeIcon className="h-12 w-12 text-primary"/>
                             <span className="text-5xl font-bold text-center text-primary break-words">SimpleTokenizer Implementation</span>

@@ -4,13 +4,8 @@ function Footer() {
     return (
         <footer className="bg-footer pb-8 pt-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div>
-                        <h3 className="text-primary text-xl font-bold mb-4">Test</h3>
-                        <p className="text-text-normal">
-                            Ein interaktives Tool zum Verstehen von LLMs
-                        </p>
-                    </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
                     <div>
                         <h4 className="text-primary text-lg font-semibold mb-4">Navigation</h4>
                         <ul className="space-y-2 text-text-normal">
@@ -20,17 +15,40 @@ function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/tokeninfo" className="hover:text-white transition-colors">
-                                    Tokenizer
+                                <Link to="tokeninfo" className="hover:text-white transition-colors">
+                                    Lernpfad 1: Versteht uns ein Sprachmodell?
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/modellgleichung" className="hover:text-white transition-colors">
+                                    Lernpfad 2: Was kann ein Modell des maschinellen Lernens?
                                 </Link>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h4 className="text-primary text-lg font-semibold mb-4">Technologie</h4>
+                        <h4 className="text-primary text-lg font-semibold mb-4">Weitere Informationen</h4>
                         <ul className="space-y-2 text-text-normal">
-                            <li>React + Vite mit Tailwind CSS</li>
-                            <li>FastAPI Backend</li>
+                            <li>
+                                <Link to="/" className="hover:text-white transition-colors"> 
+                                    Newsletter
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="download" className="hover:text-white transition-colors">
+                                    Buch Download
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/aboutus" className="hover:text-white transition-colors">
+                                    Über Uns
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/impressum" className="hover:text-white transition-colors">
+                                    Impressum
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
