@@ -9,13 +9,13 @@ export default function ModellgleichunGleichung() {
           <>
             <p className="text-lg text-text-normal mb-6 leading-relaxed">
               Die Berechnung des Neuronalen Netzwerks, die am Ende zu der
-              Ja-Nein-Entscheidung führt, schauen wir uns nun genauer an. Dazu
-              betrachten wir zunächst eine einzelne Berechnung, mit der der Wert
-              eines einzigen Neurons der zweiten Schicht, also des Hidden Layer,
-              bestimmt wird.
+              Ja-Nein-Entscheidung führt, schauen wir uns nun genauer an.
+              Betrachten Sie dazu zunächst eine einzelne Berechnung, mit der der
+              Wert eines einzigen Neurons der zweiten Schicht, also des Hidden
+              Layer, bestimmt wird.
             </p>
-            <div className="flex space-x-4 items-center justify-center">
-              <div className="bg-bgColor p-2 rounded-lg border border-outline mb-4 w-fit">
+            <div className="flex space-x-4 items-start justify-center">
+              <div className="bg-bgColor p-2 rounded-lg border border-outline w-fit">
                 <p className="text-lg text-text-normal mb-6 leading-relaxed">
                   &nbsp;&nbsp;&nbsp;Input (1) * Weight (1, x) <br></br>+ Input
                   (2) * Weight (2, x)
@@ -26,7 +26,8 @@ export default function ModellgleichunGleichung() {
               </div>
               <img
                 src="\img\Beispiel_Modellgleichung_Gleichung.png"
-                className="h-[200px] w-[450px] object-cover rounded-lg shadow-md border"
+                className="h-[187px] w-[450px] object-cover rounded-lg shadow-md border border-outline"
+                alt="einfaches Beispiel Modellgleichung"
               />
             </div>
             <div className="items-center mb-16 mt-8">
