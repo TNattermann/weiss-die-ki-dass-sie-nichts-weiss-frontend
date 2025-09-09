@@ -33,11 +33,10 @@ function AffenbandeBeispiel() {
         </h1>
         <div className="items-center mb-16">
           <p className="text-lg text-text-normal mb-6 leading-relaxed">
-            Nun versuchen Sie es doch einmal selbst: ändern Sie die Anzahl an
-            Äffchen und damit die Anzahl an verfügbaren Münzen und beobachten
-            Sie, welche Entscheidung die Maschine dann ~treffen würde. Probieren
-            Sie auch aus, was geschieht, wenn Sie den Preis für ein Äffchen auf
-            eine Münze statt fünf Münzen festlegen.
+            Ändern Sie die Anzahl an Äffchen und damit die Anzahl an verfügbaren
+            Münzen und beobachten Sie, welche Entscheidung die Maschine dann
+            ~treffen würde. Probieren Sie auch aus, was geschieht, wenn Sie den
+            Preis für ein Äffchen auf eine Münze statt fünf Münzen festlegen.
           </p>
         </div>
         {/* Aktueller Output */}
@@ -187,10 +186,9 @@ function AffenbandeBeispiel() {
         </div>
         <p className="text-lg text-text-normal mb-6 leading-relaxed">
           Durch das Beispiel haben Sie nun eine grobe Vorstellung davon
-          gewonnen, wie ein Modell eine Entscheidung ~trifft. Nun möchten wir
-          noch genauer verstehen, wie dies in einem LLM funktioniert. Dazu
-          schauen wir uns zuerst einmal den Aufbau eines Neuronalen Netzwerks
-          an, das die Basis für ein LLM bildet.
+          gewonnen, wie ein Modell eine Entscheidung ~trifft. Um genauer zu
+          verstehen, wie dies in Sprachmodellen wie ChatGPT funktioniert,
+          schauen wir uns nun den Aufbau eines Neuronalen Netzwerks an.
         </p>
       </div>
     </section>

@@ -19,10 +19,10 @@ function VideoPage() {
         Aufbau eines Neuronalen Netzwerks
       </h1>
       <p className="text-lg text-text-normal mb-6 text-center max-w-2xl">
-        Auf dem Bild ist ein einfaches Neuronales Netzwerk zu sehen, das dazu
-        geeignet ist, eine gezeichnete Ziffer zu erkennen. Das Beispiel hilft
-        dabei, die einzelnen Elemente eines Neuronalen Netzwerkes kennenzulernen
-        und zu verstehen, welche Aufgaben sie erfüllen.
+        Hier ist ein einfaches Neuronales Netzwerk zu sehen, das dazu geeignet
+        ist, eine gezeichnete Ziffer zu erkennen. Das Beispiel hilft dabei, die
+        einzelnen Elemente eines Neuronalen Netzwerkes kennenzulernen und zu
+        verstehen, welche Aufgaben sie erfüllen.
       </p>
 
       {/* Buttons über dem Bild */}
