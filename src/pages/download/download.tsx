@@ -43,7 +43,7 @@ _______________________`;
             {/* Email Button */}
             <a
               href={mailHref}
-              className="inline-block mt-4 px-5 py-3 rounded-xl bg-primary text-white font-semibold shadow hover:shadow-lg transition"
+              className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
             >
               Anfrage per E-Mail stellen
             </a>
