@@ -9,13 +9,13 @@ interface NavItem {
 
 const navItems: NavItem[] = [
     {to: '/', label: 'Startseite'},
-    {to: '/TODO', label: 'Was passiert, wenn ich ChatGPT benutze?'},
+    {to: '/temperature', label: 'Was passiert, wenn ich ChatGPT benutze?'},
     {to: '/tokeninfo', label: 'Weiß ChatGPT, was eine Brombeere ist?'},
     {to: '/wordembeddings', label: 'Wieso sind die Texte von ChatGPT so gut?'},
+    {to: '/attention', label: 'Versteht ChatGPT mich?'},
     {to: "/modellgleichung", label: "Wie funktioniert das mit diesem Neuronalen Netzwerk?"},
     {to: '/networkLearning', label: 'Wie wurde ChatGPT gebaut?'},
-    {to: '/attention', label: 'Versteht ChatGPT mich?'},
-    {to: '/TODO2', label: 'Buch Download'},
+    {to: '/download', label: 'Buch Download'},
     {to: '/aboutus', label: 'Über Uns'}
 ];
 
