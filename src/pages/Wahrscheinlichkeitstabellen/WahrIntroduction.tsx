@@ -1,5 +1,5 @@
 import {useEffect} from "react";
-import SimpleRad from "../../components/SimpleRad.tsx";
+import SimpleRad from "../../components/simpleRad.tsx";
 import Tilde from "../../components/Tilde.tsx";
 
 export default function WahrIntroduction() {

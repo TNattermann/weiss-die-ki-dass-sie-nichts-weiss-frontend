@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 import { useState } from 'react';
-import SimpleRad from "../../components/SimpleRad.tsx";
+import SimpleRad from "../../components/simpleRad.tsx";
 
 function adjustRange (range: number, minimrange : number){
     let adjustedRange: number;
