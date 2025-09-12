@@ -6,19 +6,19 @@ export default function TokenizationApproaches() {
     const tokenizationApproaches = [
         {
             id: "word",
-            label: "Wort-basiert",
+            label: "Wortbasiert",
             icon: "ri-text",
             description: "Jedes Wort wird als einzelnes Token behandelt",
         },
         {
             id: "subword",
-            label: "Teilwort-basiert",
+            label: "Teilwortbasiert",
             icon: "ri-text-spacing",
             description: "Wörter werden in häufige Teilsequenzen zerlegt",
         },
         {
             id: "character",
-            label: "Zeichen-basiert",
+            label: "Zeichenbasiert",
             icon: "ri-font-size",
             description: "Jedes Zeichen ist ein separates Token",
         },
@@ -27,7 +27,7 @@ export default function TokenizationApproaches() {
     const examples = {
         word: {
             title: "Wort-basiert:",
-            tokens: ["Das", "Wetter", "heute", "ist", "besonders", "schön."],
+            tokens: ["Das", "␣", "Wetter", "␣", "heute", "␣", "ist", "␣", "besonders", "␣", "schön."],
             tokenClass: "token-word",
             description: "6 Tokens • Große Vokabular-Größe nötig, da jedes einzelne Wort ein Token ist • Jede unterstützte Sprache vergrößert das Vokabular"
         },
