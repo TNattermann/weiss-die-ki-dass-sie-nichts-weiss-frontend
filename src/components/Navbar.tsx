@@ -75,11 +75,16 @@ function Navbar() {
                         )}
 
                         <NavLink
-                            to=""
-                            className="bg-error-container text-on-error-container block text-center px-3 py-3 rounded-lg text-base font-semibold transition-colors duration-200"
+                            to="/newsletter"
+                            className={({ isActive }) =>
+                                `block text-center px-3 py-3 rounded-lg text-base font-semibold transition-colors duration-200 bg-error-container ${
+                                    isActive ? "bg-primary-container-selected text-on-primary-container-selected" : "text-on-error-container"
+                                }`
+                            }
                         >
                             Newsletter
                         </NavLink>
+
                     </div>
                 </div>
             )}

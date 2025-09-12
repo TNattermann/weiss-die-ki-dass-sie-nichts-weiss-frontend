@@ -11,6 +11,7 @@ import Download from './pages/download/download.tsx';
 import Impressum from './pages/impressum/impressum.tsx';
 import Footer from './components/Footer.tsx';
 import TemperaturePage from "./pages/Wahrscheinlichkeitstabellen/TemperaturePage.tsx";
+import NewsletterPage from "./pages/newsletter/NewsletterPage.tsx";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                         <Route path='/wordembeddings' element={<WordEmbeddingsPage />} />
                         <Route path='/impressum' element={<Impressum />} />
                         <Route path='/download' element={<Download />} />
+                        <Route path='/newsletter' element={<NewsletterPage />} />
                     </Routes>
                 </main>
                 <Footer />
