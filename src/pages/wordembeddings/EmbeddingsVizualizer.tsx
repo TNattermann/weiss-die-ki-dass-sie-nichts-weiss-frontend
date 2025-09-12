@@ -78,8 +78,8 @@ const embeddings = {
 };
 
 const groups = {
-  "Beispiel 1": ["König", "Königin", "Mann", "Frau"],
-  "Beispiel 2": ["warm", "heiß", "sonnig", "Sonne", "Sommer", "Frühling", "Herbst", "Winter", "kalt", "Wolken", "Regen", "Schnee", "Steuererklärung"],
+  "Beispiel 1": ["warm", "heiß", "sonnig", "Sonne", "Sommer", "Frühling", "Herbst", "Winter", "kalt", "Wolken", "Regen", "Schnee", "Steuererklärung"],
+  "Beispiel 2": ["König", "Königin", "Mann", "Frau"],
   "Beispiel 3": ["Deutschland", "Berlin", "Frankreich", "Paris", "Italien", "Rom", "Spanien", "Madrid", "Australien", "Canberra"]
 };
 
@@ -87,9 +87,11 @@ function EmbeddingsVizualizer() {
   return (
     <section className="py-16 px-6" id="visualizer">
         <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-center text-primary mb-6">Wie sieht eine Worteinbettung aus?</h1>
+            <h1 className="text-5xl font-bold text-center text-primary mb-6">Wie kann eine solche Worteinbettung aussehen?</h1>
             <p className="text-xl text-text-normal mx-auto leading-relaxed">
-                Wählen Sie eine Wortgruppe um die Worteinbettungen dieser Gruppe auf dem Koordinatensystem zu sehen.
+              Vereinfacht dargestellt können reale Wörter, die in einem für uns unvorstellbaren mehrdimensionalen Raum repräsentiert werden, auf einen zweidimensionalen Raum – ein Koordinatensystem – projiziert werden.
+              Echte Worteinbettungen werden in sogenannten Vektoren gespeichert, die beispielsweise die Form [−1,9737;0,23452;1,0873465;…;3,973465] annehmen können. Jede Zahl in einem solchen Vektor gibt die Position in einer bestimmten Dimension an. In der Praxis umfassen diese Vektoren oftmals mehrere hundert Dimensionen, die zur Veranschaulichung hier jedoch auf zwei Dimensionen reduziert werden.
+              Wählen Sie eines der Beispiele aus, um die entsprechenden Worteinbettungen im Koordinatensystem zu betrachten.
             </p>
         </div>
 

@@ -80,6 +80,39 @@ function EmbeddingsRechnen() {
                         </div>
                     </div>
                 </div>
+                <div className="shadow-xl rounded-2xl p-8 mb-12">
+                    <div className="flex items-start gap-8">
+                        <div className="flex-1">
+                            <h1 className="text-2xl font-bold text-center text-primary mb-6">Beispiel 3</h1>
+                            <img 
+                                src="/EmbeddingsExample3.png" 
+                                alt="Description of image" 
+                                className="w-full h-auto"
+                            />
+                        </div>
+                        
+                        <div className="flex-shrink-0 w-80 space-y-4">
+                            <h1 className="text-3xl font-bold text-center text-primary mb-14"> </h1>
+                            <div className="flex items-start gap-3 p-3 rounded-lg border border-primary bg-primary/5">
+                                <i className="ri-map-pin-line text-primary text-lg mt-0.5"></i>
+                                <div>
+                                    <h4 className="font-semibold text-primary text-sm mb-1">Deutschland-Gruppe</h4>
+                                    <p className="text-xs text-text-normal">Deutschland und Berlin liegen nah beieinander. Dies deutet darauf hin, dass deutsche Städte und das Land selbst thematisch eng verbunden sind.</p>
+                                </div>
+                            </div>
+                            <div className="flex items-start gap-3 p-3 rounded-lg border border-primary bg-primary/5">
+                                <i className="ri-earth-line text-primary text-lg mt-0.5"></i>
+                                <div>
+                                    <h4 className="font-semibold text-primary text-sm mb-1">Europa-Gruppe</h4>
+                                    <p className="text-xs text-text-normal">
+                                        Abgesehen von Deutschland und Berlin lassen sich kaum Korrelationen erkennen. Dies ist darauf zurückzuführen, dass das Modell auf einem deutschen Datensatz trainiert wurde und für andere Länder und Städte nicht ausreichend Daten vorlagen.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </section>
     );
