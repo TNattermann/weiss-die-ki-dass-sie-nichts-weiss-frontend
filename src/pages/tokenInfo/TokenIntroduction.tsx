@@ -7,6 +7,17 @@ export default function TokenInfoAlgorithms() {
     return (
         <section className="py-6 px-6" id="educational-content">
             <div className="max-w-6xl mx-auto">
+                <div className="max-w-6xl mx-auto mb-24">
+                    <h1 className="text-6xl font-bold text-center text-primary mb-6">
+                        Weiß ChatGPT, was eine Brombeere ist?
+                    </h1>
+                    <p className="text-lg text-text-normal mb-6 leading-relaxed">
+                        Wenn Sie ChatGPT fragen, erhalten Sie sicher eine passende Antwort. Aber versteht das Modell dabei
+                        wirklich, was eine Brombeere ist? Um dieser Frage nachzugehen, lohnt sich ein Blick darauf, wie
+                        Sprachmodelle Texte überhaupt verarbeiten – und warum sie dafür auf eine mathematische
+                        Darstellung in Form von <strong className="text-primary">Tokens</strong> angewiesen sind.
+                    </p>
+                </div>
                 <h1 className="text-5xl font-bold text-center text-primary mb-6">Was sind Tokens?</h1>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                     <div>
