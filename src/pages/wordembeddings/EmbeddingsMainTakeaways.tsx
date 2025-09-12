@@ -22,12 +22,10 @@ export default function EmbeddingsMainTakeaways() {
             Unsere Sprache ist stark strukturiert.
           </h3>
           <p className="text-on-primary-container">
-            Wörter stehen nicht zufällig nebeneinander, sondern werden nach festen
-            Mustern und Bedeutungszusammenhängen verwendet. Dadurch entstehen
-            wiederkehrende Beziehungen – zum Beispiel zwischen Ländern und ihren
-            Hauptstädten oder zwischen Jahreszeiten und typischen Eigenschaften.
-            Diese lassen sich in den Worteinbettungen als räumliche Strukturen
-            abbilden.
+            Worteinebttungheuristiken können einen Teil dieser Struktur identifizieren. 
+            Dieses kann auf einer von Menschen verständlichen Art und Weise abgebildet werden, 
+            in der Wörter nicht zufällig nebeneinander stehen, sondern Muster aufweisen, die Menschen interpretieren können.
+            Dadurch werden wiederkehrende Beziehungen sichtbar – zum Beispiel zwischen Jahreszeiten und typischen Eigenschaften.
           </p>
         </div>
 
