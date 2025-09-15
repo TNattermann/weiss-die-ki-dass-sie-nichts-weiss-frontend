@@ -1,6 +1,7 @@
 import {useEffect} from "react";
 import { useState } from 'react';
 import SimpleRad from "../../components/simpleRad.tsx";
+import SingleWissensBit from "../../components/SingleWissensBit.tsx";
 
 function adjustRange (range: number, minimrange : number){
     let adjustedRange: number;
@@ -167,6 +168,8 @@ export default function Temperature() {
                             
                             </div>
                         ))}
+
+                        <SingleWissensBit title="Scheinbare Intelligenz" description="ChatGPT ist nicht intelligent, aber mit der richtig gewählten Temperatur kann es intelligente Sätze bilden."/>
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
