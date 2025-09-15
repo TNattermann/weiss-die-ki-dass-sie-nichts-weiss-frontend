@@ -52,7 +52,7 @@ function Navbar() {
 
             {isMenuOpen && (
                 <div className="px-4 pt-2 pb-4 mt-4">
-                    <div className="space-y-2">
+                    <div className="space-y-2 max-w-lg mx-auto">
                         {navItems.map(({ to, label, type }) =>
                             type === "separator" ? (
                                 <hr key={label} className="my-4 border-t text-primary/50" />
