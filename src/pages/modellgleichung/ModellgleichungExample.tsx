@@ -163,18 +163,18 @@ function AffenbandeBeispiel() {
         </div>
 
         {/* Erklärung */}
-        <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
-          <h3 className="text-lg text-text-normal mb-6 leading-relaxed">
+        <div className="bg-bgColor p-2 rounded-lg border border-outline mb-4 w-fit">
+          <h3 className="font-semibold text-primary text-xl mb-3">
             Erklärung:
           </h3>
-          <p className="text-textMedium font-medium text-lg">
+          <p className="text-lg text-text-normal mb-6 leading-relaxed">
             Die Maschine trifft die Entscheidung auf Basis einer simplen
-            Berechnung, bei der verschiedene Inputs gegeneinander abgewogen
-            werden: der Verlust des Geldes gegen die Freude mit dem Spielzeug.
-            Liegt der Preis für ein Äffchen bei fünf Münzen, so überwiegt der
-            Verlust des Geldes die Freude mit dem Spielzeug. Insgesamt
-            verringert sich die Freude also. Wenn der Preis für ein Äffchen
-            jedoch nur eine Münze beträgt, überwiegt die Freude mit dem
+            Berechnung, bei der verschiedene Eingaben (Inputs) gegeneinander
+            abgewogen werden: der Verlust des Geldes gegen die Freude mit dem
+            Spielzeug. Liegt der Preis für ein Äffchen bei fünf Münzen, so
+            überwiegt der Verlust des Geldes die Freude mit dem Spielzeug.
+            Insgesamt verringert sich die Freude also. Wenn der Preis für ein
+            Äffchen jedoch nur eine Münze beträgt, überwiegt die Freude mit dem
             Spielzeug den Verlust des Geldes. Insgesamt vergrößert sich die
             Freude hier.<br></br> Für die Maschine gilt folgendes: ist das
             Ergebnis größer als null, wird sich für den Kauf ~entschieden und

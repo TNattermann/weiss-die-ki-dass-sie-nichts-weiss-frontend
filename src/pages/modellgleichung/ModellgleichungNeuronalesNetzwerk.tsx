@@ -20,8 +20,8 @@ function VideoPage() {
       </h1>
       <p className="text-lg text-text-normal mb-6 text-center max-w-2xl">
         Hier ist ein einfaches Neuronales Netzwerk zu sehen, das dazu geeignet
-        ist, eine gezeichnete Ziffer zu erkennen. Das Beispiel hilft dabei, die
-        einzelnen Elemente eines Neuronalen Netzwerkes kennenzulernen und zu
+        ist, eine handgeschriebene Ziffer zu erkennen. Das Beispiel hilft dabei,
+        die einzelnen Elemente eines Neuronalen Netzwerkes kennenzulernen und zu
         verstehen, welche Aufgaben sie erfüllen.
       </p>
 
@@ -35,7 +35,7 @@ function VideoPage() {
               : "bg-primary-container text-on-primary-container"
           }`}
         >
-          Klassifiziere die 1
+          Erkenne die 1
         </button>
         <button
           onClick={() => setSelectedDigit("4")}
@@ -45,7 +45,7 @@ function VideoPage() {
               : "bg-primary-container text-on-primary-container"
           }`}
         >
-          Klassifiziere die 4
+          Erkenne die 4
         </button>
         <button
           onClick={() => setSelectedDigit("7")}
@@ -55,7 +55,7 @@ function VideoPage() {
               : "bg-primary-container text-on-primary-container"
           }`}
         >
-          Klassifiziere die 7
+          Erkenne die 7
         </button>
       </div>
 

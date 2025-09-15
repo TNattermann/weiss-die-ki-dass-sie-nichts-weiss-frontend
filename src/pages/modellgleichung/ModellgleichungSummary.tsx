@@ -47,8 +47,7 @@ export default function ModellgleichungMainTakeaways() {
                 Große Sprachmodelle (LLMs) unterscheiden sich zu dem hier
                 vorgestellten Beispiel eines Neuronalen Netzwerks. Sie sind
                 deutlich größer und verarbeiten keine Bilder, sondern
-                Texteingaben und geben entsprechend keine Klassifizierung aus,
-                sondern einen Text.
+                Texteingaben und nutzen Wahrscheinlichkeitsverteilungen.
               </p>
             </>
           </div>
