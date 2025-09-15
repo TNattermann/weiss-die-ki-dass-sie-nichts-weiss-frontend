@@ -135,25 +135,16 @@ button:disabled {
   }
 }
 
-.hover span {
-  display: none;
-}
-.hover:hover span {
+
+
+[data-tooltip]:hover::after {
+  display: block;
   position: absolute;
-  display: inline;
-  margin: 0 0;
-  height: auto;
-  width: auto;
-  padding: 1em;
-  z-index: 2;
-}
-.hover:hover span span {
-  position: relative;
-  margin: auto;
-  height: auto;
-  width: auto;
-  border: none;
-  padding: 0;
+  content: attr(data-tooltip);
+  border-left-style: var(--tw-border-style);
+  border-left-width: 4px;
+  background-color: var(--color-primary-container);
+  padding: .25em;
 }
 
 .loading-spinner {
