@@ -1,6 +1,24 @@
-import {useBit} from "./BitProvider.tsx";
+import {useBit} from "./WissensContext.tsx";
+import { useEffect } from "react";
 
-export default function SingleWissensBit({title, description} : any){
+export default function SingleWissensBit({title, description, isList} : any){
+
+    const { wissensbits, setWissensbits } = useBit();
+
+    useEffect(() => {
+        if (!isList){
+            const newbit = { title: title, description: description };
+            //console.log(wissensbits, newbit);
+            if (!wissensbits.includes(newbit)){
+                //console.log("I am inside the second if");
+                setWissensbits((prev : any) => [
+                ...prev,
+                newbit
+                ]);
+            }
+        }
+        //console.log(isList, wissensbits)
+    }, [setWissensbits]);
     
     return(
 

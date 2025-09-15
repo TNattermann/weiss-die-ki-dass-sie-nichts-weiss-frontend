@@ -169,7 +169,7 @@ export default function Temperature() {
                             </div>
                         ))}
 
-                        <SingleWissensBit title="Scheinbare Intelligenz" description="ChatGPT ist nicht intelligent, aber mit der richtig gewählten Temperatur kann es intelligente Sätze bilden."/>
+                        <SingleWissensBit title="Scheinbare Intelligenz" isList={false} description="ChatGPT ist nicht intelligent, aber mit der richtig gewählten Temperatur kann es intelligente Sätze bilden."/>
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
