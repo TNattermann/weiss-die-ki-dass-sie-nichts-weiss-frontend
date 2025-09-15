@@ -103,7 +103,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
     }, [temperature]); //delete the latter two maybe
 
     useEffect(() => {
-        if (isVideoStarted) {
+        if (isVideoStarted && !isLastCircle) {
             const countdownInterval = setInterval(() => {
               const currentTime = new Date().getTime();
               const eventTime = new Date(eventDate).getTime();
@@ -125,6 +125,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
                 newEventDate.setSeconds(newEventDate.getSeconds() + 2);
                 setEventDate(newEventDate);
                 }
+                
               }
       
               setTimeRemaining(remainingTime);
@@ -132,6 +133,9 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
       
             return () => clearInterval(countdownInterval);
           }
+        else if (isVideoStarted) {
+            setisVideoStarted(false);
+        }
 
     }, [isVideoStarted, timeRemaining]);
 
