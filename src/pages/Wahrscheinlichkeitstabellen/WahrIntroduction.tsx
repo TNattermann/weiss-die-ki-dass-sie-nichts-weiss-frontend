@@ -9,19 +9,22 @@ export default function WahrIntroduction() {
     return (
         
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-5xl font-bold text-center text-primary mb-6">Wie funktionieren Sprachmodelle?</h1>
+                <h1 className="text-5xl font-bold text-center text-primary mb-6">Was passiert, wenn ich ChatGPT benutze?</h1>
                 <div className="text-center mb-16">
                     <div>
 
-                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
+                        
+                        <p className="text-lg text-text-normal mb-6 leading-relaxed" style={{display: "none"}}>
 
+                        Dieser Text wird nicht angezeigt. TBD entferne ihn am Ende
                         Sprachmodelle (häufig auch LLM für "Large Language Modell" genannt) sind Systeme wie ChatGPT,
                         die einem einen gewollten Text generieren.
                         </p>
+                        
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
-                        Sprachmodelle funktionieren nach einem sehr einfachen Prinzip: Man gibt ihnen einen unvollständigen Satz 
-                        und sie generieren das nächste Wort in diesem Satz. Nehmen wir uns einen solchen Satz als Beispiel:
+                        ChatGPT funktioniert nach einem sehr einfachen Prinzip: Man gibt ihm einen unvollständigen Satz 
+                        und ChatGPT generiert das nächste Wort in diesem Satz. Hier sehen sie einen solchen Satz als Beispiel:
                         </p>
                     </div>
                 </div>
@@ -36,7 +39,7 @@ export default function WahrIntroduction() {
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
                         Als Mensch ist dieser Satz natürlich sehr einfach zu vervollständigen, 
-                        aber wenn sie Ihre Mitmenschen fragen, würde vielleicht nicht jeder das gleiche Wort benutzen.
+                        aber wenn Sie Ihre Mitmenschen fragen, würde vielleicht nicht jeder das gleiche Wort benutzen.
                         </p>
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
@@ -44,12 +47,12 @@ export default function WahrIntroduction() {
                         bekämen wir eine Wahrscheinlichkeitsverteilung, 
                         die angibt, wie viel Prozent der Menschen mit welchem Wort ergänzen würden.
                         Eine Wahrscheinlichkeitsverteilung gibt für alle Wörter, die im Deutschen überhaupt bekannt sind, 
-                        eine Prozentzahl an, so dass die Summe 100% ergibt." - TBD Buch Zitat  (vielleicht nur der zweite Teil?)
+                        eine Prozentzahl an, so dass die Summe 100% ergibt." - Zweig, Weiß die KI, dass sie nichts weiß? 2025
                         </p>
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
-                        Für unser Beispiel könnte unsere Tabelle sehr grob so aussehen:
+                        Für das vorherige Beispiel könnte diese Tabelle sehr grob so aussehen:
                         </p>
                     </div>
                 </div>
@@ -72,7 +75,7 @@ export default function WahrIntroduction() {
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
-                        Um zu entscheiden wie das Sprachmodell jetzt den Satz beendet, könnten wir diese Wahrscheinlichkeitstabelle
+                        Um zu entscheiden wie das Sprachmodell jetzt den Satz beendet, könnte man jetzt diese Wahrscheinlichkeitstabelle
                         nutzen und einfach das Wort
                         mit der größten Wahrscheinlichkeit nehmen.
                         </p>

@@ -111,9 +111,9 @@ export default function Temperature() {
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
-                        Wir haben jetzt schon zwei verschiedene Implementierungsmethoden gesehen, wie wir das Wort anhand der
-                        Wahrscheinlichkeitstabelle auswählen. Die Methode, bei der wir einfach nur das wahrscheinlichste Wort wählen (<b>A.</b>),
-                        und die, bei der wir auf unserem unveränderten Glücksrad drehen (<b>B.</b>). Wir können aber noch mehr Variation rein-bringen,
+                        Sie haben jetzt schon zwei verschiedene Implementierungsmethoden gesehen, wie das Wort anhand der
+                        Wahrscheinlichkeitstabelle ausgewählt werden kann. Die Methode, bei der einfach nur das wahrscheinlichste Wort gewählt wird (<b>A.</b>),
+                        und die, bei der Sie das unveränderte Glücksrad drehen (<b>B.</b>). Wir können aber noch mehr Variation rein-bringen,
                         in dem wir das Glücksrad etwas verändern, sodass alle Wörter etwas mehr gleich-wahrscheinlich sind.
                         </p>
 
