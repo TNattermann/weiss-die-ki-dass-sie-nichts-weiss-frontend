@@ -1,5 +1,6 @@
 import { ArrowRight, Book } from "lucide-react";
 import { Link } from "react-router-dom";
+import Tilde from "../../components/Tilde.tsx";
 
 export default function AttentionTakeaways() {
   return (
@@ -19,7 +20,7 @@ export default function AttentionTakeaways() {
       <div className="grid grid-cols-1 gap-6">
         <div>
           <h3 className="text-on-primary-container font-semibold mb-3">
-            Die künstliche ~Aufmerksamkeit hat nicht viel mit menschlicher
+            Die künstliche <Tilde />Aufmerksamkeit hat nicht viel mit menschlicher
             Aufmerksamkeit gemein.
           </h3>
           <p className="text-on-primary-container">

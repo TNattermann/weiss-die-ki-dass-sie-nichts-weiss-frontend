@@ -1,4 +1,5 @@
 import Expandable from "../../components/Expandable";
+import Tilde from "../../components/Tilde.tsx";
 
 export default function LearningGraddesc() {
   
@@ -7,7 +8,7 @@ export default function LearningGraddesc() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="mb-12">
-            <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">Welche Anpassungen ~nimmt das Modell vor?</h1>
+            <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">Welche Anpassungen <Tilde />nimmt das Modell vor?</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
                     <div>
@@ -44,7 +45,7 @@ export default function LearningGraddesc() {
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               <p className="text-text-normal font-medium">
                 Dieses Schrittweise und sich wiederholende Verfahren wird <strong className="text-primary">Gradientenabstieg</strong> genannt: 
-                Die KI <strong className="text-primary">~steigt den loss hinab</strong>, um diesen zu verringern. 
+                Die KI <Tilde /><strong className="text-primary">steigt den loss hinab</strong>, um diesen zu verringern. 
               </p>
             </div>
             <div className="w-full flex justify-center mb-6">

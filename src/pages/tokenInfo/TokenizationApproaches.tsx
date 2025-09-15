@@ -1,4 +1,5 @@
 import {useState} from "react";
+import Tilde from "../../components/Tilde.tsx";
 
 export default function TokenizationApproaches() {
     const [activeExample, setActiveExample] = useState("word");
@@ -57,7 +58,7 @@ export default function TokenizationApproaches() {
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-5xl font-bold text-center text-primary mb-10">Tokenisierungs-Ansätze im Vergleich</h1>
                 <p className="text-lg text-text-normal mb-6 leading-r>elaxed">
-                    Damit wir besser verstehen, wie Sprachmodelle mit Text ~arbeiten, müssen wir zuerst das Konzept des <strong className="text-primary">Vokabulars</strong> einführen.
+                    Damit wir besser verstehen, wie Sprachmodelle mit Text <Tilde />arbeiten, müssen wir zuerst das Konzept des <strong className="text-primary">Vokabulars</strong> einführen.
                     Das <strong className="text-primary">Vokabular</strong> ist im Kontext von Sprachmodellen die gesamte Sammlung aller möglichen Tokens, die das Modell verwenden darf – also Wörter, Wortteile oder auch Satzzeichen.
                     Genau aus diesen Token setzt das Modell seine Texte Schritt für Schritt zusammen.
                 </p>

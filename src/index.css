@@ -145,6 +145,8 @@ button:disabled {
   border-left-width: 4px;
   background-color: var(--color-primary-container);
   padding: .25em;
+  font-weight: normal;
+  font-size: medium;
 }
 
 .loading-spinner {

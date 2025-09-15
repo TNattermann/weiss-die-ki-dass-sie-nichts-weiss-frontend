@@ -1,5 +1,6 @@
 import { ArrowRight, Book } from "lucide-react";
 import { Link } from "react-router-dom";
+import Tilde from "../../components/Tilde.tsx";
 
 export default function ModellgleichungMainTakeaways() {
   return (
@@ -24,7 +25,7 @@ export default function ModellgleichungMainTakeaways() {
               <p className="text-on-primary-container">
                 Ein Modell trifft eine Ja/Nein-Entscheidung durch eine simple
                 Berechnung. Dabei werden verschiedene Inputs gegeneinander
-                abgewogen. Das Ergebnis ist die Basis für die ~Entscheidung des
+                abgewogen. Das Ergebnis ist die Basis für die <Tilde />Entscheidung des
                 Modells.
               </p>
             </>

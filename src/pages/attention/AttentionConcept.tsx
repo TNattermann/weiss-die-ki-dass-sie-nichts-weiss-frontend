@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Tilde from "../../components/Tilde.tsx";
 
 type FileWithTextProps = {
   fileSrc: string;
@@ -73,10 +74,10 @@ export default function AttentionConcept() {
           <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-4">
             <p className="text-text-normal font-medium">
               Das hört sich alles sehr kompliziert an - das ist es auch - man
-              kann es aber auch so verstehen: Das Sprachmodell ~lernt die
+              kann es aber auch so verstehen: Das Sprachmodell <Tilde />lernt die
               Betonung einzelner Wörter. So wie wir gewisse Wörter
               unterschiedlich betonen, um ihre Bedeutung zu unterstreichen,
-              ~betont das Modell auch verschiedene Wörter, um ihre Wichtigkeit
+              <Tilde />betont das Modell auch verschiedene Wörter, um ihre Wichtigkeit
               zu erfassen.
             </p>
           </div>

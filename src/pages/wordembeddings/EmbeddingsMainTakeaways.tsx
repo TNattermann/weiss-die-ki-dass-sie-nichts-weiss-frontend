@@ -1,5 +1,6 @@
 import {ArrowRight, Book} from "lucide-react";
 import {Link} from "react-router-dom";
+import Tilde from "../../components/Tilde.tsx";
 
 export default function EmbeddingsMainTakeaways() {
   return (
@@ -31,7 +32,7 @@ export default function EmbeddingsMainTakeaways() {
 
         <div>
           <h3 className="text-on-primary-container font-semibold mb-3">
-            Maschinen ~lernen ohne Erklärung.
+            Maschinen <Tilde />lernen ohne Erklärung.
           </h3>
           <p className="text-on-primary-container">
             Computer können Worteinbettungen selbstständig finden, indem sie riesige

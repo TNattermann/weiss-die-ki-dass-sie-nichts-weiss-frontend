@@ -1,3 +1,5 @@
+import Tilde from "../../components/Tilde.tsx";
+
 function WordEmbeddingsIntroduction() {
 
     return (
@@ -7,7 +9,7 @@ function WordEmbeddingsIntroduction() {
                     Wieso sind die Texte von ChatGPT so gut?
                 </h1>
                 <p className="text-lg text-text-normal mb-6 leading-relaxed">
-                    Um zu verstehen, wieso Texte von ChatGPT so gut sind, sollten Sie zunächst verstehen, wie ChatGPT mit Wörtern umgeht, bzw. wie es Wörter ~versteht.
+                    Um zu verstehen, wieso Texte von ChatGPT so gut sind, sollten Sie zunächst verstehen, wie ChatGPT mit Wörtern umgeht, bzw. wie es Wörter <Tilde />versteht.
                     Damit nämlich ein Sprachmodell wie ChatGPT ein Text erzeugen kann, muss es zuerst menschliche Sprache in Computersprache übersetzen. 
                     Dazu werden die sogenannten Worteinbettungen (Word Embeddings) benutzt.
                 </p>
@@ -44,8 +46,8 @@ function WordEmbeddingsIntroduction() {
                         <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
                             <p className="text-textMedium font-medium">
                                 Das Entscheidende: Der Computer weiß nicht, was die „Sonne“ wirklich ist. 
-                                Er ~versteht keine Helligkeit und keine Wärme. 
-                                Aber er ~erkennt, dass „Sonne“ in ähnlichen Textumgebungen vorkommt wie „Schnee“ – 
+                                Er <Tilde />versteht keine Helligkeit und keine Wärme. 
+                                Aber er <Tilde />erkennt, dass „Sonne“ in ähnlichen Textumgebungen vorkommt wie „Schnee“ – 
                                 und legt die beiden daher nah beieinander in seinem Raum ab.
                             </p>
                         </div>

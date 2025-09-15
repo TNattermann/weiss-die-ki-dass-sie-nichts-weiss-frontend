@@ -1,4 +1,5 @@
 import Expandable from "../../components/Expandable";
+import Tilde from "../../components/Tilde.tsx";
 
 export default function LearningBackprop() {
   
@@ -7,7 +8,7 @@ export default function LearningBackprop() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="mb-12">
-            <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">Woher ~weiß das Modell, was es anpassen muss?</h1>
+            <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">Woher <Tilde />weiß das Modell, was es anpassen muss?</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
                     <div>
@@ -65,7 +66,7 @@ export default function LearningBackprop() {
             </div>  
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               <p className="text-text-normal font-medium">
-                <strong className="text-primary">Zusammenfassung Backpropagation: </strong> Damit ein Modell ~weiß, was es anpassen muss, 
+                <strong className="text-primary">Zusammenfassung Backpropagation: </strong> Damit ein Modell <Tilde />weiß, was es anpassen muss, 
                 gibt es den loss von hinten nach vorne durch das Netz und bestimmt dabei die Anpassungen aller Gewichte. Anschließend 
                 können diese Anpassungen über den  <strong className="text-primary">Gradientenabstieg </strong> vorgenommen werden 
                 und der nächste Trainingsdurchlauf kann beginnen. 

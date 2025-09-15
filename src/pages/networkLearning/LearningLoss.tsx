@@ -1,4 +1,5 @@
 import Expandable from "../../components/Expandable";
+import Tilde from "../../components/Tilde.tsx";
 
 export default function LearningLoss() {
   
@@ -7,7 +8,7 @@ export default function LearningLoss() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="mb-12">
-            <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">Woher ~weiß das Modell, wie gut es ist?</h1>
+            <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">Woher <Tilde />weiß das Modell, wie gut es ist?</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
                     <div>
@@ -56,7 +57,7 @@ export default function LearningLoss() {
             </div>
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               <p className="text-text-normal font-medium">
-                <strong className="text-primary">Zusammenfassung Loss: </strong> Damit ein Modell ~lernen kann, muss zuerst ermittelt werden, 
+                <strong className="text-primary">Zusammenfassung Loss: </strong> Damit ein Modell <Tilde />lernen kann, muss zuerst ermittelt werden, 
                 wie gut es aktuell ist. Dazu wird die Abweichung zwischen Ist- und Sollzustand anhand des losses ermittelt. <br />
                 Wie die KI den loss nutzt, um im folgenden Trainingsschritt einen geringeren loss zu erzeugen, schauen wir uns im nächsten 
                 Abschnitt an. Hierbei kommt der <strong className="text-primary">Gradientenabstieg</strong> ins Spiel.

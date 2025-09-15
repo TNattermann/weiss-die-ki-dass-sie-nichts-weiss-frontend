@@ -1,4 +1,5 @@
 import WordEmbeddingViz from "../../components/WordEmbeddingViz";
+import Tilde from "../../components/Tilde.tsx";
 
 const embeddings = {
   // Monarchie
@@ -104,7 +105,7 @@ function EmbeddingsVizualizer() {
                 In der Visualisierung sehen Sie eine vereinfachte Version davon: 
                 Wörter wie „König“, „Königin“, „Sonne“ oder „kalt“ erscheinen auf einer zweidimensionalen Fläche – 
                 also wie Punkte in einem Koordinatensystem. 
-                Die Abstände dort entsprechen den inhaltlichen Abständen, die das hier verwendete Modell ~gelernt hat.
+                Die Abstände dort entsprechen den inhaltlichen Abständen, die das hier verwendete Modell <Tilde />gelernt hat.
             </p>
         </div>
     </section>
