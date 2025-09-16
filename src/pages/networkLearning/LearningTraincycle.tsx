@@ -9,7 +9,7 @@ export default function LearningTraincycle() {
 
             <p className="text-lg text-text-normal mb-6 leading-r>elaxed">
               Jetzt haben wir die drei wichtigen Konzepte des Lernens einer KI kennengelernt. Abschließend können wir alle Teile 
-              zusammenführen und uns einen vollständigen Trainingsdurchlauf anschauen. 
+              zusammenführen und uns einen vollständigen Trainingszyklus anschauen. 
             </p>
             <video 
                 src="/videos/FullTrainingCycleScene.mp4" 

@@ -17,7 +17,7 @@ export default function LearningLoss() {
                             Diese Distanz entspricht dem Fehler des aktuellen Versuchs und gibt Auskunft darüber, welche
                             Anpassungen vor dem nächsten Versuch notwendig sind.
                             Bei einer KI nennt man diese Abweichung zwischen aktueller Leistung und dem erwünschten Ziel auch 
-                            <strong className="text-primary"> loss</strong>. 
+                            <strong className="text-primary"> Loss</strong>. 
                         </p>
                     </div>
 
@@ -36,15 +36,15 @@ export default function LearningLoss() {
               von <strong className="text-primary">gesammelten Beispieldaten</strong>, die in einem großen
               <strong className="text-primary"> Trainingsdatensatz</strong> gebündelt sind. Die Zuweisung der Zielzustände 
               zu den Trainingsdaten wird im Fachjargon als <strong className="text-primary">Daten-Labeling</strong> bezeichnet 
-              und muss in mühsamer Handarbeit erfolgen. Da sich diese Trainingsbeispiele unterscheiden, muss die KI sich so 
-              anpassen, dass der loss über alle Beispiele so gering wie möglich wird.
+              und muss oft in mühsamer Handarbeit erfolgen. Da sich diese Trainingsbeispiele unterscheiden, muss die KI sich so 
+              anpassen, dass der Loss über alle Beispiele so gering wie möglich wird.
             </p>
 
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               <p className="text-text-normal font-medium">
               Um dies mit unserer Metapher zu verdeutlichen: Wir können uns Trainingsdaten wie eine Vielzahl an Schützen vorstellen, die von 
               verschiedenen Positionen auf das Ziel schießen. Beim Trainieren suchen wir also <strong className="text-primary">eine </strong> 
-              Schießtechnik, die für <strong className="text-primary">alle</strong> Schützen den loss, also die Distanz zur Zielscheibe, minimiert.  
+              Schießtechnik, die für <strong className="text-primary">alle</strong> Schützen den Loss, also die Distanz zur Zielscheibe, minimiert.  
               </p>
             </div>
             <div className="w-full flex justify-center mb-6">
@@ -57,22 +57,22 @@ export default function LearningLoss() {
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               <p className="text-text-normal font-medium">
                 <strong className="text-primary">Zusammenfassung Loss: </strong> Damit ein Modell ~lernen kann, muss zuerst ermittelt werden, 
-                wie gut es aktuell ist. Dazu wird die Abweichung zwischen Ist- und Sollzustand anhand des losses ermittelt. <br />
-                Wie die KI den loss nutzt, um im folgenden Trainingsschritt einen geringeren loss zu erzeugen, schauen wir uns im nächsten 
+                wie gut es aktuell ist. Dazu wird die Abweichung zwischen Ist- und Sollzustand anhand des Losses ermittelt. <br />
+                Wie die KI den Loss nutzt, um im folgenden Trainingsschritt einen geringeren Loss zu erzeugen, schauen wir uns im nächsten 
                 Abschnitt an. Hierbei kommt der <strong className="text-primary">Gradientenabstieg</strong> ins Spiel.
               </p>
             </div>
 
             <Expandable title="Mehr zu Verlustfunktionen" className="mb-6">
                 <p className="text-text-normal leading-relaxed">
-                    Die Ermittlung des losses erfolgt anhand einer mathematischen Funktion, die aus dem Ist- und Sollzustand eine Distanz bildet.
-                    In der Praxis gibt es je nach Anwendungsfall eine Vielzahl an mathematischen loss Funktionen, die sich nach Anwendungsfall
+                    Die Ermittlung des Losses erfolgt anhand einer mathematischen Funktion, die aus dem Ist- und Sollzustand eine Distanz bildet.
+                    In der Praxis gibt es je nach Anwendungsfall eine Vielzahl an mathematischen Loss Funktionen, die sich nach Anwendungsfall
                     und erwünschten Eigenschaften der Verlustfunktion unterscheiden. 
                     Hier eine kleine Auswahl an Aspekten, die man bei der Auswahl einer Loss Funktion beachten muss: <br />
                 </p>
                 <ul className="list-disc list-inside my-2 space-y-1 text-text-normal leading-relaxed">
                     <li>Welches Distanzmaß? Direkter Abstand (= Euklidische Distanz) oder entlang der Achsen (= City-Block Distanz)?</li>
-                    <li>Quadrierterter loss (= Mean Squared Error) oder die absoluter loss (= Mean Absolute Error)? </li>
+                    <li>Quadrierterter Loss (= Mean Squared Error) oder die absoluter Loss (= Mean Absolute Error)? </li>
                     <li>Vorhersage von einem Wert (= Regression) oder von Klassen (= Klassifikation)?</li>
                 </ul>
                 <p className="text-text-normal leading-relaxed">

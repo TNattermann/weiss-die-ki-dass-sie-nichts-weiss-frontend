@@ -12,7 +12,7 @@ export default function LearningGraddesc() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
                     <div>
                         <p className="text-lg text-text-normal leading-relaxed">
-                            Ausgehend vom loss des letzten Versuchs, wird der/die Schütze*in <strong className="text-primary">kleine Anpassungen </strong> 
+                            Ausgehend vom Loss des letzten Versuchs, wird der/die Schütze*in <strong className="text-primary">kleine Anpassungen </strong> 
                             der Technik vornehmen, um beim nächsten Versuch näher an die Mitte der Zielscheibe zu kommen. 
                             Da der / die Schütze*in die ideale Technik noch nicht erlernt hat, muss er / sie sich 
                             <strong className="text-primary" > auf kurze Sicht</strong> vortasten, um sich von Versuch zu Versuch 
@@ -38,13 +38,13 @@ export default function LearningGraddesc() {
               Auch die KI tastet sich langsam an eine optimale Einstellung heran - nur muss dabei nicht wie beim Bogenschießen
               ein Aspekt (die Bogenspannung) angepasst werden, sondern <strong className="text-primary">jedes</strong> der vielen 
               Gewichte der KI. 
-              Da jedes dieser Gewichte einen Einfluss auf den loss haben kann, muss auch für jedes Gewicht eine Anpassung erfolgen.
+              Da jedes dieser Gewichte einen Einfluss auf den Loss haben kann, muss auch für jedes Gewicht eine Anpassung erfolgen.
             </p>
 
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               <p className="text-text-normal font-medium">
-                Dieses Schrittweise und sich wiederholende Verfahren wird <strong className="text-primary">Gradientenabstieg</strong> genannt: 
-                Die KI <strong className="text-primary">~steigt den loss hinab</strong>, um diesen zu verringern. 
+                Dieses schrittweise und sich wiederholende Verfahren wird <strong className="text-primary">Gradientenabstieg</strong> genannt: 
+                Die KI <strong className="text-primary">~steigt den Loss hinab</strong>, um diesen zu verringern. 
               </p>
             </div>
             <div className="w-full flex justify-center mb-6">
@@ -60,16 +60,16 @@ export default function LearningGraddesc() {
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               <p className="text-text-normal font-medium">
                 <strong className="text-primary">Zusammenfassung Gradientenabstieg: </strong> Das Modell passt seine Gewichte 
-                schrittweise an, um den loss zunehmend zu verringern. Diese Anpasungen sind der <strong className="text-primary">Kern des eigentlichen Lernprozesses</strong>.
+                schrittweise an, um den Loss zunehmend zu verringern. Diese Anpasungen sind der <strong className="text-primary">Kern des eigentlichen Lernprozesses</strong>.
                 Woher das Modell weiß, welche Gewichte wie stark angepasst werden müssen, wird mit der <strong className="text-primary">Backpropagation </strong> bestimmt.
               </p>
             </div>
             
             <Expandable title="Mehr zum Gradientenabstieg" className="mb-6">
                 <p className="text-text-normal leading-relaxed mb-4">
-                    Um den loss hinabsteigen zu können, müssen für alle Gewichte die <strong className="text-primary">Ableitungen</strong> der 
-                    loss Funktion berechnet werden.
-                    Diese Ableitung bestimmen dabei für jedes Gewicht, wie viel dessen Änderung zur Reduzierung des losses beitragen kann.
+                    Um den Loss hinabsteigen zu können, müssen für alle Gewichte die <strong className="text-primary">Ableitungen</strong> der 
+                    Loss Funktion berechnet werden.
+                    Diese Ableitung bestimmen dabei für jedes Gewicht, wie viel dessen Änderung zur Reduzierung des Losses beitragen kann.
                     Als <strong className="text-primary">Gradient </strong>Gradient bezeichnet man die <strong className="text-primary">Sammlung dieser Ableitungen </strong>
                     in einer kompakten Form, mathematisch bezeichnen wir dies als Vektor.
                     Somit wird beim Gadientenabstieg der aktuelle Zustand der Gewichte um einen kleinen Schritt <strong className="text-primary">in Richtung des Gradienten </strong>

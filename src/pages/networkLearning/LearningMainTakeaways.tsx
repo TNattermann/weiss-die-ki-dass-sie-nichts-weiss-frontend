@@ -39,7 +39,7 @@ export default function LearningMainTakeaways() {
               <p className="text-on-primary-container">
                 Lernen für ein Modell bedeutet, sich dem Zielzustand der vorhandenen Daten bestmöglichst anzupassen.
                 Somit kann ein Modell auch nur so gut werden, wie die Daten, auf denen es basiert. Somit hat eine sorgsame
-                Auswahl von Trainingsdaten einen immensiven Einfluss auf das Ergebnis des Modells.
+                Auswahl von Trainingsdaten einen immensen Einfluss auf die Qualität des Modells.
               </p>
             </div>
 
