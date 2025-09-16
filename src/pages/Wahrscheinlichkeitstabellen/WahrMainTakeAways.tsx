@@ -29,7 +29,7 @@ export default function WahrMainTakeaways() {
                 <p className="text-on-primary-container">
                   Damit das Modell nicht immer das Selbe <Tilde />antwortet, werden Wahrscheinlichkeitstabellen benutzt, 
                   um die Wörter zu wählen. Dadurch wirkt das Modell nicht so statisch. 
-                  Damit das Modell <Tilde />herausfinded, welche Wörter gut passen, nutzt es Wahrscheinlichkeitstabellen,
+                  Damit das Modell <Tilde />herausfindet, welche Wörter gut passen, nutzt es Wahrscheinlichkeitstabellen,
                   um dann sehr wahrscheinlich ein gut passendes Wort zum bestehenden Text zu finden.
                 </p>
               </div>

@@ -68,10 +68,9 @@ export default function NextWord() {
                 <div className="text-center mb-16">
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
-
-                        Der jetzt noch fehlende Schritt ist, was das Modell macht, nachdem ein Wort hinzugefügt wurde. 
-                        Das Modell nimmt einfach den Satz, der das neue Wort enthält, und macht das gleiche nochmal,
-                        bis der Satz beendet wird. Schließlich hat es ja für jeden Satz zugriff auf die Wahrscheinlichkeitstabellen.
+                            Der noch fehlende Schritt besteht darin, zu erläutern, was das Modell nach der Auswahl eines Wortes unternimmt. 
+                            Es erweitert den Satz um dieses Wort und wiederholt anschließend denselben Prozess, bis eine Satzbeendigung erfolgt. 
+                            Da dem Modell für jede mögliche Fortsetzung entsprechende Wahrscheinlichkeitstabellen zur Verfügung stehen, kann es den nächsten Token jeweils konsistent bestimmen.
                         </p>
 
                         
