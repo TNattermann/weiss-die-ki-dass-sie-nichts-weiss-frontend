@@ -113,14 +113,16 @@ export default function Temperature() {
 
                         Wir haben jetzt schon zwei verschiedene Implementierungsmethoden gesehen, wie wir das Wort anhand der
                         Wahrscheinlichkeitstabelle auswählen. Die Methode, bei der wir einfach nur das wahrscheinlichste Wort wählen (<b>A.</b>),
-                        und die, bei der wir auf unserem unveränderten Glücksrad drehen (<b>B.</b>). Wir können aber noch mehr Variation rein-bringen,
-                        in dem wir das Glücksrad etwas verändern, sodass alle Wörter etwas mehr gleich-wahrscheinlich sind.
+                        und die, bei der wir auf unserem unveränderten Glücksrad drehen (<b>B.</b>). 
+                        Zusätzlich lässt sich die Variation erhöhen, indem das Glücksrad so angepasst wird, 
+                        dass die Wahrscheinlichkeiten der Wörter einander stärker angeglichen werden.
                         </p>
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
-
-                        Diese Anpassung der Wahrscheinlichkeiten wird Temperatur genannt. Wobei eine Temperatur für immer dasselbe Ergebnis
-                        sorgt und je höher die Temperatur ist, desto gleich-wahrscheinlicher werden die Worte.
+                            Diese Anpassung der Wahrscheinlichkeitsverteilung wird als Temperatur bezeichnet. 
+                            Eine feste Temperatur führt bei identischer Ausgangslage stets zum gleichen Ergebnis. 
+                            Mit steigender Temperatur nähern sich die Wahrscheinlichkeiten der möglichen Wörter einander an, 
+                            sodass die Auswahl zunehmend gleichverteilt erfolgt.
                         </p>
                     </div>
                 </div>

@@ -15,13 +15,13 @@ export default function WahrIntroduction() {
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
-                        Sprachmodelle (häufig auch LLM für "Large Language Modell" genannt) sind Systeme wie ChatGPT,
-                        die einem einen gewollten Text generieren.
+                        Sprachmodelle (häufig auch Large Language Modells (LLMs) genannt) sind Systeme wie ChatGPT,
+                        die einem einen meist gramiatikalisch korrekten und zumindest sinnvoll klingenden Text generieren.
                         </p>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
-                        Sprachmodelle funktionieren nach einem sehr einfachen Prinzip: Man gibt ihnen einen unvollständigen Satz 
-                        und sie generieren das nächste Wort in diesem Satz. Nehmen wir uns einen solchen Satz als Beispiel:
+                        Diese Texte werden generiert indem ihnen ein unvollständiger Satz gegeben wird 
+                        und sie dann das nächste Wort in diesem Satz generieren. Nehmen wir einen Beispielsatz:
                         </p>
                     </div>
                 </div>
@@ -49,7 +49,7 @@ export default function WahrIntroduction() {
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
-                        Für unser Beispiel könnte unsere Tabelle sehr grob so aussehen:
+                        Für unser Beispiel könnte die Tabelle vereinfacht so aussehen:
                         </p>
                     </div>
                 </div>
@@ -71,10 +71,8 @@ export default function WahrIntroduction() {
                 <div className="text-center mb-16">
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
-
-                        Um zu entscheiden wie das Sprachmodell jetzt den Satz beendet, könnten wir diese Wahrscheinlichkeitstabelle
-                        nutzen und einfach das Wort
-                        mit der größten Wahrscheinlichkeit nehmen.
+                            Um zu entscheiden, wie das Sprachmodell den Satz fortsetzt, könnte die Wahrscheinlichkeitstabelle herangezogen werden,
+                             indem das Wort mit der höchsten Wahrscheinlichkeit ausgewählt wird.
                         </p>
 
                         
@@ -90,11 +88,10 @@ export default function WahrIntroduction() {
                 <div className="text-center mb-16">
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
-
-                        Eine gute Methode, um sich diese Wahrscheinlichkeitstabelle vorzustellen ist als Glücksrad auf dem Jahrmarkt.
-                        Je größer die Wahrscheinlichkeit des Wortes ist, desto mehr Platz bekommt ein Wort. In diesem Fall, also "schön"
-                        mit dem meisten Platz und "kalt" am wenigsten. Wenn das Rad gedreht wird, sollte es in etwa drei von zehn Fällen bei
-                        "warm" liegen bleiben.
+                            Eine anschauliche Möglichkeit, sich die Wahrscheinlichkeitstabelle vorzustellen, ist das Bild eines Glücksrads auf einem Jahrmarkt. 
+                            Je höher die Wahrscheinlichkeit eines Wortes, desto größer ist der ihm zugewiesene Sektor. 
+                            In diesem Beispiel erhält "schön" den größten Bereich, während "kalt" den kleinsten einnimmt. 
+                            Wird das Rad gedreht, bleibt es erwartungsgemäß in etwa drei von zehn Fällen bei "warm" stehen.
                         </p>
 
                         
@@ -104,21 +101,17 @@ export default function WahrIntroduction() {
                         
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
-
-                        Durch das Glücksrad ist jetzt auch etwas Varianz gewährleistet, 
-                        so dass unser LLM nicht immer das häufigste
-                        Wort nimmt, aber trotzdem dazu tendiert, Wörter zu nehmen, die zu der Situation passen 
-                        (und nicht zum Beispiel das Wort "Banane").
+                            Durch die Verwendung des Glücksradmodells wird eine gewisse Varianz gewährleistet, 
+                            sodass das Sprachmodell nicht ausschließlich das wahrscheinlichste Wort auswählt. 
+                            Gleichzeitig bleibt jedoch die Tendenz erhalten, Wörter zu bevorzugen, die zum Kontext passen, 
+                            wodurch unplausible Optionen – wie etwa das Wort "Banane" – weitgehend ausgeschlossen werden.
                         </p>
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
-
-                        Für das LLM hat das Glücksrad natürlich nicht nur drei Worte, sondern alle möglichen. 
-                        Dabei sind nicht nur Wörter,
-                        sondern auch Sonderzeichen, wie der Punkt "." enthalten, 
-                        damit das Sprachmodell auch einen Satz beenden kann.
-                        Jetzt muss man sich nur noch vorstellen, dass das LLM diese Wahrscheinlichkeitstabellen für jeden möglichen 
-                        Satzanfang besitzt. Damit <Tilde />weiß das Sprachmodell bei jedem Satz, welches Wort als nächstes kommt.
+                            Für ein Sprachmodell umfasst das Glücksrad selbstverständlich nicht nur drei Wörter, sondern den gesamten Wortschatz. 
+                            Darin sind neben Wörtern auch Sonderzeichen wie der Punkt "."" enthalten, sodass das Modell Sätze korrekt beenden kann. 
+                            Man kann sich nun vorstellen, dass das Modell für jede mögliche Fortsetzung entsprechende Wahrscheinlichkeitstabellen bereithält. 
+                            Auf diese Weise <Tilde />weiß das Sprachmodell bei jedem Schritt, welches Wort mit welcher Wahrscheinlichkeit als Nächstes folgt.
                         </p>
 
                         

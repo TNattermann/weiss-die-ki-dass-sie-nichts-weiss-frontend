@@ -17,7 +17,7 @@ function WordEmbeddingsIntroduction() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
-                            Da ein Computer nur mit Zahlen arbeiten kann, müssen Wörter zunächst in eine für ihn verständliche Form „übersetzt“ werden. 
+                            Da ein Computer nur mit Zahlen arbeiten kann, müssen Wörter oder Tokens zunächst in eine für ihn verständliche Form „übersetzt“ werden. 
                             Bei dieser Übersetzung soll die Bedeutung der Wörter möglichst erhalten bleiben.
                             Moderne Sprachmodelle, wie ChatGPT nutzen hierfür sogenannte Worteinbettungen (Word Embeddings). 
                         </p>
