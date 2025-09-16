@@ -1,5 +1,5 @@
 import Tilde from "../../components/Tilde";
-import { ArrowRight} from "lucide-react";
+import { ArrowLeft, ArrowRight} from "lucide-react";
 import { Link } from "react-router-dom";
 
 
@@ -37,7 +37,15 @@ export default function WahrMainTakeaways() {
             </div>
           </div>
           {/* Navigation */}
-          <div className="mt-12 text-center">
+          <div className="mt-12 flex justify-center space-x-6">
+          {/* Home */}
+          <Link
+            to="/"
+            className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
+          >
+            <ArrowLeft className="text-on-primary-container mr-2 h-5 w-5" />
+            Zurück zur Hauptseite
+          </Link>
             <Link
               to="/tokeninfo"
               className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"

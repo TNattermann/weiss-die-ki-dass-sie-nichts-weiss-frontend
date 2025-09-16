@@ -74,7 +74,7 @@ export default function LearningMainTakeaways() {
             to="/"
             className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
           >
-            Zurück zur Hauptseite
+            Startseite
           </Link>
         </div>
 
