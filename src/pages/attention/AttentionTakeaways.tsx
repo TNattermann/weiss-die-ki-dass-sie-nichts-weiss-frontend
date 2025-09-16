@@ -1,4 +1,4 @@
-import { ArrowRight, Book } from "lucide-react";
+import { ArrowLeft, ArrowRight, Book } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function AttentionTakeaways() {
@@ -37,7 +37,22 @@ export default function AttentionTakeaways() {
 
         {/* Navigation */}
         <div className="mt-12 flex justify-center space-x-6">
-          {/* Lernpfad 1 */}
+          {/* Zurück zu WE */}
+          <Link
+            to="/wordembeddings"
+            className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
+          >
+            <ArrowLeft className="text-on-primary-container mr-2 h-5 w-5" />
+            Zurück im Lernpfad
+          </Link>
+          {/* Home */}
+          <Link
+            to="/"
+            className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
+          >
+            Startseite
+          </Link>
+          {/* Lernpfad 2 */}
           <Link
             to="/modellgleichung"
             className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
@@ -46,14 +61,7 @@ export default function AttentionTakeaways() {
             <ArrowRight className="text-on-primary-container ml-2 h-5 w-5" />
           </Link>
 
-          {/* Home */}
-          <Link
-            to="/"
-            className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
-          >
-            Zurück zu Home
-            <ArrowRight className="text-on-primary-container ml-2 h-5 w-5" />
-          </Link>
+
         </div>
       </div>
     </section>

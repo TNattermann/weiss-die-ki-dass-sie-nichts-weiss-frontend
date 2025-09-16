@@ -54,7 +54,7 @@ export default function ModellgleichungMainTakeaways() {
         </div>
 
         {/* Navigation */}
-        <div className="mt-12 text-center">
+        <div className="mt-12 flex justify-center space-x-6">
           <Link
             to="/networkLearning"
             className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
