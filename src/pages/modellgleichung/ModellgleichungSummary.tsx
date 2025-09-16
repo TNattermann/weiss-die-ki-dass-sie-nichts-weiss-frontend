@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, Book } from "lucide-react";
+import { ArrowRight, Book } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function ModellgleichungMainTakeaways() {
