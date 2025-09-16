@@ -100,8 +100,7 @@ export default function TempAusprob() {
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
-                        Hier können Sie jetzt selbst ein bisschen ausprobieren, was das verstellen, des Temperatur-reglers bewirkt
-                        und einen Satz generieren.
+                        Hier können Sie jetzt selbst ausprobieren, wie sich das Verstellen des Temperaturreglers auf des Satz auswirkt.
                         </p>
 
                         

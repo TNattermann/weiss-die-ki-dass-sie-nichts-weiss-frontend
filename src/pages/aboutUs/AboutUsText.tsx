@@ -11,10 +11,10 @@ export default function AboutUsText() {
           Wir sind eine Gruppe von Studierenden, die ihren Master in
           Sozioinformatik an der RPTU in Kaiserslautern machen. Diese Webseite
           ist im Rahmen unseres Master-Projekts entstanden und ergänzt das Buch
-          "Weiß die KI, dass sie nichts weiß?" von Katharina A. Zweig. Unser
+          "Weiß die KI, dass sie nichts weiß?" von Prof. Dr. Katharina A. Zweig. Unser
           Ziel ist es, allen Menschen ein grundlegendes Verständnis von
           Sprachmodellen zu vermitteln, unabhängig von technischen
-          Vorkenntnissen. (Text ergänzen)
+          Vorkenntnissen.
         </p>
       </div>
     </div>

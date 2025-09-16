@@ -90,7 +90,7 @@ function EmbeddingsVizualizer() {
             <h1 className="text-5xl font-bold text-center text-primary mb-6">Wie kann eine solche Worteinbettung aussehen?</h1>
             <p className="text-xl text-text-normal mx-auto leading-relaxed">
               Vereinfacht dargestellt können reale Wörter, die in einem für uns unvorstellbaren mehrdimensionalen Raum repräsentiert werden, auf einen zweidimensionalen Raum – ein Koordinatensystem – projiziert werden.
-              Echte Worteinbettungen werden in sogenannten Vektoren gespeichert, die beispielsweise die Form [−1,9737;0,23452;1,0873465;…;3,973465] annehmen können. Jede Zahl in einem solchen Vektor gibt die Position in einer bestimmten Dimension an. In der Praxis umfassen diese Vektoren oftmals mehrere hundert Dimensionen, die zur Veranschaulichung hier jedoch auf zwei Dimensionen reduziert werden.
+              Echte Worteinbettungen werden in sogenannten Vektoren gespeichert, die beispielsweise die Form <span className="text-primary">[−1,9737; 0,23452; 1,0873465; …; 3,973465]</span> annehmen können. Jede Zahl in einem solchen Vektor gibt die Position in einer bestimmten Dimension an. In der Praxis umfassen diese Vektoren oftmals mehrere hundert Dimensionen, die zur Veranschaulichung hier jedoch auf zwei Dimensionen reduziert werden.
               Wählen Sie eines der Beispiele aus, um die entsprechenden Worteinbettungen im Koordinatensystem zu betrachten.
             </p>
         </div>
