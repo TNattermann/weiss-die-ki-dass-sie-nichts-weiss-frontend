@@ -14,14 +14,10 @@ export default function HomeNavigation() {
 
   return (
     <section className="py-1 px-6">
-      <div className="shadow-xl text-center text-on-primary-container rounded-2xl p-8">
         <div>
           <div className="text-center mb-6">
-            <h1 className="text-5xl font-bold text-center text-primary mb-6">
-              Lernpfade
-            </h1>
-            <p className="text-xl text-primary mx-auto leading-relaxed">
-              Um mehr über Sprachmodelle wie ChatGPT zu erfahren, können Sie
+            <p className="text-text-normal">
+              Um sich einen breiteren Überblick über Sprachmodelle wie ChatGPT zu verschaffen, können Sie
               einen der beiden Lernpfade starten. Lernpfad 1 beschäftigt sich
               insbesondere mit der Frage, ob ChatGPT uns verstehen kann.
               Lernpfad 2 fokussiert sich auf die Fähigkeiten von Sprachmodellen.
@@ -57,7 +53,7 @@ export default function HomeNavigation() {
                     className="bg-primary text-primary-container px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2"
                   >
                     <i className="ri-thumb-up-line"></i>
-                    Word Embeddings
+                    Worteinbettungen
                   </button>
                 </div>
               </div>
@@ -113,7 +109,6 @@ export default function HomeNavigation() {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }

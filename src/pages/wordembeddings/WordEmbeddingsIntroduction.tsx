@@ -27,7 +27,7 @@ function WordEmbeddingsIntroduction() {
               Da ein Computer nur mit Zahlen arbeiten kann, müssen Wörter oder
               Tokens zunächst in eine für ihn verständliche Form „übersetzt“
               werden. Bei dieser Übersetzung soll die Bedeutung der Wörter
-              möglichst erhalten bleiben. Moderne Sprachmodelle, wie ChatGPT
+              möglichst erhalten bleiben. Moderne Sprachmodelle wie ChatGPT
               nutzen hierfür sogenannte Worteinbettungen (Word Embeddings).
             </p>
             <p className="text-lg text-text-normal mb-6 leading-relaxed">

@@ -16,11 +16,8 @@ export default function WahrIntroduction() {
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
                         Sprachmodelle (häufig auch Large Language Modells (LLMs) genannt) sind Systeme wie ChatGPT,
-                        die einem einen meist gramiatikalisch korrekten und zumindest sinnvoll klingenden Text generieren.
-                        </p>
-                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
-
-                        Diese Texte werden generiert indem ihnen ein unvollständiger Satz gegeben wird 
+                        die einem einen meist grammatikalisch korrekten und zumindest sinnvoll klingenden Text generieren.
+                        Diese Texte werden generiert, indem ihnen ein unvollständiger Satz gegeben wird 
                         und sie dann das nächste Wort in diesem Satz generieren. Nehmen wir einen Beispielsatz:
                         </p>
                     </div>
@@ -34,9 +31,8 @@ export default function WahrIntroduction() {
                 <div className="text-center mb-16">
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
-
                         Als Mensch ist dieser Satz natürlich sehr einfach zu vervollständigen, 
-                        aber wenn sie Ihre Mitmenschen fragen, würde vielleicht nicht jeder das gleiche Wort benutzen.
+                        aber wenn Sie Ihre Mitmenschen fragen, würde vielleicht nicht jeder das gleiche Wort benutzen.
                         </p>
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
@@ -44,7 +40,7 @@ export default function WahrIntroduction() {
                         bekämen wir eine Wahrscheinlichkeitsverteilung, 
                         die angibt, wie viel Prozent der Menschen mit welchem Wort ergänzen würden.
                         Eine Wahrscheinlichkeitsverteilung gibt für alle Wörter, die im Deutschen überhaupt bekannt sind, 
-                        eine Prozentzahl an, so dass die Summe 100% ergibt." - TBD Buch Zitat  (vielleicht nur der zweite Teil?)
+                        eine Prozentzahl an, so dass die Summe 100% ergibt." - Katharina Zweig, Weiß die KI, dass sie nichts weiß?
                         </p>
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">

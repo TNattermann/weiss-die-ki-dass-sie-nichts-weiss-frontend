@@ -56,10 +56,9 @@ export default function HomeIntroduction() {
         Schreiben an eine Behörde oder Zuhause bei einem Kochrezept? Und wo
         sollten Sie es lieber lassen, weil Fehler nicht geduldet werden können?
         Auf dieser Seite vermitteln wir das grundlegende Wissen, um diese Fragen
-        beantworten zu können. Dazu können Sie entweder einem der beiden
-        Lernpfade folgen, um einen umfassenden Überblick zu erhalten, oder Sie
-        klicken direkt auf eine der unten stehenden Fragen, um mehr über das
-        Thema zu erfahren, das Sie besonders interessiert.
+        beantworten zu können. Dazu können Sie entweder direkt auf eine der unten stehenden Fragen klicken, um mehr über ein spezielles
+        Thema zu erfahren, das Sie besonders interessiert oder einem der beiden
+        Lernpfade folgen, um einen umfassenden Überblick über Sprachmodelle wie ChatGPT zu erhalten.
       </h1>
 
       <div className="max-w-3xl mx-auto px-6 py-6 text-center">

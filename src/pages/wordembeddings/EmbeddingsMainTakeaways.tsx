@@ -23,7 +23,7 @@ export default function EmbeddingsMainTakeaways() {
                 Unsere Sprache ist stark strukturiert.
               </h3>
               <p className="text-on-primary-container">
-                Worteinebttungheuristiken können einen Teil dieser Struktur
+                Worteinbettungsheuristiken können einen Teil dieser Struktur
                 identifizieren. Dieses kann auf einer von Menschen
                 verständlichen Art und Weise abgebildet werden, in der Wörter
                 nicht zufällig nebeneinander stehen, sondern Muster aufweisen,

@@ -18,7 +18,7 @@ export default function ModellgleichungMainTakeaways() {
 
         <div className="bg-primary-container p-8 rounded-2xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <>
+            <div>
               <h3 className="text-on-primary-container font-semibold mb-3">
                 Wie entscheidet ein Modell?
               </h3>
@@ -28,8 +28,8 @@ export default function ModellgleichungMainTakeaways() {
                 abgewogen. Das Ergebnis ist die Basis für die <Tilde />
                 Entscheidung des Modells.
               </p>
-            </>
-            <>
+            </div>
+            <div>
               <h3 className="text-on-primary-container font-semibold mb-3">
                 Aufbau Neuronales Netzwerk
               </h3>
@@ -39,18 +39,18 @@ export default function ModellgleichungMainTakeaways() {
                 mehrere Hidden Layer sowie den Output Layer. Zwischen den
                 Neuronen bestehen gewichtete Verbindungen.
               </p>
-            </>
-            <>
+            </div>
+            <div>
               <h3 className="text-on-primary-container font-semibold mb-3">
                 Bezug zu LLMs
               </h3>
               <p className="text-on-primary-container">
-                Große Sprachmodelle (LLMs) unterscheiden sich zu dem hier
+                Große Sprachmodelle unterscheiden sich zu dem hier
                 vorgestellten Beispiel eines Neuronalen Netzwerks. Sie sind
                 deutlich größer und verarbeiten keine Bilder, sondern
                 Texteingaben und nutzen Wahrscheinlichkeitsverteilungen.
               </p>
-            </>
+            </div>
           </div>
         </div>
 
