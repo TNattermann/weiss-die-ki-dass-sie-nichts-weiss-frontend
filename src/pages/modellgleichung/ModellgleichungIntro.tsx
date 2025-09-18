@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Tilde from "../../components/Tilde";
 
 export default function ModellgleichungIntro() {
   const [isOpen, setIsOpen] = useState(false);
@@ -112,9 +113,10 @@ export default function ModellgleichungIntro() {
             <p className="text-textMedium font-medium text-lg">
               Wenn wir unsere Entscheidungen auf diese Weise abbilden, kann auch
               eine Maschine eine Entscheidung berechnen: im ersten Fall würde
-              sich die Maschine gegen den Kauf ~entscheiden. Da das Ergebnis der
-              zweiten Berechnung positiv ist, würde sich die Maschine hier für
-              den Kauf ~entscheiden.
+              sich die Maschine gegen den Kauf <Tilde />
+              entscheiden. Da das Ergebnis der zweiten Berechnung positiv ist,
+              würde sich die Maschine hier für den Kauf <Tilde />
+              entscheiden.
             </p>
           </div>
         </div>

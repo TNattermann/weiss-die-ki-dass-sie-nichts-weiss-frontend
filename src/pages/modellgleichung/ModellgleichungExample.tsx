@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Tilde from "../../components/Tilde";
 
 function AffenbandeBeispiel() {
   const [countAffe, setCountAffe] = useState(0);
@@ -35,7 +36,8 @@ function AffenbandeBeispiel() {
           <p className="text-lg text-text-normal mb-6 leading-relaxed">
             Ändern Sie die Anzahl an Äffchen und damit die Anzahl an verfügbaren
             Münzen und beobachten Sie, welche Entscheidung die Maschine dann
-            ~treffen würde. Probieren Sie auch aus, was geschieht, wenn Sie den
+            <Tilde />
+            treffen würde. Probieren Sie auch aus, was geschieht, wenn Sie den
             Preis für ein Äffchen auf eine Münze statt fünf Münzen festlegen.
           </p>
         </div>
@@ -177,18 +179,19 @@ function AffenbandeBeispiel() {
             Äffchen jedoch nur eine Münze beträgt, überwiegt die Freude mit dem
             Spielzeug den Verlust des Geldes. Insgesamt vergrößert sich die
             Freude hier.<br></br> Für die Maschine gilt folgendes: ist das
-            Ergebnis größer als null, wird sich für den Kauf ~entschieden und
-            bei einem Ergebnis kleiner null gegen den Kauf. Hierbei stellt die
-            null einen Grenzwert dar, der auch anders gewählt werden könnte.
-            Dieses grundlegende Konzept wird auch in Neuronalen Netzwerken
-            angewandt.
+            Ergebnis größer als null, wird sich für den Kauf <Tilde />
+            entschieden und bei einem Ergebnis kleiner null gegen den Kauf.
+            Hierbei stellt die null einen Grenzwert dar, der auch anders gewählt
+            werden könnte. Dieses grundlegende Konzept wird auch in Neuronalen
+            Netzwerken angewandt.
           </p>
         </div>
         <p className="text-lg text-text-normal mb-6 leading-relaxed">
           Durch das Beispiel haben Sie nun eine grobe Vorstellung davon
-          gewonnen, wie ein Modell eine Entscheidung ~trifft. Um genauer zu
-          verstehen, wie dies in Sprachmodellen wie ChatGPT funktioniert,
-          schauen wir uns nun den Aufbau eines Neuronalen Netzwerks an.
+          gewonnen, wie ein Modell eine Entscheidung <Tilde />
+          trifft. Um genauer zu verstehen, wie dies in Sprachmodellen wie
+          ChatGPT funktioniert, schauen wir uns nun den Aufbau eines Neuronalen
+          Netzwerks an.
         </p>
       </div>
     </section>

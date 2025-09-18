@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Tilde from "../../components/Tilde";
 
 const notes = [
   {
@@ -67,7 +68,8 @@ export default function AttentionIntroduction() {
           <div>
             <p className="text-lg text-text-normal mb-6 leading-relaxed">
               Wir haben gelernt, dass ein Sprachmodell das nächste Wort in einem
-              Satz ~vorhersagt. Nun gibt es Wörter, die für so ein Ratespiel
+              Satz <Tilde />
+              vorhersagt. Nun gibt es Wörter, die für so ein Ratespiel
               relevanter sind, und welche, die man kaum beachten muss. Dort
               setzt das Konzept der Aufmerksameit an - dadurch lernt das
               Sprachmodell, welches Wort für die Ausgabe relevant ist, und
@@ -142,9 +144,10 @@ export default function AttentionIntroduction() {
         </div>
         <p className="text-lg text-text-normal mb-4 leading-relaxed mt-4">
           Ähnlich wie wir muss sich das Sprachmodell also auf die relevantesten
-          Wörter ~konzentrieren können - sonst geht der gesamte Kontext
-          verloren. Doch woher ~weiß das Modell, welches Wort relevant ist und
-          welches nicht?
+          Wörter <Tilde />
+          konzentrieren können - sonst geht der gesamte Kontext verloren. Doch
+          woher <Tilde />
+          weiß das Modell, welches Wort relevant ist und welches nicht?
         </p>
       </div>
     </section>

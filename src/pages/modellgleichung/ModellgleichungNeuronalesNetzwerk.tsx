@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Tilde from "../../components/Tilde";
 
 function VideoPage() {
   const [isOpenInput, setIsOpenInput] = useState(false);
@@ -165,9 +166,10 @@ function VideoPage() {
               <div className="mt-4 text-text-normal text-left leading-relaxed">
                 Jedes Neuron des Output Layer hat einen Wert zwischen 0 und 1.
                 Dieser ist das Resultat der Berechnungen, die zuvor gemacht
-                wurden. Je höher der Wert eines Neurons ist, desto eher ~denkt
-                das Netzwerk, dass dies die Ziffer ist, die auf dem Bild zu
-                sehen ist. Wenn also am Ende das Neuron für die Ziffer 4 den
+                wurden. Je höher der Wert eines Neurons ist, desto eher{" "}
+                <Tilde />
+                denkt das Netzwerk, dass dies die Ziffer ist, die auf dem Bild
+                zu sehen ist. Wenn also am Ende das Neuron für die Ziffer 4 den
                 höchsten Wert von allen 10 Output-Neuronen hat, dann
                 klassifiziert das Netzwerk die gezeichnete Zahl als eine 4.
               </div>

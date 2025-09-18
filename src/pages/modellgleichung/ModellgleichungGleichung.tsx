@@ -1,3 +1,5 @@
+import Tilde from "../../components/Tilde";
+
 export default function ModellgleichunGleichung() {
   return (
     <section className="py-6 px-6" id="educational-content">
@@ -46,8 +48,9 @@ export default function ModellgleichunGleichung() {
                 So ermittelt man die Werte für die dritte Schicht. Dieser
                 Vorgang wird dann noch ein weiteres Mal wiederholt, um die Werte
                 für die letzte Schicht, den Output Layer, zu ermitteln. Nun kann
-                das Modell ~entscheiden, welche Ziffer gezeichnet wurde. Hierzu
-                wählt es das Neuron, das den höchsten berechneten Wert hat.
+                das Modell <Tilde />
+                entscheiden, welche Ziffer gezeichnet wurde. Hierzu wählt es das
+                Neuron, das den höchsten berechneten Wert hat.
               </p>
             </div>
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-4">
