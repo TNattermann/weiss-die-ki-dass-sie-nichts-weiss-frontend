@@ -1,4 +1,5 @@
 import React from "react";
+import Tilde from "../../components/Tilde";
 
 type FileWithTextProps = {
   fileSrc: string;
@@ -134,7 +135,8 @@ const AttentionExample: React.FC = () => {
           Betonung kann die Wichtigkeit von Wörtern herausheben, und wir
           erkennen die Wichtigkeit von Wörtern auch anhand der Betonung. Ein
           Sprachmodell kann dies - wenn überhaupt - nur mit dem Text selbst
-          ~erkennen, d.h. mathematisch berechnen.
+          <Tilde />
+          erkennen, d.h. mathematisch berechnen.
         </p>
         <div className="bg-primary/5 border-l-4 text-primary p-4 rounded-r-lg mb-4">
           <p className="text-text-normal font-medium">

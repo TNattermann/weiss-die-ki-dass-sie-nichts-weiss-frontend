@@ -1,39 +1,40 @@
 import { ArrowLeft, ArrowRight, Book } from "lucide-react";
 import { Link } from "react-router-dom";
+import Tilde from "../../components/Tilde";
 
 export default function AttentionTakeaways() {
   return (
-<section className="py-16 px-6">
-  <div className="max-w-6xl mx-auto">
-    {/* Key Takeaways */}
-    <h1 className="text-5xl font-bold text-center text-primary mb-6">
-      <div className="flex justify-center items-center gap-3">
-        <Book className="mr-3 h-7 w-7" />
-        <span className="text-5xl font-bold text-center text-primary break-words">
-          Wichtige Erkenntnisse
-        </span>
-      </div>
-    </h1>
+    <section className="py-16 px-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Key Takeaways */}
+        <h1 className="text-5xl font-bold text-center text-primary mb-6">
+          <div className="flex justify-center items-center gap-3">
+            <Book className="mr-3 h-7 w-7" />
+            <span className="text-5xl font-bold text-center text-primary break-words">
+              Wichtige Erkenntnisse
+            </span>
+          </div>
+        </h1>
 
-    <div className="bg-primary-container p-8 rounded-2xl">
-      <div className="grid grid-cols-1 gap-6">
-        <div>
-          <h3 className="text-on-primary-container font-semibold mb-3">
-            Die künstliche ~Aufmerksamkeit hat nicht viel mit menschlicher
-            Aufmerksamkeit gemein.
-          </h3>
-          <p className="text-on-primary-container">
-            Der Aufmerksamkeitsmechanismus in großen Sprachmodellen basiert auf
-            einer Reihe von handwerklichen Entscheidungen. Diese arbeiten darauf
-            hin, mathematisch die Wichtigkeit von bestimmten Wörtern zu berechnen.
-            Dieser Aufbau ist schwer mit menschlicher Intuition zu erklären, hat
-            keinerlei Verbindung zur Semantik der echten Welt, und ist nicht die
-            beste Lösung für das Problem.
-          </p>
+        <div className="bg-primary-container p-8 rounded-2xl">
+          <div className="grid grid-cols-1 gap-6">
+            <div>
+              <h3 className="text-on-primary-container font-semibold mb-3">
+                Die künstliche <Tilde />
+                Aufmerksamkeit hat nicht viel mit menschlicher Aufmerksamkeit
+                gemein.
+              </h3>
+              <p className="text-on-primary-container">
+                Der Aufmerksamkeitsmechanismus in großen Sprachmodellen basiert
+                auf einer Reihe von handwerklichen Entscheidungen. Diese
+                arbeiten darauf hin, mathematisch die Wichtigkeit von bestimmten
+                Wörtern zu berechnen. Dieser Aufbau ist schwer mit menschlicher
+                Intuition zu erklären, hat keinerlei Verbindung zur Semantik der
+                echten Welt, und ist nicht die beste Lösung für das Problem.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-
 
         {/* Navigation */}
         <div className="mt-12 flex justify-center space-x-6">
@@ -60,8 +61,6 @@ export default function AttentionTakeaways() {
             Weiter zu Lernpfad 2
             <ArrowRight className="text-on-primary-container ml-2 h-5 w-5" />
           </Link>
-
-
         </div>
       </div>
     </section>

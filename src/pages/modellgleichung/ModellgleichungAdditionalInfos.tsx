@@ -1,3 +1,5 @@
+import Tilde from "../../components/Tilde";
+
 export default function ModellgleichungAdditionalInfos() {
   const notes = [
     {
@@ -5,8 +7,23 @@ export default function ModellgleichungAdditionalInfos() {
       color: "primary",
       borderColor: "border-primary",
       title: "Gewichte",
-      description:
-        "Um das Abwägen darzustellen, nutzt ein Neuronales Netzwerk sogenannte Gewichte (auch Weights genannt). Jede Verbindung zwischen zwei Neuronen wird mit einem Gewicht versehen, das darstellt, wie wichtig oder unwichtig diese Verbindung ist. Der Input, also beispielsweise die 0 oder 1 von dem Pixel, wird mit diesem Gewicht multipliziert. Durch Berechnungen werden die Werte für die Neuronen der nächsten Schicht bestimmt. Wie genau das funktioniert, schauen wir uns im nächsten Abschnitt an. Mithilfe der gewichteten Verbindungen werden Informationen durch das Netzwerk weitergeleitet und auf Basis der Berechnungen ~trifft das Modell letztlich die Entscheidung. Die Gewichte bleiben nicht dauerhaft gleich, sondern werden im Training angepasst. Mehr darüber erfahren Sie im nächsten Kapitel. ",
+      description: (
+        <>
+          "Um das Abwägen darzustellen, nutzt ein Neuronales Netzwerk sogenannte
+          Gewichte (auch Weights genannt). Jede Verbindung zwischen zwei
+          Neuronen wird mit einem Gewicht versehen, das darstellt, wie wichtig
+          oder unwichtig diese Verbindung ist. Der Input, also beispielsweise
+          die 0 oder 1 von dem Pixel, wird mit diesem Gewicht multipliziert.
+          Durch Berechnungen werden die Werte für die Neuronen der nächsten
+          Schicht bestimmt. Wie genau das funktioniert, schauen wir uns im
+          nächsten Abschnitt an. Mithilfe der gewichteten Verbindungen werden
+          Informationen durch das Netzwerk weitergeleitet und auf Basis der
+          Berechnungen <Tilde />
+          trifft das Modell letztlich die Entscheidung. Die Gewichte bleiben
+          nicht dauerhaft gleich, sondern werden im Training angepasst. Mehr
+          darüber erfahren Sie im nächsten Kapitel. ",
+        </>
+      ),
     },
     {
       icon: "ri-lightbulb-line",
