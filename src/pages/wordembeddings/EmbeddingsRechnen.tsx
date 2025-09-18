@@ -41,8 +41,8 @@ function EmbeddingsRechnen() {
                                 <i className="ri-contrast-2-line text-primary text-lg mt-0.5"></i>
                                 <div>
                                     <h4 className="font-semibold text-primary text-sm mb-1">Entfernte Wörter</h4>
-                                    <p className="text-xs text-text-normal">Wörter, die weiter voneinander entfernt sind, wie zum Beispiel Sonne und Schnee, 
-                                        in desem Modell eine geringere thematische Ähnlichkeit.</p>
+                                    <p className="text-xs text-text-normal">Wörter, die weiter voneinander entfernt sind, wie zum Beispiel Sonne und Schnee, haben
+                                        in diesem Modell eine geringere thematische Ähnlichkeit.</p>
                                 </div>
                             </div>
                         </div>
