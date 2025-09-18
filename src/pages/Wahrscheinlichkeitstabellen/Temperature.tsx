@@ -107,7 +107,7 @@ export default function Temperature() {
         
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-5xl font-bold text-center text-primary mb-6">Temperatur</h1>
-                <div className="text-center mb-16">
+                <div className="mb-16">
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
@@ -127,6 +127,7 @@ export default function Temperature() {
                     </div>
                 </div>
 
+                <div>
                 <div className="p-8 rounded-xl">
 
                 {temperatureExamples.map((t) => {
@@ -171,14 +172,10 @@ export default function Temperature() {
                         ))}
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
-
                         Mit diesem Regler lässt sich die Temperatur auch separat umstellen:
-
                         </p>
 
-                        <h3 className="text-primary text-xl font-semibold text-textDark mb-4">D. Temperatur = {rangeAdjustedValue}</h3>
-
-                        
+                        <h3 className="text-primary text-xl font-semibold text-textDark mb-4">D. Temperatur = {rangeAdjustedValue}</h3> 
                         <input
                             type="range"
                             min={minrange}
@@ -186,10 +183,11 @@ export default function Temperature() {
                             value={rangeValue} // Controlled input
                             onChange={handleRangeChange} // Update state on change
                         />
-
-                        <SimpleRad wordpercentlist={applytemperature([["schön", 0.45 ], ["warm", 0.3], ["kalt", 0.25]],  rangeAdjustedValue)}
-                        />
-                        
+                        <div className="flex justify-center">
+                            <SimpleRad wordpercentlist={applytemperature([["schön", 0.45 ], ["warm", 0.3], ["kalt", 0.25]],  rangeAdjustedValue)}
+                            />
+                        </div>
+                </div>    
                 </div>
                 
 

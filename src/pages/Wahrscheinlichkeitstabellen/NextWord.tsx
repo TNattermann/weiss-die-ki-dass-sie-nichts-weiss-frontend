@@ -62,10 +62,9 @@ export default function NextWord() {
         window.scrollTo(0, 0);
     }, []);
     return (
-        
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-5xl font-bold text-center text-primary mb-6">Und das nächste Wort?</h1>
-                <div className="text-center mb-16">
+                <div className="mb-16">
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
                             Der noch fehlende Schritt besteht darin, zu erläutern, was das Modell nach der Auswahl eines Wortes unternimmt. 
@@ -73,11 +72,9 @@ export default function NextWord() {
                             Da dem Modell für jede mögliche Fortsetzung entsprechende Wahrscheinlichkeitstabellen zur Verfügung stehen, kann es den nächsten Token jeweils konsistent bestimmen.
                         </p>
 
-                        
-                        
-                        <MultiTestRad wordlibrary={wordlibrary} temperature={10} isVideo={true}
-                        />
-                        
+                        <div className="py-6 flex justify-center">
+                            <MultiTestRad wordlibrary={wordlibrary} temperature={10} isVideo={true}/>
+                        </div>
                     </div>
                 </div>
 
