@@ -103,7 +103,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
     }, [temperature]); //delete the latter two maybe
 
     useEffect(() => {
-        if (isVideoStarted) {
+        if (isVideoStarted && !isLastCircle) {
             const countdownInterval = setInterval(() => {
               const currentTime = new Date().getTime();
               const eventTime = new Date(eventDate).getTime();
@@ -132,6 +132,11 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
       
             return () => clearInterval(countdownInterval);
           }
+          else if (isVideoStarted) {
+              //ensure after the last circle has been spun (when isLastCircle has been updated) to "end" the video.
+            setisVideoStarted(false);
+        }
+
 
     }, [isVideoStarted, timeRemaining]);
 
@@ -145,7 +150,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
 
     function createCircleParade( wordlist : (string | number)[][]){
         let newlist = [];
-        const background = "rgba(128, 128, 128, 0.8)"; //grey and 80% opacity
+        const background = "rgba(128, 128, 128, 0.1)"; //grey and 80% opacity
         
         for (let i=0; i < totalnumberofcircles; i++){
             if (i == 0){
@@ -428,6 +433,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
         
 
         handleStartButton();
+        setisLastCircle(false);
         
         const newEventDate = new Date();
         newEventDate.setSeconds(newEventDate.getSeconds() + 2);
