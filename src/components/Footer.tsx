@@ -47,7 +47,10 @@ function Footer() {
             </h4>
             <ul className="space-y-2 text-text-normal">
               <li>
-                <Link to="/" className="hover:text-white transition-colors">
+                <Link
+                  to="/newsletter"
+                  className="hover:text-white transition-colors"
+                >
                   Newsletter
                 </Link>
               </li>
