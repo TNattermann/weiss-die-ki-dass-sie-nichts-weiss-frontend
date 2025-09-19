@@ -14,39 +14,37 @@ export default function WahrIntroduction() {
                         Was passiert, wenn ich ChatGPT nutze?
                     </h1>
                     <p className="text-lg text-text-normal mb-6 leading-relaxed">
-                        TODO
+                        Sprachmodelle (häufig auch Large Language Modells (LLMs) genannt) sind Systeme wie ChatGPT,
+                        die einem einen meist grammatikalisch korrekten und zumindest sinnvoll klingenden Text generieren.
+                        Diese Texte werden generiert, indem ihnen ein unvollständiger Text (ein Prompt) gegeben wird 
+                        und sie dann so lange das nächste Wort in diesem Satz generieren, bis ein vollständiger Text generiert wird.
+                        Dies erfolgt mithilfe von Wahrscheinlichkeitstabellen. Wie diese Tabellen angewendet werden und in welchem 
+                        Zusammenhang sie mit der Temperatur stehen, erfahren Sie auf dieser Seite. 
                     </p>
                 </div>
-                <h1 className="text-5xl font-bold text-center text-primary mb-6">Wie funktionieren Sprachmodelle? (TODO)</h1>
+                <h1 className="text-5xl font-bold text-center text-primary mb-6">Wie nutzt ChatGPT Wahrscheinlichkeitstabellen?</h1>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                     <div className="p-8 rounded-xl">
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
-                        Sprachmodelle (häufig auch Large Language Modells (LLMs) genannt) sind Systeme wie ChatGPT,
-                        die einem einen meist grammatikalisch korrekten und zumindest sinnvoll klingenden Text generieren.
-                        Diese Texte werden generiert, indem ihnen ein unvollständiger Satz gegeben wird 
-                        und sie dann das nächste Wort in diesem Satz generieren. Nehmen wir einen Beispielsatz:
+                        Nehmen wir einen Beispielsatz:
+                        </p>
+                        <div className="bg-bgColor p-4 rounded-lg border border-outline mb-4">
+                                <p className="text-text-normal font-mono text-textDark">"Das Wetter heute ist besonders..."</p>
+                        </div>
+                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
+                            Als Mensch ist dieser Satz natürlich sehr einfach zu vervollständigen, 
+                            aber wenn Sie Ihre Mitmenschen fragen, würde vielleicht nicht jeder das gleiche Wort wählen.
                         </p>
                     </div>
                     <div className="p-8 rounded-xl">
-                            <h3 className="text-primary text-xl font-semibold mb-4">Einfaches Beispiel</h3>
-                            <div className="bg-bgColor p-4 rounded-lg border border-outline mb-4">
-                                <p className="text-text-normal font-mono text-textDark">"Das Wetter heute ist besonders..."</p>
-                            </div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
-                        Als Mensch ist dieser Satz natürlich sehr einfach zu vervollständigen, 
-                        aber wenn Sie Ihre Mitmenschen fragen, würde vielleicht nicht jeder das gleiche Wort benutzen.
+                        "Wenn ich dieses Experiment mit 1000 Personen aus Deutschland durchführen würde, 
+                        bekämen wir eine Wahrscheinlichkeitsverteilung, 
+                        die angibt, wie viel Prozent der Menschen mit welchem Wort ergänzen würden.
+                        Eine Wahrscheinlichkeitsverteilung gibt für alle Wörter, die im Deutschen überhaupt bekannt sind, 
+                        eine Prozentzahl an, so dass die Summe 100% ergibt." - Katharina Zweig, Weiß die KI, dass sie nichts weiß?
                         </p>
                     </div>
-                </div>
-
-                <div className="py-6">
-                    <p className="text-lg text-text-normal mb-6 leading-relaxed">
-                    "Wenn ich dieses Experiment mit 1000 Personen aus Deutschland durchführen würde, 
-                    bekämen wir eine Wahrscheinlichkeitsverteilung, 
-                    die angibt, wie viel Prozent der Menschen mit welchem Wort ergänzen würden.
-                    Eine Wahrscheinlichkeitsverteilung gibt für alle Wörter, die im Deutschen überhaupt bekannt sind, 
-                    eine Prozentzahl an, so dass die Summe 100% ergibt." - Katharina Zweig, Weiß die KI, dass sie nichts weiß?
-                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
@@ -99,17 +97,19 @@ export default function WahrIntroduction() {
                     </div>
                 </div>
 
-                <div className="mb-16">
+                <div>
                     <div>
-                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
-                            Eine anschauliche Möglichkeit, sich die Wahrscheinlichkeitstabelle vorzustellen, ist das Bild eines Glücksrads auf einem Jahrmarkt. 
-                            Je höher die Wahrscheinlichkeit eines Wortes, desto größer ist der ihm zugewiesene Sektor. 
-                            In diesem Beispiel erhält "schön" den größten Bereich, während "kalt" den kleinsten einnimmt. 
-                            Wird das Rad gedreht, bleibt es erwartungsgemäß in etwa drei von zehn Fällen bei "warm" stehen.
-                        </p>
-                        <div className="py-6 flex justify-center">
-                            <SimpleRad wordpercentlist={[["schön", 0.45], ["warm", 0.3], ["kalt", 0.25]]}
-                            />
+                        <div className=" grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                            <p className="text-lg text-text-normal mb-6 leading-relaxed">
+                                Eine anschauliche Möglichkeit, sich die Wahrscheinlichkeitstabelle vorzustellen, ist das Bild eines Glücksrads auf einem Jahrmarkt. 
+                                Je höher die Wahrscheinlichkeit eines Wortes, desto größer ist der ihm zugewiesene Sektor. 
+                                In diesem Beispiel erhält "schön" den größten Bereich, während "kalt" den kleinsten einnimmt. 
+                                Wird das Rad gedreht, bleibt es erwartungsgemäß in etwa drei von zehn Fällen bei "warm" stehen.
+                            </p>
+                            <div className="pb-6">
+                                <SimpleRad wordpercentlist={[["schön", 0.45], ["warm", 0.3], ["kalt", 0.25]]}
+                                />
+                            </div>
                         </div>
 
                         <div>

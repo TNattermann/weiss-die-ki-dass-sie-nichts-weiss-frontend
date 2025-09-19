@@ -106,7 +106,7 @@ export default function Temperature() {
     return (
         
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-5xl font-bold text-center text-primary mb-6">Temperatur</h1>
+                <h1 className="text-5xl font-bold text-center text-primary mb-6">Was hat das mit Temperatur zu tun?</h1>
                 <div className="mb-16">
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
@@ -129,7 +129,7 @@ export default function Temperature() {
 
                 <div>
                 <div className="p-8 rounded-xl">
-
+                    <div className="flex flex-wrap justify-center gap-6 mb-8">
                 {temperatureExamples.map((t) => {
                         const isActive = activeExample === t.id;
                         return (
@@ -142,20 +142,12 @@ export default function Temperature() {
                                     : "bg-primary-container text-on-primary-container"}
         `}
                             >
-                                <div
-                                    className={`w-16 h-16 flex items-center justify-center rounded-xl mx-auto mb-4
-            ${isActive
-                                        ? "bg-on-primary-container-selected/10"
-                                        : "bg-on-primary-container/10"}`}
-                                >
-                                   
-                                </div>
-                                <h3 className="font-bold text-lg mb-2">{t.label}</h3>
-                                <p className="text-sm">{t.description}</p>
+
+                                <h3 className="font-bold text-lg mb-2">{t.label} {t.description}</h3>
                             </button>
                         );
                     })}
-
+                    </div>
                     {Object.entries(temperaturewheels).map(([key, example]) => (
                             <div
                                 key={key}
@@ -170,11 +162,13 @@ export default function Temperature() {
                             
                             </div>
                         ))}
+                        
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
-                        Mit diesem Regler lässt sich die Temperatur auch separat umstellen:
+                        Mit diesem Regler könne Sie die Temperatur auch selbst einstellen:
                         </p>
 
+                        <div className="flex flex-col items-center">
                         <h3 className="text-primary text-xl font-semibold text-textDark mb-4">D. Temperatur = {rangeAdjustedValue}</h3> 
                         <input
                             type="range"
@@ -183,6 +177,7 @@ export default function Temperature() {
                             value={rangeValue} // Controlled input
                             onChange={handleRangeChange} // Update state on change
                         />
+                        </div>
                         <div className="flex justify-center">
                             <SimpleRad wordpercentlist={applytemperature([["schön", 0.45 ], ["warm", 0.3], ["kalt", 0.25]],  rangeAdjustedValue)}
                             />
