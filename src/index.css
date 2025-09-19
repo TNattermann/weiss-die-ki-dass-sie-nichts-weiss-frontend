@@ -334,7 +334,6 @@ button:disabled {
   margin-right: 8px; /* Space between the color box and text */
 }
 
-input:focus,
 textarea:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
