@@ -2,7 +2,7 @@ import {useEffect} from "react";
 import { useState } from 'react';
 import SimpleRad from "../../components/simpleRad.tsx";
 
-function adjustRange (range: number, minimrange : number){
+function adjustRange (range: number, minimrange : number, maximrange: number){
     let adjustedRange: number;
     /*if (range == 0){
         adjustedRange = 1;
@@ -11,7 +11,7 @@ function adjustRange (range: number, minimrange : number){
         adjustedRange = (range - minimrange) / Math.abs(minimrange); //a range of 0 results in an adjustedRange of 1
     }
     else {
-        adjustedRange = Number(range) + Number(1); //no idea why this is necessary
+        adjustedRange = (Number(range) + Number(maximrange)) / Math.abs(maximrange); //no idea why this is necessary
     }
 
     return(adjustedRange);
@@ -37,7 +37,7 @@ function applytemperature (wordpercentlist : [string, number][], temperature : n
 
     }
     else {
-        const explist : [string, number][] = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1] * 50 / temperature)]);
+        const explist : [string, number][] = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1]  / temperature * 1.6)]);
         const expsum = explist.reduce((accumulator, wordexp) => accumulator + wordexp[1], 0);
         newlist = explist.map( (wordexp) => [wordexp[0], wordexp[1] / expsum]);
     }
@@ -52,13 +52,14 @@ function applytemperature (wordpercentlist : [string, number][], temperature : n
 }
 
 export default function Temperature() {
-    const minrange = -20;
+    const minrange = -50;
+    const maxrange = 50;
     const [rangeValue, setRangeValue] = useState(0); //update this to 0 again !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    const [rangeAdjustedValue, setRangeAdjustedValue] = useState(adjustRange(rangeValue, minrange));
+    const [rangeAdjustedValue, setRangeAdjustedValue] = useState(adjustRange(rangeValue, minrange, maxrange));
 
     const handleRangeChange = (event : any) => {
         setRangeValue(event.target.value); // Update state with the current value
-        setRangeAdjustedValue(adjustRange(event.target.value, minrange));
+        setRangeAdjustedValue(adjustRange(event.target.value, minrange, maxrange));
     };
 
     const [activeExample, setActiveExample] = useState("A");
@@ -76,7 +77,7 @@ export default function Temperature() {
         {
             id: "C",
             label: "C.",
-            description: "Temperatur = 100",
+            description: "Temperatur = 2",
         },
     ] as const;
 
@@ -173,7 +174,7 @@ export default function Temperature() {
                         <input
                             type="range"
                             min={minrange}
-                            max="99"
+                            max={maxrange}
                             value={rangeValue} // Controlled input
                             onChange={handleRangeChange} // Update state on change
                         />

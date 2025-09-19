@@ -28,7 +28,7 @@ function applytemperature (wordpercentlist : [string, number][], temperature : n
 
     }
     else {
-        const explist : [string, number][] = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1] * 50 / temperature)]);
+        const explist : [string, number][] = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1]  / temperature * 1.6)]);
         const expsum = explist.reduce((accumulator, wordexp) => accumulator + wordexp[1], 0);
         newlist = explist.map( (wordexp) => [wordexp[0], wordexp[1] / expsum]);
     }

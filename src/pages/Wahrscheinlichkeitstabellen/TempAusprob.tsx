@@ -6,7 +6,7 @@ import MultiTestRad from "../../components/MultiTestRad.tsx";
 
 //find a way to import these two functions instead
 
-function adjustRange (range: number, minimrange : number){
+function adjustRange (range: number, minimrange : number, maximrange: number){
     let adjustedRange: number;
     /*if (range == 0){
         adjustedRange = 1;
@@ -15,7 +15,7 @@ function adjustRange (range: number, minimrange : number){
         adjustedRange = (range - minimrange) / Math.abs(minimrange); //a range of 0 results in an adjustedRange of 1
     }
     else {
-        adjustedRange = Number(range) + Number(1); //no idea why this is necessary
+        adjustedRange = (Number(range) + Number(maximrange)) / Math.abs(maximrange); //no idea why this is necessary
     }
 
     return(adjustedRange);
@@ -80,13 +80,14 @@ const wordlibrary = [
 
 
 export default function TempAusprob() {
-    const minrange = -20;
+    const minrange = -50;
+    const maxrange = 50;
     const [rangeValue, setRangeValue] = useState(0); //update this to 0 again !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    const [rangeAdjustedValue, setRangeAdjustedValue] = useState(adjustRange(rangeValue, minrange));
+    const [rangeAdjustedValue, setRangeAdjustedValue] = useState(adjustRange(rangeValue, minrange, maxrange));
 
     const handleRangeChange = (event : any) => {
         setRangeValue(event.target.value); // Update state with the current value
-        setRangeAdjustedValue(adjustRange(event.target.value, minrange));
+        setRangeAdjustedValue(adjustRange(event.target.value, minrange, maxrange));
     };
 
     useEffect(() => {
@@ -102,10 +103,11 @@ export default function TempAusprob() {
                             <p className="text-lg text-text-normal mb-6 leading-relaxed">
                             Hier können Sie jetzt selbst ausprobieren, wie sich das Verstellen des Temperaturreglers auf des Satz auswirkt.
                             </p>
+                            <h3 className="text-primary text-xl font-semibold text-textDark mb-4">Temperatur = {rangeAdjustedValue}</h3>
                             <input
                                 type="range"
                                 min={minrange}
-                                max="99"
+                                max={maxrange}
                                 value={rangeValue} // Controlled input
                                 onChange={handleRangeChange} // Update state on change
                             />
