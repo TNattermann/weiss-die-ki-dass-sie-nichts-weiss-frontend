@@ -84,7 +84,7 @@ export default function AttentionConcept() {
           </div>
 
           <FileWithText
-            fileSrc="/example-audio.mp3"
+            fileSrc="/audio/example01.wav"
             fileType="audio"
             fileSubtitle={
               <>

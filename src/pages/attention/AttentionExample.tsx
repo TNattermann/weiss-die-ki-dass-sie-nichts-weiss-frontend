@@ -65,7 +65,7 @@ const AttentionExample: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-lg text-text-normal mb-4 leading-relaxed">
             <FileWithText
-              fileSrc="/example-audio.mp3"
+              fileSrc="/audio/example03.wav"
               fileType="audio"
               fileSubtitle="Das Wetter ist heute sehr schön."
               heading="Keine Betonung"
@@ -82,7 +82,7 @@ const AttentionExample: React.FC = () => {
           </p>
           <p className="text-lg text-text-normal mb-4 leading-relaxed">
             <FileWithText
-              fileSrc="/example-audio.mp3"
+              fileSrc="/audio/example04.wav"
               fileType="audio"
               fileSubtitle={
                 <>
@@ -106,7 +106,7 @@ const AttentionExample: React.FC = () => {
           </p>
           <p className="text-lg text-text-normal mb-4 leading-relaxed">
             <FileWithText
-              fileSrc="/example-audio.mp3"
+              fileSrc="/audio/example05.wav"
               fileType="audio"
               fileSubtitle={
                 <>

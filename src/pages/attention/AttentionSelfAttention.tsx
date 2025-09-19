@@ -119,7 +119,7 @@ export default function AttentionSelfattention() {
             </p>
 
             <FileWithText
-              fileSrc="/example-audio.mp3"
+              fileSrc="/audio/example02.wav"
               fileType="audio"
               fileSubtitle={
                 <>
