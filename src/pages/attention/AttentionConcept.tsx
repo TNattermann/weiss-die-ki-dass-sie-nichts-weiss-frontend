@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Tilde from "../../components/Tilde";
+import { bits } from "../../components/Wissensbit";
 
 type FileWithTextProps = {
   fileSrc: string;
@@ -71,16 +71,16 @@ export default function AttentionConcept() {
             Wort und die Kontextinformationen im Modell darstellt.
           </p>
 
-          <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-4">
-            <p className="text-text-normal font-medium">
-              Das hört sich alles sehr kompliziert an - das ist es auch - man
-              kann es aber auch so verstehen: Das Sprachmodell <Tilde />
-              lernt die Betonung einzelner Wörter. So wie wir gewisse Wörter
-              unterschiedlich betonen, um ihre Bedeutung zu unterstreichen,
-              <Tilde />
-              betont das Modell auch verschiedene Wörter, um ihre Wichtigkeit zu
-              erfassen.
-            </p>
+          <div
+            className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+            id="attention2"
+          >
+            {bits.slice(1, 2).map((c) => (
+              <section key={c.id}>
+                <h2>{c.title}</h2>
+                <p>{c.text}</p>
+              </section>
+            ))}
           </div>
 
           <FileWithText

@@ -1,21 +1,30 @@
-import Bit from "../../components/Wissensbit";
+import { Link } from "react-router-dom";
+import { bits } from "../../components/Wissensbit";
 
 function WissenPage() {
   return (
-    <Bit
-      id={1}
-      title="Attention-Block"
-      content={
-        <>
-          Die Teile eines großen Sprachmodells wie ChatGPT, die für die
-          Aufmerksamkeit zuständig sind, werden oft als{" "}
-          <strong className="text-primary">
-            Aufmerksamkeits- oder Attention-Block
-          </strong>{" "}
-          bezeichnet.
-        </>
-      }
-    ></Bit>
+    <div>
+      <Link to="/attention#attention1">
+        <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
+          {bits.slice(0, 1).map((c) => (
+            <section key={c.id}>
+              <h2>{c.title}</h2>
+              <p>{c.text}</p>
+            </section>
+          ))}
+        </div>
+      </Link>
+      <Link to="/attention#attention2">
+        <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
+          {bits.slice(1, 2).map((c) => (
+            <section key={c.id}>
+              <h2>{c.title}</h2>
+              <p>{c.text}</p>
+            </section>
+          ))}
+        </div>
+      </Link>
+    </div>
   );
 }
 
