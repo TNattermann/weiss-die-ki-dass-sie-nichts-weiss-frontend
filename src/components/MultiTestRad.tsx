@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const fullspinduration = 0.3;
 const spinanimation = `spin ${fullspinduration}s linear infinite`;
-const piecolours = ["blue", "red", "yellow", "green", "lightgreen", "gold", "pink"];
+const piecolours = ["oklch(28.2% 0.091 267.935)", "oklch(81.1% 0.111 293.571)", "oklch(41% 0.159 10.272)", "green", "lightgreen", "gold", "pink"];
 
 const maximumnumberofcircles = 3;
 
@@ -293,7 +293,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
                 ))*/}
                 
                 {legendsets[legendindex].keywordlist.map((keyword, index) => (
-                <li className="legend-item"  key={index}>
+                <li className="legend-item text-text-normal"  key={index}>
                     <span className={`legend-circle`} style={{background: legendsets[legendindex].beforecircle[index]}}>
                     </span>
                     {keyword}
@@ -441,9 +441,9 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
 
-                    <button id="VideoButton" onClick={handleVideoButton} className="rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
+                    <button id="VideoButton" onClick={handleVideoButton} className=" text-text-normal mb-6 rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
                     style={{ display: videodisplay}}>
-                        Play (TBD Video Play symbol here)
+                        Abspielen
                     </button>
 
 
@@ -474,12 +474,12 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
 
                     
 
-                    <button id="startButton" onClick={handleStartButton} className="rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
+                    <button id="startButton" onClick={handleStartButton} className="text-text-normal rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
                     style={{ display: clickdisplay}}>
                         Start Spinning
                     </button>
 
-                    <button id="stopButton" onClick={handleStopButton} className="rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
+                    <button id="stopButton" onClick={handleStopButton} className="text-text-normal rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
                     style={{ display: clickdisplay}}>
                         Stop Spinning
                     </button>

@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const fullspinduration = 0.3;
 const spinanimation = `spin ${fullspinduration}s linear infinite`;
-const piecolours = ["blue", "red", "yellow", "green", "lightgreen", "gold", "pink"];
+const piecolours = ["oklch(28.2% 0.091 267.935)", "oklch(81.1% 0.111 293.571)", "oklch(41% 0.159 10.272)", "green", "lightgreen", "gold", "pink"];
 
 
 
@@ -88,7 +88,7 @@ export default function SimpleRad({wordpercentlist}: any) {
 
             <ul className="legend">
                 {wordradiantlist.map((wordradiant, index) => (
-                <li className="legend-item"  key={index}>
+                <li className="legend-item text-text-normal"  key={index}>
                     <span className={`legend-circle`} style={{background: piecolours[index]}}>
                     </span>
                     {wordradiant[0]}
@@ -150,9 +150,19 @@ export default function SimpleRad({wordpercentlist}: any) {
         
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
-                    
-                    <div className="wheel-and-legend">
-                        <div className="arrow">
+                    <div>
+                        <div className="mb-6">
+                            <button id="startButton" onClick={handleStartButton} className="text-text-normal rounded-full px-4 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg">
+                                Start Spinning
+                            </button>
+
+                            <button id="stopButton" onClick={handleStopButton} className="text-text-normal rounded-full px-4 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg">
+                                Stop Spinning
+                            </button>
+                        </div>
+
+                        <div className="wheel-and-legend flex items-center justify-center">
+                            <div className="arrow mb-4">
 
                             <div className="circle" id="simpleRad" style={{
                                 background: circlebackground,
@@ -160,20 +170,15 @@ export default function SimpleRad({wordpercentlist}: any) {
                                 transform: currentTransform
                             }}>
                             </div>
+                            </div>
+
+                            
+                            <CreateLegend />
 
                         </div>
-
-                        
-                        <CreateLegend />
-                        
                     </div>
-                    <button id="startButton" onClick={handleStartButton} className="rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg">
-                        Start Spinning
-                    </button>
-
-                    <button id="stopButton" onClick={handleStopButton} className="rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg">
-                        Stop Spinning
-                    </button>
+                    
+                    
 
                     <div className="p-8 rounded-xl">
                         <div className="bg-bgColor p-4 rounded-lg border border-outline mb-4">
