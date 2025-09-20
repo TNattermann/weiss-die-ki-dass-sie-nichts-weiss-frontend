@@ -33,11 +33,11 @@ export default function SimpleRad({wordpercentlist}: any) {
         
         let totalpercent = 0;
         wordpercentlist.forEach(wordpercent => {
-            totalpercent += wordpercent[1];  
+            totalpercent += wordpercent[1]; 
         });
-        if (totalpercent != 1){
+        if (totalpercent != 100){
             for (let i=0; i < wordpercentlist.length; i++){
-                wordpercentlist[i][1] = wordpercentlist[i][1] / totalpercent;
+                wordpercentlist[i][1] = 100 * wordpercentlist[i][1] / totalpercent;
             }
         }
 
@@ -46,15 +46,13 @@ export default function SimpleRad({wordpercentlist}: any) {
         //we assume for now the numbers all add up to 1
         let wordradiantlist : [string, number][] = []; 
         let lastdegree = 0;
-        let currentdegree;
         for (let i=0; i < wordpercentlist.length; i++){
-            currentdegree = wordpercentlist[i][1] * 360 + lastdegree;
-            wordradiantlist.push([wordpercentlist[i][0], currentdegree]);
+            const currentdegree = wordpercentlist[i][1] * 3.6;
+            wordradiantlist.push([wordpercentlist[i][0], lastdegree + currentdegree]);
             lastdegree += currentdegree;
         }
         //const wordradiantlist = wordpercentlist.map( wordpercent => [wordpercent[0], wordpercent[1] * 360]);
         //const wordradiantlist = [["blue0", 172],["red", 249],["yellow",313],["green",333],["lightgreen",347],["gold",360]];
-        //console.log(wordpercentlist);
 
         return(wordradiantlist);
     }
@@ -78,7 +76,7 @@ export default function SimpleRad({wordpercentlist}: any) {
 
         const piepieces = `conic-gradient(${resultString})`;
         
-        
+
         return(piepieces);
         //conic-gradient(blue 0deg 172deg, red 172deg 249deg, yellow 249deg 313deg, green 313deg 333deg, lightgreen 333deg 347deg, gold 347deg 360deg, pink 360deg 360deg)
     }

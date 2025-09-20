@@ -29,6 +29,7 @@ function applytemperature (wordpercentlist : [string, number][], temperature : n
     }
     else {
         const explist : [string, number][] = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1]  / temperature * 1.6)]);
+        //100 ist weil darauf die ganzen terme gerade geeisht sind. 1.6 ist ein Faktor, damit Temp = 1 ansatzweise die "echte" Version ist
         const expsum = explist.reduce((accumulator, wordexp) => accumulator + wordexp[1], 0);
         newlist = explist.map( (wordexp) => [wordexp[0], wordexp[1] / expsum]);
     }
@@ -234,9 +235,9 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
         wordpercentlist.forEach(wordpercent => {
             totalpercent += wordpercent[1];  
         });
-        if (totalpercent != 1){
+        if (totalpercent != 100){
             for (let i=0; i < wordpercentlist.length; i++){
-                wordpercentlist[i][1] = wordpercentlist[i][1] / totalpercent;
+                wordpercentlist[i][1] = 100 * wordpercentlist[i][1] / totalpercent;
             }
         }
 
@@ -245,10 +246,9 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
         //we assume for now the numbers all add up to 1
         let wordradiantlist : [string, number][] = []; 
         let lastdegree = 0;
-        let currentdegree;
         for (let i=0; i < wordpercentlist.length; i++){
-            currentdegree = wordpercentlist[i][1] * 360 + lastdegree;
-            wordradiantlist.push([wordpercentlist[i][0], currentdegree]);
+            const currentdegree = wordpercentlist[i][1] * 3.6;
+            wordradiantlist.push([wordpercentlist[i][0], lastdegree + currentdegree]);
             lastdegree += currentdegree;
         }
         
@@ -335,15 +335,43 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
         winnerstring += newWinner;
         setwinnermessage(winnerstring);
 
-        return (Winner);
+        return ([Winner, winnerstring]);
 
     }
 
-    function updateNextCircle(Winner : string, isNotLastCircle : boolean){
-        const temppercentlist = wordlibrary.find((word : {
+    function modifyNextWordChoice(temppercentlist : [string, number][], Winnerstring : string){
+        const words = Winnerstring.trim().split(" ");
+        const lastWord = words.length > 0 ? words[words.length - 2] : "";
+
+        let newlist;
+
+        if (lastWord === "schön"){
+            newlist = [[" warm", 0.45 ], [" sonnig", 0.3], [" sommerlich", 0.25], [".", 0.05], [" Gardine", 0.00001]];
+        }
+        else if (lastWord === "kalt"){
+            newlist =[[" trocken", 0.45 ], [" frostig", 0.3], [" windig", 0.25], [".", 0.05], [" Gardine", 0.00001]]          
+        }
+        else {
+            newlist = [[" trocken", 0.45 ], [" sonnig", 0.3], [" windig", 0.25], [".", 0.05], [" Gardine", 0.00001]];
+        }
+
+        console.log(words, lastWord);
+        console.log(temppercentlist);
+        console.log(newlist);
+        
+
+        return (newlist);
+    }
+
+    function updateNextCircle(Winner : string, winnerstring: string, isNotLastCircle : boolean){
+        let temppercentlist = wordlibrary.find((word : {
             id: string;
             list: (string | number)[][];
         }) => word.id === Winner).list;
+
+        if (Winner === " und"){
+            temppercentlist = modifyNextWordChoice(temppercentlist, winnerstring);
+        }
         
         const tempradiantlist = turnPercenttoDegrees(applytemperature(temppercentlist, temperature));
         setwordpercentlist(temppercentlist);
@@ -402,15 +430,24 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
 
              
 
-            const isNotLastCircle = (circlecounter < totalnumberofcircles - 1);
-            setisLastCircle(!isNotLastCircle);
+            let isNotLastCircle = (circlecounter < totalnumberofcircles - 1);
 
-            const Winner = displayWinner(currentRotation, circlecounter);
+            const [Winner, winnerstring] = displayWinner(currentRotation, circlecounter);
+
+            if (isNotLastCircle && Winner.slice(-1) === "."){
+                //end early if fullstop
+                
+                isNotLastCircle = false;
+            }
+            
+            setisLastCircle(!isNotLastCircle);
+            
+            
 
 
             if (isNotLastCircle){
                 setcirclecounter(circlecounter + 1);
-                updateNextCircle(Winner, isNotLastCircle);
+                updateNextCircle(Winner, winnerstring, isNotLastCircle);
                 
                 
 
@@ -418,7 +455,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
             else {
                 
                 setcirclecounter(0);
-                updateNextCircle("0", isNotLastCircle);
+                updateNextCircle("0", winnerstring, isNotLastCircle);
             }
             
         }
@@ -492,7 +529,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
 
                     <div className="p-8 rounded-xl">
                         <div className="bg-bgColor p-4 rounded-lg border border-outline mb-4">
-                            <p className="text-text-normal font-mono text-textDark">"Das Wetter heute ist besonders {winnermessage}"</p>
+                            <p className="text-text-normal font-mono text-textDark">"Das Wetter heute ist besonders{winnermessage}"</p>
                         </div>
                 </div>
                     

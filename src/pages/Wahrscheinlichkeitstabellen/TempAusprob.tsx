@@ -25,55 +25,77 @@ function adjustRange (range: number, minimrange : number, maximrange: number){
 const wordlibrary = [
     {
         id: "0",
-        list: [["schön", 0.45 ], ["warm", 0.3], ["kalt", 0.25]]
+        list: [[" schön", 0.45 ], [" warm", 0.30], [" kalt", 0.25], [".", 0.05], [" Banane", 0.00002] ]
     },
     {
-        id: "schön",
-        list: [[" s1", 0.7 ], [" s2", 0.3], [" s3", 0.25]]
+        id: " schön",
+        list: [[".", 0.21 ], [" und", 0.12], [" für", 0.06], [" hier", 0.009], [" aufwärts", 0.00001]]
     },
     {
-        id: "warm",
-        list: [[" w1", 0.7 ], [" w2", 0.3], [" w3", 0.25]]
+        id: " warm",
+        list: [[" und", 0.46], [".", 0.10 ], [" gewesen", 0.06], [" hier", 0.009], [" aufwärts", 0.00001]]
     },
     {
-        id: "kalt",
-        list: [[" k1", 0.7 ], [" k2", 0.3], [" k3", 0.25]]
+        id: " kalt",
+        list: [[" und", 0.27], [".", 0.21 ], [" gewesen", 0.03], [" hier", 0.009], [" aufwärts", 0.00001]]
     },
     {
-        id: " s1",
-        list: [[" s11", 0.45 ], [" s12", 0.3], [" s13", 0.25]]
+        id: " Banane",
+        list: [[".", 0.10], [" für", 0.06 ], [" und", 0.02], [" hier", 0.009], [" aufwärts", 0.00001]]
+    }, 
+    {
+        id: " und",
+        list: [[" trocken", 0.45 ], [" sonnig", 0.3], [" windig", 0.25], [".", 0.05], [" Gardine", 0.00001]]
+        //mache hier noch einen special case in MultiTestRad, der an der Probability schraubt
+        //schön sollte sonnig und warm haben, warm sollte sonnig und trocken haben, kalt sollte windig, trocken und frostig haben
+        //schön: replace trocken mit warm, windig mit sommerlich; warm: basecase, kalt: replace sonnig mit frostig
     },
     {
-        id: " s2",
-        list: [[" s21", 0.45 ], [" s22", 0.3], [" s23", 0.25]]
+        id: " für",
+        list: [[" einen", 0.24 ], [" Radfahren", 0.019], [" Menschen", 0.009], [".", 0.005], [" Gardine", 0.00001]]
     },{
-        id: " s3",
-        list: [[" s31", 0.45 ], [" s32", 0.3], [" s33", 0.25]]
+        id: " hier",
+        list: [[" in", 0.45 ], [".", 0.06], [" oben", 0.04], [" und", 0.007], [" Gardine", 0.00001]]
     },
     {
-        id: " w1",
-        list: [[" w11", 0.45 ], [" w12", 0.3], [" w13", 0.25]]
+        id: " aufwärts",
+        list: [[".", 0.17 ], [" und", 0.05], [" in", 0.04], [" gewesen", 0.019], [" Gardine", 0.00001]]
     },
     {
-        id: " w2",
-        list: [[" w21", 0.45 ], [" w22", 0.3], [" w23", 0.25]]
+        id: " gewesen",
+        list: [[".", 0.39 ], [" und", 0.13], [" in", 0.01], [" mit", 0.0025], [" Gardine", 0.00001]]
     },
     {
-        id: " w3",
-        list: [[" w31", 0.45 ], [" w32", 0.3], [" w33", 0.25]]
+        id: " trocken",
+        list: [[".", 0.36 ], [" gewesen", 0.038], [" in", 0.025], [" und", 0.017], [" Gardine", 0.00001]]
     },
     {
-        id: " k1",
-        list: [[" k11", 0.45 ], [" k12", 0.3], [" k13", 0.25]]
+        id: " sonnig",
+        list: [[".", 0.36 ], [" gewesen", 0.038], [" in", 0.025], [" und", 0.017], [" Gardine", 0.00001]]
     },
     {
-        id: " k2",
-        list: [[" k21", 0.45 ], [" k22", 0.3], [" k23", 0.25]]
+        id: " sommerlich",
+        list: [[".", 0.36 ], [" gewesen", 0.038], [" in", 0.025], [" und", 0.017], [" Gardine", 0.00001]]
     },
     {
-        id: " k3",
-        list: [[" k31", 0.45 ], [" k32", 0.3], [" k33", 0.25]]
+        id: " windig",
+        list: [[".", 0.45 ], [" gewesen", 0.05], [" in", 0.03], [" und", 0.02], [" Gardine", 0.00001]]
+    },
+    {
+        id: " frostig",
+        list: [[".", 0.45 ], [" gewesen", 0.05], [" in", 0.03], [" und", 0.02], [" Gardine", 0.00001]]
+    },
+    {   
+        id: ".",
+        list: [["", 1]]
+    },
+    {   
+        id: "",
+        list: [["", 1]] //redo the list so this one doesn't happen
     }
+
+    //to potentially add: einen, Radfahren, Menschen, oben, in, mit Gardine
+
 
 ];
 
@@ -102,6 +124,7 @@ export default function TempAusprob() {
                         <div>
                             <p className="text-lg text-text-normal mb-6 leading-relaxed">
                             Hier können Sie jetzt selbst ausprobieren, wie sich das Verstellen des Temperaturreglers auf des Satz auswirkt.
+                            Gegeben sind immer jeweils drei normale Vorschläge, das Satzende und ein weniger wahrscheinliches Unsinnwort.
                             </p>
                             <h3 className="text-primary text-xl font-semibold text-textDark mb-4">Temperatur = {rangeAdjustedValue}</h3>
                             <input
