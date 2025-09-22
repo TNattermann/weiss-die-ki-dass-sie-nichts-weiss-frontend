@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Tilde from "../../components/Tilde";
 
 function AffenbandeBeispiel() {
   const [countAffe, setCountAffe] = useState(0);
@@ -33,11 +34,11 @@ function AffenbandeBeispiel() {
         </h1>
         <div className="items-center mb-16">
           <p className="text-lg text-text-normal mb-6 leading-relaxed">
-            Nun versuchen Sie es doch einmal selbst: ändern Sie die Anzahl an
-            Äffchen und damit die Anzahl an verfügbaren Münzen und beobachten
-            Sie, welche Entscheidung die Maschine dann ~treffen würde. Probieren
-            Sie auch aus, was geschieht, wenn Sie den Preis für ein Äffchen auf
-            eine Münze statt fünf Münzen festlegen.
+            Ändern Sie die Anzahl an Äffchen und damit die Anzahl an verfügbaren
+            Münzen und beobachten Sie, welche Entscheidung die Maschine dann
+            <Tilde />
+            treffen würde. Probieren Sie auch aus, was geschieht, wenn Sie den
+            Preis für ein Äffchen auf eine Münze statt fünf Münzen festlegen.
           </p>
         </div>
         {/* Aktueller Output */}
@@ -164,33 +165,33 @@ function AffenbandeBeispiel() {
         </div>
 
         {/* Erklärung */}
-        <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
-          <h3 className="text-lg text-text-normal mb-6 leading-relaxed">
+        <div className="bg-bgColor p-2 rounded-lg border border-outline mb-4 w-fit">
+          <h3 className="font-semibold text-primary text-xl mb-3">
             Erklärung:
           </h3>
-          <p className="text-textMedium font-medium text-lg">
+          <p className="text-lg text-text-normal mb-6 leading-relaxed">
             Die Maschine trifft die Entscheidung auf Basis einer simplen
-            Berechnung, bei der verschiedene Inputs gegeneinander abgewogen
-            werden: der Verlust des Geldes gegen die Freude mit dem Spielzeug.
-            Liegt der Preis für ein Äffchen bei fünf Münzen, so überwiegt der
-            Verlust des Geldes die Freude mit dem Spielzeug. Insgesamt
-            verringert sich die Freude also. Wenn der Preis für ein Äffchen
-            jedoch nur eine Münze beträgt, überwiegt die Freude mit dem
+            Berechnung, bei der verschiedene Eingaben (Inputs) gegeneinander
+            abgewogen werden: der Verlust des Geldes gegen die Freude mit dem
+            Spielzeug. Liegt der Preis für ein Äffchen bei fünf Münzen, so
+            überwiegt der Verlust des Geldes die Freude mit dem Spielzeug.
+            Insgesamt verringert sich die Freude also. Wenn der Preis für ein
+            Äffchen jedoch nur eine Münze beträgt, überwiegt die Freude mit dem
             Spielzeug den Verlust des Geldes. Insgesamt vergrößert sich die
             Freude hier.<br></br> Für die Maschine gilt folgendes: ist das
-            Ergebnis größer als null, wird sich für den Kauf ~entschieden und
-            bei einem Ergebnis kleiner null gegen den Kauf. Hierbei stellt die
-            null einen Grenzwert dar, der auch anders gewählt werden könnte.
-            Dieses grundlegende Konzept wird auch in Neuronalen Netzwerken
-            angewandt.
+            Ergebnis größer als null, wird sich für den Kauf <Tilde />
+            entschieden und bei einem Ergebnis kleiner null gegen den Kauf.
+            Hierbei stellt die null einen Grenzwert dar, der auch anders gewählt
+            werden könnte. Dieses grundlegende Konzept wird auch in Neuronalen
+            Netzwerken angewandt.
           </p>
         </div>
         <p className="text-lg text-text-normal mb-6 leading-relaxed">
           Durch das Beispiel haben Sie nun eine grobe Vorstellung davon
-          gewonnen, wie ein Modell eine Entscheidung ~trifft. Nun möchten wir
-          noch genauer verstehen, wie dies in einem LLM funktioniert. Dazu
-          schauen wir uns zuerst einmal den Aufbau eines Neuronalen Netzwerks
-          an, das die Basis für ein LLM bildet.
+          gewonnen, wie ein Modell eine Entscheidung <Tilde />
+          trifft. Um genauer zu verstehen, wie dies in Sprachmodellen wie
+          ChatGPT funktioniert, schauen wir uns nun den Aufbau eines Neuronalen
+          Netzwerks an.
         </p>
       </div>
     </section>

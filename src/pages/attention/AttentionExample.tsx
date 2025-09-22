@@ -1,4 +1,5 @@
 import React from "react";
+import Tilde from "../../components/Tilde";
 
 type FileWithTextProps = {
   fileSrc: string;
@@ -64,7 +65,7 @@ const AttentionExample: React.FC = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-lg text-text-normal mb-4 leading-relaxed">
             <FileWithText
-              fileSrc="/example-audio.mp3"
+              fileSrc="/audio/example03.wav"
               fileType="audio"
               fileSubtitle="Das Wetter ist heute sehr schön."
               heading="Keine Betonung"
@@ -81,7 +82,7 @@ const AttentionExample: React.FC = () => {
           </p>
           <p className="text-lg text-text-normal mb-4 leading-relaxed">
             <FileWithText
-              fileSrc="/example-audio.mp3"
+              fileSrc="/audio/example04.wav"
               fileType="audio"
               fileSubtitle={
                 <>
@@ -105,7 +106,7 @@ const AttentionExample: React.FC = () => {
           </p>
           <p className="text-lg text-text-normal mb-4 leading-relaxed">
             <FileWithText
-              fileSrc="/example-audio.mp3"
+              fileSrc="/audio/example05.wav"
               fileType="audio"
               fileSubtitle={
                 <>
@@ -134,7 +135,8 @@ const AttentionExample: React.FC = () => {
           Betonung kann die Wichtigkeit von Wörtern herausheben, und wir
           erkennen die Wichtigkeit von Wörtern auch anhand der Betonung. Ein
           Sprachmodell kann dies - wenn überhaupt - nur mit dem Text selbst
-          ~erkennen, d.h. mathematisch berechnen.
+          <Tilde />
+          erkennen, d.h. mathematisch berechnen.
         </p>
         <div className="bg-primary/5 border-l-4 text-primary p-4 rounded-r-lg mb-4">
           <p className="text-text-normal font-medium">

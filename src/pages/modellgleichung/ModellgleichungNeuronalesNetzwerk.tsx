@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Tilde from "../../components/Tilde";
 
 function VideoPage() {
   const [isOpenInput, setIsOpenInput] = useState(false);
@@ -19,10 +20,10 @@ function VideoPage() {
         Aufbau eines Neuronalen Netzwerks
       </h1>
       <p className="text-lg text-text-normal mb-6 text-center max-w-2xl">
-        Auf dem Bild ist ein einfaches Neuronales Netzwerk zu sehen, das dazu
-        geeignet ist, eine gezeichnete Ziffer zu erkennen. Das Beispiel hilft
-        dabei, die einzelnen Elemente eines Neuronalen Netzwerkes kennenzulernen
-        und zu verstehen, welche Aufgaben sie erfüllen.
+        Hier ist ein einfaches Neuronales Netzwerk zu sehen, das dazu geeignet
+        ist, eine handgeschriebene Ziffer zu erkennen. Das Beispiel hilft dabei,
+        die einzelnen Elemente eines Neuronalen Netzwerkes kennenzulernen und zu
+        verstehen, welche Aufgaben sie erfüllen.
       </p>
 
       {/* Buttons über dem Bild */}
@@ -35,7 +36,7 @@ function VideoPage() {
               : "bg-primary-container text-on-primary-container"
           }`}
         >
-          Klassifiziere die 1
+          Erkenne die 1
         </button>
         <button
           onClick={() => setSelectedDigit("4")}
@@ -45,7 +46,7 @@ function VideoPage() {
               : "bg-primary-container text-on-primary-container"
           }`}
         >
-          Klassifiziere die 4
+          Erkenne die 4
         </button>
         <button
           onClick={() => setSelectedDigit("7")}
@@ -55,7 +56,7 @@ function VideoPage() {
               : "bg-primary-container text-on-primary-container"
           }`}
         >
-          Klassifiziere die 7
+          Erkenne die 7
         </button>
       </div>
 
@@ -165,9 +166,10 @@ function VideoPage() {
               <div className="mt-4 text-text-normal text-left leading-relaxed">
                 Jedes Neuron des Output Layer hat einen Wert zwischen 0 und 1.
                 Dieser ist das Resultat der Berechnungen, die zuvor gemacht
-                wurden. Je höher der Wert eines Neurons ist, desto eher ~denkt
-                das Netzwerk, dass dies die Ziffer ist, die auf dem Bild zu
-                sehen ist. Wenn also am Ende das Neuron für die Ziffer 4 den
+                wurden. Je höher der Wert eines Neurons ist, desto eher{" "}
+                <Tilde />
+                denkt das Netzwerk, dass dies die Ziffer ist, die auf dem Bild
+                zu sehen ist. Wenn also am Ende das Neuron für die Ziffer 4 den
                 höchsten Wert von allen 10 Output-Neuronen hat, dann
                 klassifiziert das Netzwerk die gezeichnete Zahl als eine 4.
               </div>

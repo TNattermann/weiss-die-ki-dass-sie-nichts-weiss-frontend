@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Tilde from "../../components/Tilde";
 
 const notes = [
   {
@@ -67,7 +68,8 @@ export default function AttentionIntroduction() {
           <div>
             <p className="text-lg text-text-normal mb-6 leading-relaxed">
               Wir haben gelernt, dass ein Sprachmodell das nächste Wort in einem
-              Satz ~vorhersagt. Nun gibt es Wörter, die für so ein Ratespiel
+              Satz <Tilde />
+              vorhersagt. Nun gibt es Wörter, die für so ein Ratespiel
               relevanter sind, und welche, die man kaum beachten muss. Dort
               setzt das Konzept der Aufmerksameit an - dadurch lernt das
               Sprachmodell, welches Wort für die Ausgabe relevant ist, und
@@ -99,12 +101,9 @@ export default function AttentionIntroduction() {
             <p className="text-sm italic text-text-normal mb-4 leading-relaxed">
               Hier könnten nun viele verschiedene Antworten passen - regnerisch,
               schön, sonnig, windig oder vielleicht einfach wieder toll.{" "}
-              <span
-                tabIndex={0}
-                className="relative group cursor-help underline decoration-dotted"
-              >
-                Was würden Sie tippen?
-                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block group-focus:block bg-black text-white text-xs px-2 py-1 rounded">
+              <span className="hover">
+                <u>Was würden Sie tippen?</u>
+                <span className="border-l-4 bg-primary-container-selected text-on-primary-container-selected p-6 rounded-r-lg mb-6 text-textMedium font-medium">
                   Das Sprachmodell vervollständigt diesen Satz übrigens mit
                   "schön". Wie positiv unser kleiner künstlicher Helfer doch
                   ist.
@@ -142,9 +141,10 @@ export default function AttentionIntroduction() {
         </div>
         <p className="text-lg text-text-normal mb-4 leading-relaxed mt-4">
           Ähnlich wie wir muss sich das Sprachmodell also auf die relevantesten
-          Wörter ~konzentrieren können - sonst geht der gesamte Kontext
-          verloren. Doch woher ~weiß das Modell, welches Wort relevant ist und
-          welches nicht?
+          Wörter <Tilde />
+          konzentrieren können - sonst geht der gesamte Kontext verloren. Doch
+          woher <Tilde />
+          weiß das Modell, welches Wort relevant ist und welches nicht?
         </p>
       </div>
     </section>

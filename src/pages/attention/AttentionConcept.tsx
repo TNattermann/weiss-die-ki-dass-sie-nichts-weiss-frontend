@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Tilde from "../../components/Tilde";
 
 type FileWithTextProps = {
   fileSrc: string;
@@ -73,16 +74,17 @@ export default function AttentionConcept() {
           <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-4">
             <p className="text-text-normal font-medium">
               Das hört sich alles sehr kompliziert an - das ist es auch - man
-              kann es aber auch so verstehen: Das Sprachmodell ~lernt die
-              Betonung einzelner Wörter. So wie wir gewisse Wörter
+              kann es aber auch so verstehen: Das Sprachmodell <Tilde />
+              lernt die Betonung einzelner Wörter. So wie wir gewisse Wörter
               unterschiedlich betonen, um ihre Bedeutung zu unterstreichen,
-              ~betont das Modell auch verschiedene Wörter, um ihre Wichtigkeit
-              zu erfassen.
+              <Tilde />
+              betont das Modell auch verschiedene Wörter, um ihre Wichtigkeit zu
+              erfassen.
             </p>
           </div>
 
           <FileWithText
-            fileSrc="/example-audio.mp3"
+            fileSrc="/audio/example01.wav"
             fileType="audio"
             fileSubtitle={
               <>

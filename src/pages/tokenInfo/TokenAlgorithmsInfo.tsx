@@ -25,7 +25,7 @@ export default function TokenAlgorithmsInfo() {
             </div>
 
             <p className="text-lg text-text-normal mb-8 leading-relaxed">
-              Moderne Modelle wie GPT oder Gemini nutzen bevorzugt subword-basierte Tokenisierung. Sie ermöglichen eine hohe
+              Moderne Modelle wie GPT oder Gemini nutzen bevorzugt teilwortbasierte Tokenisierung. Sie ermöglichen eine hohe
               Ausdruckskraft bei gleichzeitig effizienter Repräsentation. Im nächsten Abschnitt schauen wir uns den wohl
               bekanntesten dieser Algorithmen genauer an: <strong className="text-primary">Byte-Pair Encoding
               (BPE)</strong>.

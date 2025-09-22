@@ -3,8 +3,12 @@ import EmbeddingsVizualizer from "./EmbeddingsVizualizer.tsx";
 import EmbeddingsMainTakeaways from "./EmbeddingsMainTakeaways";
 import SectionSidebar from "../../components/SectionSidebar.tsx";
 import EmbeddingsRechnen from "./EmbeddingsRechnen.tsx";
+import {useEffect} from "react";
 
 function WordEmbeddingsPage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="min-h-screen">
             <div className="px-4 py-10 lg:px-10">

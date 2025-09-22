@@ -1,5 +1,6 @@
 import { ArrowRight, Book } from "lucide-react";
 import { Link } from "react-router-dom";
+import Tilde from "../../components/Tilde";
 
 export default function ModellgleichungMainTakeaways() {
   return (
@@ -15,52 +16,51 @@ export default function ModellgleichungMainTakeaways() {
           </div>
         </h1>
 
-        <div className="bg-gradient-to-r from-primary text-outline-dark text-bgColor p-8 rounded-2xl">
+        <div className="bg-primary-container p-8 rounded-2xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <>
-              <h3 className="text-on-primary-container-selected font-semibold mb-3">
+            <div>
+              <h3 className="text-on-primary-container font-semibold mb-3">
                 Wie entscheidet ein Modell?
               </h3>
-              <p className="text-on-primary-container-selected">
+              <p className="text-on-primary-container">
                 Ein Modell trifft eine Ja/Nein-Entscheidung durch eine simple
                 Berechnung. Dabei werden verschiedene Inputs gegeneinander
-                abgewogen. Das Ergebnis ist die Basis für die ~Entscheidung des
-                Modells.
+                abgewogen. Das Ergebnis ist die Basis für die <Tilde />
+                Entscheidung des Modells.
               </p>
-            </>
-            <>
-              <h3 className="text-on-primary-container-selected font-semibold mb-3">
+            </div>
+            <div>
+              <h3 className="text-on-primary-container font-semibold mb-3">
                 Aufbau Neuronales Netzwerk
               </h3>
-              <p className="text-on-primary-container-selected">
+              <p className="text-on-primary-container">
                 Ein Neuronales Netzwerk besteht aus den Neuronen, die in
                 Schichten angeordnet sind. Es gibt den Input Layer, einen oder
                 mehrere Hidden Layer sowie den Output Layer. Zwischen den
                 Neuronen bestehen gewichtete Verbindungen.
               </p>
-            </>
-            <>
-              <h3 className="text-on-primary-container-selected font-semibold mb-3">
+            </div>
+            <div>
+              <h3 className="text-on-primary-container font-semibold mb-3">
                 Bezug zu LLMs
               </h3>
-              <p className="text-on-primary-container-selected">
-                Große Sprachmodelle (LLMs) unterscheiden sich zu dem hier
+              <p className="text-on-primary-container">
+                Große Sprachmodelle unterscheiden sich zu dem hier
                 vorgestellten Beispiel eines Neuronalen Netzwerks. Sie sind
                 deutlich größer und verarbeiten keine Bilder, sondern
-                Texteingaben und geben entsprechend keine Klassifizierung aus,
-                sondern einen Text.
+                Texteingaben und nutzen Wahrscheinlichkeitsverteilungen.
               </p>
-            </>
+            </div>
           </div>
         </div>
 
         {/* Navigation */}
-        <div className="mt-12 text-center">
+        <div className="mt-12 flex justify-center space-x-6">
           <Link
-            to="/"
-            className="inline-flex items-center bg-primary-container text-on-primary-container px-8 py-3 rounded-lg font-medium hover:bg-primary transition-colors duration-200 shadow-lg"
+            to="/networkLearning"
+            className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
           >
-            Weiter zum Test
+            Weiter im Lernpfad
             <ArrowRight className="text-on-primary-container ml-2 h-5 w-5" />
           </Link>
         </div>

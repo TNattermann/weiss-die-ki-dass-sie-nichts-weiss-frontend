@@ -14,17 +14,8 @@ const WordEmbeddingViz: React.FC<WordEmbeddingVizProps> = ({ embeddings, groups,
 
   // Funktion zum Hinzufügen oder Entfernen einer Wortgruppe
   const handleButtonClick = (group: string) => {
-    setSelectedWords(prevSelected => {
-      // Überprüfe, ob die Wortgruppe bereits ausgewählt ist
-      if (prevSelected.includes(group)) {
-        // Wenn ja, entferne sie
-        return prevSelected.filter(w => w !== group);
-      } else {
-        // Wenn nein, füge sie hinzu
-        return [...prevSelected, group];
-      }
-    });
-  };
+  setSelectedWords([group]); // Nur die ausgewählte Gruppe wird gesetzt
+};
 
   const reducedData = Object.keys(embeddings).map((word) => ({
     word,

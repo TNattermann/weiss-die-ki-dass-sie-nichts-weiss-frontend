@@ -7,7 +7,11 @@ import AttentionPage from "./pages/attention/AttentionPage.tsx";
 import LearningPage from "./pages/networkLearning/LearningPage.tsx";
 import ModellgleichungPage from "./pages/modellgleichung/ModellgleichungPage.tsx";
 import WordEmbeddingsPage from './pages/wordembeddings/WordEmbeddingsPage.tsx';
+import Download from './pages/download/download.tsx';
+import Impressum from './pages/impressum/impressum.tsx';
 import Footer from './components/Footer.tsx';
+import TemperaturePage from "./pages/Wahrscheinlichkeitstabellen/TemperaturePage.tsx";
+import NewsletterPage from "./pages/newsletter/NewsletterPage.tsx";
 
 
 function App() {
@@ -19,12 +23,16 @@ function App() {
                 <main className="flex-grow">
                     <Routes>
                         <Route path="/" element={<Home />} />
+                        <Route path="/temperature" element={<TemperaturePage />} />
                         <Route path="/tokeninfo" element={<TokenPage />} />
                         <Route path="/networkLearning" element={<LearningPage />} />
                         <Route path="/attention" element={<AttentionPage />} />
                         <Route path="/modellgleichung" element={<ModellgleichungPage />} />
                         <Route path="/aboutus" element={<AboutUs />} />
                         <Route path='/wordembeddings' element={<WordEmbeddingsPage />} />
+                        <Route path='/impressum' element={<Impressum />} />
+                        <Route path='/download' element={<Download />} />
+                        <Route path='/newsletter' element={<NewsletterPage />} />
                     </Routes>
                 </main>
                 <Footer />

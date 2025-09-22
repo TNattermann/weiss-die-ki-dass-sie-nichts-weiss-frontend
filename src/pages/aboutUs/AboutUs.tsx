@@ -1,13 +1,19 @@
-function AboutUs() {
+import AboutUsPicture from "./AboutUsPicture";
+import AboutUsText from "./AboutUsText";
 
-    return (
-        <div className="min-h-screen">
-            <div className="max-w-screen-xl mx-auto px-6 py-6 text-center">
-                <h1 className="text-5xl font-bold text-center text-primary mb-6">Moin</h1>
-                <h1 className="text-text-normal">Servus</h1>
-            </div>
+function AboutUs() {
+  return (
+    <div className="min-h-screen">
+      <main className="flex-1 max-w-7xl mx-auto space-y-24 px-4">
+        <div id="picture">
+          <AboutUsPicture />
         </div>
-    );
+        <div id="text">
+          <AboutUsText />
+        </div>
+      </main>
+    </div>
+  );
 }
 
 export default AboutUs;

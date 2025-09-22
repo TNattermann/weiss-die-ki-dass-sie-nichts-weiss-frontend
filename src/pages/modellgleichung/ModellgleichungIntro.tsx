@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Tilde from "../../components/Tilde";
 
 export default function ModellgleichungIntro() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +16,18 @@ export default function ModellgleichungIntro() {
         </h1>
         <div className="items-center mb-16">
           <p className="text-lg text-text-normal mb-6 leading-relaxed">
-            Die Entscheidung eines Modells kann im Grunde als eine einfache
-            <b> Ja-Nein-Entscheidung</b> betrachtet werden, bei der verschiedene
-            Inputs gegeneinander abgewogen werden. Liegt das Ergebnis über einem
-            festgelegten Grenzwert, wird Entscheidung A getroffen, liegt es
-            darunter, wird Entscheidung B getroffen.
+            Im Abschnitt "Was passiert, wenn ich ChatGPT benutze?" wurde bereits
+            gezeigt, dass ChatGPT eine Wahrscheinlichkeitstabelle nutzt, um das
+            nächste Wort zu bestimmen. Bisher unbeantwortet geblieben ist jedoch
+            die Frage, wo diese Tabelle herkommt. In diesem Abschnitt wird die
+            zugrundeliegende Technologie hinter Sprachmodellen wie ChatGPT
+            vorgestellt, sogenannte Neuronale Netzwerke. Neuronale Netzwerke
+            sind eigentlich nur eine Ansammlung von mathematischen Gleichungen,
+            die in Reihen hintereinander angeordnet sind. Jede Gleichung kann
+            als ein Neuron interpretiert werden, das eine{" "}
+            <b>Ja-Nein-Entscheidung</b> an nachfolgende Neuronen weitergibt.
+            Aber wie lässt sich damit erklären, wie ein Modell eine Entscheidung
+            trifft? Diese Frage wird in dem folgenden Abschnitt beantwortet.
           </p>
         </div>
         <div className="items-center mb-16">
@@ -75,8 +83,8 @@ export default function ModellgleichungIntro() {
             übertragen werden. Dazu wird die erwartete Freude des Onkels auf
             einer Skala von -100 bis 100 Freudenpunkten angegeben. Der Verlust
             der 5 DM könnte 50 Freudenpunkte kosten (-50), während die erwartete
-            Freude mit einem Äffchen bei 35 Freudenpunkten liegt (+35). Schauen
-            wir uns zwei Beispielrechnungen an:
+            Freude mit einem Äffchen bei 35 Freudenpunkten liegt (+35). Hierzu
+            zwei Beispielrechnungen:
           </p>
           <div className="flex space-x-4">
             <div className="bg-bgColor p-2 rounded-lg border border-outline mb-4 w-fit">
@@ -105,9 +113,10 @@ export default function ModellgleichungIntro() {
             <p className="text-textMedium font-medium text-lg">
               Wenn wir unsere Entscheidungen auf diese Weise abbilden, kann auch
               eine Maschine eine Entscheidung berechnen: im ersten Fall würde
-              sich die Maschine gegen den Kauf ~entscheiden. Da das Ergebnis der
-              zweiten Berechnung positiv ist, würde sich die Maschine hier für
-              den Kauf ~entscheiden.
+              sich die Maschine gegen den Kauf <Tilde />
+              entscheiden. Da das Ergebnis der zweiten Berechnung positiv ist,
+              würde sich die Maschine hier für den Kauf <Tilde />
+              entscheiden.
             </p>
           </div>
         </div>

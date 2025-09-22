@@ -3,7 +3,7 @@ export default function ConnectionToLLM() {
     <section className="py-6 px-6" id="educational-content">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-primary mb-6">
-          Verbindung zu LLMs
+          Verbindung zu ChatGPT
         </h1>
         <div className="items-center mb-16">
           <div>
@@ -12,32 +12,33 @@ export default function ConnectionToLLM() {
               betrachtet, das zur Erkennung von Ziffern geeignet ist. Dieses
               Beispiel hilft dabei, ein Verständnis für den grundlegenden Aufbau
               Neuronaler Netzwerke zu bekommen. Allerdings gibt es auch einige
-              Unterschiede zwischen LLMs, wie sie in der Praxis genutzt werden,
-              und unserem kleinen Beispiel. Die wichtigsten Unterschiede sind
-              hier zusammengefasst:
+              Unterschiede zwischen großen Sprachmodellen wie ChatGPT und
+              unserem kleinen Beispiel. Die wichtigsten Unterschiede sind hier
+              zusammengefasst:
             </p>
           </div>
           <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
             <p className="text-textMedium font-medium text-lg">
-              LLMs bestehen in der Praxis aus einer weitaus größeren Anzahl von
-              Layern und Neuronen. Die Anzahl an trainierbaren Parametern liegt
-              oft im Milliardenbereich.
+              Große Sprachmodelle bestehen in der Praxis aus einer weitaus
+              größeren Anzahl von Layern und Neuronen. Die Anzahl an
+              trainierbaren Parametern liegt hier im Milliardenbereich.
             </p>
           </div>
           <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
             <p className="text-textMedium font-medium text-lg">
-              Der Input für ein LLM ist kein Bild, das in Pixel aufgeteilt wird,
-              sondern ein Text. Dieser wird <i>tokenisiert</i> und mithilfe von{" "}
-              <i>Word Embeddings</i> als Vektor dargestellt.
+              Der Input für ein Sprachmodell ist kein Bild, das in Pixel
+              aufgeteilt wird, sondern ein Text. Dieser wird <i>tokenisiert</i>{" "}
+              und mithilfe von <i>Word Embeddings</i> als Vektor dargestellt.
             </p>
           </div>
           <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
             <p className="text-textMedium font-medium text-lg">
-              Der Output eines LLMs ist keine Klassifizierung, wie in dem hier
-              beschriebenen Beispiel, sondern ein Text. Im Gegensatz zu LLMs
-              muss hier auch nicht mit einer Wahrscheinlichkeitsverteilung für
-              den Output gearbeitet werden, weil in jedem Fall die Klasse mit
-              der höchsten Wahrscheinlichkeit gewählt werden soll.
+              In dem hier beschriebenen Beispiel wird für die Klassifizierung
+              der handgeschriebenen Zahl immer das Neuron mit der höchsten
+              Wahrscheinlichkeit gewählt. Im Gegensatz dazu nutzen Sprachmodelle
+              wie ChatGPT eine <i>Wahrscheinlichkeitsverteilung</i>, um das
+              nächste Wort zu bestimmen. Dadurch wird manchmal auch ein Wort
+              gewählt, das nicht die höchste Wahrscheinlichkeit hat.
             </p>
           </div>
         </div>

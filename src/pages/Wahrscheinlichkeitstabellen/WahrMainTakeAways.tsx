@@ -1,4 +1,6 @@
 import Tilde from "../../components/Tilde";
+import { ArrowLeft, ArrowRight} from "lucide-react";
+import { Link } from "react-router-dom";
 
 
 export default function WahrMainTakeaways() {
@@ -13,33 +15,46 @@ export default function WahrMainTakeaways() {
               <span className="text-5xl font-bold text-center text-primary break-words">Wichtige Erkenntnisse</span>
             </div>
           </h1>
-          <div className="bg-gradient-to-r from-primary text-outline-dark text-bgColor p-8 rounded-2xl">
+          <div className="bg-primary-container p-8 rounded-2xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h3 className="text-on-primary-container-selected font-semibold mb-3">Nur das nächste Wort</h3>
-                <p className="text-on-primary-container-selected">
+                <h3 className="text-on-primary-container font-semibold mb-3">Nur das nächste Wort</h3>
+                <p className="text-on-primary-container">
                   Das Modell macht nie etwas anderes als ein wahrscheinlich gut passendes nächstes Wort an einen Text anzuhängen.
                   Wenn es einen langen Text <Tilde />schreibt, passiert nichts weiter, als dass es diesen Prozess wiederholt
                 </p>
               </div>
               <div>
-                <h3 className="text-on-primary-container-selected font-semibold mb-3">Finden durch Wahrscheinlichkeit</h3>
-                <p className="text-on-primary-container-selected">
+                <h3 className="text-on-primary-container font-semibold mb-3">Finden durch Wahrscheinlichkeit</h3>
+                <p className="text-on-primary-container">
                   Damit das Modell nicht immer das Selbe <Tilde />antwortet, werden Wahrscheinlichkeitstabellen benutzt, 
                   um die Wörter zu wählen. Dadurch wirkt das Modell nicht so statisch. 
-                  Damit das Modell <Tilde />herausfinded, welche Wörter gut passen, nutzt es Wahrscheinlichkeitstabellen,
+                  Damit das Modell <Tilde />herausfindet, welche Wörter gut passen, nutzt es Wahrscheinlichkeitstabellen,
                   um dann sehr wahrscheinlich ein gut passendes Wort zum bestehenden Text zu finden.
                 </p>
               </div>
               {/* Volle Breite */}
-              
-              
-              
             </div>
           </div>
-
-          
-
+          {/* Navigation */}
+          <div className="mt-12 flex justify-center space-x-6">
+          {/* Home */}
+          <Link
+            to="/"
+            className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
+          >
+            <ArrowLeft className="text-on-primary-container mr-2 h-5 w-5" />
+            Zurück zur Hauptseite
+          </Link>
+            <Link
+              to="/tokeninfo"
+              className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
+            >
+              Weiter im Lernpfad
+              <ArrowRight className="text-on-primary-container ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        
         </div>
       
   );

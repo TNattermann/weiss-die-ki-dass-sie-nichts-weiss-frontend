@@ -26,7 +26,7 @@ export default function TokenHints() {
       color: "primary",
       borderColor: "border-primary",
       title: "Tokenizer-Wahl",
-      description: "Die Wahl des Tokenizers (z.B. GPT-2 vs. GPT-4 Tokenizer) beeinflusst, wie der Text aufgelöst wird."
+      description: "Die Wahl des Tokenizers (z.B. GPT-2 vs. GPT-4 Tokenizer) beeinflusst, wie der Text zerlegt wird."
     }
   ];
 

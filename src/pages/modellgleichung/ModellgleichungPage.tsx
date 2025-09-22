@@ -19,7 +19,7 @@ function ModellgleichungPage() {
               { id: "structure", title: "Aufbau Neuronales Netzwerk" },
               { id: "weights", title: "Gewichte" },
               { id: "calculation", title: "Berechnung" },
-              { id: "LLM", title: "Verbindung zu LLMs" },
+              { id: "LLM", title: "Verbindung zu ChatGPT" },
               { id: "takeaways", title: "Erkenntnisse" },
             ]}
           />
