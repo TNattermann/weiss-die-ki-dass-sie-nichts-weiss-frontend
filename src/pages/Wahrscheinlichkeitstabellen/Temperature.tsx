@@ -2,7 +2,7 @@ import {useEffect} from "react";
 import { useState } from 'react';
 import SimpleRad from "../../components/simpleRad.tsx";
 
-function adjustRange (range: number, minimrange : number){
+function adjustRange (range: number, minimrange : number, maximrange: number){
     let adjustedRange: number;
     /*if (range == 0){
         adjustedRange = 1;
@@ -11,7 +11,7 @@ function adjustRange (range: number, minimrange : number){
         adjustedRange = (range - minimrange) / Math.abs(minimrange); //a range of 0 results in an adjustedRange of 1
     }
     else {
-        adjustedRange = Number(range) + Number(1); //no idea why this is necessary
+        adjustedRange = (Number(range) + Number(maximrange)) / Math.abs(maximrange); //no idea why this is necessary
     }
 
     return(adjustedRange);
@@ -37,7 +37,7 @@ function applytemperature (wordpercentlist : [string, number][], temperature : n
 
     }
     else {
-        const explist : [string, number][] = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1] * 50 / temperature)]);
+        const explist : [string, number][] = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1]  / temperature * 1.6)]);
         const expsum = explist.reduce((accumulator, wordexp) => accumulator + wordexp[1], 0);
         newlist = explist.map( (wordexp) => [wordexp[0], wordexp[1] / expsum]);
     }
@@ -52,13 +52,14 @@ function applytemperature (wordpercentlist : [string, number][], temperature : n
 }
 
 export default function Temperature() {
-    const minrange = -20;
+    const minrange = -50;
+    const maxrange = 50;
     const [rangeValue, setRangeValue] = useState(0); //update this to 0 again !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    const [rangeAdjustedValue, setRangeAdjustedValue] = useState(adjustRange(rangeValue, minrange));
+    const [rangeAdjustedValue, setRangeAdjustedValue] = useState(adjustRange(rangeValue, minrange, maxrange));
 
     const handleRangeChange = (event : any) => {
         setRangeValue(event.target.value); // Update state with the current value
-        setRangeAdjustedValue(adjustRange(event.target.value, minrange));
+        setRangeAdjustedValue(adjustRange(event.target.value, minrange, maxrange));
     };
 
     const [activeExample, setActiveExample] = useState("A");
@@ -76,7 +77,7 @@ export default function Temperature() {
         {
             id: "C",
             label: "C.",
-            description: "Temperatur = 100",
+            description: "Temperatur = 2",
         },
     ] as const;
 
@@ -106,8 +107,8 @@ export default function Temperature() {
     return (
         
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-5xl font-bold text-center text-primary mb-6">Temperatur</h1>
-                <div className="text-center mb-16">
+                <h1 className="text-5xl font-bold text-center text-primary mb-6">Was hat das mit Temperatur zu tun?</h1>
+                <div className="mb-16">
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
 
@@ -127,8 +128,9 @@ export default function Temperature() {
                     </div>
                 </div>
 
+                <div>
                 <div className="p-8 rounded-xl">
-
+                    <div className="flex flex-wrap justify-center gap-6 mb-8">
                 {temperatureExamples.map((t) => {
                         const isActive = activeExample === t.id;
                         return (
@@ -141,20 +143,12 @@ export default function Temperature() {
                                     : "bg-primary-container text-on-primary-container"}
         `}
                             >
-                                <div
-                                    className={`w-16 h-16 flex items-center justify-center rounded-xl mx-auto mb-4
-            ${isActive
-                                        ? "bg-on-primary-container-selected/10"
-                                        : "bg-on-primary-container/10"}`}
-                                >
-                                   
-                                </div>
-                                <h3 className="font-bold text-lg mb-2">{t.label}</h3>
-                                <p className="text-sm">{t.description}</p>
+
+                                <h3 className="font-bold text-lg mb-2">{t.label} {t.description}</h3>
                             </button>
                         );
                     })}
-
+                    </div>
                     {Object.entries(temperaturewheels).map(([key, example]) => (
                             <div
                                 key={key}
@@ -169,27 +163,27 @@ export default function Temperature() {
                             
                             </div>
                         ))}
+                        
 
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
-
-                        Mit diesem Regler lässt sich die Temperatur auch separat umstellen:
-
+                        Mit diesem Regler könne Sie die Temperatur auch selbst einstellen:
                         </p>
 
-                        <h3 className="text-primary text-xl font-semibold text-textDark mb-4">D. Temperatur = {rangeAdjustedValue}</h3>
-
-                        
+                        <div className="flex flex-col items-center">
+                        <h3 className="text-primary text-xl font-semibold text-textDark mb-4">D. Temperatur = {rangeAdjustedValue}</h3> 
                         <input
                             type="range"
                             min={minrange}
-                            max="99"
+                            max={maxrange}
                             value={rangeValue} // Controlled input
                             onChange={handleRangeChange} // Update state on change
                         />
-
-                        <SimpleRad wordpercentlist={applytemperature([["schön", 0.45 ], ["warm", 0.3], ["kalt", 0.25]],  rangeAdjustedValue)}
-                        />
-                        
+                        </div>
+                        <div className="flex justify-center">
+                            <SimpleRad wordpercentlist={applytemperature([["schön", 0.45 ], ["warm", 0.3], ["kalt", 0.25]],  rangeAdjustedValue)}
+                            />
+                        </div>
+                </div>    
                 </div>
                 
 

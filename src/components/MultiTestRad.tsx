@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const fullspinduration = 0.3;
 const spinanimation = `spin ${fullspinduration}s linear infinite`;
-const piecolours = ["blue", "red", "yellow", "green", "lightgreen", "gold", "pink"];
+const piecolours = ["oklch(28.2% 0.091 267.935)", "oklch(81.1% 0.111 293.571)", "oklch(41% 0.159 10.272)", "green", "lightgreen", "gold", "pink"];
 
 const maximumnumberofcircles = 3;
 
@@ -28,7 +28,8 @@ function applytemperature (wordpercentlist : [string, number][], temperature : n
 
     }
     else {
-        const explist : [string, number][] = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1] * 50 / temperature)]);
+        const explist : [string, number][] = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1]  / temperature * 1.6)]);
+        //100 ist weil darauf die ganzen terme gerade geeisht sind. 1.6 ist ein Faktor, damit Temp = 1 ansatzweise die "echte" Version ist
         const expsum = explist.reduce((accumulator, wordexp) => accumulator + wordexp[1], 0);
         newlist = explist.map( (wordexp) => [wordexp[0], wordexp[1] / expsum]);
     }
@@ -103,7 +104,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
     }, [temperature]); //delete the latter two maybe
 
     useEffect(() => {
-        if (isVideoStarted) {
+        if (isVideoStarted && !isLastCircle) {
             const countdownInterval = setInterval(() => {
               const currentTime = new Date().getTime();
               const eventTime = new Date(eventDate).getTime();
@@ -132,6 +133,11 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
       
             return () => clearInterval(countdownInterval);
           }
+          else if (isVideoStarted) {
+              //ensure after the last circle has been spun (when isLastCircle has been updated) to "end" the video.
+            setisVideoStarted(false);
+        }
+
 
     }, [isVideoStarted, timeRemaining]);
 
@@ -145,7 +151,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
 
     function createCircleParade( wordlist : (string | number)[][]){
         let newlist = [];
-        const background = "rgba(128, 128, 128, 0.8)"; //grey and 80% opacity
+        const background = "rgba(128, 128, 128, 0.1)"; //grey and 80% opacity
         
         for (let i=0; i < totalnumberofcircles; i++){
             if (i == 0){
@@ -229,9 +235,9 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
         wordpercentlist.forEach(wordpercent => {
             totalpercent += wordpercent[1];  
         });
-        if (totalpercent != 1){
+        if (totalpercent != 100){
             for (let i=0; i < wordpercentlist.length; i++){
-                wordpercentlist[i][1] = wordpercentlist[i][1] / totalpercent;
+                wordpercentlist[i][1] = 100 * wordpercentlist[i][1] / totalpercent;
             }
         }
 
@@ -240,10 +246,9 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
         //we assume for now the numbers all add up to 1
         let wordradiantlist : [string, number][] = []; 
         let lastdegree = 0;
-        let currentdegree;
         for (let i=0; i < wordpercentlist.length; i++){
-            currentdegree = wordpercentlist[i][1] * 360 + lastdegree;
-            wordradiantlist.push([wordpercentlist[i][0], currentdegree]);
+            const currentdegree = wordpercentlist[i][1] * 3.6;
+            wordradiantlist.push([wordpercentlist[i][0], lastdegree + currentdegree]);
             lastdegree += currentdegree;
         }
         
@@ -293,7 +298,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
                 ))*/}
                 
                 {legendsets[legendindex].keywordlist.map((keyword, index) => (
-                <li className="legend-item"  key={index}>
+                <li className="legend-item text-text-normal"  key={index}>
                     <span className={`legend-circle`} style={{background: legendsets[legendindex].beforecircle[index]}}>
                     </span>
                     {keyword}
@@ -330,15 +335,43 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
         winnerstring += newWinner;
         setwinnermessage(winnerstring);
 
-        return (Winner);
+        return ([Winner, winnerstring]);
 
     }
 
-    function updateNextCircle(Winner : string, isNotLastCircle : boolean){
-        const temppercentlist = wordlibrary.find((word : {
+    function modifyNextWordChoice(temppercentlist : [string, number][], Winnerstring : string){
+        const words = Winnerstring.trim().split(" ");
+        const lastWord = words.length > 0 ? words[words.length - 2] : "";
+
+        let newlist;
+
+        if (lastWord === "schön"){
+            newlist = [[" warm", 0.45 ], [" sonnig", 0.3], [" sommerlich", 0.25], [".", 0.05], [" Gardine", 0.00001]];
+        }
+        else if (lastWord === "kalt"){
+            newlist =[[" trocken", 0.45 ], [" frostig", 0.3], [" windig", 0.25], [".", 0.05], [" Gardine", 0.00001]]          
+        }
+        else {
+            newlist = [[" trocken", 0.45 ], [" sonnig", 0.3], [" windig", 0.25], [".", 0.05], [" Gardine", 0.00001]];
+        }
+
+        console.log(words, lastWord);
+        console.log(temppercentlist);
+        console.log(newlist);
+        
+
+        return (newlist);
+    }
+
+    function updateNextCircle(Winner : string, winnerstring: string, isNotLastCircle : boolean){
+        let temppercentlist = wordlibrary.find((word : {
             id: string;
             list: (string | number)[][];
         }) => word.id === Winner).list;
+
+        if (Winner === " und"){
+            temppercentlist = modifyNextWordChoice(temppercentlist, winnerstring);
+        }
         
         const tempradiantlist = turnPercenttoDegrees(applytemperature(temppercentlist, temperature));
         setwordpercentlist(temppercentlist);
@@ -397,15 +430,24 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
 
              
 
-            const isNotLastCircle = (circlecounter < totalnumberofcircles - 1);
-            setisLastCircle(!isNotLastCircle);
+            let isNotLastCircle = (circlecounter < totalnumberofcircles - 1);
 
-            const Winner = displayWinner(currentRotation, circlecounter);
+            const [Winner, winnerstring] = displayWinner(currentRotation, circlecounter);
+
+            if (isNotLastCircle && Winner.slice(-1) === "."){
+                //end early if fullstop
+                
+                isNotLastCircle = false;
+            }
+            
+            setisLastCircle(!isNotLastCircle);
+            
+            
 
 
             if (isNotLastCircle){
                 setcirclecounter(circlecounter + 1);
-                updateNextCircle(Winner, isNotLastCircle);
+                updateNextCircle(Winner, winnerstring, isNotLastCircle);
                 
                 
 
@@ -413,7 +455,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
             else {
                 
                 setcirclecounter(0);
-                updateNextCircle("0", isNotLastCircle);
+                updateNextCircle("0", winnerstring, isNotLastCircle);
             }
             
         }
@@ -428,6 +470,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
         
 
         handleStartButton();
+        setisLastCircle(false);
         
         const newEventDate = new Date();
         newEventDate.setSeconds(newEventDate.getSeconds() + 2);
@@ -441,9 +484,9 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16">
 
-                    <button id="VideoButton" onClick={handleVideoButton} className="rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
+                    <button id="VideoButton" onClick={handleVideoButton} className=" text-text-normal mb-6 rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
                     style={{ display: videodisplay}}>
-                        Play (TBD Video Play symbol here)
+                        Abspielen
                     </button>
 
 
@@ -474,19 +517,19 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
 
                     
 
-                    <button id="startButton" onClick={handleStartButton} className="rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
+                    <button id="startButton" onClick={handleStartButton} className="text-text-normal rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
                     style={{ display: clickdisplay}}>
                         Start Spinning
                     </button>
 
-                    <button id="stopButton" onClick={handleStopButton} className="rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
+                    <button id="stopButton" onClick={handleStopButton} className="text-text-normal rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
                     style={{ display: clickdisplay}}>
                         Stop Spinning
                     </button>
 
                     <div className="p-8 rounded-xl">
                         <div className="bg-bgColor p-4 rounded-lg border border-outline mb-4">
-                            <p className="text-text-normal font-mono text-textDark">"Das Wetter heute ist besonders {winnermessage}"</p>
+                            <p className="text-text-normal font-mono text-textDark">"Das Wetter heute ist besonders{winnermessage}"</p>
                         </div>
                 </div>
                     
