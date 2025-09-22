@@ -53,7 +53,7 @@ _______________________`;
           <div className="flex justify-center md:justify-end">
             <img
               src="/img/Book_cover.jpg"
-              alt="Buchcover"
+              alt="Cover des Buchs Weiß die KI, dass sie nichts weiß? von Katharina Zweig"
               className="w-full max-w-sm rounded-xl shadow-lg"
             />
           </div>

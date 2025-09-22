@@ -156,7 +156,7 @@ function NewsletterPage() {
                 </p>
 
                 <p className="mt-6 text-sm text-text-normal">
-                    Falls Sie sich manuell auf der Mailservice-Seite der RPTU zum Newsletter anmelden möchten, klicken Sie <strong><a href="https://lists.rptu.de/wws/subscribe/cs-aal-zweig?previous_action=signoff" className="text-primary">hier</a></strong>.
+                    Falls Sie sich manuell auf der Mailservice-Seite der RPTU zum Newsletter an- oder abmelden möchten, klicken Sie <strong><a href="https://lists.rptu.de/wws/subscribe/cs-aal-zweig?previous_action=signoff" className="text-primary">hier</a></strong>.
                 </p>
 
             </div>
