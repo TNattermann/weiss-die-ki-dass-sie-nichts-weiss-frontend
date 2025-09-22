@@ -1,5 +1,5 @@
 function Download() {
-  const email = "info@rptu.de"; // <-- Replace with the correct email
+  const email = "test@test.de"; // <-- Replace with the correct email
   const subject = "Anfrage: Buchteile I und II";
   const body = `Sehr geehrte Damen und Herren,
 
