@@ -2,23 +2,23 @@ import Tilde from "../../components/Tilde";
 
 export default function ModellgleichunGleichung() {
   return (
-    <section className="py-6 px-6" id="educational-content">
+    <section className="py-6 px-4 md:px-6" id="educational-content">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold text-center text-primary mb-6">
+        <h1 className="text-3xl md:text-5xl font-bold text-center text-primary mb-4 md:mb-6">
           Berechnung des Modells
         </h1>
-        <div className="items-center mb-16">
+        <div className="items-center mb-12 md:mb-16">
           <>
-            <p className="text-lg text-text-normal mb-6 leading-relaxed">
+            <p className="text-base md:text-lg text-text-normal mb-4 md:mb-6 leading-relaxed">
               Die Berechnung des Neuronalen Netzwerks, die am Ende zu der
               Ja-Nein-Entscheidung führt, schauen wir uns nun genauer an.
               Betrachten Sie dazu zunächst eine einzelne Berechnung, mit der der
               Wert eines einzigen Neurons der zweiten Schicht, also des Hidden
               Layer, bestimmt wird.
             </p>
-            <div className="flex space-x-4 items-start justify-center">
-              <div className="bg-bgColor p-2 rounded-lg border border-outline w-fit">
-                <p className="text-lg text-text-normal mb-6 leading-relaxed">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-4 items-start justify-center">
+              <div className="bg-bgColor p-3 md:p-2 rounded-lg border border-outline w-full md:w-fit">
+                <p className="text-base md:text-lg text-text-normal mb-0 md:mb-6 leading-relaxed">
                   &nbsp;&nbsp;&nbsp;Input (1) * Weight (1, x) <br></br>+ Input
                   (2) * Weight (2, x)
                   <br></br>+ ...
@@ -27,13 +27,13 @@ export default function ModellgleichunGleichung() {
                 </p>
               </div>
               <img
-                src="\img\Beispiel_Modellgleichung_Gleichung.png"
-                className="h-[187px] w-[450px] object-cover rounded-lg shadow-md border border-outline"
-                alt="einfaches Beispiel Modellgleichung"
+                src="/img/Beispiel_Modellgleichung_Gleichung.png"
+                className="w-full md:w-[450px] h-auto md:h-[187px] object-contain md:object-cover rounded-lg shadow-md border border-outline"
+                alt="einfaches Beispiel Neuronales Netzwerk zur Berechnung der Modellgleichung"
               />
             </div>
-            <div className="items-center mb-16 mt-8">
-              <p className="text-lg text-text-normal mb-6 leading-relaxed">
+            <div className="items-center mb-12 md:mb-16 mt-6 md:mt-8">
+              <p className="text-base md:text-lg text-text-normal mb-4 md:mb-6 leading-relaxed">
                 Jedes Input-Neuron wird mit dem Gewicht für die Verbindung
                 multipliziert und all diese Werte werden aufsummiert. Auf diese
                 Weise kann der Wert für das Neuron der nächsten Schicht bestimmt
@@ -53,8 +53,8 @@ export default function ModellgleichunGleichung() {
                 Neuron, das den höchsten berechneten Wert hat.
               </p>
             </div>
-            <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-4">
-              <p className="text-textMedium font-medium text-lg">
+            <div className="bg-primary/5 border-l-4 text-primary p-4 md:p-6 rounded-r-lg mb-4">
+              <p className="text-textMedium font-medium text-base md:text-lg">
                 In einem neuronalen Netzwerk wird also nicht nur eine einzelne
                 Berechnung durchgeführt, auf deren Basis dann die
                 Ja-Nein-Entscheidung getroffen wird. Stattdessen werden viele
