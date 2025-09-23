@@ -103,7 +103,15 @@ function EmbeddingsRechnen() {
                             <h1 className="text-2xl font-bold text-center text-primary mb-6 break-words">Beispiel 3</h1>
                             <img 
                                 src="/EmbeddingsExample3.png" 
-                                alt="Description of image" 
+                                alt="Das Bild zeigt ein zweidimensionales Koordinatensystem mit hellblauem Hintergrund. 
+                                Darauf sind mehrere Punkte eingezeichnet, die jeweils mit Ländern oder Städten beschriftet sind.
+                                Links im Diagramm, etwas im oberen Bereich, befinden sich dicht beieinander die Punkte „Deutschland“ 
+                                und „Berlin“. Diese beiden Punkte sind zusätzlich mit einem ovalen Kreis markiert, 
+                                sodass sie hervorgehoben wirken. 
+                                Etwas darüber, leicht nach rechts, sind die Punkte „Rom“ und „Australien“ zu sehen. 
+                                In der Mitte des Diagramms, weiter rechts, befinden sich „Frankreich“, „Spanien“ und „Canberra“. 
+                                Darunter liegt „Italien“.
+                                Ganz rechts oben stehen die Punkte „Madrid“ und etwas tiefer „Paris“." 
                                 className="w-full h-auto rounded-lg"
                             />
                         </div>
