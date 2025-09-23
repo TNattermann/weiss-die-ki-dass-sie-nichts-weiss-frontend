@@ -53,7 +53,7 @@ const AttentionExample: React.FC = () => {
     <section className="py-6 px-6" id="educational-content">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-primary mb-4">
-          Aufmerksamkeit als Betonung
+          Beispiel
         </h1>
         <p className="text-lg text-text-normal mb-4 leading-relaxed">
           Eine gute Art sich das Konzept der Aufmerksamkeit vorzustellen, ist
