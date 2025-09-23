@@ -28,7 +28,7 @@ export default function ConnectionToLLM() {
             <p className="text-textMedium font-medium text-lg">
               Der Input für ein Sprachmodell ist kein Bild, das in Pixel
               aufgeteilt wird, sondern ein Text. Dieser wird <i>tokenisiert</i>{" "}
-              und mithilfe von <i>Word Embeddings</i> als Vektor dargestellt.
+              und mithilfe von <i>Worteinbettungen</i> als Vektor dargestellt.
             </p>
           </div>
           <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
