@@ -1,5 +1,5 @@
 function Download() {
-  const email = "info@rptu.de"; // <-- Replace with the correct email
+  const email = "test@test.de"; // <-- Replace with the correct email
   const subject = "Anfrage: Buchteile I und II";
   const body = `Sehr geehrte Damen und Herren,
 
@@ -53,7 +53,7 @@ _______________________`;
           <div className="flex justify-center md:justify-end">
             <img
               src="/img/Book_cover.jpg"
-              alt="Buchcover"
+              alt="Cover des Buchs Weiß die KI, dass sie nichts weiß? von Katharina Zweig"
               className="w-full max-w-sm rounded-xl shadow-lg"
             />
           </div>

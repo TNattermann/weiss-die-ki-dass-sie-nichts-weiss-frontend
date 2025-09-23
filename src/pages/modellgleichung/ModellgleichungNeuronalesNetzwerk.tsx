@@ -15,11 +15,12 @@ function VideoPage() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen color-primary p-6">
-      <h1 className="text-5xl font-bold text-center text-primary mb-6">
+    <div className="flex flex-col items-center justify-center min-h-screen color-primary p-4 sm:p-6">
+      <h1 className="font-bold text-primary mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl text-center">
+        {" "}
         Aufbau eines Neuronalen Netzwerks
       </h1>
-      <p className="text-lg text-text-normal mb-6 text-center max-w-2xl">
+      <p className="text-text-normal text-base sm:text-lg mb-4 sm:mb-6 text-left sm:text-center max-w-2xl">
         Hier ist ein einfaches Neuronales Netzwerk zu sehen, das dazu geeignet
         ist, eine handgeschriebene Ziffer zu erkennen. Das Beispiel hilft dabei,
         die einzelnen Elemente eines Neuronalen Netzwerkes kennenzulernen und zu
@@ -27,7 +28,7 @@ function VideoPage() {
       </p>
 
       {/* Buttons über dem Bild */}
-      <div className="flex space-x-4 mb-4">
+      <div className="flex flex-wrap justify-center gap-3 mb-4">
         <button
           onClick={() => setSelectedDigit("1")}
           className={`px-4 py-2 rounded-lg font-semibold ${
@@ -61,16 +62,16 @@ function VideoPage() {
       </div>
 
       {/* Breiterer Container für Bild und Text */}
-      <div className="grid grid-cols-8 gap-8 items-start w-full max-w-6xl">
-        <div className="col-span-2 text-center text-text-normal">
-          <h2 className="text-xl font-semibold mb-2">Input Layer</h2>
+      <div className="grid grid-cols-1 md:grid-cols-8 gap-4 sm:gap-6 md:gap-8 items-start w-full max-w-6xl">
+        <div className="md:col-span-2 text-left md:text-center text-text-normal">
+          <h2 className="font-semibold mb-2 text-lg sm:text-xl">Input Layer</h2>
           <p className="text-text-normal leading-relaxed">
             Die erste Schicht eines Neuronalen Netzwerks bezeichnet man als{" "}
             <b>Input Layer</b>. Diese Schicht erhält die zu verarbeitenden
             Informationen, also den Input.
           </p>
           {/* Aufklappbare Textbox */}
-          <div className="bg-bgColor border border-outline rounded-lg shadow-md p-4">
+          <div className="bg-bgColor border border-outline rounded-lg shadow-md p-4 mt-3">
             <button
               onClick={() => setIsOpenInput(!isOpenInput)}
               className="w-full text-left font-semibold text-primary flex justify-between items-center"
@@ -99,18 +100,20 @@ function VideoPage() {
         </div>
 
         {/* Mittlerer Bereich mit Bild */}
-        <div className="col-span-4 flex flex-col items-center">
+        <div className="md:col-span-4 flex flex-col items-center">
           {/* Bild */}
-          <div className="w-full bg-black rounded-xl overflow-hidden shadow-lg">
+          <div className="w-full bg-black md:bg-black/100 rounded-xl overflow-hidden shadow-lg">
             <img
               src={images[selectedDigit]}
-              alt={`Neuronales Netzwerk Screenshot ${selectedDigit}`}
-              className="w-full h-[500px] object-cover"
+              alt={`Neuronales Netzwerk Screenshot Erkenne die ${selectedDigit}`}
+              className="w-full h-auto md:h-[500px] object-contain md:object-cover"
             />
           </div>
           {/* Unterer Text - Hidden Layer */}
-          <div className="mt-4 text-center text-text-normal max-w-2xl">
-            <h2 className="text-xl font-semibold mb-2">Hidden Layer</h2>
+          <div className="mt-6 md:mt-4 text-left md:text-center text-text-normal max-w-2xl">
+            <h2 className="font-semibold mb-2 text-lg sm:text-xl">
+              Hidden Layer
+            </h2>
             <p className="text-text-normal leading-relaxed">
               Auf den Input Layer folgen weitere Schichten, die im Netzwerk
               versteckt sind und daher als <b>Hidden Layer</b> bezeichnet
@@ -118,7 +121,7 @@ function VideoPage() {
               Schichten haben. In unserem Beispiel gibt es zwei Hidden Layer.
             </p>
             {/* Aufklappbare Textbox */}
-            <div className="bg-bgColor border border-outline rounded-lg shadow-md p-4">
+            <div className="bg-bgColor border border-outline rounded-lg shadow-md p-4 mt-3">
               <button
                 onClick={() => setIsOpenHidden(!isOpenHidden)}
                 className="w-full text-left font-semibold text-primary flex justify-between items-center"
@@ -145,15 +148,17 @@ function VideoPage() {
         </div>
 
         {/* Rechter Text - Output Layer */}
-        <div className="col-span-2 text-center text-text-normal">
-          <h2 className="text-xl font-semibold mb-2">Output Layer</h2>
+        <div className="md:col-span-2 text-left md:text-center text-text-normal">
+          <h2 className="font-semibold mb-2 text-lg sm:text-xl">
+            Output Layer
+          </h2>
           <p className="text-text-normal leading-relaxed">
             Die letzte Schicht des Netzwerks ist der <b>Output Layer</b>. Dieser
             besteht aus 10 Neuronen, also einem Neuron für jede mögliche Ziffer
             zwischen 0 und 9, die erkannt werden könnte.
           </p>
           {/* Aufklappbare Textbox */}
-          <div className="bg-bgColor border border-outline rounded-lg shadow-md p-4">
+          <div className="bg-bgColor border border-outline rounded-lg shadow-md p-4 mt-3">
             <button
               onClick={() => setIsOpenOutput(!isOpenOutput)}
               className="w-full text-left font-semibold text-primary flex justify-between items-center"
