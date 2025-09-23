@@ -4,7 +4,7 @@ function WordEmbeddingsIntroduction() {
   return (
     <section className="py-6 px-6" id="educational-content">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-6xl font-bold text-center text-primary mb-6">
+        <h1 className="text-6xl font-bold text-center text-primary mb-6 break-words">
           Wieso sind die Texte von ChatGPT so gut?
         </h1>
         <p className="text-lg text-text-normal mb-6 leading-relaxed">
@@ -18,7 +18,7 @@ function WordEmbeddingsIntroduction() {
         </p>
       </div>
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold text-center text-primary mb-6">
+        <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">
           Was sind Worteinbettungen?
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
@@ -50,7 +50,14 @@ function WordEmbeddingsIntroduction() {
             <div className="mb-8">
               <img
                 src="/Sonne.png"
-                alt="Description of image"
+                alt="Das Bild zeigt eine halbkugelförmige Kuppel. 
+                Am unteren Rand dieser Kuppel stehen fünf kleine schwarze Scheinwerfer, die jeweils einen gelblichen Lichtstrahl nach oben projizieren. 
+                Im Inneren der Kuppel werden dadurch verschiedene Wörter sichtbar gemacht. Links schwebt das Wort „Sonne“, 
+                daneben etwas weiter in der Mitte „Schnee“. Oberhalb davon, fast in der Mitte, steht das Wort „warm“, 
+                während sich leicht versetzt daneben „kalt“ befindet. Der Abstand zwischen den Wörtern „Sonne“ und „warm“ ist ähnlich zu dem 
+                zwischen „Schnee“ und „kalt“. Weiter entfernt, am rechten Rand der Kuppel erscheint schließlich das Wort „Steuererklärung“. 
+                Alle Wörter sind in blauer Schrift geschrieben. 
+                Die Darstellung vermittelt den Eindruck, dass die Wörter wie Objekte im Raum von unten angestrahlt und dadurch erkennbar werden."
                 className="w-100 h-auto mx-auto"
               />
             </div>

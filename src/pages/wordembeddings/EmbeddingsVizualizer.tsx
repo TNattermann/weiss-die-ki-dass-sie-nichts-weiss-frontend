@@ -110,8 +110,8 @@ const groups = {
 function EmbeddingsVizualizer() {
   return (
     <section className="py-16 px-6" id="visualizer">
-      <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-5xl font-bold text-center text-primary mb-6">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">
           Wie kann eine solche Worteinbettung aussehen?
         </h1>
         <p className="text-xl text-text-normal mx-auto leading-relaxed">
@@ -132,13 +132,13 @@ function EmbeddingsVizualizer() {
         </p>
       </div>
 
-      <div className="gap-12 shadow-lg items-center mb-16">
+
         <WordEmbeddingViz
           embeddings={embeddings}
           groups={groups}
           initialWords={[]}
         />
-      </div>
+
       <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
         <p>
           In Wirklichkeit bestehen Worteinbettungen aus hunderten von Zahlen,
