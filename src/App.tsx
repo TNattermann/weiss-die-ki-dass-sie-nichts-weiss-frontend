@@ -12,6 +12,8 @@ import Impressum from "./pages/impressum/impressum.tsx";
 import Footer from "./components/Footer.tsx";
 import TemperaturePage from "./pages/Wahrscheinlichkeitstabellen/TemperaturePage.tsx";
 import NewsletterPage from "./pages/newsletter/NewsletterPage.tsx";
+import NotFoundPage from "./pages/notFound/NotFoundPage.tsx";
+import WissenPage from "./pages/Bits/WissenPage.tsx";
 
 function App() {
   return (
@@ -26,11 +28,13 @@ function App() {
             <Route path="/networkLearning" element={<LearningPage />} />
             <Route path="/attention" element={<AttentionPage />} />
             <Route path="/modellgleichung" element={<ModellgleichungPage />} />
+            <Route path="/WissenPage" element={<WissenPage />} />
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/wordembeddings" element={<WordEmbeddingsPage />} />
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/download" element={<Download />} />
             <Route path="/newsletter" element={<NewsletterPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
         <Footer />

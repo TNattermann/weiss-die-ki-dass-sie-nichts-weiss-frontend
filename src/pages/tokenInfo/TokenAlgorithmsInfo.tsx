@@ -4,7 +4,7 @@ export default function TokenAlgorithmsInfo() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="mb-12">
-            <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">Tokenisierungsalgorithmen</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-6 break-words">Tokenisierungsalgorithmen</h1>
 
             <p className="text-lg text-text-normal mb-6 leading-r>elaxed">
               Tokenisierung ist der Prozess, bei dem ein Text in kleinere Einheiten – sogenannte <strong

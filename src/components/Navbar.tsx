@@ -18,11 +18,14 @@ const navItems: NavItem[] = [
     to: "/modellgleichung",
     label: "Wie funktioniert das mit diesem Neuronalen Netzwerk?",
   },
-  { to: "/networkLearning", label: "Wie wurde ChatGPT gebaut?" },
+  { to: "/networkLearning", label: "Wie lernt ChatGPT?" },
+  { label: "separator", type: "separator" },
+  { to: "/WissenPage", label: "Wissenshäppchen" },
+
   { label: "separator", type: "separator" },
 
-    /*{ to: '/download', label: 'Buch Download' }, */
-    { to: '/aboutus', label: 'Über Uns' }
+  /*{ to: '/download', label: 'Buch Download' }, */
+  { to: "/aboutus", label: "Über Uns" },
 ];
 
 function Navbar() {

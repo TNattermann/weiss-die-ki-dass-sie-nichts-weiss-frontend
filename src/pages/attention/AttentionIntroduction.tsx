@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Tilde from "../../components/Tilde";
+import { bits } from "../../components/Wissensbit";
 
 const notes = [
   {
@@ -61,7 +62,7 @@ export default function AttentionIntroduction() {
   return (
     <section className="py-6 px-6" id="educational-content">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-6xl font-bold text-center text-primary mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center text-primary mb-4">
           Versteht ChatGPT mich?
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-6">
@@ -72,7 +73,7 @@ export default function AttentionIntroduction() {
               vorhersagt. Nun gibt es Wörter, die für so ein Ratespiel
               relevanter sind, und welche, die man kaum beachten muss. Dort
               setzt das Konzept der{" "}
-              <strong className="text-primary">Aufmerksameit</strong> an -
+              <strong className="text-primary">Aufmerksamkeit</strong> an -
               dadurch lernt das Sprachmodell, welches Wort für die Ausgabe
               relevant ist, und welches nicht. Mit folgendem Beispiel möchten
               wir dieses Konzept näher beleuchten. In wie weit dieses Konzept
@@ -80,6 +81,19 @@ export default function AttentionIntroduction() {
               beleuchtet. Zunächst ist das Ziel, den einfachen Satz auf der
               rechten Seite zu vervollständigen.
             </p>
+            <div
+              className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+              id="attention1"
+            >
+              {bits
+                .filter((c) => c.id === "attention1")
+                .map((c) => (
+                  <section>
+                    <h2>{c.title}</h2>
+                    <p>{c.text}</p>
+                  </section>
+                ))}
+            </div>
           </div>
           <div className="p-2 rounded-xl">
             <h3 className="text-primary text-xl font-semibold text-textDark mb-4">

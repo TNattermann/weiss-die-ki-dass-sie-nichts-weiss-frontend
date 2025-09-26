@@ -14,27 +14,6 @@ function TokenPage() {
     }, []);
     return (
         <div className="min-h-screen">
-            {/*<HeroSection
-                title={
-                    <>
-                        <span className="text-primary">Tokens</span> in Sprachmodellen
-                    </>
-                }
-                subtitle={
-                    <>
-                        Bevor ein Large Language Model (LLM) wie ChatGPT Texte generieren kann,
-                        muss der Inputtext zunächst in sogenannte{" "}
-                        <span className="font-semibold text-primary">Tokens</span>{" "}
-                        umgewandelt werden. Diese Tokenisierung ist ein essenzieller Verarbeitungsschritt.
-                    </>
-                }
-                badges={[
-                    { label: "Lernen", icon: "ri-lightbulb-line" },
-                    { label: "Live-Visualisierung", icon: "ri-cpu-line" },
-                ]}
-                scrollToId="educational-content"
-            />*/}
-
             <div className="px-4 py-10 lg:px-10">
                 <div className="lg:grid lg:grid-cols-[250px_1fr] lg:gap-8">
                     <SectionSidebar

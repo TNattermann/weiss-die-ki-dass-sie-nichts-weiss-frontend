@@ -17,13 +17,13 @@ function WordEmbeddingsPage() {
                         sections={[
                             { id: "introduction", title: "Einführung" },
                             { id: "demonstration", title: "Demonstration" },
-                            { id: "rechnen", title: "Erkentnisse" },
-                            { id: "takeaways", title: "Zusammenfassung" },
+                            { id: "rechnen", title: "Zusammenfassung" },
+                            { id: "takeaways", title: "Erkenntnisse" },
                         ]}
                     />
 
                     {/*Content*/}
-                        <main className="flex-1 max-w-7xl mx-auto space-y-24 px-4">
+                        <main className="flex-1 max-w-7xl mx-auto px-4">
                             <div id="introduction"><WordEmbeddingsIntroduction /></div>
                             <div id="demonstration"><EmbeddingsVizualizer /></div>
                             <div id="rechnen"><EmbeddingsRechnen /> </div>

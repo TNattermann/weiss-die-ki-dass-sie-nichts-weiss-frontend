@@ -9,8 +9,8 @@ export default function LearningIntroduction() {
   return (
     <section className="py-6 px-4 sm:px-6 overflow-x-hidden" id="introduction">
       <div className="mx-auto w-full max-w-6xl">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-6 break-words">
-          Wie wurde ChatGPT gebaut?
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center text-primary mb-6 break-words">
+          Wie lernt ChatGPT?
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start mb-8">
@@ -46,14 +46,16 @@ export default function LearningIntroduction() {
           </div>
 
           {/* Bild */}
-          <div className="flex justify-center md:justify-end">
+          <div className="flex justify-center md:justify-end w-full">
+            <div className="bg-primary/60 rounded-lg inline-flex">
             <img
               src="/img/Target_Words.png"
               alt="Zielscheibe als Analogie des KI Lernens: Mögliche Vervollständigungen des Beispielsatzes sind auf einer Zielscheibe angezeichnet,
               wobei die beste Antwort '0 °C' in der Mitte der Zielscheibe liegt. Kalt und Winter liegen auch nahe, wohingegen Sommer, warm und 
               Steuererklärung besonders weit weg liegen. "
-              className="block w-full max-w-full sm:max-w-sm h-auto rounded-xl shadow-lg object-contain"
+              className="block w-full max-w-lg h-auto rounded-xl shadow-lg object-contain"
             />
+            </div>
           </div>
         </div>
 
