@@ -117,7 +117,7 @@ export default function TokenizationApproaches() {
   return (
     <section className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold text-center text-primary mb-10">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-10">
           Tokenisierungs-Ansätze im Vergleich
         </h1>
         <p className="text-lg text-text-normal mb-6 leading-r>elaxed">

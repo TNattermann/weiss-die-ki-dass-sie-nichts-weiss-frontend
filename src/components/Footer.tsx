@@ -34,11 +34,11 @@ function Footer() {
                                     Newsletter
                                 </Link>
                             </li>
-                            <li>
+                           {/* <li>
                                 <Link to="download" className="hover:text-white transition-colors">
                                     Buch Download
                                 </Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <Link to="/aboutus" className="hover:text-white transition-colors">
                                     Über Uns

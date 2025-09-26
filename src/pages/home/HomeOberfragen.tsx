@@ -94,7 +94,7 @@ export default function HomeNavigation() {
                     className="bg-primary text-primary-container px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2"
                   >
                     <i className="ri-box-3-line"></i>
-                    Training
+                    Lernen
                   </button>
                 </div>
               </div>

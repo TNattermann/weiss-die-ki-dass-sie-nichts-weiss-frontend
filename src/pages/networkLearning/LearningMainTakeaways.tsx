@@ -19,7 +19,7 @@ export default function LearningMainTakeaways() {
             {/* Erkenntnis 1 */}
             <div>
               <h3 className="text-on-primary-container font-semibold mb-2 sm:mb-3">
-                Drei wichtige Konzepte
+                So lernt ChatGPT!
               </h3>
               <p className="text-on-primary-container leading-relaxed break-words">
                 Maschinelles Lernen setzt sich aus drei elementaren Konzepten zusammen:

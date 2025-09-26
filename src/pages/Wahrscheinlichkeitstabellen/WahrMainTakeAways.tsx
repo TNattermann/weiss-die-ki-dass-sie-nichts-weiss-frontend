@@ -1,5 +1,5 @@
 import Tilde from "../../components/Tilde";
-import { ArrowLeft, ArrowRight} from "lucide-react";
+import { ArrowLeft, ArrowRight, Book} from "lucide-react";
 import { Link } from "react-router-dom";
 
 
@@ -10,10 +10,10 @@ export default function WahrMainTakeaways() {
 
           {/* Key Takeaways */}
           <h1 className="text-5xl font-bold text-center text-primary mb-6">
-            <div className="flex justify-center items-center gap-3">
-              {/*<Book className="mr-3 h-7 w-7" />*/}
-              <span className="text-5xl font-bold text-center text-primary break-words">Wichtige Erkenntnisse</span>
-            </div>
+          <div className="flex justify-center items-center gap-2 sm:gap-3 text-primary">
+            <Book className="h-6 w-6 sm:h-7 sm:w-7" aria-hidden="true" />
+            <span className="text-3xl sm:text-4xl md:text-5xl font-bold break-words">Wichtige Erkenntnisse</span>
+          </div>
           </h1>
           <div className="bg-primary-container p-8 rounded-2xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

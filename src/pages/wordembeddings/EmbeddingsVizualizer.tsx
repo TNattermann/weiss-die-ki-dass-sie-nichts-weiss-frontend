@@ -111,7 +111,7 @@ function EmbeddingsVizualizer() {
   return (
     <section className="py-16 px-6" id="visualizer">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-6">
           Wie kann eine solche Worteinbettung aussehen?
         </h1>
         <p className="text-xl text-text-normal mx-auto leading-relaxed">

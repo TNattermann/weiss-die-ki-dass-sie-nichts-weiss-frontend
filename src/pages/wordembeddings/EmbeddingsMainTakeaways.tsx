@@ -1,18 +1,15 @@
 import { ArrowLeft, ArrowRight, Book } from "lucide-react";
 import { Link } from "react-router-dom";
-import Tilde from "../../components/Tilde";
 
 export default function EmbeddingsMainTakeaways() {
   return (
     <section className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Key Takeaways */}
-        <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">
-          <div className="flex justify-center items-center gap-3 break-words">
-            <Book className="mr-3 h-7 w-7" />
-            <span className="text-5xl font-bold text-center text-primary break-words">
-              Zusammenfassung
-            </span>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-6 break-words">
+          <div className="flex justify-center items-center gap-2 sm:gap-3 text-primary">
+            <Book className="h-6 w-6 sm:h-7 sm:w-7" aria-hidden="true" />
+            <span className="font-bold break-words">Wichtige Erkenntnisse</span>
           </div>
         </h1>
 
@@ -35,13 +32,14 @@ export default function EmbeddingsMainTakeaways() {
 
             <div>
               <h3 className="text-on-primary-container font-semibold mb-3">
-                Maschinen <Tilde />
-                lernen ohne Erklärung.
+                Wieso sind die Texte von ChatGPT so gut?
               </h3>
               <p className="text-on-primary-container">
                 Computer können Worteinbettungen selbstständig finden, indem sie
                 riesige Mengen an Texten verarbeiten – ganz ohne dass ihnen die
-                Bedeutung der Wörter vorab erklärt wird.
+                Bedeutung der Wörter vorab erklärt wird. Die in den Worteinbettung 
+                enthaltene semantische Nähe von Wörtern ist ein wesentlicher Bestandteil,
+                weshalb ChatGPT so gut ist. 
               </p>
             </div>
           </div>

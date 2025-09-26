@@ -10,7 +10,7 @@ export default function WahrIntroduction() {
         <section className="py-6 px-6" id="educational-content">
             <div className="max-w-6xl mx-auto">
                 <div className="max-w-6xl mx-auto mb-24">
-                    <h1 className="text-6xl font-bold text-center text-primary mb-6">
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center text-primary mb-6">
                         Was passiert, wenn ich ChatGPT nutze?
                     </h1>
                     <p className="text-lg text-text-normal mb-6 leading-relaxed">
@@ -22,7 +22,7 @@ export default function WahrIntroduction() {
                         Zusammenhang sie mit der Temperatur stehen, erfahren Sie auf dieser Seite. 
                     </p>
                 </div>
-                <h1 className="text-5xl font-bold text-center text-primary mb-6">Wie nutzt ChatGPT Wahrscheinlichkeitstabellen?</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-6 break-words">Wie nutzt ChatGPT Wahrscheinlichkeitstabellen?</h1>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                     <div className="p-8 rounded-xl">
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">

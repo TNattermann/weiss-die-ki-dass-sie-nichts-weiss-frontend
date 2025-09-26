@@ -17,8 +17,8 @@ function WordEmbeddingsPage() {
                         sections={[
                             { id: "introduction", title: "Einführung" },
                             { id: "demonstration", title: "Demonstration" },
-                            { id: "rechnen", title: "Erkentnisse" },
-                            { id: "takeaways", title: "Zusammenfassung" },
+                            { id: "rechnen", title: "Zusammenfassung" },
+                            { id: "takeaways", title: "Erkenntnisse" },
                         ]}
                     />
 

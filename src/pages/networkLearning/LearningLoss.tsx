@@ -27,7 +27,7 @@ export default function LearningLoss() {
             </div>
 
             {/* Bild */}
-            <div className="flex justify-center md:justify-end">
+            <div className="bg-primary/60 flex justify-center md:justify-end rounded-lg">
               <img
                 src="/img/Distance_Target.png"
                 alt="Zwei Pfeile stecken in einer Zielscheibe mit unterschiedlicher Distanz zur Mitte der Scheibe."

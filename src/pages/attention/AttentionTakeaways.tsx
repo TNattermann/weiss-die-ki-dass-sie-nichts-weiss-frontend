@@ -10,7 +10,7 @@ export default function AttentionTakeaways() {
         <h1 className="text-5xl font-bold text-center text-primary mb-6">
           <div className="flex justify-center items-center gap-3">
             <Book className="mr-3 h-7 w-7" />
-            <span className="text-5xl font-bold text-center text-primary break-words">
+            <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary break-words">
               Wichtige Erkenntnisse
             </span>
           </div>

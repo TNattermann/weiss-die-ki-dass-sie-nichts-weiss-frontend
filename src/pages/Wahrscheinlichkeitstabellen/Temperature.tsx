@@ -107,7 +107,7 @@ export default function Temperature() {
     return (
         
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-5xl font-bold text-center text-primary mb-6">Was hat das mit Temperatur zu tun?</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-6">Was hat das mit Temperatur zu tun?</h1>
                 <div className="mb-16">
                     <div>
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">

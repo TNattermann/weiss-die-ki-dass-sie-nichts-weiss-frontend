@@ -4,7 +4,7 @@ export default function ModellgleichunGleichung() {
   return (
     <section className="py-6 px-4 md:px-6" id="educational-content">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl md:text-5xl font-bold text-center text-primary mb-4 md:mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-4 md:mb-6">
           Berechnung des Modells
         </h1>
         <div className="items-center mb-12 md:mb-16">
