@@ -61,7 +61,7 @@ export default function AttentionIntroduction() {
   return (
     <section className="py-6 px-6" id="educational-content">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold text-center text-primary mb-4">
+        <h1 className="text-6xl font-bold text-center text-primary mb-4">
           Versteht ChatGPT mich?
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-6">
@@ -71,13 +71,15 @@ export default function AttentionIntroduction() {
               Satz <Tilde />
               vorhersagt. Nun gibt es Wörter, die für so ein Ratespiel
               relevanter sind, und welche, die man kaum beachten muss. Dort
-              setzt das Konzept der Aufmerksameit an - dadurch lernt das
-              Sprachmodell, welches Wort für die Ausgabe relevant ist, und
-              welches nicht. Mit folgendem Beispiel möchten wir dieses Konzept
-              näher beleuchten. Das Ziel ist es, den einfachen Satz auf der
+              setzt das Konzept der{" "}
+              <strong className="text-primary">Aufmerksameit</strong> an -
+              dadurch lernt das Sprachmodell, welches Wort für die Ausgabe
+              relevant ist, und welches nicht. Mit folgendem Beispiel möchten
+              wir dieses Konzept näher beleuchten. In wie weit dieses Konzept
+              als Verständnis interpretiert werden kann wird im Folgenden
+              beleuchtet. Zunächst ist das Ziel, den einfachen Satz auf der
               rechten Seite zu vervollständigen.
             </p>
-
           </div>
           <div className="p-2 rounded-xl">
             <h3 className="text-primary text-xl font-semibold text-textDark mb-4">
