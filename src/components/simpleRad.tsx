@@ -151,11 +151,11 @@ export default function SimpleRad({wordpercentlist}: any) {
                     <div>
                         <div className="mb-6">
                             <button id="startButton" onClick={handleStartButton} className="text-text-normal rounded-full px-4 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg">
-                                Start Spinning
+                                Start
                             </button>
 
                             <button id="stopButton" onClick={handleStopButton} className="text-text-normal rounded-full px-4 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg">
-                                Stop Spinning
+                                Stop
                             </button>
                         </div>
 

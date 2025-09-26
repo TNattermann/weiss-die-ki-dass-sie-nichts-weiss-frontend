@@ -519,12 +519,12 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
 
                     <button id="startButton" onClick={handleStartButton} className="text-text-normal rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
                     style={{ display: clickdisplay}}>
-                        Start Spinning
+                        Start
                     </button>
 
                     <button id="stopButton" onClick={handleStopButton} className="text-text-normal rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
                     style={{ display: clickdisplay}}>
-                        Stop Spinning
+                        Stop
                     </button>
 
                     <div className="p-8 rounded-xl">
