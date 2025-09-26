@@ -87,7 +87,7 @@ function WissenPage() {
         {/* Tokens Section */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-primary mb-4">Tokens</h2>
-          <Link to="/token#tokens1">
+          <Link to="/tokeninfo#tokens1">
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               {bits
                 .filter((c) => c.id === "tokens1")
@@ -99,7 +99,7 @@ function WissenPage() {
                 ))}
             </div>
           </Link>
-          <Link to="/token#tokens2">
+          <Link to="/tokeninfo#tokens2">
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               {bits
                 .filter((c) => c.id === "tokens2")
@@ -111,7 +111,7 @@ function WissenPage() {
                 ))}
             </div>
           </Link>
-          <Link to="/token#tokens3">
+          <Link to="/tokeninfo#tokens3">
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               {bits
                 .filter((c) => c.id === "tokens3")

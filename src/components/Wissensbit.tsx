@@ -72,7 +72,13 @@ export const bits = [
         <h3 className="font-semibold text-primary mb-2">Tokens 1</h3>
       </>
     ),
-    text: <>placeholder</>,
+    text: (
+      <>
+        Tokens sind rein technische Einheiten, in die Text zerlegt wird. Das
+        Modell „versteht“ den Text nicht auf Wortebene, sondern verarbeitet nur
+        diese Token-Sequenzen.
+      </>
+    ),
   },
   {
     id: "tokens2",
@@ -81,7 +87,14 @@ export const bits = [
         <h3 className="font-semibold text-primary mb-2">Tokens 2</h3>
       </>
     ),
-    text: <>placeholder</>,
+    text: (
+      <>
+        Die Wahl des Tokenisierungsalgorithmus beeinflusst direkt, wie der Text
+        zerteilt wird und wie effizient das Sprachmodell arbeitet.
+        Unterschiedliche Tokenizer können denselben Satz unterschiedlich
+        zerlegen.
+      </>
+    ),
   },
   {
     id: "tokens3",
@@ -90,7 +103,15 @@ export const bits = [
         <h3 className="font-semibold text-primary mb-2">Tokens 3</h3>
       </>
     ),
-    text: <>placeholder</>,
+    text: (
+      <>
+        Tokens entsprechen nicht automatisch Wörtern oder grammatikalisch
+        sinnvollen Bestandteilen. Besonders bei teilwort-basierten Ansätzen
+        entstehen Sequenzen wie „he“ und „ute“, die für sich genommen keine
+        Bedeutung tragen. Das Modell arbeitet aber ausschließlich mit diesen
+        Fragmenten.
+      </>
+    ),
   },
   {
     id: "embeddings1",
