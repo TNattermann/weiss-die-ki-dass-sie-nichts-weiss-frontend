@@ -42,13 +42,13 @@ export default function ModellgleichungMainTakeaways() {
             </div>
             <div>
               <h3 className="text-on-primary-container font-semibold mb-3">
-                Bezug zu LLMs
+                Bezug zu Sprachmodellen
               </h3>
               <p className="text-on-primary-container">
-                Große Sprachmodelle unterscheiden sich zu dem hier
-                vorgestellten Beispiel eines Neuronalen Netzwerks. Sie sind
-                deutlich größer und verarbeiten keine Bilder, sondern
-                Texteingaben und nutzen Wahrscheinlichkeitsverteilungen.
+                Große Sprachmodelle unterscheiden sich zu dem hier vorgestellten
+                Beispiel eines Neuronalen Netzwerks. Sie sind deutlich größer
+                und verarbeiten keine Bilder, sondern Texteingaben und nutzen
+                Wahrscheinlichkeitsverteilungen.
               </p>
             </div>
           </div>

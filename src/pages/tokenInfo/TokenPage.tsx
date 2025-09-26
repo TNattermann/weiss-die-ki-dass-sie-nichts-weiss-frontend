@@ -50,7 +50,7 @@ function TokenPage() {
                     />
 
                     {/* Content */}
-                    <main className="mx-auto space-y-24 w-full max-w-3xl lg:max-w-5xl xl:max-w-7xl">
+                    <main className="mx-auto w-full max-w-3xl lg:max-w-5xl xl:max-w-7xl">
                         <div id="introduction"><TokenIntroduction/></div>
                         <div id="visualizer"><TokenizerVisualizer/></div>
                         <div id="approaches"><TokenizationApproaches/></div>
