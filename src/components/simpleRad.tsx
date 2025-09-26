@@ -162,7 +162,7 @@ export default function SimpleRad({wordpercentlist}: any) {
                         <div className="wheel-and-legend flex items-center justify-center">
                             <div className="arrow mb-4">
 
-                            <div className="circle" id="simpleRad" aria-label="Pie-chart partitioned into the items on the legend" style={{
+                            <div className="circle" id="simpleRad" aria-label="Kuchendiagramm aufgeteilt in die Items der Legende" style={{
                                 background: circlebackground,
                                 animation: currentAnimation,
                                 transform: currentTransform

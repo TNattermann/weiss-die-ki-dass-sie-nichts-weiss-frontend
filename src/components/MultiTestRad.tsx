@@ -507,7 +507,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
                             <div className="wheel-and-legend" key={circleindex}>
                             <div className="arrow">
 
-                                <div className="circle" id="Rad1" aria-label="Pie-chart partitioned into the items on the legend" style={{
+                                <div className="circle" id="Rad1" aria-label="Drei Kuchendiagramme aufgeteilt in die Items der Legende" style={{
                                     background: circlebackground[circleindex],
                                     animation: currentAnimation[circleindex],
                                     transform: currentTransform[circleindex]
