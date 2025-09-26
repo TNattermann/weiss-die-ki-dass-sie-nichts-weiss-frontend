@@ -1,4 +1,3 @@
-import Tilde from "../../components/Tilde";
 import { bits } from "../../components/Wissensbit";
 import WordEmbeddingViz from "../../components/WordEmbeddingViz";
 
