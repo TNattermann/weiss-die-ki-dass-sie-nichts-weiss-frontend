@@ -78,9 +78,9 @@ export default function LearningMainTakeaways() {
           {/* Home */}
           <Link
             to="/Wissenpage"
-            className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
+            className="w-full sm:w-auto text-center inline-flex justify-center items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-md"
           >
-            Zu den Wissenshäppchen{" "}
+            Zu den Wissenshäppchen
             <ArrowRight className="text-on-primary-container ml-2 h-5 w-5" />
           </Link>
         </div>
