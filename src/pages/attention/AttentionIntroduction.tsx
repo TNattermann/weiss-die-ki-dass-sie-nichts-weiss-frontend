@@ -63,7 +63,7 @@ export default function AttentionIntroduction() {
     <section className="py-6 px-6" id="educational-content">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-primary mb-4">
-          Intuition
+          Versteht ChatGPT mich?
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-6">
           <div>
