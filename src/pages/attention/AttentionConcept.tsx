@@ -75,12 +75,14 @@ export default function AttentionConcept() {
             className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
             id="attention2"
           >
-            {bits.slice(1, 2).map((c) => (
-              <section key={c.id}>
-                <h2>{c.title}</h2>
-                <p>{c.text}</p>
-              </section>
-            ))}
+            {bits
+              .filter((c) => c.id === "attention2")
+              .map((c) => (
+                <section>
+                  <h2>{c.title}</h2>
+                  <p>{c.text}</p>
+                </section>
+              ))}
           </div>
 
           <FileWithText
