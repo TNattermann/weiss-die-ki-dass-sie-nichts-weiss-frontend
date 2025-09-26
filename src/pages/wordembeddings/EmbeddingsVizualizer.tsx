@@ -1,4 +1,4 @@
-import Tilde from "../../components/Tilde";
+import { bits } from "../../components/Wissensbit";
 import WordEmbeddingViz from "../../components/WordEmbeddingViz";
 
 const embeddings = {
@@ -132,24 +132,24 @@ function EmbeddingsVizualizer() {
         </p>
       </div>
 
+      <WordEmbeddingViz
+        embeddings={embeddings}
+        groups={groups}
+        initialWords={[]}
+      />
 
-        <WordEmbeddingViz
-          embeddings={embeddings}
-          groups={groups}
-          initialWords={[]}
-        />
-
-      <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg">
-        <p>
-          In Wirklichkeit bestehen Worteinbettungen aus hunderten von Zahlen,
-          also Koordinaten in einem hochdimensionalen Raum. In der
-          Visualisierung sehen Sie eine vereinfachte Version davon: Wörter wie
-          „König“, „Königin“, „Sonne“ oder „kalt“ erscheinen auf einer
-          zweidimensionalen Fläche – also wie Punkte in einem Koordinatensystem.
-          Die Abstände dort entsprechen den inhaltlichen Abständen, die das hier
-          verwendete Modell <Tilde />
-          gelernt hat.
-        </p>
+      <div
+        className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg"
+        id="attention2"
+      >
+        {bits
+          .filter((c) => c.id === "embeddings2")
+          .map((c) => (
+            <section>
+              <h2>{c.title}</h2>
+              <p>{c.text}</p>
+            </section>
+          ))}
       </div>
     </section>
   );

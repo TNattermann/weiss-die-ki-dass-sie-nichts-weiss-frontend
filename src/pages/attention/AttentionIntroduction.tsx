@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Tilde from "../../components/Tilde";
+import { bits } from "../../components/Wissensbit";
 
 const notes = [
   {
@@ -80,6 +81,19 @@ export default function AttentionIntroduction() {
               beleuchtet. Zunächst ist das Ziel, den einfachen Satz auf der
               rechten Seite zu vervollständigen.
             </p>
+            <div
+              className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+              id="attention1"
+            >
+              {bits
+                .filter((c) => c.id === "attention1")
+                .map((c) => (
+                  <section>
+                    <h2>{c.title}</h2>
+                    <p>{c.text}</p>
+                  </section>
+                ))}
+            </div>
           </div>
           <div className="p-2 rounded-xl">
             <h3 className="text-primary text-xl font-semibold text-textDark mb-4">

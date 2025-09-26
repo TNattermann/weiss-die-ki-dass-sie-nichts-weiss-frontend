@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Tilde from "../../components/Tilde";
+import { bits } from "../../components/Wissensbit";
 
 export default function TokenizationApproaches() {
   const [activeExample, setActiveExample] = useState("word");
@@ -193,6 +194,32 @@ export default function TokenizationApproaches() {
               </div>
             ))}
           </div>
+        </div>
+        <div
+          className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+          id="tokens2"
+        >
+          {bits
+            .filter((c) => c.id === "tokens2")
+            .map((c) => (
+              <section>
+                <h2>{c.title}</h2>
+                <p>{c.text}</p>
+              </section>
+            ))}
+        </div>
+        <div
+          className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+          id="tokens2"
+        >
+          {bits
+            .filter((c) => c.id === "tokens3")
+            .map((c) => (
+              <section>
+                <h2>{c.title}</h2>
+                <p>{c.text}</p>
+              </section>
+            ))}
         </div>
       </div>
     </section>

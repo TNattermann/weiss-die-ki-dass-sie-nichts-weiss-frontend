@@ -1,4 +1,5 @@
 import Tilde from "../../components/Tilde";
+import { bits } from "../../components/Wissensbit";
 
 function WordEmbeddingsIntroduction() {
   return (
@@ -61,15 +62,18 @@ function WordEmbeddingsIntroduction() {
                 className="w-100 h-auto mx-auto"
               />
             </div>
-            <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
-              <p className="text-textMedium font-medium">
-                Das Entscheidende: Der Computer weiß nicht, was die „Sonne“
-                wirklich ist. Er <Tilde />
-                versteht keine Helligkeit und keine Wärme. Aber er <Tilde />
-                erkennt, dass „Sonne“ in ähnlichen Textumgebungen vorkommt wie
-                „Schnee“ – und legt die beiden daher nah beieinander in seinem
-                Raum ab.
-              </p>
+            <div
+              className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+              id="attention2"
+            >
+              {bits
+                .filter((c) => c.id === "embeddings1")
+                .map((c) => (
+                  <section>
+                    <h2>{c.title}</h2>
+                    <p>{c.text}</p>
+                  </section>
+                ))}
             </div>
           </div>
         </div>
