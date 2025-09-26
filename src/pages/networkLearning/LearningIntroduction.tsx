@@ -46,14 +46,16 @@ export default function LearningIntroduction() {
           </div>
 
           {/* Bild */}
-          <div className="bg-primary/60 flex justify-center md:justify-end rounded-lg">
+          <div className="flex justify-center md:justify-end w-full">
+            <div className="bg-primary/60 rounded-lg inline-flex">
             <img
               src="/img/Target_Words.png"
               alt="Zielscheibe als Analogie des KI Lernens: Mögliche Vervollständigungen des Beispielsatzes sind auf einer Zielscheibe angezeichnet,
               wobei die beste Antwort '0 °C' in der Mitte der Zielscheibe liegt. Kalt und Winter liegen auch nahe, wohingegen Sommer, warm und 
               Steuererklärung besonders weit weg liegen. "
-              className="block w-full max-w-full sm:max-w-sm h-auto rounded-xl shadow-lg object-contain"
+              className="block w-full max-w-lg h-auto rounded-xl shadow-lg object-contain"
             />
+            </div>
           </div>
         </div>
 

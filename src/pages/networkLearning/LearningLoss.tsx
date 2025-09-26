@@ -28,12 +28,15 @@ export default function LearningLoss() {
             </div>
 
             {/* Bild */}
-            <div className="bg-primary/60 flex justify-center md:justify-end rounded-lg">
-              <img
-                src="/img/Distance_Target.png"
-                alt="Zwei Pfeile stecken in einer Zielscheibe mit unterschiedlicher Distanz zur Mitte der Scheibe."
-                className="block w-full max-w-full sm:max-w-sm h-auto rounded-xl shadow-lg object-contain"
-              />
+            
+            <div className="flex justify-center md:justify-end w-full">
+              <div className="bg-primary/60 rounded-lg inline-flex">
+                <img
+                  src="/img/Distance_Target.png"
+                  alt="Zwei Pfeile stecken in einer Zielscheibe mit unterschiedlicher Distanz zur Mitte der Scheibe"
+                  className="block w-full max-w-sm h-auto rounded-xl shadow-lg object-contain"
+            />
+              </div>
             </div>
           </div>
 
