@@ -1,6 +1,6 @@
-import {useState} from "react";
-import {NavLink} from "react-router-dom";
-import {Menu, X} from "lucide-react";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 
 interface NavItem {
     to?: string;
@@ -9,24 +9,20 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-    {to: "/", label: "Startseite"},
-    
-    {label: "separator", type: "separator"},
-    {to: "/temperature", label: "Was passiert, wenn ich ChatGPT benutze?"},
-    {to: "/tokeninfo", label: "Weiß ChatGPT, was eine Brombeere ist?"},
-    {to: "/wordembeddings", label: "Wieso sind die Texte von ChatGPT so gut?"},
-
-    {label: "separator", type: "separator"},
-    {to: "/attention", label: "Versteht ChatGPT mich?"},
-    {to: "/modellgleichung", label: "Wie funktioniert das mit diesem Neuronalen Netzwerk?",},
-    {to: "/networkLearning", label: "Wie lernt ChatGPT?"},
-
-    {label: "separator", type: "separator"},
-    {to: "/WissenPage", label: "Wissenshäppchen"},
-
-    {label: "separator", type: "separator"},
-    { to: '/download', label: 'Buch Download' }, 
-    {to: "/aboutus", label: "Über Uns"},
+    { to: "/", label: "Startseite" },
+    { label: "separator", type: "separator" },
+    { to: "/temperature", label: "Was passiert, wenn ich ChatGPT benutze?" },
+    { to: "/tokeninfo", label: "Weiß ChatGPT, was eine Brombeere ist?" },
+    { to: "/wordembeddings", label: "Wieso sind die Texte von ChatGPT so gut?" },
+    { label: "separator", type: "separator" },
+    { to: "/attention", label: "Versteht ChatGPT mich?" },
+    { to: "/modellgleichung", label: "Wie funktioniert das mit diesem Neuronalen Netzwerk?", },
+    { to: "/networkLearning", label: "Wie lernt ChatGPT?" },
+    { label: "separator", type: "separator" },
+    { to: "/WissenPage", label: "Wissenshäppchen" },
+    { label: "separator", type: "separator" },
+    { to: '/download', label: 'Buch Download' },
+    { to: "/aboutus", label: "Über Uns" }
 ];
 
 function Navbar() {
@@ -37,10 +33,10 @@ function Navbar() {
             <div className="flex items-center justify-between w-full px-4 sm:px-6 lg:px-8">
                 <div className="flex-shrink-0">
                     <NavLink to="/" className="flex items-center space-x-3">
-                        <i className="ri-robot-2-line text-5xl text-primary"/>
+                        <i className="ri-robot-2-line text-5xl text-primary" />
                         <h1 className="text-xl font-bold text-primary leading-tight">
                             Weiß die KI, dass
-                            <br/>
+                            <br />
                             sie nichts weiß?
                         </h1>
                     </NavLink>
@@ -51,23 +47,23 @@ function Navbar() {
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className="text-primary hover:text-primary-container focus:outline-none"
                     >
-                        {isMenuOpen ? <X size={24}/> : <Menu size={24}/>}
+                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
                 </div>
             </div>
 
             {isMenuOpen && (
-                <div className="px-4 pt-2 pb-4 mt-4">
+                <div className="px-4 pt-2 pb-4 mt-4 max-h-[calc(100vh-8rem)] overflow-y-auto">
                     <div className="space-y-2 max-w-lg mx-auto">
-                        {navItems.map(({to, label, type}) =>
+                        {navItems.map(({ to, label, type }) =>
                             type === "separator" ? (
-                                <hr key={label} className="my-4 border-t text-primary/50"/>
+                                <hr key={label} className="my-4 border-t text-primary/50" />
                             ) : (
                                 <NavLink
                                     key={to}
                                     to={to!}
                                     onClick={() => setIsMenuOpen(false)}
-                                    className={({isActive}) =>
+                                    className={({ isActive }) =>
                                         `block text-center px-3 py-3 rounded-lg text-base font-semibold transition-colors duration-200 ${
                                             isActive
                                                 ? "bg-primary-container-selected text-on-primary-container-selected"
@@ -82,7 +78,8 @@ function Navbar() {
 
                         <NavLink
                             to="/newsletter"
-                            className={({isActive}) =>
+                            onClick={() => setIsMenuOpen(false)}
+                            className={({ isActive }) =>
                                 `block text-center px-3 py-3 rounded-lg text-base font-semibold transition-colors duration-200 bg-error-container ${
                                     isActive
                                         ? "bg-primary-container-selected text-on-primary-container-selected"
