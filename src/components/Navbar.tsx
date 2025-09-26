@@ -20,9 +20,6 @@ const navItems: NavItem[] = [
   },
   { to: "/networkLearning", label: "Wie wurde ChatGPT gebaut?" },
   { label: "separator", type: "separator" },
-  { to: "/WissenPage", label: "Wissenshäppchen" },
-
-  { label: "separator", type: "separator" },
 
     /*{ to: '/download', label: 'Buch Download' }, */
     { to: '/aboutus', label: 'Über Uns' }
