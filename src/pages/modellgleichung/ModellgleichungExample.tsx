@@ -41,19 +41,8 @@ function AffenbandeBeispiel() {
             Preis für ein Äffchen auf eine Münze statt fünf Münzen festlegen.
           </p>
         </div>
-        {/* Aktueller Output */}
-        {/* Entscheidungsbox + Buttons nebeneinander und mittig */}
-        <div className="flex justify-center items-center gap-6 mb-6">
-          {/* Box */}
-          <div className="bg-bgColor p-4 rounded-lg border border-outline w-fit">
-            <p className="text-lg text-text-normal leading-relaxed">
-              Aktuelle Entscheidung der Maschine: <br></br>{" "}
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" "}
-              {getZufriedenheitsAntwort(zufriedenheit)}
-            </p>
-          </div>
-
-          {/* Button-Gruppe */}
+        {/* Button-Gruppe */}
+        <div className="flex justify-center mb-6">
           <div className="inline-flex rounded-lg border border-outline overflow-hidden">
             <button
               type="button"
@@ -83,38 +72,6 @@ function AffenbandeBeispiel() {
             </button>
           </div>
         </div>
-        <div className="w-full max-w-3xl mx-auto flex flex-col sm:flex-row items-stretch gap-6">
-          {/* Zufriedenheitsskala */}
-          <div className="flex-1 flex flex-col items-center">
-            <h2 className="text-lg font-semibold text-text-normal mb-2">
-              Zufriedenheitsskala
-            </h2>
-            <input
-              type="range"
-              min={-100}
-              max={100}
-              value={zufriedenheit}
-              readOnly
-              className="w-full h-2 rounded-lg appearance-none bg-text-normal
-               accent-text-normal
-               [&::-webkit-slider-thumb]:appearance-none 
-               [&::-webkit-slider-thumb]:h-5 
-               [&::-webkit-slider-thumb]:w-5 
-               [&::-webkit-slider-thumb]:rounded-full 
-               [&::-webkit-slider-thumb]:bg-primary
-               [&::-webkit-slider-thumb]:cursor-pointer 
-               [&::-moz-range-thumb]:h-5 
-               [&::-moz-range-thumb]:w-5 
-               [&::-moz-range-thumb]:rounded-full 
-               [&::-moz-range-thumb]:bg-primary 
-               [&::-moz-range-thumb]:cursor-pointer"
-            />
-            <span className="mt-2 text-primary font-bold text-lg">
-              {zufriedenheit}
-            </span>
-          </div>
-        </div>
-
         {/* Counter-Felder */}
         <div className="flex flex-col sm:flex-row justify-center items-center mt-8 mb-6 mx-auto gap-8">
           {/* Feld 1 - Äffchen */}
@@ -162,6 +119,54 @@ function AffenbandeBeispiel() {
               </span>
             </div>
           </div>
+        </div>
+
+        {/* Zufriedenheitsskala */}
+        <div className="flex-1 flex flex-col items-center">
+          <h2 className="text-lg font-semibold text-text-normal mb-2">
+            Zufriedenheitsskala
+          </h2>
+          <input
+            type="range"
+            min={-100}
+            max={100}
+            value={zufriedenheit}
+            readOnly
+            className="w-3/4 h-2 rounded-lg appearance-none bg-text-normal
+               accent-text-normal
+               [&::-webkit-slider-thumb]:appearance-none 
+               [&::-webkit-slider-thumb]:h-3 
+               [&::-webkit-slider-thumb]:w-3 
+               [&::-webkit-slider-thumb]:rounded-full 
+               [&::-webkit-slider-thumb]:bg-primary
+               [&::-webkit-slider-thumb]:cursor-pointer 
+               [&::-moz-range-thumb]:h-3 
+               [&::-moz-range-thumb]:w-3 
+               [&::-moz-range-thumb]:rounded-full 
+               [&::-moz-range-thumb]:bg-primary 
+               [&::-moz-range-thumb]:cursor-pointer"
+          />
+          <div className="w-3/4 flex justify-between mt-1 text-sm text-text-normal">
+            <span>-100</span>
+            <span>0</span>
+            <span>100</span>
+          </div>
+          <span className="mt-2 text-primary font-bold text-lg">
+            Aktuelle Zufriedenheit: {zufriedenheit}
+          </span>
+          {/* Aktueller Output */}
+          {/* Entscheidungsbox + Buttons nebeneinander und mittig */}
+          <div className="flex justify-center items-center gap-6 mb-6">
+            {/* Box */}
+            <div className="bg-bgColor p-4 rounded-lg border border-outline w-fit mt-4">
+              <p className="text-lg text-text-normal leading-relaxed">
+                Aktuelle Entscheidung der Maschine: <br></br>{" "}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" "}
+                <b>{getZufriedenheitsAntwort(zufriedenheit)}</b>
+              </p>
+            </div>
+          </div>
+          <div className="w-full max-w-3xl mx-auto flex flex-col sm:flex-row items-stretch gap-6"></div>
         </div>
 
         {/* Erklärung */}

@@ -19,7 +19,7 @@ const navItems: NavItem[] = [
 
     { label: 'separator', type: "separator" },
 
-    { to: '/download', label: 'Buch Download' },
+    /*{ to: '/download', label: 'Buch Download' }, */
     { to: '/aboutus', label: 'Über Uns' }
 ];
 

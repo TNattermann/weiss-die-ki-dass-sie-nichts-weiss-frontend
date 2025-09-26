@@ -8,36 +8,35 @@ function Impressum() {
 
                 <div className="space-y-8 text-left text-text-normal leading-relaxed">
                     <section>
-                        <h2 className="text-2xl font-semibold mb-2">Angaben gemäß § 5 TMG</h2>
+                        <h2 className="text-2xl font-semibold mb-2">Anbieter</h2>
                         <p>
+                            Algorithm Accountability Lab
                             RPTU Kaiserslautern-Landau <br />
                             Campus Kaiserslautern <br />
-                            Gottlieb-Daimler-Straße, Gebäude 47 <br />
-                            67663 Kaiserslautern
+                            Gottlieb-Daimler-Straße, Gebäude 48 <br />
+                            67663 Kaiserslautern <br />
+
+                            <strong className="text-primary">Telefon: </strong>{" "} +49 631 205 3358<br />
+                            <strong className="text-primary">E-Mail: </strong>{" "} zweig@cs.uni-kl.de<br />
                         </p>
                     </section>
                     <section>
                         <h2 className="text-2xl font-semibold mb-2">Zuständige Aufsichtsbehörde</h2>
                         <p>
-                            Ministerium für Wissenschaft und Gesundheit des Landes Rheinland-Pfalz
+                            Ministerium für Wissenschaft und Gesundheit des Landes Rheinland-Pfalz <br />
+                            Mittlere Bleiche 61 <br />
+                            55116 Mainz
                         </p>
                     </section>
 
                     <section>
-                        <h2 className="text-2xl font-semibold mb-2">Inhaltlich verantwortlich gem. § 55 Abs. 2 RStV</h2>
+                        <h2 className="text-2xl font-semibold mb-2">Inhaltliche Verantwortung gem. § 18 Abs. 2 MStV</h2>
                         <p>
                             Prof. Dr. Katharina Zweig <br />
                             Fachbereich Informatik <br />
                             RPTU Kaiserslautern-Landau <br />
                             Postfach 3049 <br />
                             67663 Kaiserslautern
-                        </p>
-                    </section>
-                    <section>
-                        <h2 className="text-2xl font-semibold mb-2">Kontakt</h2>
-                        <p>
-                            Telefon: +49 (0) ???? <br />
-                            E-Mail: zweig@cs.uni-kl.de
                         </p>
                     </section>
                 </div>
