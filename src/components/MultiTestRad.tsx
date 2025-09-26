@@ -28,7 +28,18 @@ function applytemperature (wordpercentlist : [string, number][], temperature : n
 
     }
     else {
-        const explist : [string, number][] = wordpercentlist.map( (wordpercent) => [wordpercent[0], Math.exp( wordpercent[1]  / temperature * 1.6)]);
+        let adjustedTemperature: number;
+        if (temperature <= 1) {
+            adjustedTemperature = temperature; // For temperatures <= 1
+        } 
+        else {
+            // Linear scaling between 1 and 2
+            adjustedTemperature = ((temperature - 1) / (2 - 1)) * (10 - 1) + 1; // Scale to [1, 100]
+        }
+
+        const explist : [string, number][] = wordpercentlist.map( (wordpercent) => 
+            [wordpercent[0], Math.exp( wordpercent[1]  / adjustedTemperature * 3)]
+            );
         //100 ist weil darauf die ganzen terme gerade geeisht sind. 1.6 ist ein Faktor, damit Temp = 1 ansatzweise die "echte" Version ist
         const expsum = explist.reduce((accumulator, wordexp) => accumulator + wordexp[1], 0);
         newlist = explist.map( (wordexp) => [wordexp[0], wordexp[1] / expsum]);
@@ -496,7 +507,7 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
                             <div className="wheel-and-legend" key={circleindex}>
                             <div className="arrow">
 
-                                <div className="circle" id="Rad1" style={{
+                                <div className="circle" id="Rad1" aria-label="Pie-chart partitioned into the items on the legend" style={{
                                     background: circlebackground[circleindex],
                                     animation: currentAnimation[circleindex],
                                     transform: currentTransform[circleindex]
@@ -519,12 +530,12 @@ export default function MultiTestRad({wordlibrary, temperature, isVideo}: any) {
 
                     <button id="startButton" onClick={handleStartButton} className="text-text-normal rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
                     style={{ display: clickdisplay}}>
-                        Start Spinning
+                        Start
                     </button>
 
                     <button id="stopButton" onClick={handleStopButton} className="text-text-normal rounded-full px-4 py-2 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg"
                     style={{ display: clickdisplay}}>
-                        Stop Spinning
+                        Stop
                     </button>
 
                     <div className="p-8 rounded-xl">

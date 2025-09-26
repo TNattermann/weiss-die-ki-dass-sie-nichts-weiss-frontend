@@ -41,7 +41,7 @@ function TokenPage() {
                         sections={[
                             {id: "introduction", title: "Einführung"},
                             {id: "visualizer", title: "Ausprobieren"},
-                            {id: "approaches", title: "Tokenisierungsansätze"},
+                            {id: "approaches", title: "Tokeniserungsarten"},
                             {id: "hints", title: "Hinweise"},
                             {id: "algorithms", title: "Algorithmen"},
                             {id: "bpe", title: "BPE"},
