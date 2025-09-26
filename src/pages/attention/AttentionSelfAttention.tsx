@@ -81,7 +81,7 @@ export default function AttentionSelfattention() {
   return (
     <section className="py-6 px-6" id="educational-content">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold text-center text-primary mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-4">
           Self-Attention
         </h1>
 

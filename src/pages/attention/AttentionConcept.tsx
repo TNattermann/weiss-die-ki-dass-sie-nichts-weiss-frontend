@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Tilde from "../../components/Tilde";
+import { bits } from "../../components/Wissensbit";
 
 type FileWithTextProps = {
   fileSrc: string;
@@ -55,7 +55,7 @@ export default function AttentionConcept() {
     <section className="py-6 px-6" id="educational-content">
       <div className="max-w-6xl mx-auto">
         <div className="mb-4">
-          <h1 className="text-5xl font-bold text-center text-primary mb-4 break-words">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-4 break-words">
             Konzept
           </h1>
 
@@ -71,16 +71,18 @@ export default function AttentionConcept() {
             Wort und die Kontextinformationen im Modell darstellt.
           </p>
 
-          <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-4">
-            <p className="text-text-normal font-medium">
-              Das hört sich alles sehr kompliziert an - das ist es auch - man
-              kann es aber auch so verstehen: Das Sprachmodell <Tilde />
-              lernt die Betonung einzelner Wörter. So wie wir gewisse Wörter
-              unterschiedlich betonen, um ihre Bedeutung zu unterstreichen,
-              <Tilde />
-              betont das Modell auch verschiedene Wörter, um ihre Wichtigkeit zu
-              erfassen.
-            </p>
+          <div
+            className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+            id="attention2"
+          >
+            {bits
+              .filter((c) => c.id === "attention2")
+              .map((c) => (
+                <section>
+                  <h2>{c.title}</h2>
+                  <p>{c.text}</p>
+                </section>
+              ))}
           </div>
 
           <FileWithText

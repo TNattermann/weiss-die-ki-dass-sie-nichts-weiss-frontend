@@ -1,10 +1,11 @@
 import Tilde from "../../components/Tilde";
+import { bits } from "../../components/Wissensbit";
 
 function WordEmbeddingsIntroduction() {
   return (
     <section className="py-6 px-6" id="educational-content">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-6xl font-bold text-center text-primary mb-6 break-words">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center text-primary mb-6 break-words">
           Wieso sind die Texte von ChatGPT so gut?
         </h1>
         <p className="text-lg text-text-normal mb-6 leading-relaxed">
@@ -18,10 +19,10 @@ function WordEmbeddingsIntroduction() {
         </p>
       </div>
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-6 ">
           Was sind Worteinbettungen?
         </h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg text-text-normal mb-6 leading-relaxed">
               Da ein Computer nur mit Zahlen arbeiten kann, müssen Wörter oder
@@ -61,15 +62,18 @@ function WordEmbeddingsIntroduction() {
                 className="w-100 h-auto mx-auto"
               />
             </div>
-            <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
-              <p className="text-textMedium font-medium">
-                Das Entscheidende: Der Computer weiß nicht, was die „Sonne“
-                wirklich ist. Er <Tilde />
-                versteht keine Helligkeit und keine Wärme. Aber er <Tilde />
-                erkennt, dass „Sonne“ in ähnlichen Textumgebungen vorkommt wie
-                „Schnee“ – und legt die beiden daher nah beieinander in seinem
-                Raum ab.
-              </p>
+            <div
+              className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+              id="attention2"
+            >
+              {bits
+                .filter((c) => c.id === "embeddings1")
+                .map((c) => (
+                  <section>
+                    <h2>{c.title}</h2>
+                    <p>{c.text}</p>
+                  </section>
+                ))}
             </div>
           </div>
         </div>

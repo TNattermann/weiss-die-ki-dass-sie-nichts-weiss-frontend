@@ -40,14 +40,14 @@ export default function HomeIntroduction() {
     },
     {
       icon: "ri-box-3-line",
-      text: "Wie wurde ChatGPT gebaut?",
+      text: "Wie lernt ChatGPT?",
       href: "/networkLearning",
     },
   ];
 
   return (
     <div className="max-w-screen-xl mx-auto px-6 py-3 text-center">
-      <h1 className="text-5xl font-bold text-center text-primary mb-6">
+      <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-center text-primary mb-6">
         Wozu können Sprachmodelle verwendet werden?
       </h1>
       <h1 className="text-text-normal">

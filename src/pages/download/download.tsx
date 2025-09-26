@@ -1,5 +1,11 @@
+import {useEffect} from "react";
+
 function Download() {
-  const email = "test@test.de"; // <-- Replace with the correct email
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+  const email = "Bald verfügbar"; // TO DO: Replace with the correct email
   const subject = "Anfrage: Buchteile I und II";
   const body = `Sehr geehrte Damen und Herren,
 

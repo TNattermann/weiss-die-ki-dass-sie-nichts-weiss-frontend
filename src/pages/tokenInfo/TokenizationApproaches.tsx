@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Tilde from "../../components/Tilde";
+import { bits } from "../../components/Wissensbit";
 
 export default function TokenizationApproaches() {
   const [activeExample, setActiveExample] = useState("word");
@@ -117,8 +118,8 @@ export default function TokenizationApproaches() {
   return (
     <section className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold text-center text-primary mb-10">
-          Arten von Tokeniserung im Vergleich
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-10">
+          Tokenisierungs-Ansätze im Vergleich
         </h1>
         <p className="text-lg text-text-normal mb-6 leading-r>elaxed">
           Damit wir besser verstehen, wie Sprachmodelle mit Text <Tilde />
@@ -193,6 +194,32 @@ export default function TokenizationApproaches() {
               </div>
             ))}
           </div>
+        </div>
+        <div
+          className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+          id="tokens2"
+        >
+          {bits
+            .filter((c) => c.id === "tokens2")
+            .map((c) => (
+              <section>
+                <h2>{c.title}</h2>
+                <p>{c.text}</p>
+              </section>
+            ))}
+        </div>
+        <div
+          className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+          id="tokens2"
+        >
+          {bits
+            .filter((c) => c.id === "tokens3")
+            .map((c) => (
+              <section>
+                <h2>{c.title}</h2>
+                <p>{c.text}</p>
+              </section>
+            ))}
         </div>
       </div>
     </section>

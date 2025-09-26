@@ -1,4 +1,9 @@
+import {useEffect} from "react";
+
 function Impressum() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="min-h-screen">
             <div className="max-w-screen-xl mx-auto px-6 py-12">
@@ -17,7 +22,7 @@ function Impressum() {
                             67663 Kaiserslautern <br />
 
                             <strong className="text-primary">Telefon: </strong>{" "} +49 631 205 3358<br />
-                            <strong className="text-primary">E-Mail: </strong>{" "} zweig@cs.uni-kl.de<br />
+                            <strong className="text-primary">E-Mail: </strong>{" "} aalab-sekretariat@cs.rptu.de<br />
                         </p>
                     </section>
                     <section>

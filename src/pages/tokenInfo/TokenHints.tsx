@@ -33,7 +33,7 @@ export default function TokenHints() {
   return (
     <section className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold text-center text-primary mb-10">Hinweise zur Tokenisierung</h1>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-10">Hinweise zur Tokenisierung</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {notes.map((note, index) => (
             <div 
