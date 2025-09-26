@@ -12,12 +12,13 @@ function WissenPage() {
           Hier werden die wichtigsten Erkenntnisse und Informationen von der
           Webseite zusammengefasst. Wissenshäppchen - perfekt zum Nachschlagen.
         </p>
+        <h2 className="text-2xl font-bold text-primary mb-4">Grundlagen </h2>
 
         {/* Temperature Section */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-4">
+          <h3 className="text-xl font-bold text-primary mb-4">
             Was passiert, wenn ich ChatGPT benutze?
-          </h2>
+          </h3>
           <Link to="/temperature#temperature1">
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               {bits
@@ -58,7 +59,7 @@ function WissenPage() {
 
         {/* Tokens Section */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-4">
+          <h2 className="text-xl font-bold text-primary mb-4">
             Weiß ChatGPT, was eine Brombeere ist?
           </h2>
           <Link to="/tokeninfo#tokens1">
@@ -101,7 +102,7 @@ function WissenPage() {
 
         {/* Embeddings Section */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-4">
+          <h2 className="text-xl font-bold text-primary mb-4">
             Wieso sind die Texte von ChatGPT so gut?
           </h2>
           <Link to="/wordembeddings#embeddings1">
@@ -129,10 +130,10 @@ function WissenPage() {
             </div>
           </Link>
         </div>
-
+        <h2 className="text-2xl font-bold text-primary mb-4">Vertiefung</h2>
         {/* Attention Section */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-4">
+          <h2 className="text-xl font-bold text-primary mb-4">
             Versteht ChatGPT mich?
           </h2>
           <Link to="/attention#attention1">
@@ -163,7 +164,7 @@ function WissenPage() {
 
         {/* Decisions Section */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-4">
+          <h2 className="text-xl font-bold text-primary mb-4">
             Wie funktioniert das mit diesem Neuronalen Netzwerk?
           </h2>
           <Link to="/modellgleichung#decisions1">
@@ -194,7 +195,7 @@ function WissenPage() {
 
         {/* Training Section */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-4">
+          <h2 className="text-xl font-bold text-primary mb-4">
             Wie wurde ChatGPT gebaut?
           </h2>
           <Link to="/networkLearning#training1">

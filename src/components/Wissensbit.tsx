@@ -6,7 +6,7 @@ export const bits = [
     id: "attention1",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 9</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 1</h3>
       </>
     ),
     text: (
@@ -24,7 +24,7 @@ export const bits = [
     id: "attention2",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 10</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 2</h3>
       </>
     ),
     text: (
@@ -172,7 +172,7 @@ export const bits = [
     id: "decisions1",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 11</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 3</h3>
       </>
     ),
     text: (
@@ -187,7 +187,7 @@ export const bits = [
     id: "decisions2",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 12</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 4</h3>
       </>
     ),
     text: (
@@ -203,7 +203,7 @@ export const bits = [
     id: "training1",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 13</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 5</h3>
       </>
     ),
     text: (
@@ -219,7 +219,7 @@ export const bits = [
     id: "training2",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 14</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 6</h3>
       </>
     ),
     text: (
@@ -237,7 +237,7 @@ export const bits = [
     id: "training3",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 15</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 7</h3>
       </>
     ),
     text: (
