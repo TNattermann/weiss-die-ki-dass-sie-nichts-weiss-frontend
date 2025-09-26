@@ -21,7 +21,7 @@ export default function WahrMainTakeaways() {
                 <h3 className="text-on-primary-container font-semibold mb-3">Nur das nächste Wort</h3>
                 <p className="text-on-primary-container">
                   Das Modell macht nie etwas anderes als ein wahrscheinlich gut passendes nächstes Wort an einen Text anzuhängen.
-                  Wenn es einen langen Text <Tilde />schreibt, passiert nichts weiter, als dass es diesen Prozess wiederholt
+                  Wenn es einen langen Text <Tilde />schreibt, passiert nichts weiter, als dass es diesen Prozess wiederholt.
                 </p>
               </div>
               <div>
@@ -31,6 +31,15 @@ export default function WahrMainTakeaways() {
                   um die Wörter zu wählen. Dadurch wirkt das Modell nicht so statisch. 
                   Damit das Modell <Tilde />herausfindet, welche Wörter gut passen, nutzt es Wahrscheinlichkeitstabellen,
                   um dann sehr wahrscheinlich ein gut passendes Wort zum bestehenden Text zu finden.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-on-primary-container font-semibold mb-3">Textgenerierung</h3>
+                <p className="text-on-primary-container">
+                Wenn ich ChatGPT nutze, wird alles bisher geschriebene als Text genommen, 
+                und mithilfe der Wahrscheinlichkeitstabellen immer wieder ein weiteres Wort angehängt, 
+                bis es wahrscheinlicher ist, den Text zu enden. 
+                Dadurch ensteht ein meist sinnvoller und grammatikalisch korrekter Satz.
                 </p>
               </div>
               {/* Volle Breite */}

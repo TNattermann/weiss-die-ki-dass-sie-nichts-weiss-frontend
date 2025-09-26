@@ -29,7 +29,7 @@ export default function ModellgleichunGleichung() {
               <img
                 src="/img/Beispiel_Modellgleichung_Gleichung.png"
                 className="w-full md:w-[450px] h-auto md:h-[187px] object-contain md:object-cover rounded-lg shadow-md border border-outline"
-                alt="einfaches Beispiel Neuronales Netzwerk zur Berechnung der Modellgleichung"
+                alt="Beispielhaftes Neuronales Netzwerk zur Berechnung der Modellgleichung"
               />
             </div>
             <div className="items-center mb-12 md:mb-16 mt-6 md:mt-8">

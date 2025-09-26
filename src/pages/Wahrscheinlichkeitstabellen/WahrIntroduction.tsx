@@ -16,13 +16,13 @@ export default function WahrIntroduction() {
                     <p className="text-lg text-text-normal mb-6 leading-relaxed">
                         Sprachmodelle (häufig auch Large Language Modells (LLMs) genannt) sind Systeme wie ChatGPT,
                         die einem einen meist grammatikalisch korrekten und zumindest sinnvoll klingenden Text generieren.
-                        Diese Texte werden generiert, indem ihnen ein unvollständiger Text (ein Prompt) gegeben wird 
+                        Diese Texte werden generiert, indem ihnen ein unvollständiger Text (ein Prompt) gegeben wird
                         und sie dann so lange das nächste Wort in diesem Satz generieren, bis ein vollständiger Text generiert wird.
                         Dies erfolgt mithilfe von Wahrscheinlichkeitstabellen. Wie diese Tabellen angewendet werden und in welchem 
                         Zusammenhang sie mit der Temperatur stehen, erfahren Sie auf dieser Seite. 
                     </p>
                 </div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-6 break-words">Wie nutzt ChatGPT Wahrscheinlichkeitstabellen?</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-6 break-long-words" >Wie nutzt ChatGPT Wahrscheinlichkeitstabellen?</h1>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                     <div className="p-8 rounded-xl">
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
@@ -121,7 +121,7 @@ export default function WahrIntroduction() {
                             </p>
                             <p className="text-lg text-text-normal mb-6 leading-relaxed">
                                 Für ein Sprachmodell umfasst das Glücksrad selbstverständlich nicht nur drei Wörter, sondern den gesamten Wortschatz. 
-                                Darin sind neben Wörtern auch Sonderzeichen wie der Punkt "."" enthalten, sodass das Modell Sätze korrekt beenden kann. 
+                                Darin sind neben Wörtern auch Sonderzeichen wie der Punkt "." enthalten, sodass das Modell Sätze korrekt beenden kann.
                                 Man kann sich nun vorstellen, dass das Modell für jede mögliche Fortsetzung entsprechende Wahrscheinlichkeitstabellen bereithält. 
                                 Auf diese Weise <Tilde />weiß das Sprachmodell bei jedem Schritt, welches Wort mit welcher Wahrscheinlichkeit als Nächstes folgt.
                             </p>

@@ -28,9 +28,10 @@ export default function AttentionTakeaways() {
                 Der Aufmerksamkeitsmechanismus in großen Sprachmodellen basiert
                 auf einer Reihe von handwerklichen Entscheidungen. Diese
                 arbeiten darauf hin, mathematisch die Wichtigkeit von bestimmten
-                Wörtern zu berechnen. Dieser Aufbau ist schwer mit menschlicher
-                Intuition zu erklären, hat keinerlei Verbindung zur Semantik der
-                echten Welt, und ist nicht die beste Lösung für das Problem.
+                Wörtern zu berechnen. Von Verständnis kann man hier also nicht
+                sprechen. Das Konzept ist schwer mit menschlicher Intuition zu
+                erklären, hat keinerlei Verbindung zur Semantik der echten Welt,
+                und ist nicht die beste Lösung für das Problem.
               </p>
             </div>
           </div>

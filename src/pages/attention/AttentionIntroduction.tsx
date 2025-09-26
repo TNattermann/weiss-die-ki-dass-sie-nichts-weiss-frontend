@@ -71,13 +71,15 @@ export default function AttentionIntroduction() {
               Satz <Tilde />
               vorhersagt. Nun gibt es Wörter, die für so ein Ratespiel
               relevanter sind, und welche, die man kaum beachten muss. Dort
-              setzt das Konzept der Aufmerksameit an - dadurch lernt das
-              Sprachmodell, welches Wort für die Ausgabe relevant ist, und
-              welches nicht. Mit folgendem Beispiel möchten wir dieses Konzept
-              näher beleuchten. Das Ziel ist es, den einfachen Satz auf der
+              setzt das Konzept der{" "}
+              <strong className="text-primary">Aufmerksameit</strong> an -
+              dadurch lernt das Sprachmodell, welches Wort für die Ausgabe
+              relevant ist, und welches nicht. Mit folgendem Beispiel möchten
+              wir dieses Konzept näher beleuchten. In wie weit dieses Konzept
+              als Verständnis interpretiert werden kann wird im Folgenden
+              beleuchtet. Zunächst ist das Ziel, den einfachen Satz auf der
               rechten Seite zu vervollständigen.
             </p>
-
           </div>
           <div className="p-2 rounded-xl">
             <h3 className="text-primary text-xl font-semibold text-textDark mb-4">
