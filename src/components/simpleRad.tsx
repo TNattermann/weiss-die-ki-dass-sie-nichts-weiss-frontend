@@ -147,7 +147,7 @@ export default function SimpleRad({wordpercentlist}: any) {
     return (
         
             <div className="max-w-6xl mx-auto">
-                <div className="text-center mb-16">
+                <div className="text-center">
                     <div>
                         <div className="mb-6">
                             <button id="startButton" onClick={handleStartButton} className="text-text-normal rounded-full px-4 text-lg font-semibold transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110 hover:shadow-lg">

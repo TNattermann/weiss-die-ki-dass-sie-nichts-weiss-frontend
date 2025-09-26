@@ -3,7 +3,7 @@ import Tilde from "../../components/Tilde";
 
 export default function LearningLoss() {
   return (
-    <section className="py-10 sm:py-14 md:py-16 px-4 sm:px-6 overflow-x-hidden" id="loss">
+    <section className="px-4 sm:px-6 overflow-x-hidden" id="loss">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-4 sm:mb-6 break-words">
@@ -11,7 +11,7 @@ export default function LearningLoss() {
             weiß das Modell, wie gut es ist?
           </h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-start md:items-center mb-6 sm:mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-start md:items-center">
             <div>
               <p className="text-base sm:text-lg text-text-normal leading-relaxed break-words">
                 Möchten wir beim Bogenschießen ermitteln, wie gut ein Versuch
@@ -85,7 +85,7 @@ export default function LearningLoss() {
             </p>
           </div>
 
-          <Expandable title="Mehr zu Verlustfunktionen" className="mb-6">
+          <Expandable title="Mehr zu Verlustfunktionen" className="">
             <p className="text-text-normal leading-relaxed break-words">
               Die Ermittlung des Losses erfolgt anhand einer mathematischen
               Funktion, die aus dem Ist- und Sollzustand eine Distanz bildet. In
