@@ -43,6 +43,7 @@ const WordEmbeddingViz: React.FC<WordEmbeddingVizProps> = ({ embeddings, groups,
         fontWeight={selectedWords.includes(value) ? "bold" : "normal"}
         textAnchor="start"
         dominantBaseline="middle"
+        className="sm:text-xs lg:text-sm"
       >
         {value}
       </text>
@@ -50,10 +51,10 @@ const WordEmbeddingViz: React.FC<WordEmbeddingVizProps> = ({ embeddings, groups,
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto rounded-xl p-8">
-      <div className="mb-8">
-        <h3 className="text-lg font-semibold text-primary text-center mb-4">Wortgruppen auswählen:</h3>
-        <div className="flex flex-wrap gap-3 justify-center">
+    <div className="rounded-xl p-4 sm:p-6 lg:p-8">
+      <div className="mb-6 sm:mb-8">
+        <h3 className="text-lg font-semibold text-primary text-center mb-3 sm:mb-4">Wortgruppen auswählen:</h3>
+        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-3 justify-center">
           {Object.keys(groups).map((group) => (
             <button
               key={group}
@@ -72,17 +73,17 @@ const WordEmbeddingViz: React.FC<WordEmbeddingVizProps> = ({ embeddings, groups,
         
       </div>
 
-      <div className="bg-secondary-container p-6 rounded-lg">
+      <div className="bg-secondary-container p-3 mb-6 sm:p-4 lg:p-6 rounded-lg">
         <h3 className="text-xl font-semibold text-on-secondary-container mb-4 text-center">
           Worteinbettungen für ausgewählte Gruppen
         </h3>
         <ResponsiveContainer width="100%" height={500}>
           <ScatterChart
             margin={{
-              top: 40,
-              right: 80,
-              bottom: 40,
-              left: 40,
+              top: 20,
+              right: 40,
+              bottom: 20,
+              left: 5,
             }}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#E5E7EB" />

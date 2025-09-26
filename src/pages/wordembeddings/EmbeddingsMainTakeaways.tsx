@@ -7,8 +7,8 @@ export default function EmbeddingsMainTakeaways() {
     <section className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Key Takeaways */}
-        <h1 className="text-5xl font-bold text-center text-primary mb-6">
-          <div className="flex justify-center items-center gap-3">
+        <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">
+          <div className="flex justify-center items-center gap-3 break-words">
             <Book className="mr-3 h-7 w-7" />
             <span className="text-5xl font-bold text-center text-primary break-words">
               Zusammenfassung

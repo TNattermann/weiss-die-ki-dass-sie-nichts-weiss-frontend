@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Tilde from "../../components/Tilde";
+import Bit from "../../components/Wissensbit";
 
 const notes = [
   {
@@ -77,16 +78,20 @@ export default function AttentionIntroduction() {
               näher beleuchten. Das Ziel ist es, den einfachen Satz auf der
               rechten Seite zu vervollständigen.
             </p>
-            <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
-              <p className="text-textMedium font-medium">
-                Die Teile eines großen Sprachmodells wie ChatGPT, die für die
-                Aufmerksamkeit zuständig sind, werden oft als{" "}
-                <strong className="text-primary">
-                  Aufmerksamkeits- oder Attention-Block
-                </strong>{" "}
-                bezeichnet.
-              </p>
-            </div>
+            <Bit
+              id={1}
+              title="Attention-Block"
+              content={
+                <>
+                  Die Teile eines großen Sprachmodells wie ChatGPT, die für die
+                  Aufmerksamkeit zuständig sind, werden oft als{" "}
+                  <strong className="text-primary">
+                    Aufmerksamkeits- oder Attention-Block
+                  </strong>{" "}
+                  bezeichnet.
+                </>
+              }
+            ></Bit>
           </div>
           <div className="p-2 rounded-xl">
             <h3 className="text-primary text-xl font-semibold text-textDark mb-4">
