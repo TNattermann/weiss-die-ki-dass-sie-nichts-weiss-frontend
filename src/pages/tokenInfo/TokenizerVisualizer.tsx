@@ -77,7 +77,7 @@ export default function TokenizerVisualizer() {
     <section className="py-16 px-6" id="visualizer">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-center text-primary mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-6">
             Tokenisierung ausprobieren
           </h1>
           <p className="text-xl text-text-normal max-w-3xl mx-auto leading-relaxed">

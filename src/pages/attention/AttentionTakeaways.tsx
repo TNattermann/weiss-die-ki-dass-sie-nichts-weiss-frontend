@@ -10,7 +10,7 @@ export default function AttentionTakeaways() {
         <h1 className="text-5xl font-bold text-center text-primary mb-6">
           <div className="flex justify-center items-center gap-3">
             <Book className="mr-3 h-7 w-7" />
-            <span className="text-5xl font-bold text-center text-primary break-words">
+            <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary break-words">
               Wichtige Erkenntnisse
             </span>
           </div>
@@ -38,28 +38,13 @@ export default function AttentionTakeaways() {
         </div>
 
         {/* Navigation */}
-        <div className="mt-12 flex justify-center space-x-6">
-          {/* Zurück zu WE */}
-          <Link
-            to="/wordembeddings"
-            className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
-          >
-            <ArrowLeft className="text-on-primary-container mr-2 h-5 w-5" />
-            Zurück im Lernpfad
-          </Link>
-          {/* Home */}
-          <Link
-            to="/"
-            className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
-          >
-            Startseite
-          </Link>
+        <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
           {/* Lernpfad 2 */}
           <Link
             to="/modellgleichung"
-            className="inline-flex items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
+            className="w-full sm:w-auto text-center inline-flex justify-center items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-md"
           >
-            Weiter zu Lernpfad 2
+            Weiter im Lernpfad
             <ArrowRight className="text-on-primary-container ml-2 h-5 w-5" />
           </Link>
         </div>

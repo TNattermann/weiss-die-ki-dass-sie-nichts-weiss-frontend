@@ -4,10 +4,7 @@ import { bits } from "../../components/Wissensbit";
 
 export default function LearningBackprop() {
   return (
-    <section
-      className="py-10 sm:py-14 md:py-16 px-4 sm:px-6 overflow-x-hidden"
-      id="backProp"
-    >
+    <section className="px-4 sm:px-6 overflow-x-hidden" id="backProp">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-4 sm:mb-6 break-words">

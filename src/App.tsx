@@ -12,6 +12,7 @@ import Impressum from "./pages/impressum/impressum.tsx";
 import Footer from "./components/Footer.tsx";
 import TemperaturePage from "./pages/Wahrscheinlichkeitstabellen/TemperaturePage.tsx";
 import NewsletterPage from "./pages/newsletter/NewsletterPage.tsx";
+import NotFoundPage from "./pages/notFound/NotFoundPage.tsx";
 import WissenPage from "./pages/Bits/WissenPage.tsx";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/download" element={<Download />} />
             <Route path="/newsletter" element={<NewsletterPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
         <Footer />

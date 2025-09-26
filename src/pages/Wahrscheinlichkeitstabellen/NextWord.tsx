@@ -159,7 +159,7 @@ export default function NextWord() {
   }, []);
   return (
     <div className="max-w-6xl mx-auto">
-      <h1 className="text-5xl font-bold text-center text-primary mb-6">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-6">
         Und das nächste Wort?
       </h1>
       <div className="mb-16">
