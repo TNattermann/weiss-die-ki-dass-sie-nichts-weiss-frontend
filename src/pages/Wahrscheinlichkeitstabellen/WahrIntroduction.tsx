@@ -121,7 +121,7 @@ export default function WahrIntroduction() {
                             </p>
                             <p className="text-lg text-text-normal mb-6 leading-relaxed">
                                 Für ein Sprachmodell umfasst das Glücksrad selbstverständlich nicht nur drei Wörter, sondern den gesamten Wortschatz. 
-                                Darin sind neben Wörtern auch Sonderzeichen wie der Punkt "."" enthalten, sodass das Modell Sätze korrekt beenden kann. 
+                                Darin sind neben Wörtern auch Sonderzeichen wie der Punkt "." enthalten, sodass das Modell Sätze korrekt beenden kann.
                                 Man kann sich nun vorstellen, dass das Modell für jede mögliche Fortsetzung entsprechende Wahrscheinlichkeitstabellen bereithält. 
                                 Auf diese Weise <Tilde />weiß das Sprachmodell bei jedem Schritt, welches Wort mit welcher Wahrscheinlichkeit als Nächstes folgt.
                             </p>
