@@ -1,9 +1,13 @@
 import Expandable from "../../components/Expandable";
 import Tilde from "../../components/Tilde";
+import { bits } from "../../components/Wissensbit";
 
 export default function LearningLoss() {
   return (
-    <section className="py-10 sm:py-14 md:py-16 px-4 sm:px-6 overflow-x-hidden" id="loss">
+    <section
+      className="py-10 sm:py-14 md:py-16 px-4 sm:px-6 overflow-x-hidden"
+      id="loss"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-4 sm:mb-6 break-words">
@@ -70,19 +74,18 @@ export default function LearningLoss() {
             />
           </div>
 
-          <div className="bg-primary/5 border-l-4 text-primary p-4 sm:p-6 rounded-r-lg mb-6">
-            <p className="text-text-normal font-medium break-words">
-              <strong className="text-primary">Zusammenfassung Loss: </strong>{" "}
-              Damit ein Modell <Tilde />
-              lernen kann, muss zuerst ermittelt werden, wie gut es aktuell ist.
-              Dazu wird die Abweichung zwischen Ist- und Sollzustand anhand des
-              Losses ermittelt. <br />
-              Wie die KI den Loss nutzt, um im folgenden Trainingsschritt einen
-              geringeren Loss zu erzeugen, schauen wir uns im nächsten Abschnitt
-              an. Hierbei kommt der{" "}
-              <strong className="text-primary">Gradientenabstieg</strong> ins
-              Spiel.
-            </p>
+          <div
+            className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+            id="attention2"
+          >
+            {bits
+              .filter((c) => c.id === "training1")
+              .map((c) => (
+                <section>
+                  <h2>{c.title}</h2>
+                  <p>{c.text}</p>
+                </section>
+              ))}
           </div>
 
           <Expandable title="Mehr zu Verlustfunktionen" className="mb-6">
@@ -123,6 +126,15 @@ export default function LearningLoss() {
               gesamten Prozesses und der Fragestellung gewählt werden.
             </p>
           </Expandable>
+          <div>
+            <p className="text-base sm:text-lg text-text-normal mb-6 leading-relaxed break-words">
+              Wie die KI den Loss nutzt, um im folgenden Trainingsschritt einen
+              geringeren Loss zu erzeugen, schauen wir uns im nächsten Abschnitt
+              an. Hierbei kommt der{" "}
+              <strong className="text-primary">Gradientenabstieg</strong> ins
+              Spiel.
+            </p>
+          </div>
         </div>
       </div>
     </section>

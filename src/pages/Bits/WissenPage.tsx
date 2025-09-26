@@ -10,42 +10,14 @@ function WissenPage() {
         </h1>
         <p className="text-lg text-text-normal mb-6 leading-relaxed">
           Hier werden die wichtigsten Erkenntnisse und Informationen von der
-          Webseite übersichtlich dargestelt. Wissenshäppchen - perfekt zum
-          nachschlagen.
+          Webseite zusammengefasst. Wissenshäppchen - perfekt zum Nachschlagen.
         </p>
-
-        {/* Attention Section */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-4">Attention</h2>
-          <Link to="/attention#attention1">
-            <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
-              {bits
-                .filter((c) => c.id === "attention1")
-                .map((c) => (
-                  <section key={c.id}>
-                    <h2>{c.title}</h2>
-                    <p>{c.text}</p>
-                  </section>
-                ))}
-            </div>
-          </Link>
-          <Link to="/attention#attention2">
-            <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
-              {bits
-                .filter((c) => c.id === "attention2")
-                .map((c) => (
-                  <section key={c.id}>
-                    <h2>{c.title}</h2>
-                    <p>{c.text}</p>
-                  </section>
-                ))}
-            </div>
-          </Link>
-        </div>
 
         {/* Temperature Section */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-4">Temperature</h2>
+          <h2 className="text-2xl font-bold text-primary mb-4">
+            Was passiert, wenn ich ChatGPT benutze?
+          </h2>
           <Link to="/temperature#temperature1">
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               {bits
@@ -86,7 +58,9 @@ function WissenPage() {
 
         {/* Tokens Section */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-4">Tokens</h2>
+          <h2 className="text-2xl font-bold text-primary mb-4">
+            Weiß ChatGPT, was eine Brombeere ist?
+          </h2>
           <Link to="/tokeninfo#tokens1">
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               {bits
@@ -127,7 +101,9 @@ function WissenPage() {
 
         {/* Embeddings Section */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-4">Embeddings</h2>
+          <h2 className="text-2xl font-bold text-primary mb-4">
+            Wieso sind die Texte von ChatGPT so gut?
+          </h2>
           <Link to="/wordembeddings#embeddings1">
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               {bits
@@ -154,10 +130,43 @@ function WissenPage() {
           </Link>
         </div>
 
+        {/* Attention Section */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-primary mb-4">
+            Versteht ChatGPT mich?
+          </h2>
+          <Link to="/attention#attention1">
+            <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
+              {bits
+                .filter((c) => c.id === "attention1")
+                .map((c) => (
+                  <section key={c.id}>
+                    <h2>{c.title}</h2>
+                    <p>{c.text}</p>
+                  </section>
+                ))}
+            </div>
+          </Link>
+          <Link to="/attention#attention2">
+            <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
+              {bits
+                .filter((c) => c.id === "attention2")
+                .map((c) => (
+                  <section key={c.id}>
+                    <h2>{c.title}</h2>
+                    <p>{c.text}</p>
+                  </section>
+                ))}
+            </div>
+          </Link>
+        </div>
+
         {/* Decisions Section */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-4">Decisions</h2>
-          <Link to="/attention#decisions1">
+          <h2 className="text-2xl font-bold text-primary mb-4">
+            Wie funktioniert das mit diesem Neuronalen Netzwerk?
+          </h2>
+          <Link to="/modellgleichung#decisions1">
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               {bits
                 .filter((c) => c.id === "decisions1")
@@ -169,22 +178,10 @@ function WissenPage() {
                 ))}
             </div>
           </Link>
-          <Link to="/attention#decisions2">
+          <Link to="/modellgleichung#decisions2">
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               {bits
                 .filter((c) => c.id === "decisions2")
-                .map((c) => (
-                  <section key={c.id}>
-                    <h2>{c.title}</h2>
-                    <p>{c.text}</p>
-                  </section>
-                ))}
-            </div>
-          </Link>
-          <Link to="/attention#decisions3">
-            <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
-              {bits
-                .filter((c) => c.id === "decisions3")
                 .map((c) => (
                   <section key={c.id}>
                     <h2>{c.title}</h2>
@@ -197,8 +194,10 @@ function WissenPage() {
 
         {/* Training Section */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-4">Training</h2>
-          <Link to="/learning#training1">
+          <h2 className="text-2xl font-bold text-primary mb-4">
+            Wie wurde ChatGPT gebaut?
+          </h2>
+          <Link to="/networkLearning#training1">
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               {bits
                 .filter((c) => c.id === "training1")
@@ -210,7 +209,7 @@ function WissenPage() {
                 ))}
             </div>
           </Link>
-          <Link to="/learning#training2">
+          <Link to="/networkLearning#training2">
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               {bits
                 .filter((c) => c.id === "training2")
@@ -222,7 +221,7 @@ function WissenPage() {
                 ))}
             </div>
           </Link>
-          <Link to="/learning#training3">
+          <Link to="/networkLearning#training3">
             <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
               {bits
                 .filter((c) => c.id === "training3")

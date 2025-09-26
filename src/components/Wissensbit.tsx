@@ -6,7 +6,7 @@ export const bits = [
     id: "attention1",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 1</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 9</h3>
       </>
     ),
     text: (
@@ -24,7 +24,7 @@ export const bits = [
     id: "attention2",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 2</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 10</h3>
       </>
     ),
     text: (
@@ -42,7 +42,7 @@ export const bits = [
     id: "temperature1",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Temperature 1</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 1</h3>
       </>
     ),
     text: (
@@ -58,7 +58,7 @@ export const bits = [
     id: "temperature2",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Temperature 2</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 2</h3>
       </>
     ),
     text: (
@@ -73,7 +73,7 @@ export const bits = [
     id: "temperature3",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Temperature 3</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 3</h3>
       </>
     ),
     text: (
@@ -88,7 +88,7 @@ export const bits = [
     id: "tokens1",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Tokens 1</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 4</h3>
       </>
     ),
     text: (
@@ -103,7 +103,7 @@ export const bits = [
     id: "tokens2",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Tokens 2</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 5</h3>
       </>
     ),
     text: (
@@ -119,7 +119,7 @@ export const bits = [
     id: "tokens3",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Tokens 3</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 6</h3>
       </>
     ),
     text: (
@@ -136,7 +136,7 @@ export const bits = [
     id: "embeddings1",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Embeddings 1</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 7</h3>
       </>
     ),
     text: (
@@ -152,7 +152,7 @@ export const bits = [
     id: "embeddings2",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Embeddings 2</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 8</h3>
       </>
     ),
     text: (
@@ -172,7 +172,7 @@ export const bits = [
     id: "decisions1",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Decisions 1</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 11</h3>
       </>
     ),
     text: (
@@ -187,7 +187,7 @@ export const bits = [
     id: "decisions2",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Decisions 2</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 12</h3>
       </>
     ),
     text: (
@@ -200,39 +200,52 @@ export const bits = [
     ),
   },
   {
-    id: "decisions3",
-    title: (
-      <>
-        <h3 className="font-semibold text-primary mb-2">Decisions 3</h3>
-      </>
-    ),
-    text: <>placeholder</>,
-  },
-  {
     id: "training1",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Training 1</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 13</h3>
       </>
     ),
-    text: <>placeholder</>,
+    text: (
+      <>
+        Damit ein Modell <Tilde />
+        lernen kann, muss zuerst ermittelt werden, wie gut es aktuell ist. Dazu
+        wird die Abweichung zwischen Ist- und Sollzustand anhand des Losses
+        ermittelt.
+      </>
+    ),
   },
   {
     id: "training2",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Training 2</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 14</h3>
       </>
     ),
-    text: <>placeholder</>,
+    text: (
+      <>
+        Das Modell passt seine Gewichte schrittweise an, um den Loss zunehmend
+        zu verringern. Diese Anpassungen sind der{" "}
+        <strong className="text-primary">
+          Kern des eigentlichen Lernprozesses
+        </strong>
+        .
+      </>
+    ),
   },
   {
     id: "training3",
     title: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Training 3</h3>
+        <h3 className="font-semibold text-primary mb-2">Wissenshäppchen 15</h3>
       </>
     ),
-    text: <>placeholder</>,
+    text: (
+      <>
+        Damit ein Modell <Tilde />
+        weiß, was es anpassen muss, gibt es den Loss von hinten nach vorne durch
+        das Netz und bestimmt dabei die Anpassungen aller Gewichte.
+      </>
+    ),
   },
 ];

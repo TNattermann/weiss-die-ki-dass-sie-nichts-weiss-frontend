@@ -1,9 +1,13 @@
 import Expandable from "../../components/Expandable";
 import Tilde from "../../components/Tilde";
+import { bits } from "../../components/Wissensbit";
 
 export default function LearningGraddesc() {
   return (
-    <section className="py-10 sm:py-14 md:py-16 px-4 sm:px-6 overflow-x-hidden" id="gradDesc">
+    <section
+      className="py-10 sm:py-14 md:py-16 px-4 sm:px-6 overflow-x-hidden"
+      id="gradDesc"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-4 sm:mb-6 break-words">
@@ -73,23 +77,19 @@ export default function LearningGraddesc() {
             />
           </div>
 
-          <div className="bg-primary/5 border-l-4 text-primary p-4 sm:p-6 rounded-r-lg mb-6">
-            <p className="text-text-normal font-medium break-words">
-              <strong className="text-primary">
-                Zusammenfassung Gradientenabstieg:{" "}
-              </strong>{" "}
-              Das Modell passt seine Gewichte schrittweise an, um den Loss
-              zunehmend zu verringern. Diese Anpassungen sind der{" "}
-              <strong className="text-primary">
-                Kern des eigentlichen Lernprozesses
-              </strong>
-              . Woher das Modell weiß, welche Gewichte wie stark angepasst
-              werden müssen, wird mit der{" "}
-              <strong className="text-primary">Backpropagation</strong>{" "}
-              bestimmt.
-            </p>
+          <div
+            className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+            id="attention2"
+          >
+            {bits
+              .filter((c) => c.id === "training2")
+              .map((c) => (
+                <section>
+                  <h2>{c.title}</h2>
+                  <p>{c.text}</p>
+                </section>
+              ))}
           </div>
-
           <Expandable title="Mehr zum Gradientenabstieg" className="mb-6">
             <p className="text-text-normal leading-relaxed mb-4 break-words">
               Um den Loss hinabsteigen zu können, müssen für alle Gewichte die{" "}
@@ -113,15 +113,20 @@ export default function LearningGraddesc() {
             <p className="text-text-normal leading-relaxed break-words">
               Zudem ist zu beachten, dass die KI über diese schrittweise
               Annäherung auf{" "}
-              <strong className="text-primary">kurze Sicht</strong>{" "}
-              nicht garantiert eine optimale Lösung findet. Man kann sich zum
-              Beispiel vorstellen, dass die KI sogar zuerst den Gradienten
-              hinauf laufen sollte, um anschließend einen noch steileren Abstieg
-              zu finden. Bei einem solchen Verfahren, das eine optimale Lösung
-              nicht garantieren kann, sprechen wir auch von einer
+              <strong className="text-primary">kurze Sicht</strong> nicht
+              garantiert eine optimale Lösung findet. Man kann sich zum Beispiel
+              vorstellen, dass die KI sogar zuerst den Gradienten hinauf laufen
+              sollte, um anschließend einen noch steileren Abstieg zu finden.
+              Bei einem solchen Verfahren, das eine optimale Lösung nicht
+              garantieren kann, sprechen wir auch von einer
               <strong className="text-primary"> Heuristik</strong>.
             </p>
           </Expandable>
+          <p className="text-base sm:text-lg text-text-normal mb-6 leading-relaxed break-words">
+            Woher das Modell weiß, welche Gewichte wie stark angepasst werden
+            müssen, wird mit der{" "}
+            <strong className="text-primary">Backpropagation</strong> bestimmt.
+          </p>
         </div>
       </div>
     </section>

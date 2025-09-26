@@ -1,9 +1,13 @@
 import Expandable from "../../components/Expandable";
 import Tilde from "../../components/Tilde";
+import { bits } from "../../components/Wissensbit";
 
 export default function LearningBackprop() {
   return (
-    <section className="py-10 sm:py-14 md:py-16 px-4 sm:px-6 overflow-x-hidden" id="backProp">
+    <section
+      className="py-10 sm:py-14 md:py-16 px-4 sm:px-6 overflow-x-hidden"
+      id="backProp"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-4 sm:mb-6 break-words">
@@ -47,8 +51,8 @@ export default function LearningBackprop() {
             jedes Gewicht der KI die Stärke der individuellen Anpassung
             ermittelt werden. <br />
             Zum Glück hilft uns hier aber die Mathematik: Mithilfe der{" "}
-            <strong className="text-primary">Backpropagation</strong>
-            {" "}kann dies gelöst werden, indem der Loss vom{" "}
+            <strong className="text-primary">Backpropagation</strong> kann dies
+            gelöst werden, indem der Loss vom{" "}
             <strong className="text-primary">Ende</strong> des Netzes aus
             (hinten, also back) nach{" "}
             <strong className="text-primary">vorne</strong> weitergeleitet
@@ -87,29 +91,29 @@ export default function LearningBackprop() {
             />
           </div>
 
-          <div className="bg-primary/5 border-l-4 text-primary p-4 sm:p-6 rounded-r-lg mb-6">
-            <p className="text-text-normal font-medium break-words">
-              <strong className="text-primary">
-                Zusammenfassung Backpropagation:{" "}
-              </strong>{" "}
-              Damit ein Modell <Tilde />
-              weiß, was es anpassen muss, gibt es den Loss von hinten nach vorne
-              durch das Netz und bestimmt dabei die Anpassungen aller Gewichte.
-              Anschließend können diese Anpassungen über den{" "}
-              <strong className="text-primary">Gradientenabstieg</strong>{" "}
-              vorgenommen werden und der nächste Trainingszyklus kann beginnen.
-            </p>
+          <div
+            className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+            id="attention2"
+          >
+            {bits
+              .filter((c) => c.id === "training3")
+              .map((c) => (
+                <section>
+                  <h2>{c.title}</h2>
+                  <p>{c.text}</p>
+                </section>
+              ))}
           </div>
 
           <Expandable title="Mehr zur Backpropagation" className="mb-6">
             <p className="text-text-normal leading-relaxed mb-4 break-words">
               Eine besondere Herausforderung bei der Backpropagation liegt in
-              der <strong className="text-primary">Verschachtelung</strong>
-              {" "}der einzelnen Gewichte. Den isolierten Einfluss eines Gewichts auf
-              den Loss zu bestimmen ist gar nicht so einfach, da sich die
-              Gewichte, wie wir im vorherigen Abschnitt gesehen haben,
-              gegenseitig beeinflussen. Vereinfacht gesagt erfolgt deshalb auch
-              die Anpassung der Gewichte{" "}
+              der <strong className="text-primary">Verschachtelung</strong> der
+              einzelnen Gewichte. Den isolierten Einfluss eines Gewichts auf den
+              Loss zu bestimmen ist gar nicht so einfach, da sich die Gewichte,
+              wie wir im vorherigen Abschnitt gesehen haben, gegenseitig
+              beeinflussen. Vereinfacht gesagt erfolgt deshalb auch die
+              Anpassung der Gewichte{" "}
               <strong className="text-primary">von hinten nach vorne</strong>,
               um diese Abhängigkeiten von Schicht zu Schicht des Netzes zu
               berücksichtigen.
@@ -135,6 +139,11 @@ export default function LearningBackprop() {
               kann!
             </p>
           </Expandable>
+          <p className="text-text-normal font-medium break-words">
+            Anschließend können diese Anpassungen über den{" "}
+            <strong className="text-primary">Gradientenabstieg</strong>{" "}
+            vorgenommen werden und der nächste Trainingszyklus kann beginnen.
+          </p>
         </div>
       </div>
     </section>
