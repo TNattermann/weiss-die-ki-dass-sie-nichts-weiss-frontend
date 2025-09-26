@@ -73,7 +73,7 @@ export default function AttentionIntroduction() {
               vorhersagt. Nun gibt es Wörter, die für so ein Ratespiel
               relevanter sind, und welche, die man kaum beachten muss. Dort
               setzt das Konzept der{" "}
-              <strong className="text-primary">Aufmerksameit</strong> an -
+              <strong className="text-primary">Aufmerksamkeit</strong> an -
               dadurch lernt das Sprachmodell, welches Wort für die Ausgabe
               relevant ist, und welches nicht. Mit folgendem Beispiel möchten
               wir dieses Konzept näher beleuchten. In wie weit dieses Konzept
