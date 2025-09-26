@@ -22,7 +22,7 @@ export default function WahrIntroduction() {
                         Zusammenhang sie mit der Temperatur stehen, erfahren Sie auf dieser Seite. 
                     </p>
                 </div>
-                <h1 className="text-5xl font-bold text-center text-primary mb-6 break-long-words" >Wie nutzt ChatGPT <shy>Wahrscheinlichkeitstabellen?</shy></h1>
+                <h1 className="text-5xl font-bold text-center text-primary mb-6 break-long-words" >Wie nutzt ChatGPT Wahrscheinlichkeitstabellen?</h1>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                     <div className="p-8 rounded-xl">
                         <p className="text-lg text-text-normal mb-6 leading-relaxed">
