@@ -16,7 +16,7 @@ export default function WahrIntroduction() {
                     <p className="text-lg text-text-normal mb-6 leading-relaxed">
                         Sprachmodelle (häufig auch Large Language Modells (LLMs) genannt) sind Systeme wie ChatGPT,
                         die einem einen meist grammatikalisch korrekten und zumindest sinnvoll klingenden Text generieren.
-                        Diese Texte werden generiert, indem Ihnen ein unvollständiger Text (ein Prompt) gegeben wird
+                        Diese Texte werden generiert, indem ihnen ein unvollständiger Text (ein Prompt) gegeben wird
                         und sie dann so lange das nächste Wort in diesem Satz generieren, bis ein vollständiger Text generiert wird.
                         Dies erfolgt mithilfe von Wahrscheinlichkeitstabellen. Wie diese Tabellen angewendet werden und in welchem 
                         Zusammenhang sie mit der Temperatur stehen, erfahren Sie auf dieser Seite. 
