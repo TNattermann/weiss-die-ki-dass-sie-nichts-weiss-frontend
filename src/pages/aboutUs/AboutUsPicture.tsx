@@ -11,13 +11,15 @@ export default function AboutUsPicture() {
       </h1>
 
       <div>
-        <img
-          src={"img/Gruppenbild.png"}
-          alt={"Gruppenbild"}
-          className="w-full h-150 rounded-2xl flex items-center justify-center"
-        />
+        <div className="flex justify-center">
+          <img
+            src={"img/Gruppenbild.jpeg"}
+            alt={"Gruppenbild"}
+            className="w-240 h-auto rounded-2xl flex items-center justify-center"
+          />
+        </div>
         <p className="mt-2 text-sm text-text-normal">
-          v.l.n.r. Cameron, Natalia ...
+          v.l.n.r. Darko, Thorben, Natalia, Milli, Nico, Yannik, Cameron
         </p>
       </div>
     </div>

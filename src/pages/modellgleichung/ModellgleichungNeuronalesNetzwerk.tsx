@@ -105,7 +105,7 @@ function VideoPage() {
           <div className="w-full bg-black md:bg-black/100 rounded-xl overflow-hidden shadow-lg">
             <img
               src={images[selectedDigit]}
-              alt={`Neuronales Netzwerk Screenshot Erkenne die ${selectedDigit}`}
+              alt={`Neuronales Netzwerk: Erkenne die ${selectedDigit}`}
               className="w-full h-auto md:h-[500px] object-contain md:object-cover"
             />
           </div>

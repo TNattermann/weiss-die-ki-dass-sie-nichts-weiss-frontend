@@ -25,9 +25,10 @@ export default function ModellgleichungIntro() {
             sind eigentlich nur eine Ansammlung von mathematischen Gleichungen,
             die in Reihen hintereinander angeordnet sind. Jede Gleichung kann
             als ein Neuron interpretiert werden, das eine{" "}
-            <b>Ja-Nein-Entscheidung</b> an nachfolgende Neuronen weitergibt.
-            Aber wie lässt sich damit erklären, wie ein Modell eine Entscheidung
-            trifft? Diese Frage wird in dem folgenden Abschnitt beantwortet.
+            <b>Ja-Nein-Entscheidung</b> an nachfolgende Neuronen weitergibt. Wie
+            ein Neuronales Netzwerk aufgebaut ist und wie es Entscheidungen{" "}
+            <Tilde />
+            trifft, wird im folgenden Abschnitt gezeigt.
           </p>
         </div>
         <div className="items-center mb-16">

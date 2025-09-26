@@ -31,14 +31,6 @@ function Footer() {
                   Lernpfad 2: Was kann ein Modell des maschinellen Lernens?
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="wissenshäppchen"
-                  className="hover:text-white transition-colors"
-                >
-                  Wissenshäppchen
-                </Link>
-              </li>
             </ul>
           </div>
           <div>
