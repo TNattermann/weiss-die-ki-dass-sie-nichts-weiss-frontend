@@ -1,4 +1,5 @@
 import Tilde from "../../components/Tilde";
+import { bits } from "../../components/Wissensbit";
 
 export default function ModellgleichunGleichung() {
   return (
@@ -53,14 +54,18 @@ export default function ModellgleichunGleichung() {
                 Neuron, das den höchsten berechneten Wert hat.
               </p>
             </div>
-            <div className="bg-primary/5 border-l-4 text-primary p-4 md:p-6 rounded-r-lg mb-4">
-              <p className="text-textMedium font-medium text-base md:text-lg">
-                In einem neuronalen Netzwerk wird also nicht nur eine einzelne
-                Berechnung durchgeführt, auf deren Basis dann die
-                Ja-Nein-Entscheidung getroffen wird. Stattdessen werden viele
-                Gleichungen berechnet, die am Ende zu der Ja-Nein-Entscheidung
-                führen.
-              </p>
+            <div
+              className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+              id="attention2"
+            >
+              {bits
+                .filter((c) => c.id === "decisions2")
+                .map((c) => (
+                  <section>
+                    <h2>{c.title}</h2>
+                    <p>{c.text}</p>
+                  </section>
+                ))}
             </div>
           </>
         </div>

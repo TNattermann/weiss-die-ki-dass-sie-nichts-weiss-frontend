@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Tilde from "../../components/Tilde";
+import { bits } from "../../components/Wissensbit";
 
 function VideoPage() {
   const [isOpenInput, setIsOpenInput] = useState(false);
@@ -62,7 +63,7 @@ function VideoPage() {
       </div>
 
       {/* Breiterer Container für Bild und Text */}
-      <div className="grid grid-cols-1 md:grid-cols-8 gap-4 sm:gap-6 md:gap-8 items-start w-full max-w-6xl">
+      <div className="grid grid-cols-1 md:grid-cols-8 gap-4 sm:gap-6 md:gap-8 items-start w-full max-w-6xl mb-6">
         <div className="md:col-span-2 text-left md:text-center text-text-normal">
           <h2 className="font-semibold mb-2 text-lg sm:text-xl">Input Layer</h2>
           <p className="text-text-normal leading-relaxed">
@@ -181,6 +182,19 @@ function VideoPage() {
             )}
           </div>
         </div>
+      </div>
+      <div
+        className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+        id="decisions1"
+      >
+        {bits
+          .filter((c) => c.id === "decisions1")
+          .map((c) => (
+            <section>
+              <h2>{c.title}</h2>
+              <p>{c.text}</p>
+            </section>
+          ))}
       </div>
     </div>
   );

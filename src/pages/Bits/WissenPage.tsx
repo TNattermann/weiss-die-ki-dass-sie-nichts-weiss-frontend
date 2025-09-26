@@ -152,18 +152,6 @@ function WissenPage() {
                 ))}
             </div>
           </Link>
-          <Link to="/wordembeddings#embeddings3">
-            <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
-              {bits
-                .filter((c) => c.id === "embeddings3")
-                .map((c) => (
-                  <section key={c.id}>
-                    <h2>{c.title}</h2>
-                    <p>{c.text}</p>
-                  </section>
-                ))}
-            </div>
-          </Link>
         </div>
 
         {/* Decisions Section */}

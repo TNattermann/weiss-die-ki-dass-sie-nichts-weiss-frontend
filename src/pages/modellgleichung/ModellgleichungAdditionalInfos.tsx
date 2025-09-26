@@ -9,7 +9,7 @@ export default function ModellgleichungAdditionalInfos() {
       title: "Gewichte",
       description: (
         <>
-          "Um das Abwägen darzustellen, nutzt ein Neuronales Netzwerk sogenannte
+          Um das Abwägen darzustellen, nutzt ein Neuronales Netzwerk sogenannte
           Gewichte (auch Weights genannt). Jede Verbindung zwischen zwei
           Neuronen wird mit einem Gewicht versehen, das darstellt, wie wichtig
           oder unwichtig diese Verbindung ist. Der Input, also beispielsweise
@@ -21,7 +21,7 @@ export default function ModellgleichungAdditionalInfos() {
           Berechnungen <Tilde />
           trifft das Modell letztlich die Entscheidung. Die Gewichte bleiben
           nicht dauerhaft gleich, sondern werden im Training angepasst. Mehr
-          darüber erfahren Sie im nächsten Kapitel. ",
+          darüber erfahren Sie im nächsten Kapitel.
         </>
       ),
     },

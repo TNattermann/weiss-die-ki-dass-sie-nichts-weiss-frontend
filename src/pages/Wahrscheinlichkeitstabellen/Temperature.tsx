@@ -1,204 +1,227 @@
-import {useEffect} from "react";
-import { useState } from 'react';
+import { useEffect } from "react";
+import { useState } from "react";
 import SimpleRad from "../../components/simpleRad.tsx";
+import { bits } from "../../components/Wissensbit.tsx";
 
-function adjustRange (range: number, minimrange : number, maximrange: number){
-    let adjustedRange: number;
-    /*if (range == 0){
+function adjustRange(range: number, minimrange: number, maximrange: number) {
+  let adjustedRange: number;
+  /*if (range == 0){
         adjustedRange = 1;
     }
-    else*/ if(range <= 0){
-        adjustedRange = (range - minimrange) / Math.abs(minimrange); //a range of 0 results in an adjustedRange of 1
-    }
-    else {
-        adjustedRange = (Number(range) + Number(maximrange)) / Math.abs(maximrange); //no idea why this is necessary
-    }
+    else*/ if (range <= 0) {
+    adjustedRange = (range - minimrange) / Math.abs(minimrange); //a range of 0 results in an adjustedRange of 1
+  } else {
+    adjustedRange = (Number(range) + Number(maximrange)) / Math.abs(maximrange); //no idea why this is necessary
+  }
 
-    return(adjustedRange);
+  return adjustedRange;
 }
 
-function applytemperature (wordpercentlist : [string, number][], temperature : number){
-    let newlist : [string, number][];
-    let newvalue : number;
+function applytemperature(
+  wordpercentlist: [string, number][],
+  temperature: number
+) {
+  let newlist: [string, number][];
+  let newvalue: number;
 
-    //console.log(wordpercentlist);
+  //console.log(wordpercentlist);
 
-    if (temperature == 0){
-        newlist = [];
-        for (let i=0; i < wordpercentlist.length; i++){
-            if (i == 0){  //muss eigentlich erst nach dem maximum suchen, aber nehme mal implizit an, dass das gegeben ist
-                newvalue = wordpercentlist[i][1];
-            }
-            else {
-                newvalue = 0;
-            }
-            newlist.push([wordpercentlist[i][0], newvalue]);
-        }
-
+  if (temperature == 0) {
+    newlist = [];
+    for (let i = 0; i < wordpercentlist.length; i++) {
+      if (i == 0) {
+        //muss eigentlich erst nach dem maximum suchen, aber nehme mal implizit an, dass das gegeben ist
+        newvalue = wordpercentlist[i][1];
+      } else {
+        newvalue = 0;
+      }
+      newlist.push([wordpercentlist[i][0], newvalue]);
     }
-    else {
-        let adjustedTemperature: number;
-        if (temperature <= 1) {
-            adjustedTemperature = temperature; // For temperatures <= 1
-        } 
-        else {
-            // Linear scaling between 1 and 2
-            adjustedTemperature = ((temperature - 1) / (2 - 1)) * (10 - 1) + 1; // Scale to [1, 100]
-        }
-
-        const explist : [string, number][] = wordpercentlist.map( (wordpercent) => 
-            [wordpercent[0], Math.exp( wordpercent[1]  / adjustedTemperature * 3)]
-        );
-        const expsum = explist.reduce((accumulator, wordexp) => accumulator + wordexp[1], 0);
-        newlist = explist.map( (wordexp) => [wordexp[0], wordexp[1] / expsum]);
+  } else {
+    let adjustedTemperature: number;
+    if (temperature <= 1) {
+      adjustedTemperature = temperature; // For temperatures <= 1
+    } else {
+      // Linear scaling between 1 and 2
+      adjustedTemperature = ((temperature - 1) / (2 - 1)) * (10 - 1) + 1; // Scale to [1, 100]
     }
 
-    
-        
-        
-    //console.log(newlist);
+    const explist: [string, number][] = wordpercentlist.map((wordpercent) => [
+      wordpercent[0],
+      Math.exp((wordpercent[1] / adjustedTemperature) * 3),
+    ]);
+    const expsum = explist.reduce(
+      (accumulator, wordexp) => accumulator + wordexp[1],
+      0
+    );
+    newlist = explist.map((wordexp) => [wordexp[0], wordexp[1] / expsum]);
+  }
 
-    return (newlist);
+  //console.log(newlist);
 
+  return newlist;
 }
 
 export default function Temperature() {
-    const minrange = -50;
-    const maxrange = 50;
-    const [rangeValue, setRangeValue] = useState(0); //update this to 0 again !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    const [rangeAdjustedValue, setRangeAdjustedValue] = useState(adjustRange(rangeValue, minrange, maxrange));
+  const minrange = -50;
+  const maxrange = 50;
+  const [rangeValue, setRangeValue] = useState(0); //update this to 0 again !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  const [rangeAdjustedValue, setRangeAdjustedValue] = useState(
+    adjustRange(rangeValue, minrange, maxrange)
+  );
 
-    const handleRangeChange = (event : any) => {
-        setRangeValue(event.target.value); // Update state with the current value
-        setRangeAdjustedValue(adjustRange(event.target.value, minrange, maxrange));
-    };
+  const handleRangeChange = (event: any) => {
+    setRangeValue(event.target.value); // Update state with the current value
+    setRangeAdjustedValue(adjustRange(event.target.value, minrange, maxrange));
+  };
 
-    const [activeExample, setActiveExample] = useState("A");
-    const temperatureExamples = [
-        {
-            id: "A",
-            label: "A.",
-            description: "Temperatur = 0",
-        },
-        {
-            id: "B",
-            label: "B.",
-            description: "Temperatur = 1",
-        },
-        {
-            id: "C",
-            label: "C.",
-            description: "Temperatur = 2",
-        },
-    ] as const;
+  const [activeExample, setActiveExample] = useState("A");
+  const temperatureExamples = [
+    {
+      id: "A",
+      label: "A.",
+      description: "Temperatur = 0",
+    },
+    {
+      id: "B",
+      label: "B.",
+      description: "Temperatur = 1",
+    },
+    {
+      id: "C",
+      label: "C.",
+      description: "Temperatur = 2",
+    },
+  ] as const;
 
-    const temperaturewheels = {
-        A: {
-            wordratio: [["schön", 1]]
-            
-        },
-        B: {
-            
-            wordratio: [["schön", 0.45], ["warm", 0.3], ["kalt", 0.25]]
-        },
-        C: {
-            
-            wordratio: [["schön", 33], ["warm", 33], ["kalt", 33]] //Wird später zu Prozent zusammengekürzt. Benutze hier ganze Zahlen um floating point error zu vermeiden.
+  const temperaturewheels = {
+    A: {
+      wordratio: [["schön", 1]],
+    },
+    B: {
+      wordratio: [
+        ["schön", 0.45],
+        ["warm", 0.3],
+        ["kalt", 0.25],
+      ],
+    },
+    C: {
+      wordratio: [
+        ["schön", 33],
+        ["warm", 33],
+        ["kalt", 33],
+      ], //Wird später zu Prozent zusammengekürzt. Benutze hier ganze Zahlen um floating point error zu vermeiden.
+    },
+  };
 
-        }
-    };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return (
+    <div className="max-w-6xl mx-auto">
+      <h1 className="text-5xl font-bold text-center text-primary mb-6">
+        Was hat das mit Temperatur zu tun?
+      </h1>
+      <div className="mb-16">
+        <div>
+          <p className="text-lg text-text-normal mb-6 leading-relaxed">
+            Wir haben jetzt schon zwei verschiedene Implementierungsmethoden
+            gesehen, wie wir das Wort anhand der Wahrscheinlichkeitstabelle
+            auswählen. Die Methode, bei der wir einfach nur das
+            wahrscheinlichste Wort wählen (<b>A.</b>), und die, bei der wir auf
+            unserem unveränderten Glücksrad drehen (<b>B.</b>). Zusätzlich lässt
+            sich die Variation erhöhen, indem das Glücksrad so angepasst wird,
+            dass die Wahrscheinlichkeiten der Wörter einander stärker
+            angeglichen werden.
+          </p>
 
-    
+          <p className="text-lg text-text-normal mb-6 leading-relaxed">
+            Diese Anpassung der Wahrscheinlichkeitsverteilung wird als
+            Temperatur bezeichnet. Eine feste Temperatur führt bei identischer
+            Ausgangslage stets zum gleichen Ergebnis. Mit steigender Temperatur
+            nähern sich die Wahrscheinlichkeiten der möglichen Wörter einander
+            an, sodass die Auswahl zunehmend gleichverteilt erfolgt.
+          </p>
+        </div>
+      </div>
 
-
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-    return (
-        
-            <div className="max-w-6xl mx-auto">
-                <h1 className="text-5xl font-bold text-center text-primary mb-6">Was hat das mit Temperatur zu tun?</h1>
-                <div className="mb-16">
-                    <div>
-                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
-
-                        Wir haben jetzt schon zwei verschiedene Implementierungsmethoden gesehen, wie wir das Wort anhand der
-                        Wahrscheinlichkeitstabelle auswählen. Die Methode, bei der wir einfach nur das wahrscheinlichste Wort wählen (<b>A.</b>),
-                        und die, bei der wir auf unserem unveränderten Glücksrad drehen (<b>B.</b>). 
-                        Zusätzlich lässt sich die Variation erhöhen, indem das Glücksrad so angepasst wird, 
-                        dass die Wahrscheinlichkeiten der Wörter einander stärker angeglichen werden.
-                        </p>
-
-                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
-                            Diese Anpassung der Wahrscheinlichkeitsverteilung wird als Temperatur bezeichnet. 
-                            Eine feste Temperatur führt bei identischer Ausgangslage stets zum gleichen Ergebnis. 
-                            Mit steigender Temperatur nähern sich die Wahrscheinlichkeiten der möglichen Wörter einander an, 
-                            sodass die Auswahl zunehmend gleichverteilt erfolgt.
-                        </p>
-                    </div>
-                </div>
-
-                <div>
-                <div className="p-8 rounded-xl">
-                    <div className="flex flex-wrap justify-center gap-6 mb-8">
-                {temperatureExamples.map((t) => {
-                        const isActive = activeExample === t.id;
-                        return (
-                            <button
-                                key={t.id}
-                                onClick={() => setActiveExample(t.id as typeof activeExample)}
-                                className={`p-6 rounded-xl text-center transition-all duration-300 transform hover:scale-105
-          ${isActive
-                                    ? "bg-primary-container-selected text-on-primary-container-selected"
-                                    : "bg-primary-container text-on-primary-container"}
+      <div>
+        <div className="p-8 rounded-xl">
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
+            {temperatureExamples.map((t) => {
+              const isActive = activeExample === t.id;
+              return (
+                <button
+                  key={t.id}
+                  onClick={() => setActiveExample(t.id as typeof activeExample)}
+                  className={`p-6 rounded-xl text-center transition-all duration-300 transform hover:scale-105
+          ${
+            isActive
+              ? "bg-primary-container-selected text-on-primary-container-selected"
+              : "bg-primary-container text-on-primary-container"
+          }
         `}
-                            >
-
-                                <h3 className="font-bold text-lg mb-2">{t.label} {t.description}</h3>
-                            </button>
-                        );
-                    })}
-                    </div>
-                    {Object.entries(temperaturewheels).map(([key, example]) => (
-                            <div
-                                key={key}
-                                className={`${activeExample === key ? "block" : "hidden"}`}
-                            >
-                                
-                                
-                                
-                                <SimpleRad wordpercentlist={example.wordratio}
-                                />
-                                    
-                            
-                            </div>
-                        ))}
-                        
-
-                        <p className="text-lg text-text-normal mb-6 leading-relaxed">
-                        Mit diesem Regler könne Sie die Temperatur auch selbst einstellen:
-                        </p>
-
-                        <div className="flex flex-col items-center">
-                        <h3 className="text-primary text-xl font-semibold text-textDark mb-4">D. Temperatur = {rangeAdjustedValue}</h3> 
-                        <input
-                            type="range"
-                            min={minrange}
-                            max={maxrange}
-                            value={rangeValue} // Controlled input
-                            onChange={handleRangeChange} // Update state on change
-                        />
-                        </div>
-                        <div className="flex justify-center">
-                            <SimpleRad wordpercentlist={applytemperature([["schön", 0.45 ], ["warm", 0.3], ["kalt", 0.25]],  rangeAdjustedValue)}
-                            />
-                        </div>
-                </div>    
-                </div>
-                
-
+                >
+                  <h3 className="font-bold text-lg mb-2">
+                    {t.label} {t.description}
+                  </h3>
+                </button>
+              );
+            })}
+          </div>
+          {Object.entries(temperaturewheels).map(([key, example]) => (
+            <div
+              key={key}
+              className={`${activeExample === key ? "block" : "hidden"}`}
+            >
+              <SimpleRad wordpercentlist={example.wordratio} />
             </div>
-        
-    );
+          ))}
+
+          <p className="text-lg text-text-normal mb-6 leading-relaxed">
+            Mit diesem Regler könne Sie die Temperatur auch selbst einstellen:
+          </p>
+
+          <div className="flex flex-col items-center">
+            <h3 className="text-primary text-xl font-semibold text-textDark mb-4">
+              D. Temperatur = {rangeAdjustedValue}
+            </h3>
+            <input
+              type="range"
+              min={minrange}
+              max={maxrange}
+              value={rangeValue} // Controlled input
+              onChange={handleRangeChange} // Update state on change
+            />
+          </div>
+          <div className="flex justify-center">
+            <SimpleRad
+              wordpercentlist={applytemperature(
+                [
+                  ["schön", 0.45],
+                  ["warm", 0.3],
+                  ["kalt", 0.25],
+                ],
+                rangeAdjustedValue
+              )}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
+        id="attention2"
+      >
+        {bits
+          .filter((c) => c.id === "temperature3")
+          .map((c) => (
+            <section>
+              <h2>{c.title}</h2>
+              <p>{c.text}</p>
+            </section>
+          ))}
+      </div>
+    </div>
+  );
 }

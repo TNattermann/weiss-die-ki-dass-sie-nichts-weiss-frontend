@@ -45,7 +45,14 @@ export const bits = [
         <h3 className="font-semibold text-primary mb-2">Temperature 1</h3>
       </>
     ),
-    text: <>placeholder</>,
+    text: (
+      <>
+        Sprachmodelle haben ein spezielles Token, wodurch sie ~wissen, das der
+        Text fertig ist und kein weiteres Wort generiert werden soll.
+        Normalerweise ist dieses Token unsichtbar, in den Beispielen hier, wird
+        der Punkt benutzt.
+      </>
+    ),
   },
   {
     id: "temperature2",
@@ -54,7 +61,13 @@ export const bits = [
         <h3 className="font-semibold text-primary mb-2">Temperature 2</h3>
       </>
     ),
-    text: <>placeholder</>,
+    text: (
+      <>
+        Das Modell wählt immer ein Wort das wahrscheinlich zum bestehenden Text
+        passt, und hängt dies an. Dann wird dieser Prozess mit dem bestehenden
+        Text plus Anhang wiederholt, bis der Text fertig ist.
+      </>
+    ),
   },
   {
     id: "temperature3",
@@ -63,7 +76,13 @@ export const bits = [
         <h3 className="font-semibold text-primary mb-2">Temperature 3</h3>
       </>
     ),
-    text: <>placeholder</>,
+    text: (
+      <>
+        ChatGPT ist nicht intelligent, aber mit der richtig gewählten Temperatur
+        kann es intelligente Sätze bilden. Die Temperatur ist dabei ein Faktor
+        der die Wahrscheinlichkeit des nächsten gewählten Wortes beeinflusst.
+      </>
+    ),
   },
   {
     id: "tokens1",
@@ -120,7 +139,14 @@ export const bits = [
         <h3 className="font-semibold text-primary mb-2">Embeddings 1</h3>
       </>
     ),
-    text: <>placeholder</>,
+    text: (
+      <>
+        Der Computer weiß nicht, was die „Sonne“ wirklich ist. Er <Tilde />
+        versteht keine Helligkeit und keine Wärme. Aber er <Tilde />
+        erkennt, dass „Sonne“ in ähnlichen Textumgebungen vorkommt wie „Schnee“
+        – und legt die beiden daher nah beieinander in seinem Raum ab.
+      </>
+    ),
   },
   {
     id: "embeddings2",
@@ -129,17 +155,19 @@ export const bits = [
         <h3 className="font-semibold text-primary mb-2">Embeddings 2</h3>
       </>
     ),
-    text: <>placeholder</>,
-  },
-  {
-    id: "embeddings3",
-    title: (
+    text: (
       <>
-        <h3 className="font-semibold text-primary mb-2">Embeddings 3</h3>
+        In Wirklichkeit bestehen Worteinbettungen aus hunderten von Zahlen, also
+        Koordinaten in einem hochdimensionalen Raum. In der Visualisierung sehen
+        Sie eine vereinfachte Version davon: Wörter wie „König“, „Königin“,
+        „Sonne“ oder „kalt“ erscheinen auf einer zweidimensionalen Fläche – also
+        wie Punkte in einem Koordinatensystem. Die Abstände dort entsprechen den
+        inhaltlichen Abständen, die das hier verwendete Modell <Tilde />
+        gelernt hat.
       </>
     ),
-    text: <>placeholder</>,
   },
+
   {
     id: "decisions1",
     title: (
@@ -147,7 +175,13 @@ export const bits = [
         <h3 className="font-semibold text-primary mb-2">Decisions 1</h3>
       </>
     ),
-    text: <>placeholder</>,
+    text: (
+      <>
+        Ein Neuronales Netzwerk besteht aus den Neuronen, die in Schichten
+        angeordnet sind. Es gibt den Input Layer, einen oder mehrere Hidden
+        Layer sowie den Output Layer.
+      </>
+    ),
   },
   {
     id: "decisions2",
@@ -156,7 +190,14 @@ export const bits = [
         <h3 className="font-semibold text-primary mb-2">Decisions 2</h3>
       </>
     ),
-    text: <>placeholder</>,
+    text: (
+      <>
+        In einem neuronalen Netzwerk wird also nicht nur eine einzelne
+        Berechnung durchgeführt, auf deren Basis dann die Ja-Nein-Entscheidung
+        getroffen wird. Stattdessen werden viele Gleichungen berechnet, die am
+        Ende zu der Ja-Nein-Entscheidung führen.
+      </>
+    ),
   },
   {
     id: "decisions3",
