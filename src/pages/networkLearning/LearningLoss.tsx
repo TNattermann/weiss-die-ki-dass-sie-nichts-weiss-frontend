@@ -3,17 +3,17 @@ import Tilde from "../../components/Tilde";
 
 export default function LearningLoss() {
   return (
-    <section className="py-16" id="loss">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
-          <h1 className="text-5xl font-bold text-center text-primary mb-6 break-words">
+    <section className="py-10 sm:py-14 md:py-16 px-4 sm:px-6 overflow-x-hidden" id="loss">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-8 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-4 sm:mb-6 break-words">
             Woher <Tilde />
             weiß das Modell, wie gut es ist?
           </h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-start md:items-center mb-6 sm:mb-8">
             <div>
-              <p className="text-lg text-text-normal leading-relaxed">
+              <p className="text-base sm:text-lg text-text-normal leading-relaxed break-words">
                 Möchten wir beim Bogenschießen ermitteln, wie gut ein Versuch
                 war, muss die
                 <strong className="text-primary"> Distanz</strong> der
@@ -30,13 +30,13 @@ export default function LearningLoss() {
             <div className="flex justify-center md:justify-end">
               <img
                 src="/img/Distance_Target.png"
-                alt="Verschiedene Schüsse"
-                className="w-full max-w-sm rounded-xl shadow-lg"
+                alt="Zwei Pfeile stecken in einer Zielscheibe mit unterschiedlicher Distanz zur Mitte der Scheibe."
+                className="block w-full max-w-full sm:max-w-sm h-auto rounded-xl shadow-lg object-contain"
               />
             </div>
           </div>
 
-          <p className="text-lg text-text-normal mb-6 leading-r>elaxed">
+          <p className="text-base sm:text-lg text-text-normal mb-6 leading-relaxed break-words">
             Beim Trainieren einer KI schießt nicht ein*e Schütze*in auf eine
             Zielscheibe - stattdessen lernt die KI anhand von{" "}
             <strong className="text-primary">gesammelten Beispieldaten</strong>,
@@ -50,8 +50,8 @@ export default function LearningLoss() {
             der Loss über alle Beispiele so gering wie möglich wird.
           </p>
 
-          <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
-            <p className="text-text-normal font-medium">
+          <div className="bg-primary/5 border-l-4 text-primary p-4 sm:p-6 rounded-r-lg mb-6">
+            <p className="text-text-normal font-medium break-words">
               Um dies mit unserer Metapher zu verdeutlichen: Wir können uns
               Trainingsdaten wie eine Vielzahl an Schützen vorstellen, die von
               verschiedenen Positionen auf das Ziel schießen. Beim Trainieren
@@ -61,15 +61,17 @@ export default function LearningLoss() {
               also die Distanz zur Zielscheibe, minimiert.
             </p>
           </div>
+
           <div className="w-full flex justify-center mb-6">
             <img
               src="/img/Bowmen_Datapoints.png"
-              alt="Mehrere Bogenschützen als Daten"
-              className="w-full max-w-none rounded-xl shadow-lg object-contain"
+              alt="Mehrere Bogenschützen schießen auf dieselbe Zielscheibe."
+              className="block w-full max-w-full h-auto rounded-xl shadow-lg object-contain"
             />
           </div>
-          <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
-            <p className="text-text-normal font-medium">
+
+          <div className="bg-primary/5 border-l-4 text-primary p-4 sm:p-6 rounded-r-lg mb-6">
+            <p className="text-text-normal font-medium break-words">
               <strong className="text-primary">Zusammenfassung Loss: </strong>{" "}
               Damit ein Modell <Tilde />
               lernen kann, muss zuerst ermittelt werden, wie gut es aktuell ist.
@@ -84,7 +86,7 @@ export default function LearningLoss() {
           </div>
 
           <Expandable title="Mehr zu Verlustfunktionen" className="mb-6">
-            <p className="text-text-normal leading-relaxed">
+            <p className="text-text-normal leading-relaxed break-words">
               Die Ermittlung des Losses erfolgt anhand einer mathematischen
               Funktion, die aus dem Ist- und Sollzustand eine Distanz bildet. In
               der Praxis gibt es je nach Anwendungsfall eine Vielzahl an
@@ -100,14 +102,14 @@ export default function LearningLoss() {
               </li>
               <li>
                 Quadrierterter Loss (= Mean Squared Error) oder die absoluter
-                Loss (= Mean Absolute Error)?{" "}
+                Loss (= Mean Absolute Error)?
               </li>
               <li>
                 Vorhersage von einem Wert (= Regression) oder von Klassen (=
                 Klassifikation)?
               </li>
             </ul>
-            <p className="text-text-normal leading-relaxed">
+            <p className="text-text-normal leading-relaxed break-words">
               Am Ende erfüllen allerdings alle denselben Zweck: Sie ermitteln
               die{" "}
               <strong className="text-primary">

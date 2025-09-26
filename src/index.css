@@ -44,7 +44,6 @@ body {
   }
 }
 
-
 .neural-bg {
   background-image: radial-gradient(
       circle at 10% 20%,
@@ -146,7 +145,10 @@ button:disabled {
   width: auto;
   padding: 1em;
   z-index: 2;
+  font-weight: bold;
+  font-size: medium;
 }
+
 .hover:hover span span {
   position: relative;
   margin: auto;
@@ -234,107 +236,6 @@ button:disabled {
   margin-right: 8px; /* Space between the color box and text */
 }
 
-.arrow {
-  width: 100px;
-  height: 100px;
-  position: relative;
-}
-
-.arrow::before {
-  /* the actual arrow pointing at the top of the circle */
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: -5px; /* Adjust this value to position the triangle vertically */
-  left: 50%; /* Center the triangle horizontally */
-  transform: translateX(-50%); /* Center and rotate the triangle */
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent; /* Left side of the triangle */
-  border-right: 5px solid transparent; /* Right side of the triangle */
-  border-top: 15px solid grey; /* Top side of the triangle (the color of the triangle) */
-}
-
-.circle-parade {
-  display: flex;
-  align-items: center;
-}
-
-.wheel-and-legend {
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.legend {
-  margin-left: 20px; /* Space between the circle and the legend */
-  display: flex;
-  flex-direction: column; /* Stack legend items vertically */
-}
-
-.legend-item {
-  display: flex;
-  align-items: center; /* Center items vertically */
-}
-
-.legend-circle {
-  width: 15px; /* Width of the color box */
-  height: 15px; /* Height of the color box */
-  border-radius: 50%; /* Make it a circle */
-  margin-right: 8px; /* Space between the color box and text */
-}
-
-.arrow {
-  width: 100px;
-  height: 100px;
-  position: relative;
-}
-
-.arrow::before {
-  /* the actual arrow pointing at the top of the circle */
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: -5px; /* Adjust this value to position the triangle vertically */
-  left: 50%; /* Center the triangle horizontally */
-  transform: translateX(-50%); /* Center and rotate the triangle */
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent; /* Left side of the triangle */
-  border-right: 5px solid transparent; /* Right side of the triangle */
-  border-top: 15px solid grey; /* Top side of the triangle (the color of the triangle) */
-}
-
-.circle-parade {
-  display: flex;
-  align-items: center;
-}
-
-.wheel-and-legend {
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.legend {
-  margin-left: 20px; /* Space between the circle and the legend */
-  display: flex;
-  flex-direction: column; /* Stack legend items vertically */
-}
-
-.legend-item {
-  display: flex;
-  align-items: center; /* Center items vertically */
-}
-
-.legend-circle {
-  width: 15px; /* Width of the color box */
-  height: 15px; /* Height of the color box */
-  border-radius: 50%; /* Make it a circle */
-  margin-right: 8px; /* Space between the color box and text */
-}
-
-input:focus,
 textarea:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
