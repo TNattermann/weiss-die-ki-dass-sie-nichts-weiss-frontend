@@ -16,7 +16,7 @@ function WissenPage() {
           Hier werden die wichtigsten Erkenntnisse und Informationen von der
           Webseite zusammengefasst. Wissenshäppchen - perfekt zum Nachschlagen.
         </p>
-        <h2 className="text-2xl font-bold text-primary mb-4">Grundlagen </h2>
+        <h2 className="text-2xl font-bold text-primary mb-4">Grundlagen</h2>
 
         {/* Temperature Section */}
         <div className="mb-8">

@@ -20,7 +20,7 @@ function Footer() {
                   to="/temperature"
                   className="hover:text-white transition-colors"
                 >
-                  Lernpfad 1: Versteht uns ein Sprachmodell?
+                  Lernpfad Grundlagen: Versteht uns ein Sprachmodell?
                 </Link>
               </li>
               <li>
@@ -28,7 +28,8 @@ function Footer() {
                   to="/attention"
                   className="hover:text-white transition-colors"
                 >
-                  Lernpfad 2: Was kann ein Modell des maschinellen Lernens?
+                  Lernpfad Vertiefung: Was kann ein Modell des maschinellen
+                  Lernens?
                 </Link>
               </li>
             </ul>
