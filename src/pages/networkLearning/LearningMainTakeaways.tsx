@@ -58,11 +58,11 @@ export default function LearningMainTakeaways() {
         </div>
 
         {/* Navigation */}
-        <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-6">
+        <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
           {/* Lernpfad 1 */}
           <Link
             to="/modellgleichung"
-            className="inline-flex justify-center items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-6 sm:px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary w-full sm:w-auto"
+            className="w-full sm:w-auto text-center inline-flex justify-center items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-md"
           >
             <ArrowLeft className="text-on-primary-container mr-2 h-5 w-5" aria-hidden="true" />
             Zurück im Lernpfad
@@ -71,7 +71,7 @@ export default function LearningMainTakeaways() {
           {/* Home */}
           <Link
             to="/"
-            className="inline-flex justify-center items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-6 sm:px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary w-full sm:w-auto"
+            className="w-full sm:w-auto text-center inline-flex justify-center items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-md"
           >
             Startseite
           </Link>
