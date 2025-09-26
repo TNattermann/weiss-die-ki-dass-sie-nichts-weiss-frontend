@@ -82,12 +82,14 @@ export default function AttentionIntroduction() {
               className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6"
               id="attention1"
             >
-              {bits.slice(0, 1).map((c) => (
-                <section key={c.id}>
-                  <h2>{c.title}</h2>
-                  <p>{c.text}</p>
-                </section>
-              ))}
+              {bits
+                .filter((c) => c.id === "attention1")
+                .map((c) => (
+                  <section>
+                    <h2>{c.title}</h2>
+                    <p>{c.text}</p>
+                  </section>
+                ))}
             </div>
           </div>
           <div className="p-2 rounded-xl">

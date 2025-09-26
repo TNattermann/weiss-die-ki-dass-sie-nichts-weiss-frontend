@@ -38,4 +38,139 @@ export const bits = [
       </>
     ),
   },
+  {
+    id: "temperature1",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Temperature 1</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
+  {
+    id: "temperature2",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Temperature 2</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
+  {
+    id: "temperature3",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Temperature 3</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
+  {
+    id: "tokens1",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Tokens 1</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
+  {
+    id: "tokens2",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Tokens 2</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
+  {
+    id: "tokens3",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Tokens 3</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
+  {
+    id: "embeddings1",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Embeddings 1</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
+  {
+    id: "embeddings2",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Embeddings 2</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
+  {
+    id: "embeddings3",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Embeddings 3</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
+  {
+    id: "decisions1",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Decisions 1</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
+  {
+    id: "decisions2",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Decisions 2</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
+  {
+    id: "decisions3",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Decisions 3</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
+  {
+    id: "training1",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Training 1</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
+  {
+    id: "training2",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Training 2</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
+  {
+    id: "training3",
+    title: (
+      <>
+        <h3 className="font-semibold text-primary mb-2">Training 3</h3>
+      </>
+    ),
+    text: <>placeholder</>,
+  },
 ];
