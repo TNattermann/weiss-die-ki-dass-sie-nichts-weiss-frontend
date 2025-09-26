@@ -120,7 +120,7 @@ export default function TempAusprob() {
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-5xl font-bold text-center text-primary mb-6">Selbst Text generieren</h1>
                 <div className=" mb-16">
-                    <div className="flex justify-center">
+                    <div className="justify-center">
                         <div>
                             <p className="text-lg text-text-normal mb-6 leading-relaxed">
                             Hier können Sie jetzt selbst ausprobieren, wie sich das Verstellen des Temperaturreglers auf des Satz auswirkt.
