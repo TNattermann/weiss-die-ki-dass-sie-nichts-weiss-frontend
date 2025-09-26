@@ -10,20 +10,22 @@ interface NavItem {
 
 const navItems: NavItem[] = [
     {to: "/", label: "Startseite"},
+    
     {label: "separator", type: "separator"},
     {to: "/temperature", label: "Was passiert, wenn ich ChatGPT benutze?"},
     {to: "/tokeninfo", label: "Weiß ChatGPT, was eine Brombeere ist?"},
     {to: "/wordembeddings", label: "Wieso sind die Texte von ChatGPT so gut?"},
+
     {label: "separator", type: "separator"},
     {to: "/attention", label: "Versteht ChatGPT mich?"},
     {to: "/modellgleichung", label: "Wie funktioniert das mit diesem Neuronalen Netzwerk?",},
     {to: "/networkLearning", label: "Wie lernt ChatGPT?"},
+
     {label: "separator", type: "separator"},
     {to: "/WissenPage", label: "Wissenshäppchen"},
 
     {label: "separator", type: "separator"},
-
-    /*{ to: '/download', label: 'Buch Download' }, */
+    { to: '/download', label: 'Buch Download' }, 
     {to: "/aboutus", label: "Über Uns"},
 ];
 

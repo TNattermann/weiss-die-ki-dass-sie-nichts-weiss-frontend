@@ -6,7 +6,7 @@ export default function AboutUsPicture() {
   }, []);
   return (
     <div className="max-w-screen-xl mx-auto px-6 py-6 text-center">
-      <h1 className="text-5xl font-bold text-center text-primary mb-6">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-6">
         Über uns
       </h1>
 
