@@ -139,7 +139,7 @@ function EmbeddingsVizualizer() {
           initialWords={[]}
         />
 
-      <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg mb-6">
+      <div className="bg-primary/5 border-l-4 text-primary p-6 rounded-r-lg">
         <p>
           In Wirklichkeit bestehen Worteinbettungen aus hunderten von Zahlen,
           also Koordinaten in einem hochdimensionalen Raum. In der

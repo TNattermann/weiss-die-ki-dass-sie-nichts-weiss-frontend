@@ -21,7 +21,7 @@ function WordEmbeddingsIntroduction() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-6 ">
           Was sind Worteinbettungen?
         </h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-lg text-text-normal mb-6 leading-relaxed">
               Da ein Computer nur mit Zahlen arbeiten kann, müssen Wörter oder

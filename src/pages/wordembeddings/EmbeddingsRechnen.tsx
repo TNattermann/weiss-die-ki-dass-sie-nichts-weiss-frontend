@@ -97,7 +97,7 @@ function EmbeddingsRechnen() {
                         </div>
                     </div>
                 </div>
-                <div className="shadow-xl rounded-2xl p-8 mb-12">
+                <div className="shadow-xl rounded-2xl p-8">
                     <div className="flex flex-col gap-8">
                         <div className="flex-1">
                             <h1 className="text-2xl font-bold text-center text-primary mb-6 break-words">Beispiel 3</h1>
