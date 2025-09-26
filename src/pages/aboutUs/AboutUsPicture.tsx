@@ -19,7 +19,7 @@ export default function AboutUsPicture() {
           />
         </div>
         <p className="mt-2 text-sm text-text-normal">
-          v.l.n.r. Darko, Thorben, Natalia, Milli, Nico, Yannik, Cameron
+          v.l.n.r. Darko, Torben, Natalia, Milli, Nico, Yannik, Cameron
         </p>
       </div>
     </div>
