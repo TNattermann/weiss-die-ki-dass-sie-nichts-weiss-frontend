@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Konfiguration
-REMOTE_USER="milli"
+REMOTE_USER="masterprojekt"
 REMOTE_HOST="aalab-weiss-die-ki-dass-sie-nichts-weiss.cs.rptu.de"
 REMOTE_DIR="/home/masterprojekt/frontend"
 REMOTE_DIST="$REMOTE_DIR/dist"
@@ -16,6 +16,6 @@ scp -r dist/* "$REMOTE_USER@$REMOTE_HOST:$REMOTE_DIST" || { echo "Upload failed"
 
 # Schreibrechte für Gruppe setzen auf dem Server
 echo "Setting group write permissions on server..."
-ssh "$REMOTE_USER@$REMOTE_HOST" "chmod -R g+w $REMOTE_DIST"
+ssh "$REMOTE_USER@$REMOTE_HOST" "chmod -R g+w,a+X $REMOTE_DIST"
 
 echo "✅ Deployment complete!"
