@@ -123,7 +123,8 @@ export default function WahrIntroduction() {
                 eines Wortes, desto größer ist der ihm zugewiesene Sektor. In
                 diesem Beispiel erhält "schön" den größten Bereich, während
                 "kalt" den kleinsten einnimmt. Wird das Rad gedreht, bleibt es
-                erwartungsgemäß in etwa drei von zehn Fällen bei "warm" stehen.
+                erwartungsgemäß in etwa drei von zehn Fällen bei "warm" stehen. 
+                Hier bei dem Rad können Sie es einmal selbst ausprobieren.
               </p>
               <div className="pb-6">
                 <SimpleRad

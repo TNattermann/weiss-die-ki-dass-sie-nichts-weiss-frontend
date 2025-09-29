@@ -142,6 +142,11 @@ export default function Temperature() {
             nähern sich die Wahrscheinlichkeiten der möglichen Wörter einander
             an, sodass die Auswahl zunehmend gleichverteilt erfolgt.
           </p>
+
+          <p className="text-lg text-text-normal mb-6 leading-relaxed">
+            Hier sehen sie, welche Auswirkungen das auf die gleiche Wahrscheinlichkeitsverteilung 
+            bei einer Temperatur von 0, 1 oder 2 hat.
+          </p>
         </div>
       </div>
 
@@ -179,7 +184,7 @@ export default function Temperature() {
           ))}
 
           <p className="text-lg text-text-normal mb-6 leading-relaxed">
-            Mit diesem Regler könne Sie die Temperatur auch selbst einstellen:
+            Mit diesem Regler können Sie die Temperatur auch selbst einstellen:
           </p>
 
           <div className="flex flex-col items-center">

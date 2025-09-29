@@ -171,6 +171,7 @@ export default function NextWord() {
             bis eine Satzbeendigung erfolgt. Da dem Modell für jede mögliche
             Fortsetzung entsprechende Wahrscheinlichkeitstabellen zur Verfügung
             stehen, kann es den nächsten Token jeweils konsistent bestimmen.
+            Hier ein Beispiel:
           </p>
 
           <div className="py-6 flex justify-center">
