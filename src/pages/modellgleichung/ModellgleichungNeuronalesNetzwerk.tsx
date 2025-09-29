@@ -21,11 +21,13 @@ function VideoPage() {
         {" "}
         Aufbau eines Neuronalen Netzwerks
       </h1>
-      <p className="text-text-normal text-base sm:text-lg mb-4 sm:mb-6 text-left sm:text-center max-w-2xl">
+      <p className="text-text-normal text-base sm:text-lg mb-4 sm:mb-6 text-left sm:text-center max-w-3xl">
         Hier ist ein einfaches Neuronales Netzwerk zu sehen, das dazu geeignet
         ist, eine handgeschriebene Ziffer zu erkennen. Das Beispiel hilft dabei,
         die einzelnen Elemente eines Neuronalen Netzwerkes kennenzulernen und zu
-        verstehen, welche Aufgaben sie erfüllen.
+        verstehen, welche Aufgaben sie erfüllen. <br></br> Wählen Sie eine
+        andere Zahl aus, die erkannt werden soll, und beobachten Sie die
+        Veränderungen im Netzwerk.
       </p>
 
       {/* Buttons über dem Bild */}
