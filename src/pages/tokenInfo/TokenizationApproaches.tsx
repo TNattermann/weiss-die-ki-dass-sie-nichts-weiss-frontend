@@ -163,7 +163,7 @@ export default function TokenizationApproaches() {
           })}
         </div>
 
-        <div className="shadow-xl rounded-2xl p-8">
+        <div className="shadow-xl rounded-2xl p-8 mb-6">
           <div className="text-center mb-6">
             <h3 className="text-xl font-semibold text-primary mb-2">
               Beispiel: "Das Wetter heute ist besonders schön."
