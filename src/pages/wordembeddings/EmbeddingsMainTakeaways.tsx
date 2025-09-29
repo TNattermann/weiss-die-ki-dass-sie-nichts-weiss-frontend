@@ -37,24 +37,24 @@ export default function EmbeddingsMainTakeaways() {
               <p className="text-on-primary-container">
                 Computer können Worteinbettungen selbstständig finden, indem sie
                 riesige Mengen an Texten verarbeiten – ganz ohne dass ihnen die
-                Bedeutung der Wörter vorab erklärt wird. Die in den Worteinbettung 
-                enthaltene semantische Nähe von Wörtern ist ein wesentlicher Bestandteil,
-                weshalb ChatGPT so gut ist. 
+                Bedeutung der Wörter vorab erklärt wird. Die in den
+                Worteinbettung enthaltene semantische Nähe von Wörtern ist ein
+                wesentlicher Bestandteil, weshalb ChatGPT so gut ist.
               </p>
             </div>
           </div>
         </div>
 
         {/* Navigation */}
-          <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
-            <Link
-              to="/tokeninfo"
-              className="w-full sm:w-auto text-center inline-flex justify-center items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-md"
-            >
-              <ArrowLeft className="text-on-primary-container mr-2 h-5 w-5" />
-              Zurück im Lernpfad
-            </Link>
-            {/* Home */}
+        <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+          <Link
+            to="/tokeninfo"
+            className="w-full sm:w-auto text-center inline-flex justify-center items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-md"
+          >
+            <ArrowLeft className="text-on-primary-container mr-2 h-5 w-5" />
+            Zurück im Lernpfad
+          </Link>
+          {/* Home */}
           <Link
             to="/"
             className="w-full sm:w-auto text-center inline-flex justify-center items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-md"
@@ -66,10 +66,10 @@ export default function EmbeddingsMainTakeaways() {
             to="/attention"
             className="w-full sm:w-auto text-center inline-flex justify-center items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-md"
           >
-            Weiter zu Lernpfad 2
+            Weiter zu Lernpfad Vertiefung
             <ArrowRight className="text-on-primary-container ml-2 h-5 w-5" />
           </Link>
-          </div>
+        </div>
       </div>
     </section>
   );

@@ -7,7 +7,7 @@ function Impressum() {
     return (
         <div className="min-h-screen">
             <div className="max-w-screen-xl mx-auto px-6 py-12">
-                <h1 className="text-5xl font-bold text-center text-primary mb-10">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-primary mb-10">
                     Impressum
                 </h1>
 

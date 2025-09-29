@@ -1,4 +1,4 @@
-import { ArrowRight, Book } from "lucide-react";
+import { ArrowLeft, ArrowRight, Book } from "lucide-react";
 import { Link } from "react-router-dom";
 import Tilde from "../../components/Tilde";
 
@@ -39,6 +39,20 @@ export default function AttentionTakeaways() {
 
         {/* Navigation */}
         <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+          <Link
+            to="/wordembeddings"
+            className="w-full sm:w-auto text-center inline-flex justify-center items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-md"
+          >
+            <ArrowLeft className="text-on-primary-container mr-2 h-5 w-5" />
+            Zurück zum Lernpfad Grundlagen
+          </Link>
+          {/* Home */}
+          <Link
+            to="/"
+            className="w-full sm:w-auto text-center inline-flex justify-center items-center bg-primary-container text-on-primary-container hover:brightness-110 hover:shadow-lg px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-md"
+          >
+            Startseite
+          </Link>
           {/* Lernpfad 2 */}
           <Link
             to="/modellgleichung"

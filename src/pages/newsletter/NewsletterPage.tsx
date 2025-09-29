@@ -65,7 +65,7 @@ function NewsletterPage() {
     return (
         <div className="min-h-screen px-6 py-8">
             <div className="max-w-2xl mx-auto text-center">
-                <h1 className="text-5xl font-bold text-primary mb-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-6">
                     Newsletter
                 </h1>
                 <p className="text-lg text-primary mb-8">
