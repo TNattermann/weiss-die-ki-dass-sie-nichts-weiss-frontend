@@ -22,7 +22,7 @@ function Impressum() {
                             67663 Kaiserslautern <br />
 
                             <strong className="text-primary">Telefon: </strong>{" "} +49 631 205 3358<br />
-                            <strong className="text-primary">E-Mail: </strong>{" "} aalab-sekretariat@cs.rptu.de<br />
+                            <strong className="text-primary">E-Mail: </strong>{" "} aalab-technik@cs.rptu.de<br />
                         </p>
                     </section>
                     <section>

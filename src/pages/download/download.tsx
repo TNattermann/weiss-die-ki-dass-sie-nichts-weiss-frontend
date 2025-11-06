@@ -5,7 +5,7 @@ function Download() {
         window.scrollTo(0, 0);
     }, []);
 
-  const email = "Bald verfügbar"; // TO DO: Replace with the correct email
+  const email = "aalab-buch@cs.rptu.de";
   const subject = "Anfrage: Buchteile I und II";
   const body = `Sehr geehrte Damen und Herren,
 
