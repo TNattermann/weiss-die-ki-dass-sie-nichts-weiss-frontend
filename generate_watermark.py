@@ -12,12 +12,15 @@ def create_watermark(width, height, name, date):
     text = f"Zur Verfügung gestellt an {name} am {date} zur exklusiven Nutzung für edukative Zwecke"
 
     c.saveState()
-    c.setFillColor(Color(0.5, 0.5, 0.5, alpha=0.35))  # transparent grau
-    c.translate(width/2, height/2)
-    c.rotate(45)
-    c.setFont("Helvetica", 15)
 
-    c.drawCentredString(0, 0, text)
+    c.setFillColor(Color(0, 0, 1, alpha=0.8))
+
+    c.setFont("Helvetica", 10)
+
+    bottom_margin = 30
+
+    c.drawCentredString(width / 2, bottom_margin, text)
+
     c.restoreState()
 
     c.save()
@@ -49,8 +52,8 @@ if __name__ == "__main__":
     date = datetime.today().strftime("%d.%m.%Y")
 
     add_watermark(
-        input_pdf="book.pdf",
-        output_pdf=f"book_{name}",
+        input_pdf="OpenAccessBook.pdf",
+        output_pdf=f"OpenAccessBook_{name}.pdf",
         name=name,
         date=date
     )
