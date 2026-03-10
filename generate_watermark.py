@@ -1,0 +1,58 @@
+from io import BytesIO
+from datetime import datetime
+from pypdf import PdfReader, PdfWriter
+from reportlab.pdfgen import canvas
+from reportlab.lib.colors import Color
+
+
+def create_watermark(width, height, name, date):
+    packet = BytesIO()
+    c = canvas.Canvas(packet, pagesize=(width, height))
+
+    text = f"Zur Verfügung gestellt an {name} am {date} zur exklusiven Nutzung für edukative Zwecke"
+
+    c.saveState()
+    c.setFillColor(Color(0.5, 0.5, 0.5, alpha=0.35))  # transparent grau
+    c.translate(width/2, height/2)
+    c.rotate(45)
+    c.setFont("Helvetica", 15)
+
+    c.drawCentredString(0, 0, text)
+    c.restoreState()
+
+    c.save()
+    packet.seek(0)
+
+    return PdfReader(packet).pages[0]
+
+
+def add_watermark(input_pdf, output_pdf, name, date):
+    reader = PdfReader(input_pdf)
+    writer = PdfWriter()
+
+    for page in reader.pages:
+        width = float(page.mediabox.width)
+        height = float(page.mediabox.height)
+
+        watermark = create_watermark(width, height, name, date)
+
+        page.merge_page(watermark)
+        writer.add_page(page)
+
+    with open(output_pdf, "wb") as f:
+        writer.write(f)
+
+
+if __name__ == "__main__":
+
+    name = "Max Mustermann"
+    date = datetime.today().strftime("%d.%m.%Y")
+
+    add_watermark(
+        input_pdf="book.pdf",
+        output_pdf=f"book_{name}",
+        name=name,
+        date=date
+    )
+
+    print("Watermark erfolgreich hinzugefügt.")
