@@ -3,6 +3,7 @@ from datetime import datetime
 from pypdf import PdfReader, PdfWriter
 from reportlab.pdfgen import canvas
 from reportlab.lib.colors import Color
+import argparse
 
 
 def create_watermark(width, height, name, date):
@@ -48,7 +49,17 @@ def add_watermark(input_pdf, output_pdf, name, date):
 
 if __name__ == "__main__":
 
-    name = "Max Mustermann"
+    parser = argparse.ArgumentParser(description="Add watermark to PDF")
+
+    parser.add_argument(
+        "--name",
+        default="Max Mustermann",
+        help="Name for the watermark"
+    )
+
+    args = parser.parse_args()
+
+    name = args.name #overwrite here in Code
     date = datetime.today().strftime("%d.%m.%Y")
 
     add_watermark(
