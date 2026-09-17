@@ -1,10 +1,10 @@
-# ⚛️ React + TypeScript + Vite Frontend
-
 ## Disclaimer 
 
 This is the mirrored version of the AALAB research group repo at RPTU Kaiserslautern. The code for this work was greated by a student group that i was part of. Original GitLab repo can be found [here](https://gitlab.rhrk.uni-kl.de/algorithm-accountability-lab/weiss-die-ki-homepage/weiss-ki-ki-dass-sie-nichts-weiss-frontend). 
 
 The resulting homepage serves as supporting, interactive material for the book ["Weiss die KI, dass sie nichts weiß?"](https://www.penguin.de/buecher/katharina-zweig-weiss-die-ki-dass-sie-nichts-weiss-/paperback/9783453219076) by Katharina Zweig. The resulting homepage can be found [here](https://aalab-weiss-die-ki-dass-sie-nichts-weiss.cs.rptu.de/).
+
+# ⚛️ React + TypeScript + Vite Frontend
 
 Dies ist das **Frontend** für unser Master-Projekt. Es basiert auf einem modernen Stack bestehend aus:
 
